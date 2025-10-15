@@ -1,0 +1,184 @@
+/* Section 1: Onze Kernwaarden */
+.values-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: var(--color-text);
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+
+}
+
+.values-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    color: #0A192F;
+}
+
+.values-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 450px;
+    height: 250px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.value-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-bg);
+}
+
+.value-card p {
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* Section 2: SEO */
+.seo-section {
+    padding: 6rem 2rem;
+    background-color: #0A192F;
+    color: white;
+    text-align: center;
+}
+
+.seo-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.seo-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* Section 3: Onze aanpak */
+.approach-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: var(--color-text);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+
+}
+
+.approach-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-bg);
+}
+
+.approach-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.approach-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 450px;
+    height: 250px;
+}
+
+.approach-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.approach-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #0A192F;
+}
+
+.approach-card p {
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* Footer */
+.footer {
+    background-color: #0A192F;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #64FFDA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: var(--font-title), sans-serif;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .values-grid, .approach-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .value-card, .approach-card {
+        width: 100%;
+    }
+
+    .seo-section p {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .seo-section,
+    .values-section{
+        padding: 2rem 2rem;
+    }
+    .values-section h2,
+    .seo-section h2,
+    .approach-section h2 {
+        font-size: 2rem;
+    }
+
+    .value-card h3, .approach-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .value-card p, .approach-card p,
+    .seo-section p {
+        font-size: 0.95rem;
+    }
+}

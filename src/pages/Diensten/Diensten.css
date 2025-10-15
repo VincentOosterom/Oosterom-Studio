@@ -1,0 +1,132 @@
+/* Algemene pagina styling */
+.diensten-hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background-color: #0A192F;
+    color: #FFFFFF;
+}
+
+.diensten-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.diensten-hero p {
+    font-size: 1.2rem;
+    color: var(--color-text, #64FFDA);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Container voor de diensten secties */
+.diensten-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem;
+}
+
+/* Per dienst sectie */
+.dienst-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dienst-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.dienst-content {
+    max-width: 700px;
+    margin-left: 2rem;
+}
+
+/* Diensten icon & tekst */
+.dienst-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.dienst-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0A192F;
+}
+
+.dienst-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .dienst-section {
+        padding: 2.5rem;
+    }
+
+    .dienst-title {
+        font-size: 1.8rem;
+    }
+
+    .dienst-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dienst-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .dienst-content {
+        margin-left: 0;
+    }
+
+    .dienst-title {
+        font-size: 1.6rem;
+    }
+
+    .dienst-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .diensten-hero h1 {
+        font-size: 2rem;
+    }
+
+    .diensten-hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .dienst-section {
+        padding: 1.5rem;
+    }
+
+    .dienst-title {
+        font-size: 1.4rem;
+    }
+
+    .dienst-description {
+        font-size: 0.85rem;
+    }
+
+    .dienst-icon {
+        font-size: 3rem;
+    }
+}

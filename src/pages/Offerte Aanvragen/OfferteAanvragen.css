@@ -1,0 +1,123 @@
+/* QuoteForm.css */
+#offerte {
+    background-color: var(--color-bg);
+    padding: 6rem 1.5rem;
+    color: var(--color-text);
+}
+
+#offerte h2 {
+    font-family: var(--font-title);
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#offerte p {
+    text-align: center;
+    color: var(--color-muted);
+    margin-bottom: 2.5rem;
+}
+
+#offerte form {
+    display: grid;
+    gap: 1rem;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+#offerte input,
+#offerte select,
+#offerte textarea {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-muted);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: border var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#offerte input:focus,
+#offerte select:focus,
+#offerte textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+}
+
+#offerte button {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    font-family: var(--font-title);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+#offerte button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #offerte {
+        padding: 4rem 1rem;
+    }
+
+    #offerte h2 {
+        font-size: 1.8rem;
+    }
+
+    #offerte p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+
+    #offerte form {
+        max-width: 100%;
+        gap: 0.75rem;
+        padding: 0 0.5rem;
+    }
+
+    #offerte input,
+    #offerte select,
+    #offerte textarea,
+    #offerte button {
+        font-size: 0.95rem;
+        padding: 0.65rem 0.9rem;
+    }
+
+    #offerte button {
+        padding: 0.65rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #offerte h2 {
+        font-size: 1.5rem;
+    }
+
+    #offerte p {
+        font-size: 0.9rem;
+    }
+
+    #offerte input,
+    #offerte select,
+    #offerte textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    #offerte button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
