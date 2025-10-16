@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import './Diensten.css';
 import Navigate from "../../components/Navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
+import Footer from "../../components/Footer/Footer.jsx";
 
 const services = [
     {
@@ -77,7 +78,9 @@ function Diensten() {
                     ))}
                 </div>
             </section>
+            <Footer/>
         </div>
+
     );
 }
 

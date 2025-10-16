@@ -2,6 +2,7 @@ import './OverOns.css';
 import Navigate from "../../components/Navigate/Navigate.jsx";
 import { motion } from "framer-motion";
 import {Helmet} from "react-helmet-async";
+import Footer from "../../components/Footer/Footer.jsx";
 
 function OverOns() {
     return (
@@ -93,9 +94,7 @@ function OverOns() {
                 </motion.div>
             </section>
 
-            <footer className="overons-footer">
-                <p>© {new Date().getFullYear()} Oosterom Studio — Gemaakt met passie en precisie.</p>
-            </footer>
+            <Footer/>
         </>
     );
 }

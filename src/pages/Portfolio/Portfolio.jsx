@@ -3,6 +3,7 @@ import Navigate from "../../components/Navigate/Navigate.jsx";
 import { motion } from "framer-motion";
 import logo_dave from "../../assets/logo-dave.jpg";
 import {Helmet} from "react-helmet-async";
+import Footer from "../../components/Footer/Footer.jsx";
 
 
 const projects = [
@@ -83,6 +84,7 @@ function Portfolio() {
                     </motion.div>
                 </div>
             </section>
+            <Footer/>
         </>
     )
 }
