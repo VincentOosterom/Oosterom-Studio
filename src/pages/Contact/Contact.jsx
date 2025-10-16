@@ -7,23 +7,31 @@ import {Helmet} from "react-helmet-async";
 
 function Contact() {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-        company: '',
+        name: "",
+        company: "",
+        email: "",
+        message: ""
     });
 
     const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form Data:', formData);
-        alert('Bedankt voor je bericht! We nemen snel contact op.');
-        setFormData({name: '', email: '', message: ''});
-        // Hier kun je EmailJS of FormSubmit integreren
+        const response = await fetch("https://formspree.io/f/mzzjyoko", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
+        if (response.ok) {
+            alert("Bedankt! We nemen spoedig contact op.");
+            setFormData({ name: "", company: "", email: "", message: "" });
+        } else {
+            alert("Er is iets misgegaan, probeer het later opnieuw.");
+        }
     };
+
 
     return (
         <>
@@ -86,7 +94,7 @@ function Contact() {
                         />
                         <motion.input
                             type="text"
-                            name="Company-Name"
+                            name="company"
                             placeholder="Bedrijfsnaam"
                             value={formData.company}
                             onChange={handleChange}

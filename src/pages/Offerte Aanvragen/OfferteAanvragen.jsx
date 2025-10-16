@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
 import './OfferteAanvragen.css';
-import { motion } from "framer-motion";
-import Navigate from "../../components/Navigate/Navigate.jsx"; //
+import Navigate from "../../components/Navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 
 function OfferteAanvragen() {
@@ -10,16 +10,26 @@ function OfferteAanvragen() {
         email: "",
         service: "",
         budget: "",
-        message: "",
+        message: ""
     });
 
-    const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Verzonden:", formData);
-        alert("Bedankt voor je aanvraag! We nemen spoedig contact op.");
-        setFormData({ name: "", email: "", service: "", budget: "", message: "" }); // reset form
+        const response = await fetch("https://formspree.io/f/mldpazoo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
+        if (response.ok) {
+            alert("Bedankt voor je aanvraag! We nemen spoedig contact op.");
+            setFormData({ name: "", email: "", service: "", budget: "", message: "" });
+        } else {
+            alert("Er is iets misgegaan, probeer het later opnieuw.");
+        }
     };
 
     return (
@@ -38,66 +48,117 @@ function OfferteAanvragen() {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
 
-            <Navigate />
+            <Navigate/>
 
-            {/* Offerte formulier */}
-            <section id="offerte">
-                <motion.div
-                    className="offerte-container"
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <h2>Offerte aanvragen</h2>
-                    <p>Vertel ons wat je nodig hebt, we reageren binnen 24 uur.</p>
-                    <form onSubmit={handleSubmit}>
-                        <input
+            <section id="offerte" className="offerte-section">
+                <div className="offerte-container">
+                    <motion.h2
+                        className="offerte-title"
+                        initial={{opacity: 0, y: 30}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8}}
+                    >
+                        Offerte aanvragen
+                    </motion.h2>
+
+                    <motion.p
+                        className="offerte-subtitle"
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8, delay: 0.2}}
+                    >
+                        Vertel wat je nodig hebt, we reageren binnen 24 uur.
+                    </motion.p>
+
+                    <motion.form
+                        className="offerte-form"
+                        onSubmit={handleSubmit}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{once: true}}
+                    >
+                        <motion.input
+                            type="text"
                             name="name"
                             placeholder="Naam *"
                             value={formData.name}
                             onChange={handleChange}
+                            className="offerte-input"
+                            variants={{
+                                hidden: {opacity: 0, y: 30},
+                                visible: {opacity: 1, y: 0, transition: {delay: 0.1}},
+                            }}
                             required
                         />
-                        <input
-                            name="email"
+                        <motion.input
                             type="email"
+                            name="email"
                             placeholder="E-mailadres *"
                             value={formData.email}
                             onChange={handleChange}
+                            className="offerte-input"
+                            variants={{
+                                hidden: {opacity: 0, y: 30},
+                                visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
+                            }}
                             required
                         />
-                        <select
+                        <motion.select
                             name="service"
                             value={formData.service}
                             onChange={handleChange}
+                            className="offerte-input"
+                            variants={{
+                                hidden: {opacity: 0, y: 30},
+                                visible: {opacity: 1, y: 0, transition: {delay: 0.3}},
+                            }}
                             required
                         >
                             <option value="">Waar ben je naar op zoek?</option>
                             <option value="design">Webdesign (Figma)</option>
                             <option value="development">Webdevelopment</option>
                             <option value="complete">Complete website (design + build)</option>
-                        </select>
-                        <select
+                        </motion.select>
+                        <motion.select
                             name="budget"
                             value={formData.budget}
                             onChange={handleChange}
+                            className="offerte-input"
+                            variants={{
+                                hidden: {opacity: 0, y: 30},
+                                visible: {opacity: 1, y: 0, transition: {delay: 0.4}},
+                            }}
                         >
                             <option value="">Geschat budget</option>
                             <option value="500-1500">€500 – €1.500</option>
                             <option value="1500-3000">€1.500 – €3.000</option>
                             <option value="3000-plus">€3.000+</option>
-                        </select>
-                        <textarea
+                        </motion.select>
+                        <motion.textarea
                             name="message"
                             placeholder="Vertel kort over je project *"
-                            rows="5"
                             value={formData.message}
                             onChange={handleChange}
+                            rows="5"
+                            className="offerte-textarea"
+                            variants={{
+                                hidden: {opacity: 0, y: 30},
+                                visible: {opacity: 1, y: 0, transition: {delay: 0.5}},
+                            }}
                             required
                         />
-                        <button type="submit">Verstuur aanvraag</button>
-                    </form>
-                </motion.div>
+                        <motion.button
+                            type="submit"
+                            className="offerte-btn"
+                            variants={{
+                                hidden: {opacity: 0, y: 20},
+                                visible: {opacity: 1, y: 0, transition: {delay: 0.6}},
+                            }}
+                        >
+                            Verstuur aanvraag
+                        </motion.button>
+                    </motion.form>
+                </div>
             </section>
         </>
     );
