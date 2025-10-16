@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import './Contact.css';
-import Navigate from "../../components/Navigate/Navigate.jsx"; // jouw navbar component
+import Navigate from "../../components/Navigate/Navigate.jsx";
+import {Helmet} from "react-helmet-async";
+
 
 function Contact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
+        company: '',
     });
 
     const handleChange = (e) => {
@@ -24,6 +27,20 @@ function Contact() {
 
     return (
         <>
+            <Helmet>
+                <title>Oosterom Studio | Contact</title>
+                <meta
+                    name="description"
+                    content="Neem contact op met Oosterom Studio voor vragen, samenwerkingen of projecten. Snel antwoord gegarandeerd."
+                />
+                <meta name="keywords" content="contact, vragen, samenwerking, Oosterom Studio, webdevelopment" />
+                <meta property="og:title" content="Oosterom Studio | Contact" />
+                <meta property="og:description" content="Bereik Vincent Oosterom voor jouw webproject of vraag." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.oosteromstudio.nl/contact" />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+
             <Navigate/>
 
             <section id="contact" className="contact-section">
@@ -57,13 +74,26 @@ function Contact() {
                         <motion.input
                             type="text"
                             name="name"
-                            placeholder="Naam *"
+                            placeholder="Volledige naam *"
                             value={formData.name}
                             onChange={handleChange}
                             className="contact-input"
                             variants={{
                                 hidden: {opacity: 0, y: 30},
                                 visible: {opacity: 1, y: 0, transition: {delay: 0.1}},
+                            }}
+                            required
+                        />
+                        <motion.input
+                            type="text"
+                            name="Company-Name"
+                            placeholder="Bedrijfsnaam"
+                            value={formData.company}
+                            onChange={handleChange}
+                            className="contact-input"
+                            variants={{
+                                hidden: {opacity: 0, y: 30},
+                                visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
                             }}
                             required
                         />
@@ -82,7 +112,7 @@ function Contact() {
                         />
                         <motion.textarea
                             name="message"
-                            placeholder="Bericht *"
+                            placeholder="Uw bericht *"
                             value={formData.message}
                             onChange={handleChange}
                             rows="5"

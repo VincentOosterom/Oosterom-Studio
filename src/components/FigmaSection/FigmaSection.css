@@ -1,0 +1,36 @@
+.figma-section {
+    background-color: var(--color-bg);
+    padding: 6rem 2rem;
+}
+
+.figma-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.figma-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.figma-description {
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .figma-title {
+        font-size: 2rem;
+    }
+
+    .figma-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}

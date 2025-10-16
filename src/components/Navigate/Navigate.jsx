@@ -24,6 +24,7 @@ function Navigate() {
                 <ul className="navbar-links">
                     <li><NavLink to="/diensten">Diensten</NavLink></li>
                     <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+                    <li><NavLink to="/over-ons">Over ons</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
                     <li><NavLink to="/offerte-aanvragen">Offerte Aanvragen</NavLink></li>
                 </ul>
@@ -47,6 +48,7 @@ function Navigate() {
                         >
                             <li><NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink></li>
                             <li><NavLink to="/diensten" onClick={toggleMenu}>Diensten</NavLink></li>
+                            <li><NavLink to="/over-ons">Over ons</NavLink></li>
                             <li><NavLink to="/offerte-aanvragen" onClick={toggleMenu}>Offerte Aanvragen</NavLink></li>
                             <li><NavLink to="/portfolio" onClick={toggleMenu}>Portfolio</NavLink></li>
                         </motion.ul>

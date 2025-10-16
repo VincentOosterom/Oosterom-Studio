@@ -58,6 +58,7 @@
     text-align: center;
     gap: 1rem;
     margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 .portfolio-content h3 {
@@ -74,12 +75,22 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .portfolio-section {
+        padding: 4rem 2rem;
+    }
     .portfolio-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr ;
+    }
+
+    .portfolio-image img {
+        width: 400px;
+        height: 200px;
+        border-radius: 10px;
+        margin: 0 20px;
     }
 
     .portfolio-content h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .portfolio-content p {

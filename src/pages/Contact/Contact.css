@@ -18,7 +18,7 @@
 }
 
 .contact-subtitle {
-    color: #6B7280;
+    color: var(--color-text);
     margin-bottom: 3rem;
     font-size: 1rem;
 }
@@ -37,6 +37,13 @@
     font-size: 1rem;
     width: 100%;
     resize: none;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+    color: var(--color-bg);
+    font-family: var(--font-body), sans-serif;
+
 }
 
 .contact-input:focus,

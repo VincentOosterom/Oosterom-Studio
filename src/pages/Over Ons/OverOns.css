@@ -1,0 +1,70 @@
+.overons-hero {
+    background-color: #0A192F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+}
+
+.overons-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.overons-hero p {
+    font-size: 1.2rem;
+    color: #ccd6f6;
+}
+
+.overons-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.overons-text {
+    background-color: #f9f9f9;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.overons-text h2 {
+    color: #0A192F;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.overons-text p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.overons-footer {
+    background-color: #0A192F;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .overons-hero h1 {
+        font-size: 2rem;
+    }
+
+    .overons-text {
+        padding: 1.5rem;
+    }
+
+    .overons-content {
+        padding: 2rem 1rem;
+    }
+}

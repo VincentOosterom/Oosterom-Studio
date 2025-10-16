@@ -1,13 +1,27 @@
 import './Homepage.css';
 import Header from "../../components/Header/Header.jsx";
 import {motion} from "framer-motion";
+import Footer from "../../components/Footer/Footer.jsx";
+import {Helmet} from "react-helmet-async";
+import FigmaSection from "../../components/FigmaSection/FigmaSection.jsx";
 
 function Homepage() {
     return (
         <>
-            {/* Header */}
-            <Header/>
+            <Helmet>
+                <title>Oosterom Studio | Webdesign & Development</title>
+                <meta
+                    name="description"
+                    content="Professionele websites en webapplicaties op maat, ontwikkeld door Oosterom Studio."
+                />
+                <meta property="og:title" content="Oosterom Studio" />
+                <meta property="og:description" content="Webdesign en development op maat." />
+                <meta property="og:type" content="website" />
+            </Helmet>
 
+
+            {/* Header Component */}
+            <Header/>
 
             {/* Section 1: Onze Kernwaarden */}
             <section className="values-section">
@@ -80,18 +94,8 @@ function Homepage() {
                     </div>
                 </motion.div>
             </section>
-
-            {/* Footer */}
-            <footer className="footer">
-                <div className="footer-container">
-                    <p>© {new Date().getFullYear()} Oosterom Studio. Alle rechten voorbehouden.</p>
-                    <div className="footer-links">
-                        <a href="/diensten">Diensten</a>
-                        <a href="/portfolio">Portfolio</a>
-                        <a href="/contact">Contact</a>
-                    </div>
-                </div>
-            </footer>
+            <FigmaSection/>
+            <Footer/>
         </>
     );
 }

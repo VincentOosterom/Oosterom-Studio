@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './OfferteAanvragen.css';
 import { motion } from "framer-motion";
-import Navigate from "../../components/Navigate/Navigate.jsx"; // jouw navbar component
+import Navigate from "../../components/Navigate/Navigate.jsx"; //
+import {Helmet} from "react-helmet-async";
 
 function OfferteAanvragen() {
     const [formData, setFormData] = useState({
@@ -23,7 +24,20 @@ function OfferteAanvragen() {
 
     return (
         <>
-            {/* Navbar */}
+            <Helmet>
+                <title>Oosterom Studio | Offerte Aanvragen</title>
+                <meta
+                    name="description"
+                    content="Vraag een offerte aan bij Oosterom Studio. Vertel wat je nodig hebt en ontvang snel een professionele prijsopgave."
+                />
+                <meta name="keywords" content="offerte, prijsopgave, webdevelopment, webdesign, Oosterom Studio" />
+                <meta property="og:title" content="Oosterom Studio | Offerte Aanvragen" />
+                <meta property="og:description" content="Snel en eenvoudig een offerte aanvragen voor jouw project." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.oosteromstudio.nl/offerte-aanvragen" />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+
             <Navigate />
 
             {/* Offerte formulier */}
