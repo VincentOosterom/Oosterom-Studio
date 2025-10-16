@@ -24,6 +24,13 @@ const services = [
         icon: "📈",
         bgColor: "#F3E5F5"
     },
+    {
+        title: "Social Media Beheer",
+        description: "Consistente en doordachte aanwezigheid op social media om jouw merk zichtbaar te maken. We creëren, plannen en beheren content die jouw doelgroep aanspreekt en groei stimuleert.",
+        icon: "💬",
+        bgColor: "#E3F2FD"
+    },
+
 ];
 
 function Diensten() {

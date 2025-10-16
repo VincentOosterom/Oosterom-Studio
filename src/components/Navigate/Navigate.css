@@ -93,3 +93,16 @@
         display: flex;
     }
 }
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+

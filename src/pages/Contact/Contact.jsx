@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer.jsx";
 
 
 function Contact() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         company: "",
@@ -15,22 +16,21 @@ function Contact() {
     });
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setFormData({...formData, [e.target.name]: e.target.value});
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const response = await fetch("https://formspree.io/f/mzzjyoko", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formData),
         });
         if (response.ok) {
-            alert("Bedankt! We nemen spoedig contact op.");
-            setFormData({ name: "", company: "", email: "", message: "" });
+            setFormData({name: "", company: "", email: "", message: ""});
         } else {
             alert("Er is iets misgegaan, probeer het later opnieuw.");
         }
+        setIsSubmitted(true);
     };
 
 
@@ -42,12 +42,12 @@ function Contact() {
                     name="description"
                     content="Neem contact op met Oosterom Studio voor vragen, samenwerkingen of projecten. Snel antwoord gegarandeerd."
                 />
-                <meta name="keywords" content="contact, vragen, samenwerking, Oosterom Studio, webdevelopment" />
-                <meta property="og:title" content="Oosterom Studio | Contact" />
-                <meta property="og:description" content="Bereik Vincent Oosterom voor jouw webproject of vraag." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/contact" />
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="keywords" content="contact, vragen, samenwerking, Oosterom Studio, webdevelopment"/>
+                <meta property="og:title" content="Oosterom Studio | Contact"/>
+                <meta property="og:description" content="Bereik Vincent Oosterom voor jouw webproject of vraag."/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.oosteromstudio.nl/contact"/>
+                <meta name="twitter:card" content="summary_large_image"/>
             </Helmet>
 
             <Navigate/>
@@ -69,80 +69,86 @@ function Contact() {
                         whileInView={{opacity: 1, y: 0}}
                         transition={{duration: 0.8, delay: 0.2}}
                     >
-                        Heb je een vraag of wil je een project bespreken? Vul het formulier in en we nemen snel contact
+                        Heb je een vraag of wil je een project bespreken? Vul het formulier in en we nemen snel
+                        contact
                         op.
                     </motion.p>
-
-                    <motion.form
-                        className="contact-form"
-                        onSubmit={handleSubmit}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{once: true}}
-                    >
-                        <motion.input
-                            type="text"
-                            name="name"
-                            placeholder="Volledige naam *"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="contact-input"
-                            variants={{
-                                hidden: {opacity: 0, y: 30},
-                                visible: {opacity: 1, y: 0, transition: {delay: 0.1}},
-                            }}
-                            required
-                        />
-                        <motion.input
-                            type="text"
-                            name="company"
-                            placeholder="Bedrijfsnaam"
-                            value={formData.company}
-                            onChange={handleChange}
-                            className="contact-input"
-                            variants={{
-                                hidden: {opacity: 0, y: 30},
-                                visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
-                            }}
-                            required
-                        />
-                        <motion.input
-                            type="email"
-                            name="email"
-                            placeholder="E-mailadres *"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="contact-input"
-                            variants={{
-                                hidden: {opacity: 0, y: 30},
-                                visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
-                            }}
-                            required
-                        />
-                        <motion.textarea
-                            name="message"
-                            placeholder="Uw bericht *"
-                            value={formData.message}
-                            onChange={handleChange}
-                            rows="5"
-                            className="contact-textarea"
-                            variants={{
-                                hidden: {opacity: 0, y: 30},
-                                visible: {opacity: 1, y: 0, transition: {delay: 0.3}},
-                            }}
-                            required
-                        />
-                        <motion.button
-                            type="submit"
-                            className="contact-btn"
-                            variants={{
-                                hidden: {opacity: 0, y: 20},
-                                visible: {opacity: 1, y: 0, transition: {delay: 0.4}},
-                            }}
+                    {!isSubmitted ? (
+                        <motion.form
+                            className="contact-form"
+                            onSubmit={handleSubmit}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{once: true}}
                         >
-                            Verstuur
-                        </motion.button>
-                    </motion.form>
+                            <motion.input
+                                type="text"
+                                name="name"
+                                placeholder="Volledige naam *"
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="contact-input"
+                                variants={{
+                                    hidden: {opacity: 0, y: 30},
+                                    visible: {opacity: 1, y: 0, transition: {delay: 0.1}},
+                                }}
+                                required
+                            />
+                            <motion.input
+                                type="text"
+                                name="company"
+                                placeholder="Bedrijfsnaam"
+                                value={formData.company}
+                                onChange={handleChange}
+                                className="contact-input"
+                                variants={{
+                                    hidden: {opacity: 0, y: 30},
+                                    visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
+                                }}
+                                required
+                            />
+                            <motion.input
+                                type="email"
+                                name="email"
+                                placeholder="E-mailadres *"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="contact-input"
+                                variants={{
+                                    hidden: {opacity: 0, y: 30},
+                                    visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
+                                }}
+                                required
+                            />
+                            <motion.textarea
+                                name="message"
+                                placeholder="Uw bericht *"
+                                value={formData.message}
+                                onChange={handleChange}
+                                rows="5"
+                                className="contact-textarea"
+                                variants={{
+                                    hidden: {opacity: 0, y: 30},
+                                    visible: {opacity: 1, y: 0, transition: {delay: 0.3}},
+                                }}
+                                required
+                            />
+                            <motion.button
+                                type="submit"
+                                className="contact-btn"
+                                variants={{
+                                    hidden: {opacity: 0, y: 20},
+                                    visible: {opacity: 1, y: 0, transition: {delay: 0.4}},
+                                }}
+                            >
+                                Verstuur
+                            </motion.button>
+                        </motion.form>) : (
+                        <div className="thank-you-message">
+                            <h2>Bedankt voor uw bericht</h2>
+                            <p>We nemen zo snel mogelijk contact met u op.</p>
+                        </div>
+                    )}
                 </div>
             </section>
             <Footer/>

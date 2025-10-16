@@ -1,4 +1,5 @@
 import './Footer.css'
+import { NavLink } from "react-router-dom";
 
 
 function Footer() {
@@ -10,9 +11,15 @@ function Footer() {
                 <div className="footer-container">
                     <p>© {new Date().getFullYear()} Oosterom Studio. Alle rechten voorbehouden.</p>
                     <div className="footer-links">
-                        <a href="/diensten">Diensten</a>
-                        <a href="/portfolio">Portfolio</a>
-                        <a href="/contact">Contact</a>
+                        <NavLink to="/diensten" className={({ isActive }) => isActive ? "active" : ""}>
+                            Diensten
+                        </NavLink>
+                        <NavLink to="/portfolio" className={({ isActive }) => isActive ? "active" : ""}>
+                            Portfolio
+                        </NavLink>
+                        <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>
+                            Contact
+                        </NavLink>
                     </div>
                 </div>
             </footer>

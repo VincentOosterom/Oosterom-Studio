@@ -46,11 +46,12 @@ function Navigate() {
                             exit={{opacity: 0, y: -20}}
                             transition={{duration: 0.3}}
                         >
-                            <li><NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink></li>
                             <li><NavLink to="/diensten" onClick={toggleMenu}>Diensten</NavLink></li>
-                            <li><NavLink to="/over-ons">Over ons</NavLink></li>
-                            <li><NavLink to="/offerte-aanvragen" onClick={toggleMenu}>Offerte Aanvragen</NavLink></li>
                             <li><NavLink to="/portfolio" onClick={toggleMenu}>Portfolio</NavLink></li>
+                            <li><NavLink to="/over-ons">Over ons</NavLink></li>
+                            <li><NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink></li>
+                            <li><NavLink to="/offerte-aanvragen" onClick={toggleMenu}>Offerte Aanvragen</NavLink></li>
+
                         </motion.ul>
                     )}
                 </AnimatePresence>

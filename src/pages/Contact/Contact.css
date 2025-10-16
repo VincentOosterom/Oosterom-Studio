@@ -2,7 +2,7 @@
     padding: 6rem 2rem;
     background-color: var(--color-bg );
     text-align: center;
-    height: 100vh;
+    height: 80vh;
 }
 
 .contact-container {
@@ -67,4 +67,11 @@
 .contact-btn:hover {
     background-color: #52e6c7;
     transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 3rem 2rem;
+        margin-bottom: 2rem;
+    }
 }

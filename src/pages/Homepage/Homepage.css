@@ -1,10 +1,12 @@
 /* Section 1: Onze Kernwaarden */
 .values-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 6rem 2rem;
     text-align: center;
     background-color: var(--color-text);
-    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
-
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
 }
 
 .values-section h2 {
@@ -15,39 +17,52 @@
 }
 
 .values-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    margin: 2rem auto;
 }
 
 .value-card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     background-color: white;
     border-radius: 12px;
-    padding: 1rem;
-    width: 450px;
-    height: 250px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon boven titel */
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .value-card h3 {
-    font-size: 2.2rem;
+    font-size: 2rem; /* iets kleiner voor balans met icon */
     margin-bottom: 1rem;
     color: var(--color-bg);
+    text-align: center;
 }
 
 .value-card p {
     font-size: 1rem;
     color: #333333;
+    text-align: center;
+    line-height: 1.6;
 }
 
 /* Section 2: SEO */
@@ -76,7 +91,7 @@
     padding: 6rem 2rem;
     text-align: center;
     background-color: var(--color-text);
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    clip-path: polygon(0 3%, 100% 0, 100% 98%, 0 100%);
 
 }
 
@@ -100,7 +115,7 @@
     background-color: white;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 450px;
     height: 250px;
@@ -108,7 +123,7 @@
 
 .approach-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .approach-card h3 {
@@ -122,42 +137,166 @@
     color: #333333;
 }
 
+/* ========== CTA Section ========== */
+.cta-section {
+    background-color: var(--color-text);
+    padding: 6rem 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+}
 
+.cta-container {
+    max-width: 700px;
+    background: white;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* Responsive */
+.cta-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-family: var(--font-title), sans-serif;
+    padding: 0.9rem 2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* ==================== Responsive Styling ==================== */
+
+/* Tablet & grote mobiele schermen */
 @media (max-width: 768px) {
-    .values-grid, .approach-grid {
+    /* Values Section */
+    .values-grid {
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .value-card {
+        width: 100%;
+        padding: 1.5rem 1rem;
+    }
+
+    .value-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .value-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Approach Section */
+    .approach-grid {
+        display: flex;
         flex-direction: column;
         gap: 1.5rem;
     }
 
-    .value-card, .approach-card {
+    .approach-card {
         width: 100%;
     }
 
+    /* SEO Section */
     .seo-section p {
         padding: 0 1rem;
+        font-size: 1rem;
+    }
+
+    /* CTA Section */
+    .cta-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
     }
 }
 
+/* Kleine mobiele schermen */
 @media (max-width: 480px) {
-
-    .seo-section,
-    .values-section{
-        padding: 2rem 2rem;
+    /* Clip-path aanpassingen */
+    .values-section {
+        clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+        padding: 5rem 1rem;
     }
+
+    .approach-section{
+        clip-path: polygon(0 3%, 100% 0, 100% 98%, 0 100%);
+        padding: 5rem 1rem;
+    }
+
+    /* Section titels */
     .values-section h2,
     .seo-section h2,
     .approach-section h2 {
         font-size: 2rem;
     }
 
-    .value-card h3, .approach-card h3 {
+    /* Card titels */
+    .value-card h3,
+    .approach-card h3 {
         font-size: 1.8rem;
     }
 
-    .value-card p, .approach-card p,
+    /* Card en sectie tekst */
+    .value-card p,
+    .approach-card p,
     .seo-section p {
+        font-size: 0.95rem;
+    }
+
+    /* Values Grid spacing */
+    .values-grid {
+        gap: 1.2rem;
+    }
+
+    /* Approach Grid spacing */
+    .approach-grid {
+        gap: 1.2rem;
+    }
+
+    /* CTA Button en Container */
+    .cta-container {
+        padding: 1.8rem 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section p {
         font-size: 0.95rem;
     }
 }
