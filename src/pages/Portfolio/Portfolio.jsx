@@ -23,7 +23,7 @@ const projects = [
     },
     {
         title: "JP Casino-Verhuur",
-        description: "Voor JP Casino-Verhuur hebben we tot nu toe een professioneel Figma-ontwerp ontwikkeld als basis voor een mogelijke toekomstige website. Dit ontwerp vormt een modern en stijlvol concept dat later eenvoudig kan worden omgezet naar een volledige website, mocht het bedrijf besluiten om zijn online uitstraling te vernieuwen.",
+        description: "Voor JP Casino-Verhuur hebben we tot nu toe een professioneel Figma-ontwerp ontwikkeld als basis voor een mogelijke toekomstige website.npm Dit ontwerp vormt een modern en stijlvol concept dat later eenvoudig kan worden omgezet naar een volledige website, mocht het bedrijf besluiten om zijn online uitstraling te vernieuwen.",
         image: jp_casinoverhuur,
     }
     // voeg hier meer projecten toe

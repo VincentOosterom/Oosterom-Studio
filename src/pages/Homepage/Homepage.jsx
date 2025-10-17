@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer.jsx";
 import {Helmet} from "react-helmet-async";
 import FigmaSection from "../../components/FigmaSection/FigmaSection.jsx";
 import {Link} from "react-router-dom";
+import headerImage from "../../assets/header-image.jpg";
 
 function Homepage() {
     return (
@@ -15,14 +16,19 @@ function Homepage() {
                     name="description"
                     content="Professionele websites en webapplicaties op maat, ontwikkeld door Oosterom Studio."
                 />
-                <meta property="og:title" content="Oosterom Studio" />
-                <meta property="og:description" content="Webdesign en development op maat." />
-                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Oosterom Studio"/>
+                <meta property="og:description" content="Webdesign en development op maat."/>
+                <meta property="og:type" content="website"/>
             </Helmet>
 
 
             {/* Header Component */}
-            <Header/>
+            <Header
+                title="Wij bouwen digitale ervaringen die indruk maken."
+                subtitle="Van strak design in Figma tot razendsnelle websites — bij Oosterom Studio komt
+                            creativiteit en code samen."
+                buttonText="Ontvang een gratis offerte"
+                image={headerImage}/>
 
             {/* Section 1: Onze Kernwaarden */}
             <section className="values-section">
@@ -34,31 +40,33 @@ function Homepage() {
                 >
                     <h2>Onze Kernwaarden</h2>
                     <div className="values-grid">
-                    <div className="value-card">
-                        <div className="value-icon">🎨</div>
-                        <h3>Creativiteit</h3>
-                        <p>
-                            We ontwerpen unieke, opvallende en memorabele visuals die jouw merk echt laten opvallen.
-                            Elk ontwerp wordt afgestemd op jouw doelgroep en versterkt de identiteit van je bedrijf.
-                        </p>
+                        <div className="value-card">
+                            <div className="value-icon">🎨</div>
+                            <h3>Creativiteit</h3>
+                            <p>
+                                We ontwerpen unieke, opvallende en memorabele visuals die jouw merk echt laten opvallen.
+                                Elk ontwerp wordt afgestemd op jouw doelgroep en versterkt de identiteit van je bedrijf.
+                            </p>
+                        </div>
+                        <div className="value-card">
+                            <div className="value-icon">🤝</div>
+                            <h3>Betrouwbaarheid</h3>
+                            <p>
+                                Duidelijke communicatie, realistische planning en consistente kwaliteit zijn bij ons
+                                vanzelfsprekend.
+                                Jij kunt altijd rekenen op een betrouwbare partner voor elk project.
+                            </p>
+                        </div>
+                        <div className="value-card">
+                            <div className="value-icon">🚀</div>
+                            <h3>Innovatie</h3>
+                            <p>
+                                We gebruiken de nieuwste technologieën en creatieve oplossingen om jouw website of
+                                applicatie
+                                efficiënt, modern en toekomstbestendig te maken.
+                            </p>
+                        </div>
                     </div>
-                    <div className="value-card">
-                        <div className="value-icon">🤝</div>
-                        <h3>Betrouwbaarheid</h3>
-                        <p>
-                            Duidelijke communicatie, realistische planning en consistente kwaliteit zijn bij ons vanzelfsprekend.
-                            Jij kunt altijd rekenen op een betrouwbare partner voor elk project.
-                        </p>
-                    </div>
-                    <div className="value-card">
-                        <div className="value-icon">🚀</div>
-                        <h3>Innovatie</h3>
-                        <p>
-                            We gebruiken de nieuwste technologieën en creatieve oplossingen om jouw website of applicatie
-                            efficiënt, modern en toekomstbestendig te maken.
-                        </p>
-                    </div>
-                </div>
                 </motion.div>
             </section>
 
@@ -119,7 +127,8 @@ function Homepage() {
                 >
                     <h2>Klaar om jouw project te starten?</h2>
                     <p>
-                        Of je nu een nieuwe website nodig hebt, je huidige design wilt vernieuwen of online beter gevonden wilt worden — wij helpen je graag verder.
+                        Of je nu een nieuwe website nodig hebt, je huidige design wilt vernieuwen of online beter
+                        gevonden wilt worden — wij helpen je graag verder.
                     </p>
                     <Link to="/contact" className="cta-button">Neem contact op</Link>
                 </motion.div>

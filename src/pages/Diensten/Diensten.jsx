@@ -4,36 +4,42 @@ import './Diensten.css';
 import Navigate from "../../components/Navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
+import {Link} from "react-router-dom";
 
 const services = [
     {
         title: "Webdesign (Figma)",
         description: "Pixel-perfect UI/UX ontwerpen in Figma. Van concept tot interactief prototype. Wij creëren designs die zowel visueel aantrekkelijk als functioneel zijn, zodat je gebruikerservaring optimaal is.",
         icon: "🎨",
-        bgColor: "#E0F7FA"
+        bgColor: "#E0F7FA",
+        link: "/diensten/figma"
     },
     {
         title: "Webdevelopment",
         description: "Van Figma naar React: snelle, responsive en SEO-geoptimaliseerde websites. Onze code is schoon, modulair en onderhoudsvriendelijk, zodat jouw website toekomstbestendig is.",
         icon: "💻",
-        bgColor: "#FFF3E0"
+        bgColor: "#FFF3E0",
+        link: "/diensten/webdevelopment"
     },
     {
         title: "Branding & Strategie",
         description: "Sterke merkidentiteit en visuele strategie om jouw bedrijf te laten groeien. We vertalen jouw visie naar een consistente branding die vertrouwen en herkenning opbouwt.",
         icon: "📈",
-        bgColor: "#F3E5F5"
+        bgColor: "#F3E5F5",
+        link: "/diensten/branding&strategie",
     },
     {
         title: "Social Media Beheer",
         description: "Consistente en doordachte aanwezigheid op social media om jouw merk zichtbaar te maken. We creëren, plannen en beheren content die jouw doelgroep aanspreekt en groei stimuleert.",
         icon: "💬",
-        bgColor: "#E3F2FD"
+        bgColor: "#E3F2FD",
+        link: "/diensten/social-media-beheer"
     },
 
 ];
 
 function Diensten() {
+
     return (
         <div>
             <Helmet>
@@ -80,6 +86,7 @@ function Diensten() {
                                 <div className="dienst-icon">{service.icon}</div>
                                 <h2 className="dienst-title">{service.title}</h2>
                                 <p className="dienst-description">{service.description}</p>
+                                <Link to={service.link}>Bekijk meer</Link>
                             </div>
                         </motion.div>
                     ))}
