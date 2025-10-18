@@ -26,6 +26,14 @@
     line-height: 1.2;
 }
 
+.call-to-action-btn button {
+    color: var(--color-bg);
+}
+
+.call-to-action-btn button:visited{
+    color: var(--color-bg);
+}
+
 /* Header afbeelding */
 .header-image {
     display: flex;

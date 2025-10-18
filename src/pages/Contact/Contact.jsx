@@ -42,7 +42,7 @@ function Contact() {
                     name="description"
                     content="Neem contact op met Oosterom Studio voor vragen, samenwerkingen of projecten. Snel antwoord gegarandeerd."
                 />
-                <meta name="keywords" content="contact, vragen, samenwerking, Oosterom Studio, webdevelopment"/>
+                <meta name="keywords" content="contact, vragen, samenwerking, website, SEO, Oosterom Studio, webdevelopment"/>
                 <meta property="og:title" content="Oosterom Studio | Contact"/>
                 <meta property="og:description" content="Bereik Vincent Oosterom voor jouw webproject of vraag."/>
                 <meta property="og:type" content="website"/>

@@ -19,7 +19,6 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />}/>
                 <Route path="/over-ons" element={<AboutUs />}/>
                 <Route path="/offerte-aanvragen" element={<OfferteAanvragen />}/>
-                <Route path="/diensten" element={<Diensten />}/>
                 <Route path="*" element={<NotFound/>}/>
 
             </Routes>
