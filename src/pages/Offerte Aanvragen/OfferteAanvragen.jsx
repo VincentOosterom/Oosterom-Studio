@@ -106,6 +106,19 @@ function OfferteAanvragen() {
                                     }}
                                     required
                                 />
+                                <motion.input
+                                    type="text"
+                                    name="company"
+                                    placeholder="Bedrijfsnaam"
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                    className="contact-input"
+                                    variants={{
+                                        hidden: {opacity: 0, y: 30},
+                                        visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
+                                    }}
+                                    required
+                                />
                                 <motion.select
                                     name="service"
                                     value={formData.service}

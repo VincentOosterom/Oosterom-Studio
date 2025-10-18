@@ -115,8 +115,11 @@ function Homepage() {
                     </div>
                 </motion.div>
             </section>
+
+            {/* Section 4: Figma Section */}
             <FigmaSection/>
-            {/* Section 4: Call to Action */}
+
+            {/* Section 5: Call to Action */}
             <section className="cta-section">
                 <motion.div
                     className="cta-container"
@@ -131,6 +134,31 @@ function Homepage() {
                         gevonden wilt worden — wij helpen je graag verder.
                     </p>
                     <Link to="/contact" className="cta-button">Neem contact op</Link>
+                </motion.div>
+            </section>
+
+            <section className="pricing-section">
+                <motion.div
+                    className="pricing-container"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h2>Prijzen</h2>
+                    <p>
+                        Wij werken niet met standaard pakketten of vaste tarieven, omdat we geloven dat elke website uniek is.
+                        Elk project heeft zijn eigen doel, uitstraling en technische wensen. Daarom kijken we zorgvuldig naar wat jouw
+                        website écht nodig heeft — van design tot functionaliteit.
+                    </p>
+                    <p>
+                        De prijs wordt bepaald aan de hand van verschillende factoren, zoals de complexiteit van het ontwerp, het aantal
+                        pagina’s, eventuele koppelingen met systemen, de gewenste doorlooptijd en de mate van maatwerk.
+                    </p>
+                    <p>
+                        Zo betaal je nooit te veel, maar krijg je precies wat bij jouw bedrijf past. Samen bespreken we jouw wensen en
+                        stellen we een transparante, eerlijke offerte op die aansluit bij jouw visie en doelen.
+                    </p>
                 </motion.div>
             </section>
 

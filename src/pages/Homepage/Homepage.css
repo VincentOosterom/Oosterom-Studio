@@ -190,6 +190,29 @@
     transform: translateY(-2px);
 }
 
+/* Pricing section */
+.pricing-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.pricing-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pricing-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-container p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+
 /* ==================== Responsive Styling ==================== */
 
 /* Tablet & grote mobiele schermen */
@@ -242,6 +265,7 @@
     .cta-section p {
         font-size: 1rem;
     }
+
 }
 
 /* Kleine mobiele schermen */
@@ -299,4 +323,10 @@
     .cta-section p {
         font-size: 0.95rem;
     }
+
+    .pricing-section {
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
 }

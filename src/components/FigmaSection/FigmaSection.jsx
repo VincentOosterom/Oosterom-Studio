@@ -22,7 +22,6 @@ function FigmaSection() {
                     Bij Oosterom Studio starten we elk project met een Figma ontwerp. Zo kunnen we een helder en interactief
                     prototype maken voordat er ook maar één regel code wordt geschreven. Dit zorgt ervoor dat je precies ziet hoe
                     jouw website eruit komt te zien, en we kunnen in een vroeg stadium wijzigingen doorvoeren.
-                    <br /><br />
                     Door te werken met Figma besparen we tijd, voorkomen we misverstanden en zorgen we voor een pixel-perfect
                     ontwerp dat naadloos wordt omgezet in een professionele website.
                 </motion.p>

@@ -7,7 +7,6 @@ import OfferteAanvragen from "./pages/Offerte Aanvragen/OfferteAanvragen.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import Portfolio from "./pages/Portfolio/Portfolio.jsx";
 import AboutUs from "./pages/Over Ons/OverOns.jsx";
-import FigmaPage from "./pages/Figma/FigmaPage.jsx";
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
                 <Route path="/offerte-aanvragen" element={<OfferteAanvragen />}/>
                 <Route path="/diensten" element={<Diensten />}/>
                 <Route path="*" element={<NotFound/>}/>
-                <Route path="/diensten/figma" element={<FigmaPage />}/>
+
             </Routes>
         </>
     )

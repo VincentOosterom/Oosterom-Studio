@@ -86,7 +86,6 @@ function Diensten() {
                                 <div className="dienst-icon">{service.icon}</div>
                                 <h2 className="dienst-title">{service.title}</h2>
                                 <p className="dienst-description">{service.description}</p>
-                                <Link to={service.link}>Bekijk meer</Link>
                             </div>
                         </motion.div>
                     ))}
