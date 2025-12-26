@@ -1,5 +1,5 @@
 .overons-hero {
-    background-color: #0A192F;
+    background-color: var(--color-bg);
     color: #FFFFFF;
     text-align: center;
     padding: 6rem 2rem 4rem;

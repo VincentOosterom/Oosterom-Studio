@@ -4,11 +4,12 @@
     align-items: center;
     padding: 0 2rem;
     height: 80px;
-    margin: 20px;
+    top: 1rem;
+    margin: 0 20px;
     border-radius: 20px;
-    backdrop-filter: var(--backdrop-blur);
-    border: 2px solid var(--color-nav-border);
+    border: 1px solid var(--color-nav-border);
     position: relative;
+    z-index: 3;
 }
 
 .navbar-logo .logo {

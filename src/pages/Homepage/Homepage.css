@@ -6,14 +6,14 @@
     padding: 6rem 2rem;
     text-align: center;
     background-color: var(--color-text);
-    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
 }
 
 .values-section h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     margin-top: 2rem;
-    color: #0A192F;
+    color: var(--color-bg);
 }
 
 .values-grid {
@@ -68,7 +68,7 @@
 /* Section 2: SEO */
 .seo-section {
     padding: 6rem 2rem;
-    background-color: #0A192F;
+    background-color: var(--color-bg);
     color: white;
     text-align: center;
 }
@@ -272,8 +272,8 @@
 @media (max-width: 480px) {
     /* Clip-path aanpassingen */
     .values-section {
-        clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
-        padding: 5rem 1rem;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 97%);
+        padding: 3rem 1rem;
     }
 
     .approach-section{

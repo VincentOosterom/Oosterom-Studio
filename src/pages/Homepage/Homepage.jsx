@@ -28,8 +28,7 @@ function Homepage() {
                 title="Wij bouwen digitale ervaringen die indruk maken."
                 subtitle="Van strak design in Figma tot razendsnelle websites — bij Oosterom Studio komt
                             creativiteit en code samen."
-                buttonText="Ontvang een gratis offerte"
-                image={headerImage}/>
+                buttonText="Ontvang een gratis offerte"/>
 
             {/* Section 1: Onze Kernwaarden */}
             <section className="values-section">

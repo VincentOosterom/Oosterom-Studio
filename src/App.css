@@ -14,7 +14,7 @@
     --font-body: 'Inter', sans-serif;
 
     /* Colors */
-    --color-bg: #0A192F; /* Achtergrond hoofdkleur */
+    --color-bg: #000000; /* Achtergrond hoofdkleur */
     --color-accent: #64FFDA; /* Accent (buttons, links,hover) */
     --color-text: #F9FAFB; /* Primaire tekstkleur */
     --color-muted: #94A3B8; /* Secundaire tekst */

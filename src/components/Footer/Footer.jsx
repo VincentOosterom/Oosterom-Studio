@@ -8,7 +8,7 @@ function Footer() {
         <>
             {/* Footer */}
             <footer className="footer">
-                <div className="footer-container">
+                <div2 className="footer-container">
                     <p>© {new Date().getFullYear()} Oosterom Studio. Alle rechten voorbehouden.</p>
                     <div className="footer-links">
                         <NavLink to="/diensten" className={({ isActive }) => isActive ? "active" : ""}>
@@ -21,7 +21,8 @@ function Footer() {
                             Contact
                         </NavLink>
                     </div>
-                </div>
+
+                </div2>
             </footer>
         </>
     )

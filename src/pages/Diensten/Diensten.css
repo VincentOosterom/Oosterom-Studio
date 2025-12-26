@@ -2,7 +2,7 @@
 .diensten-hero {
     text-align: center;
     padding: 6rem 2rem 4rem;
-    background-color: #0A192F;
+    background-color: var(--color-bg);
     color: #FFFFFF;
 }
 
