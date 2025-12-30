@@ -5,7 +5,7 @@ import Footer from "../../components/Footer/Footer.jsx";
 import {Helmet} from "react-helmet-async";
 import FigmaSection from "../../components/FigmaSection/FigmaSection.jsx";
 import {Link} from "react-router-dom";
-import headerImage from "../../assets/header-image.jpg";
+
 
 function Homepage() {
     return (

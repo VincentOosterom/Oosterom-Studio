@@ -7,6 +7,7 @@ import OfferteAanvragen from "./pages/Offerte Aanvragen/OfferteAanvragen.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import Portfolio from "./pages/Portfolio/Portfolio.jsx";
 import AboutUs from "./pages/Over Ons/OverOns.jsx";
+import ProjectPage from "./pages/ProjectPage/ProjectPage.jsx";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />}/>
                 <Route path="/over-ons" element={<AboutUs />}/>
                 <Route path="/offerte-aanvragen" element={<OfferteAanvragen />}/>
+                <Route path="/portfolio/:slug" element={<ProjectPage />} />
                 <Route path="*" element={<NotFound/>}/>
 
             </Routes>

@@ -17,6 +17,10 @@
     gap: 2rem;
 }
 
+.portfolio-card-link {
+    text-decoration: none;
+}
+
 .portfolio-card {
     background-color: white;
     margin: 0 auto;
@@ -29,8 +33,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .portfolio-card:hover {
     transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 10px 25px rgb(136, 232, 244);
 }
 
