@@ -5,13 +5,12 @@
 .contact-section {
     min-height: 100vh;
     padding: 7rem 2rem;
-    background:
-            radial-gradient(
-                    circle at 80% 20%,
-                    rgba(100, 255, 218, 0.12),
-                    transparent 45%
-            ),
-            linear-gradient(180deg, #000000 0%, #020617 100%);
+    background: radial-gradient(
+            circle at 80% 20%,
+            rgba(100, 255, 218, 0.12),
+            transparent 45%
+    ),
+    linear-gradient(180deg, #000000 0%, #020617 100%);
     color: var(--color-text);
 }
 
@@ -102,18 +101,16 @@
 
 .contact-form {
     position: relative;
-    background:
-            linear-gradient(
-                    180deg,
-                    rgba(255, 255, 255, 0.06),
-                    rgba(255, 255, 255, 0.02)
-            );
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.02)
+    );
     backdrop-filter: blur(14px);
     border-radius: calc(var(--radius) + 4px);
     padding: 3.5rem;
-    box-shadow:
-            0 40px 80px rgba(0, 0, 0, 0.65),
-            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -181,9 +178,9 @@
 
 .contact-form button:hover {
     transform: translateY(-3px);
-    box-shadow:
-            0 14px 30px rgba(100, 255, 218, 0.4);
+    box-shadow: 0 14px 30px rgba(100, 255, 218, 0.4);
 }
+
 /* =========================
    THANK YOU
 ========================= */
@@ -195,6 +192,7 @@
     text-align: center;
     box-shadow: var(--shadow);
 }
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -202,14 +200,14 @@
 @media (max-width: 900px) {
     .contact-layout {
         grid-template-columns: 1fr;
+        margin: 5rem 2rem;
     }
 
     .contact-form {
         padding: 2rem 1.5rem;
         border-radius: 18px;
-        box-shadow:
-                0 20px 40px rgba(0, 0, 0, 0.55),
-                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .contact-form input,
@@ -237,6 +235,7 @@
         font-size: 0.9rem;
         color: var(--color-muted);
         margin-bottom: 1.5rem;
+        text-align: left;
     }
 
 }

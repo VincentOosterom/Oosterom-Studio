@@ -104,11 +104,7 @@ function Diensten() {
                                 viewport={{ once: true, amount: 0.3 }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <div className="dienst-visual">
-                                    <span className="dienst-icon">{service.icon}</span>
-                                </div>
-
-                                <div className="dienst-content">
+                                <article className="dienst-content">
                                     <h2>{service.title}</h2>
                                     <p>{service.description}</p>
 
@@ -117,7 +113,7 @@ function Diensten() {
                                             <li key={i}>{item}</li>
                                         ))}
                                     </ul>
-                                </div>
+                                </article>
                             </motion.div>
                         );
                     })}

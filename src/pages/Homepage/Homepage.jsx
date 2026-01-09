@@ -39,16 +39,16 @@ function Homepage() {
                     transition={{duration: 0.8}}
                 >
                     <h2>Onze Kernwaarden</h2>
-                    <div className="values-grid">
-                        <div className="value-card">
+                    <section className="values-grid">
+                        <article className="value-card">
                             <div className="value-icon">🎨</div>
                             <h3>Creativiteit</h3>
                             <p>
                                 We ontwerpen unieke, opvallende en memorabele visuals die jouw merk echt laten opvallen.
                                 Elk ontwerp wordt afgestemd op jouw doelgroep en versterkt de identiteit van je bedrijf.
                             </p>
-                        </div>
-                        <div className="value-card">
+                        </article>
+                        <article className="value-card">
                             <div className="value-icon">🤝</div>
                             <h3>Betrouwbaarheid</h3>
                             <p>
@@ -56,8 +56,8 @@ function Homepage() {
                                 vanzelfsprekend.
                                 Jij kunt altijd rekenen op een betrouwbare partner voor elk project.
                             </p>
-                        </div>
-                        <div className="value-card">
+                        </article>
+                        <article className="value-card">
                             <div className="value-icon">🚀</div>
                             <h3>Innovatie</h3>
                             <p>
@@ -65,8 +65,8 @@ function Homepage() {
                                 applicatie
                                 efficiënt, modern en toekomstbestendig te maken.
                             </p>
-                        </div>
-                    </div>
+                        </article>
+                    </section>
                 </motion.div>
             </section>
 

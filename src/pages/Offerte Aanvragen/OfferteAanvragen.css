@@ -5,13 +5,12 @@
 .offerte-section {
     min-height: 100vh;
     padding: 7rem 2rem;
-    background:
-            radial-gradient(
-                    circle at 80% 20%,
-                    rgba(100, 255, 218, 0.12),
-                    transparent 45%
-            ),
-            linear-gradient(180deg, #000000 0%, #020617 100%);
+    background: radial-gradient(
+            circle at 80% 20%,
+            rgba(100, 255, 218, 0.12),
+            transparent 45%
+    ),
+    linear-gradient(180deg, #000000 0%, #020617 100%);
     color: var(--color-text);
 }
 
@@ -85,18 +84,16 @@
 
 .offerte-form {
     position: relative;
-    background:
-            linear-gradient(
-                    180deg,
-                    rgba(255, 255, 255, 0.06),
-                    rgba(255, 255, 255, 0.02)
-            );
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.02)
+    );
     backdrop-filter: blur(14px);
     border-radius: calc(var(--radius) + 4px);
     padding: 3.5rem;
-    box-shadow:
-            0 40px 80px rgba(0, 0, 0, 0.65),
-            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -122,7 +119,7 @@
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 14px;
     padding: 1rem 1.1rem;
-    font-family: var(--font-body);
+    font-family: var(--font-body), serif;
     font-size: 0.95rem;
     color: var(--color-text);
     transition: var(--transition-fast);
@@ -185,15 +182,19 @@
 @media (max-width: 900px) {
     .offerte-layout {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        margin: 5rem 2rem
+
     }
 
     .offerte-info h2 {
         font-size: 2.2rem;
     }
-}
 
-@media (max-width: 600px) {
+    .offerte-info h2::after {
+        display: none;
+    }
+
+
     .offerte-form {
         padding: 2rem 1.5rem;
     }
@@ -205,3 +206,4 @@
         padding: 0.85rem;
     }
 }
+
