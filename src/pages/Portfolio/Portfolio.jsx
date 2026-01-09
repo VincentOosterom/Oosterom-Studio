@@ -83,7 +83,11 @@ function Portfolio() {
                                 >
                                     <div className="portfolio-image">
                                         <img src={project.image} alt={project.title} />
+                                        <div className="portfolio-image-overlay">
+                                            <span>Bekijk project →</span>
+                                        </div>
                                     </div>
+
                                     <div className="portfolio-content">
                                         <h3>{project.title}</h3>
                                         <p>{project.description}</p>

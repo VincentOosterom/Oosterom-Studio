@@ -7,7 +7,6 @@
     top: 1rem;
     margin: 0 20px;
     border-radius: 20px;
-    border: 1px solid var(--color-nav-border);
     position: relative;
     z-index: 3;
 }

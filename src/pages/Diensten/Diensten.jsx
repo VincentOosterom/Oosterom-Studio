@@ -9,34 +9,54 @@ import {Link} from "react-router-dom";
 const services = [
     {
         title: "Webdesign (Figma)",
-        description: "Pixel-perfect UI/UX ontwerpen in Figma. Van concept tot interactief prototype. Wij creëren designs die zowel visueel aantrekkelijk als functioneel zijn, zodat je gebruikerservaring optimaal is.",
+        description: "Pixel-perfect UI/UX ontwerpen in Figma, volledig afgestemd op jouw doelgroep en doelen.",
+        bullets: [
+            "UX research & wireframes",
+            "High-end UI design",
+            "Interactieve prototypes",
+            "Design klaar voor development"
+        ],
         icon: "🎨",
-        bgColor: "#E0F7FA",
         link: "/diensten/figma"
     },
     {
         title: "Webdevelopment",
-        description: "Van Figma naar React: snelle, responsive en SEO-geoptimaliseerde websites. Onze code is schoon, modulair en onderhoudsvriendelijk, zodat jouw website toekomstbestendig is.",
+        description: "Snelle, schaalbare en SEO-vriendelijke websites gebouwd met moderne technologie.",
+        bullets: [
+            "React / moderne frontend",
+            "Responsive & performance-first",
+            "SEO & toegankelijkheid",
+            "Onderhoudsvriendelijke code"
+        ],
         icon: "💻",
-        bgColor: "#FFF3E0",
         link: "/diensten/webdevelopment"
     },
     {
         title: "Branding & Strategie",
-        description: "Sterke merkidentiteit en visuele strategie om jouw bedrijf te laten groeien. We vertalen jouw visie naar een consistente branding die vertrouwen en herkenning opbouwt.",
+        description: "Een sterke merkidentiteit die vertrouwen uitstraalt en herkenbaar blijft.",
+        bullets: [
+            "Merkstrategie & positionering",
+            "Logo & visuele identiteit",
+            "Consistente merkuitstraling",
+            "Langetermijnvisie"
+        ],
         icon: "📈",
-        bgColor: "#F3E5F5",
-        link: "/diensten/branding&strategie",
+        link: "/diensten/branding&strategie"
     },
     {
         title: "Social Media Beheer",
-        description: "Consistente en doordachte aanwezigheid op social media om jouw merk zichtbaar te maken. We creëren, plannen en beheren content die jouw doelgroep aanspreekt en groei stimuleert.",
+        description: "Doordachte content en consistente aanwezigheid op social media.",
+        bullets: [
+            "Contentplanning",
+            "Creatie & publicatie",
+            "Merkconsistentie",
+            "Groei & zichtbaarheid"
+        ],
         icon: "💬",
-        bgColor: "#E3F2FD",
         link: "/diensten/social-media-beheer"
-    },
-
+    }
 ];
+
 
 function Diensten() {
 
@@ -72,23 +92,35 @@ function Diensten() {
             {/* Services overzicht */}
             <section className="diensten-overview">
                 <div className="diensten-container">
-                    {services.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            className="dienst-section"
-                            style={{backgroundColor: service.bgColor}}
-                            initial={{opacity: 0, y: 40}}
-                            animate={{opacity: 1, y: 0}}
-                            viewport={{once: true, amount: 0.2}}
-                            transition={{duration: 0.4, delay: index * 0.3}}
-                        >
-                            <div className="dienst-content">
-                                <div className="dienst-icon">{service.icon}</div>
-                                <h2 className="dienst-title">{service.title}</h2>
-                                <p className="dienst-description">{service.description}</p>
-                            </div>
-                        </motion.div>
-                    ))}
+                    {services.map((service, index) => {
+                        const isReversed = index % 2 !== 0;
+
+                        return (
+                            <motion.div
+                                key={index}
+                                className={`dienst-row ${isReversed ? "reverse" : ""}`}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.6 }}
+                            >
+                                <div className="dienst-visual">
+                                    <span className="dienst-icon">{service.icon}</span>
+                                </div>
+
+                                <div className="dienst-content">
+                                    <h2>{service.title}</h2>
+                                    <p>{service.description}</p>
+
+                                    <ul>
+                                        {service.bullets.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </section>
             <Footer/>

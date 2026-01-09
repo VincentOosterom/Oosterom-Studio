@@ -1,144 +1,134 @@
-/* Algemene pagina styling */
+/* =========================
+   HERO
+========================= */
+
 .diensten-hero {
-    text-align: center;
     padding: 6rem 2rem 4rem;
-    background-color: var(--color-bg);
-    color: #FFFFFF;
+    text-align: center;
 }
 
 .diensten-hero h1 {
+    font-family: var(--font-title), serif;
     font-size: 3rem;
-    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .diensten-hero p {
-    font-size: 1.2rem;
-    color: var(--color-text, #64FFDA);
+    color: var(--color-muted);
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Container voor de diensten secties */
+/* =========================
+   OVERVIEW
+========================= */
+
+.diensten-overview {
+    padding: 6rem 2rem;
+}
+
 .diensten-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 6rem;
+
+}
+
+/* =========================
+   ROW
+========================= */
+
+.dienst-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    padding: 3rem;
-}
-
-/* Per dienst sectie */
-.dienst-section {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    border-radius: 12px;
-    padding: 3rem;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 4rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 3rem;
 }
 
-.dienst-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+.dienst-row.reverse {
+    direction: rtl;
 }
 
-.dienst-content {
-    max-width: 700px;
-    margin-left: 2rem;
+.dienst-row.reverse > * {
+    direction: ltr;
 }
 
 
-/* Diensten icon & tekst */
+
+/* =========================
+   VISUAL
+========================= */
+
+.dienst-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .dienst-icon {
     font-size: 4rem;
-    margin-bottom: 1rem;
+    background: rgba(100, 255, 218, 0.1);
+    padding: 2.5rem;
+    border-radius: 50%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-.dienst-title {
+/* =========================
+   CONTENT
+========================= */
+
+.dienst-content h2 {
+    font-family: var(--font-title), serif;
     font-size: 2rem;
-    font-weight: 700;
     margin-bottom: 1rem;
-    color: #0A192F;
 }
 
-.dienst-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333333;
+.dienst-content p {
+    color: var(--color-muted);
+    line-height: 1.7;
     margin-bottom: 1.5rem;
+    max-width: 480px;
 }
 
-.dienst-content a {
-    text-decoration: none;
-    background-color: var(--color-bg);
-    padding: 1rem 1rem;
-    border-radius: 10px;
+.dienst-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.dienst-content li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
     color: var(--color-text);
-    font-family: var(--font-title), sans-serif;
-
+    font-size: 0.95rem;
 }
 
-/* Responsive styling */
-@media (max-width: 1024px) {
-    .dienst-section {
-        padding: 2.5rem;
-    }
-
-    .dienst-title {
-        font-size: 1.8rem;
-    }
-
-    .dienst-description {
-        font-size: 0.95rem;
-    }
+.dienst-content li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
 }
 
-@media (max-width: 768px) {
-    .dienst-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem;
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .dienst-row,
+    .dienst-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
-    .dienst-content {
-        margin-left: 0;
-    }
-
-    .dienst-title {
-        font-size: 1.6rem;
-    }
-
-    .dienst-description {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .diensten-hero h1 {
-        font-size: 2rem;
-    }
-
-    .diensten-hero p {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    .dienst-section {
-        padding: 1.5rem;
-    }
-
-    .dienst-title {
-        font-size: 1.4rem;
-    }
-
-    .dienst-description {
-        font-size: 0.85rem;
-    }
-
-    .dienst-icon {
-        font-size: 3rem;
+    .dienst-visual {
+        justify-content: flex-start;
     }
 }

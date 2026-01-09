@@ -8,9 +8,8 @@ function Footer() {
         <>
             {/* Footer */}
             <footer className="footer">
-                <div2 className="footer-container">
-                    <p>© {new Date().getFullYear()} Oosterom Studio. Alle rechten voorbehouden.</p>
-                    <div className="footer-links">
+                <section    className="footer-container">
+                    <article className="footer-links">
                         <NavLink to="/diensten" className={({ isActive }) => isActive ? "active" : ""}>
                             Diensten
                         </NavLink>
@@ -20,9 +19,9 @@ function Footer() {
                         <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>
                             Contact
                         </NavLink>
-                    </div>
-
-                </div2>
+                    </article>
+                    <p className="footer-copyright">© {new Date().getFullYear()} Oosterom Studio. Alle rechten voorbehouden.</p>
+                </section>
             </footer>
         </>
     )

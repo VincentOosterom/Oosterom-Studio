@@ -42,7 +42,8 @@ function Contact() {
                     name="description"
                     content="Neem contact op met Oosterom Studio voor vragen, samenwerkingen of projecten. Snel antwoord gegarandeerd."
                 />
-                <meta name="keywords" content="contact, vragen, samenwerking, website, SEO, Oosterom Studio, webdevelopment"/>
+                <meta name="keywords"
+                      content="contact, vragen, samenwerking, website, SEO, Oosterom Studio, webdevelopment"/>
                 <meta property="og:title" content="Oosterom Studio | Contact"/>
                 <meta property="og:description" content="Bereik Vincent Oosterom voor jouw webproject of vraag."/>
                 <meta property="og:type" content="website"/>
@@ -52,105 +53,81 @@ function Contact() {
 
             <Navigate/>
 
-            <section id="contact" className="contact-section">
-                <div className="contact-container">
-                    <motion.h2
-                        className="contact-title"
-                        initial={{opacity: 0, y: 30}}
+            <section className="contact-layout">
+                <article className="contact-info">
+                    <h2>Neem contact op</h2>
+                    <p>
+                        Heb je een idee, project of vraag?
+                        Vul het formulier in en we nemen snel contact met je op.
+                    </p>
+
+                    <div className="contact-details">
+                        <p><strong>E-mail</strong><br/>info@oosteromstudio.nl</p>
+                        <p><strong>Reactietijd</strong><br/>Binnen 24 uur</p>
+                    </div>
+                    <div className="company-details">
+                        <h3>Oosterom Studio is onderdeel van Oosterom Creative</h3>
+                        <div className="company-details-extra">
+                            <p><strong>KVK Nummer:</strong><br/>85118028</p>
+                            <p><strong>BTW Nummer</strong><br/>NL004057297B50</p>
+                        </div>
+                    </div>
+                </article>
+
+                {!isSubmitted ? (
+                    <motion.form
+                        className="contact-form"
+                        onSubmit={handleSubmit}
+                        initial={{opacity: 0, y: 40}}
                         whileInView={{opacity: 1, y: 0}}
                         transition={{duration: 0.8}}
+                        viewport={{once: true}}
                     >
-                        Contact
-                    </motion.h2>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Volledige naam *"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
 
-                    <motion.p
-                        className="contact-subtitle"
-                        initial={{opacity: 0, y: 20}}
-                        whileInView={{opacity: 1, y: 0}}
-                        transition={{duration: 0.8, delay: 0.2}}
-                    >
-                        Heb je een vraag of wil je een project bespreken? Vul het formulier in en we nemen snel
-                        contact
-                        op.
-                    </motion.p>
-                    {!isSubmitted ? (
-                        <motion.form
-                            className="contact-form"
-                            onSubmit={handleSubmit}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{once: true}}
-                        >
-                            <motion.input
-                                type="text"
-                                name="name"
-                                placeholder="Volledige naam *"
-                                value={formData.name}
-                                onChange={handleChange}
-                                className="contact-input"
-                                variants={{
-                                    hidden: {opacity: 0, y: 30},
-                                    visible: {opacity: 1, y: 0, transition: {delay: 0.1}},
-                                }}
-                                required
-                            />
-                            <motion.input
-                                type="text"
-                                name="company"
-                                placeholder="Bedrijfsnaam"
-                                value={formData.company}
-                                onChange={handleChange}
-                                className="contact-input"
-                                variants={{
-                                    hidden: {opacity: 0, y: 30},
-                                    visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
-                                }}
-                                required
-                            />
-                            <motion.input
-                                type="email"
-                                name="email"
-                                placeholder="E-mailadres *"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className="contact-input"
-                                variants={{
-                                    hidden: {opacity: 0, y: 30},
-                                    visible: {opacity: 1, y: 0, transition: {delay: 0.2}},
-                                }}
-                                required
-                            />
-                            <motion.textarea
-                                name="message"
-                                placeholder="Uw bericht *"
-                                value={formData.message}
-                                onChange={handleChange}
-                                rows="5"
-                                className="contact-textarea"
-                                variants={{
-                                    hidden: {opacity: 0, y: 30},
-                                    visible: {opacity: 1, y: 0, transition: {delay: 0.3}},
-                                }}
-                                required
-                            />
-                            <motion.button
-                                type="submit"
-                                className="contact-btn"
-                                variants={{
-                                    hidden: {opacity: 0, y: 20},
-                                    visible: {opacity: 1, y: 0, transition: {delay: 0.4}},
-                                }}
-                            >
-                                Verstuur
-                            </motion.button>
-                        </motion.form>) : (
-                        <div className="thank-you-message">
-                            <h2>Bedankt voor uw bericht</h2>
-                            <p>We nemen zo snel mogelijk contact met u op.</p>
-                        </div>
-                    )}
-                </div>
+                        <input
+                            type="text"
+                            name="company"
+                            placeholder="Bedrijfsnaam"
+                            value={formData.company}
+                            onChange={handleChange}
+                        />
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="E-mailadres *"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+
+                        <textarea
+                            name="message"
+                            placeholder="Waar kunnen we je bij helpen? *"
+                            value={formData.message}
+                            onChange={handleChange}
+                            rows="5"
+                            required
+                        />
+
+                        <button type="submit">Verstuur bericht</button>
+                    </motion.form>
+                ) : (
+                    <div className="thank-you-message">
+                        <h2>Bedankt!</h2>
+                        <p>We nemen zo snel mogelijk contact met je op.</p>
+                    </div>
+                )}
             </section>
+
             <Footer/>
         </>
     );

@@ -21,7 +21,7 @@
     --color-dark: #1F2937;
 
     --color-nav-bg: rgb(255, 255, 255); /* Semi-transparant donkerblauw */
-    --color-nav-border: rgba(255, 255, 255, 0.08);
+    --color-nav-border: rgb(136, 232, 244);
     --backdrop-blur: blur(10px);
 
     /* Effects */
@@ -74,15 +74,6 @@ li {
     font-family: var(--font-body), sans-serif;
     color: var(--color-text);
 }
-
-li:hover {
-    cursor: pointer;
-    background-color: var(--color-accent);
-    border-radius: 10px;
-    padding: 5px;
-    transition: all var(--transition-slow);
-}
-
 
 a {
     transition: color var(--transition-fast);

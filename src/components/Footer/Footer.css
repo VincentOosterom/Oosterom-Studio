@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-bottom: 10px;
 }
 
 .footer-links a {
@@ -27,5 +28,9 @@
 .footer-links .active {
     font-weight: 600;
     color: var(--color-accent);
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
 }
 
