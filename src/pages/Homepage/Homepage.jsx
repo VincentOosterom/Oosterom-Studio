@@ -11,7 +11,6 @@ function Homepage() {
     return (
         <>
             <Helmet>
-
                 <title>Oosterom Studio | Webdesign & Development</title>
                 <meta
                     name="description"
@@ -22,13 +21,50 @@ function Homepage() {
                 <meta property="og:type" content="website"/>
             </Helmet>
 
-
-            {/* Header Component */}
             <Header
                 title="Wij bouwen digitale ervaringen die indruk maken."
-                subtitle="Van strak design in Figma tot razendsnelle websites — bij Oosterom Studio komt
-                            creativiteit en code samen."
-                buttonText="Ontvang een gratis offerte"/>
+                subtitle="Van doordacht design tot razendsnelle websites — bij Oosterom Studio komen creativiteit en techniek samen om digitale oplossingen te bouwen die niet alleen mooi zijn, maar ook daadwerkelijk resultaat opleveren."
+                buttonText="Ontvang een gratis offerte"
+            />
+
+            <section className="moving-bar">
+                <div className="moving-track">
+                    <div className="track">
+                        <span>Webdesign</span>
+                        <span className="dot">•</span>
+                        <span>Webdevelopment</span>
+                        <span className="dot">•</span>
+                        <span>SEO</span>
+                        <span className="dot">•</span>
+                        <span>SEA</span>
+                        <span className="dot">•</span>
+                        <span>Webshops</span>
+                        <span className="dot">•</span>
+                        <span>Branding</span>
+                        <span className="dot">•</span>
+                        <span>Digitale strategie</span>
+                    </div>
+
+
+                    <div className="track">
+                        <span>•</span>
+                        <span >Webdesign</span>
+                        <span className="dot">•</span>
+                        <span>Webdevelopment</span>
+                        <span className="dot">•</span>
+                        <span>SEO</span>
+                        <span className="dot">•</span>
+                        <span>SEA</span>
+                        <span className="dot">•</span>
+                        <span>Webshops</span>
+                        <span className="dot">•</span>
+                        <span>Branding</span>
+                        <span className="dot">•</span>
+                        <span>Digitale strategie</span>
+                    </div>
+
+                </div>
+            </section>
 
             {/* Section 1: Onze Kernwaarden */}
             <section className="values-section">

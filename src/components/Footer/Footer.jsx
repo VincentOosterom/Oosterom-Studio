@@ -8,6 +8,12 @@ function Footer() {
         <>
             {/* Footer */}
             <footer className="footer">
+                <div>
+                    <h2 className="availability">
+                        <span className="status-dot" aria-hidden="true"></span>
+                        Beschikbaar voor jouw project
+                    </h2>
+                </div>
                 <section    className="footer-container">
                     <article className="footer-links">
                         <NavLink to="/diensten" className={({ isActive }) => isActive ? "active" : ""}>

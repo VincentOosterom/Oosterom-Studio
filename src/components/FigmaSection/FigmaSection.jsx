@@ -11,7 +11,7 @@ function FigmaSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Waarom we altijd beginnen met een Figma ontwerp
+                    Waarom we altijd beginnen met een ontwerp
                 </motion.h2>
                 <motion.p
                     className="figma-description"
@@ -19,11 +19,7 @@ function FigmaSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                    Bij Oosterom Studio starten we elk project met een Figma ontwerp. Zo kunnen we een helder en interactief
-                    prototype maken voordat er ook maar één regel code wordt geschreven. Dit zorgt ervoor dat je precies ziet hoe
-                    jouw website eruit komt te zien, en we kunnen in een vroeg stadium wijzigingen doorvoeren.
-                    Door te werken met Figma besparen we tijd, voorkomen we misverstanden en zorgen we voor een pixel-perfect
-                    ontwerp dat naadloos wordt omgezet in een professionele website.
+                    Bij Oosterom Studio starten we elk project met een doordachte ontwerpfase. Door eerst een helder en interactief prototype uit te werken, krijg je vooraf een duidelijk beeld van het eindresultaat. Dit geeft ruimte om in een vroeg stadium te finetunen, zodat het ontwerp en de functionaliteit perfect aansluiten op jouw wensen. Zo bouwen we efficiënt, voorkomen we misverstanden en leggen we een sterke basis voor een hoogwaardige website.
                 </motion.p>
             </div>
         </section>

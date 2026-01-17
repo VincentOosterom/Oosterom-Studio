@@ -1,36 +1,77 @@
+/* =========================
+   NAVBAR BASE
+========================= */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
     height: 80px;
-    top: 1rem;
     margin: 0 20px;
     border-radius: 20px;
     position: relative;
     z-index: 3;
 }
 
+/* =========================
+   LOGO
+========================= */
+
 .navbar-logo .logo {
-    color: white;
+    color: var(--color-text);
     font-weight: 700;
     font-size: 1.5rem;
 }
+
+/* =========================
+   DESKTOP LINKS
+========================= */
 
 .navbar-links {
     display: flex;
     align-items: center;
     gap: 2.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.navbar-links li a {
+/* NavLink basis */
+.nav-link {
+    display: inline-flex;
     text-decoration: none;
-    color: white;
-    font-weight: 500;
     font-family: var(--font-title), sans-serif;
+    font-weight: 500;
+    color: var(--color-text);
 }
 
-/* Hamburger icon */
+/* =========================
+   PER-LETTER ANIMATION
+========================= */
+
+.nav-letter {
+    display: inline-block;
+    transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+}
+
+/* Hover effect */
+.nav-link:hover .nav-letter {
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* Active route */
+.nav-link.active .nav-letter {
+    color: var(--color-accent);
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -43,11 +84,12 @@
 .hamburger .bar {
     height: 3px;
     width: 100%;
-    background-color: white;
+    background-color: var(--color-text);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
+/* Hamburger open state */
 .hamburger .bar.open:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -60,7 +102,10 @@
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile menu */
+/* =========================
+   MOBILE MENU
+========================= */
+
 .mobile-menu {
     position: absolute;
     top: 100%;
@@ -76,15 +121,20 @@
     z-index: 50;
 }
 
-.mobile-menu li a {
-    color: black;
-    text-decoration: none;
+.mobile-menu li {
+    list-style: none;
+}
+
+.mobile-menu .nav-link {
     font-size: 1.2rem;
-    font-weight: 500;
+    color: var(--color-dark);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1023px) {
     .navbar-links {
         display: none;
     }
@@ -94,15 +144,5 @@
     }
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .navbar-links {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
 
 

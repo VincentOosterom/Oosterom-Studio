@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {NavLink, useNavigate} from 'react-router-dom';
 import {motion, AnimatePresence} from 'framer-motion';
 import './Navigate.css';
+import AnimatedNavText from "../AnimatedNavText.jsx";
 
 function Navigate() {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +23,31 @@ function Navigate() {
 
                 {/* Desktop links */}
                 <ul className="navbar-links">
-                    <li><NavLink to="/diensten">Diensten</NavLink></li>
-                    <li><NavLink to="/portfolio">Portfolio</NavLink></li>
-                    <li><NavLink to="/over-ons">Over ons</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
-                    <li><NavLink to="/offerte-aanvragen">Offerte Aanvragen</NavLink></li>
+                    <li>
+                        <NavLink to="/diensten" className="nav-link">
+                            <AnimatedNavText text="Diensten" />
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/portfolio" className="nav-link">
+                            <AnimatedNavText text="Portfolio" />
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/over-ons" className="nav-link">
+                            <AnimatedNavText text="Over ons" />
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/contact" className="nav-link">
+                            <AnimatedNavText text="Contact" />
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/offerte-aanvragen" className="nav-link">
+                            <AnimatedNavText text="Offerte Aanvragen" />
+                        </NavLink>
+                    </li>
                 </ul>
 
                 {/* Hamburger */}

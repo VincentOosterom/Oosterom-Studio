@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {motion} from 'framer-motion';
+import {color, motion} from 'framer-motion';
 import './Contact.css';
 import Navigate from "../../components/Navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
@@ -60,10 +60,9 @@ function Contact() {
                         Heb je een idee, project of vraag?
                         Vul het formulier in en we nemen snel contact met je op.
                     </p>
-
                     <div className="contact-details">
-                        <p><strong>E-mail</strong><br/>info@oosteromstudio.nl</p>
-                        <p><strong>Reactietijd</strong><br/>Binnen 24 uur</p>
+                        <p><strong>E-mail</strong>info@oosteromstudio.nl</p>
+                        <p><strong>Reactietijd</strong>Binnen 24 uur</p>
                     </div>
                     <div className="company-details">
                         <h3>Oosterom Studio is onderdeel van Oosterom Creative</h3>
@@ -83,6 +82,8 @@ function Contact() {
                         transition={{duration: 0.8}}
                         viewport={{once: true}}
                     >
+                        <h2>Contactformulier</h2>
+                        <p className="warning">Let op! Velden met * zijn verplicht</p>
                         <input
                             type="text"
                             name="name"

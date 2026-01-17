@@ -63,8 +63,8 @@ function OfferteAanvragen() {
                     </p>
 
                     <div className="offerte-details">
-                        <p><strong>Reactietijd</strong><br/>Binnen 24 uur</p>
-                        <p><strong>Vrijblijvend</strong><br/>Geen verplichtingen</p>
+                        <p><strong>Reactietijd</strong>Binnen 24 uur</p>
+                        <p><strong>Vrijblijvend</strong>Geen verplichtingen</p>
                     </div>
                 </article>
 
@@ -77,6 +77,8 @@ function OfferteAanvragen() {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
+                        <h2>Offerte aanvragen</h2>
+                        <p className="warning">Let op! Velden met * zijn verplicht</p>
                         <input
                             type="text"
                             name="name"

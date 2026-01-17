@@ -212,6 +212,49 @@
     color: var(--color-text);
 }
 
+.moving-bar {
+    overflow: hidden;
+    background: rgba(100, 255, 218, 0.08);
+    padding: 1rem 0;
+}
+
+.moving-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+.track {
+    display: flex;
+}
+
+.track .dot {
+    color: var(--color-accent);
+}
+
+.moving-bar-icon {
+    color: var(--color-accent);
+}
+
+.track span {
+    font-family: var(--font-title), serif;
+    font-size: 1rem;
+    color: white;
+    margin: 0 3rem;
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
+/* 🔁 ECHTE INFINITE LOOP */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 
 /* ==================== Responsive Styling ==================== */
 
@@ -276,7 +319,7 @@
         padding: 3rem 1rem;
     }
 
-    .approach-section{
+    .approach-section {
         clip-path: polygon(0 3%, 100% 0, 100% 98%, 0 100%);
         padding: 5rem 1rem;
     }
