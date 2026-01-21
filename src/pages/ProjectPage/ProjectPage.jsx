@@ -6,6 +6,9 @@ import projects from "/src/Projects.js";
 import Footer from "../../components/Footer/Footer.jsx";
 
 function ProjectPage() {
+    const {slug} = useParams();
+    const project = projects.find(p => p.slug === slug);
+
     const cardVariants = {
         hidden: {
             opacity: 0,
@@ -21,9 +24,6 @@ function ProjectPage() {
             }
         })
     };
-    const {slug} = useParams();
-
-    const project = projects.find(p => p.slug === slug);
 
     if (!project) {
         return (
@@ -59,7 +59,7 @@ function ProjectPage() {
                         </motion.p>
                     </article>
                     <article className="hero-right">
-                        <img src={project.image} alt=""/>
+                        <img src={project.image} alt="company logo"/>
                     </article>
                 </section>
             </header>
@@ -112,7 +112,11 @@ function ProjectPage() {
                 </section>
                 <section className="sfeer">
                     <h2>Bekijk ons werk hieronder</h2>
-                    <img src={project.sfeer} alt=""/>
+                    {project.sfeer ? (
+                        <img src={project.sfeer} alt="project_work" />
+                    ) : (
+                        <p>Nog geen werk toegevoegd</p>
+                    )}
                 </section>
             </main>
             <Footer/>

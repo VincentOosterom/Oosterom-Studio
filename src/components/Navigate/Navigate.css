@@ -107,27 +107,42 @@
 ========================= */
 
 .mobile-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
     background-color: var(--color-nav-bg);
     list-style: none;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
+
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    border-radius: 20px;
-    z-index: 50;
-}
+    gap: 2rem;
 
+    border-radius: 24px;
+    z-index: 100;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
 .mobile-menu li {
     list-style: none;
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    font-family: var(--font-title), sans-serif;
+    color: var(--color-bg);
 }
 
 .mobile-menu .nav-link {
     font-size: 1.2rem;
     color: var(--color-dark);
+}
+
+.mobile-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* =========================

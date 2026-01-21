@@ -1,8 +1,9 @@
 import logo_dave from "./assets/logo-dave.jpg"
 import logo_oliebollen from "./assets/logo-oliebollenalphen.png"
-import logo_casino from "./assets/jp-casinoverhuur.jpg"
+import logo_casino from "./assets/logo_jp_casino.svg"
 
 import sfeer from "./assets/sfeer_dave.png"
+import work_oliebollenalphen from "./assets/OliebollenAlphen_work.png"
 
 const projects = [
     {
@@ -75,7 +76,8 @@ const projects = [
         result: `Het resultaat is een professionele en stabiele webshop die klaar is voor hoge
     bezoekersaantallen en bestellingen tijdens de drukke eindejaarsperiode. Klanten kunnen eenvoudig
     bestellen, terwijl de ondernemer beschikt over een betrouwbare online verkoopomgeving die
-    bijdraagt aan een soepel en succesvol verkoopseizoen.`
+    bijdraagt aan een soepel en succesvol verkoopseizoen.`,
+        sfeer: work_oliebollenalphen
     }
 
 ];

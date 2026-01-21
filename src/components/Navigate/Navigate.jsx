@@ -62,17 +62,19 @@ function Navigate() {
                     {isOpen && (
                         <motion.ul
                             className="mobile-menu"
-                            initial={{opacity: 0, y: -20}}
-                            animate={{opacity: 1, y: 0}}
-                            exit={{opacity: 0, y: -20}}
-                            transition={{duration: 0.3}}
+                            initial={{ opacity: 0, y: "100%" }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: "100%" }}
+                            transition={{
+                                duration: 0.45,
+                                ease: [0.16, 1, 0.3, 1]
+                            }}
                         >
                             <li><NavLink to="/diensten" onClick={toggleMenu}>Diensten</NavLink></li>
                             <li><NavLink to="/portfolio" onClick={toggleMenu}>Portfolio</NavLink></li>
-                            <li><NavLink to="/over-ons">Over ons</NavLink></li>
+                            <li><NavLink to="/over-ons" onClick={toggleMenu}>Over ons</NavLink></li>
                             <li><NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink></li>
-                            <li><NavLink to="/offerte-aanvragen" onClick={toggleMenu}>Offerte Aanvragen</NavLink></li>
-
+                            <li><NavLink to="/offerte-aanvragen" onClick={toggleMenu}>Offerte aanvragen</NavLink></li>
                         </motion.ul>
                     )}
                 </AnimatePresence>

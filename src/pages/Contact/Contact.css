@@ -29,6 +29,7 @@
     gap: 4rem;
     align-items: center;
     margin: 5rem 10rem;
+    height: 80vh;
 }
 
 /* =========================
@@ -58,6 +59,16 @@
     color: var(--color-muted);
     line-height: 1.8;
     max-width: 460px;
+}
+
+.document-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-body), serif;
+}
+
+.document-link:hover {
+    text-decoration: underline;
 }
 
 .contact-details {
@@ -201,6 +212,7 @@
     .contact-layout {
         grid-template-columns: 1fr;
         margin: 5rem 2rem;
+        height: auto;
     }
 
     .contact-form {

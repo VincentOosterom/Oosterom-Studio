@@ -5,6 +5,21 @@ import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
 
 function OverOns() {
+    const AnimatedWord = ({ children }) => (
+        <motion.span
+            className="keyword"
+            initial={{ y: 12, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+                duration: 0.6,
+                ease: "easeOut"
+            }}
+            viewport={{ once: true }}
+        >
+            {children}
+        </motion.span>
+    );
+
     return (
         <>
             <Helmet>
@@ -26,55 +41,84 @@ function OverOns() {
                 <h1>Over Oosterom Studio</h1>
                 <p>Gedreven door passie voor design, technologie en veiligheid.</p>
             </section>
-
             <section className="overons-content">
+
                 <article className="overons-text">
-                    <h2>Wie ben ik?</h2>
+                    <h2>
+                        De <AnimatedWord>basis</AnimatedWord> van Oosterom Studio
+                    </h2>
+
                     <p>
-                        Mijn naam is <strong>Vincent Oosterom</strong>, 25 jaar en oprichter van{" "}
-                        <strong>Oosterom Studio</strong>. Sinds mei 2025 volg ik de opleiding{" "}
-                        Software Development.
+                        Mijn naam is <strong>Vincent Oosterom</strong>, oprichter van
+                        <strong> Oosterom Studio</strong>. Vanuit een sterke interesse in
+                        technologie en digitale kwaliteit ben ik gestart met het bouwen
+                        van professionele weboplossingen voor ondernemers.
                     </p>
                     <p>
-                        Ik ben altijd gefascineerd geweest door hoe websites écht werken — niet
-                        alleen wat je ziet, maar ook wat er achter de schermen gebeurt.
-                        Wat begon als interesse, groeide uit tot een bewuste keuze:{" "}
-                        <em>ik ga hier mijn werk van maken.</em>
+                        Wat begon als nieuwsgierigheid naar hoe websites écht functioneren,
+                        groeide uit tot een duidelijke visie: digitale producten moeten
+                        niet alleen visueel overtuigen, maar ook technisch robuust,
+                        veilig en toekomstbestendig zijn.
                     </p>
                 </article>
 
                 <article className="overons-text reverse">
-                    <h2>Wat doe ik nu?</h2>
+                    <h2>
+                        Ontwikkeling en <AnimatedWord>expertise</AnimatedWord>
+                    </h2>
+
                     <p>
-                        Momenteel volg ik de{" "}
-                        <strong>HBO-opleiding Full Stack Development</strong>. Hierbij combineer
-                        ik frontend en backend om complete, snelle en veilige webapplicaties te
-                        bouwen.
+                        Momenteel volg ik de <strong>HBO-opleiding Full Stack Development</strong>,
+                        waarin ik mij richt op het ontwerpen en realiseren van complete
+                        webapplicaties — met aandacht voor frontend, backend en datalaag.
                     </p>
                     <p>
-                        Daarnaast verdiep ik mij steeds meer in{" "}
-                        <strong>Artificial Intelligence</strong> en{" "}
-                        <strong>automatisering</strong>. Ik geloof dat slimme technologie een
-                        grote rol speelt in de toekomst van webontwikkeling.
+                        Parallel hieraan verdiep ik mij actief in <strong>cybersecurity</strong>,
+                        via praktijkgerichte leeromgevingen zoals TryHackMe, waar ik
+                        hands-on ervaring opdoe met kwetsbaarheden, aanvalstechnieken en
+                        verdedigingsprincipes binnen moderne IT-omgevingen.
                     </p>
+                    <p>
+                        Na afronding van deze opleiding ligt mijn focus op verdere specialisatie
+                        binnen <strong>cybersecurity</strong>. Door mijn technische basis in
+                        full stack development te combineren met security-kennis, kan ik
+                        software niet alleen bouwen, maar ook onderbouwd beveiligen en
+                        strategisch adviseren over architectuur en risico’s.
+                    </p>
+
                 </article>
 
                 <article className="overons-text">
-                    <h2>Waar wil ik naartoe?</h2>
+                    <h2>
+                        Visie en <AnimatedWord>richting</AnimatedWord>
+                    </h2>
                     <p>
-                        In de toekomst wil ik mij verder specialiseren in{" "}
-                        <strong>Cybersecurity</strong>, zodat websites niet alleen mooi en snel,
-                        maar ook veilig zijn.
+                        Oosterom Studio bevindt zich in een fase van ontwikkeling en groei.
+                        Wat vaststaat, is de richting: wij geloven dat software, beveiliging
+                        en strategisch inzicht onlosmakelijk met elkaar verbonden zijn.
                     </p>
                     <p>
-                        Met <strong>Oosterom Studio</strong> help ik ondernemers aan een sterke
-                        online aanwezigheid — professioneel, betrouwbaar en toekomstgericht.
+                        In de toekomst willen wij organisaties ondersteunen bij het bouwen
+                        van doordachte softwareoplossingen, waarbij veiligheid geen
+                        bijzaak is maar een fundamenteel onderdeel van het ontwerp.
+                    </p>
+                    <p>
+                        Hoe deze dienstverlening zich exact zal ontwikkelen, staat nog
+                        niet volledig vast. Wel is onze overtuiging helder: bedrijven
+                        verdienen technologie die onderbouwd, uitlegbaar en
+                        toekomstbestendig is.
+                    </p>
+                    <p>
+                        Vanuit die visie willen wij niet alleen bouwen, maar ook
+                        adviseren — over <strong>hoe</strong> systemen worden opgezet en
+                        <strong> waarom</strong> bepaalde keuzes worden gemaakt.
                     </p>
                 </article>
 
             </section>
 
-            <Footer/>
+            <Footer />
+
         </>
     );
 }

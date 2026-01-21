@@ -4,10 +4,11 @@ import './Contact.css';
 import Navigate from "../../components/Navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
-
+import algemene from "../../assets/Algemene Voorwaarden - Oosterom Studio.pdf";
 
 function Contact() {
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState(null);
     const [formData, setFormData] = useState({
         name: "",
         company: "",
@@ -28,7 +29,7 @@ function Contact() {
         if (response.ok) {
             setFormData({name: "", company: "", email: "", message: ""});
         } else {
-            alert("Er is iets misgegaan, probeer het later opnieuw.");
+            setError("Er is iets mis gegaan. Probeer het opnieuw")
         }
         setIsSubmitted(true);
     };
@@ -52,7 +53,6 @@ function Contact() {
             </Helmet>
 
             <Navigate/>
-
             <section className="contact-layout">
                 <article className="contact-info">
                     <h2>Neem contact op</h2>
@@ -60,17 +60,20 @@ function Contact() {
                         Heb je een idee, project of vraag?
                         Vul het formulier in en we nemen snel contact met je op.
                     </p>
-                    <div className="contact-details">
+                    <article className="contact-details">
                         <p><strong>E-mail</strong>info@oosteromstudio.nl</p>
                         <p><strong>Reactietijd</strong>Binnen 24 uur</p>
-                    </div>
-                    <div className="company-details">
+                    </article>
+                    <article className="company-details">
                         <h3>Oosterom Studio is onderdeel van Oosterom Creative</h3>
                         <div className="company-details-extra">
                             <p><strong>KVK Nummer:</strong><br/>85118028</p>
                             <p><strong>BTW Nummer</strong><br/>NL004057297B50</p>
+                            <a href={algemene} target="_blank" rel="noopener noreferrer" className="document-link">
+                                Algemene Voorwaarden
+                            </a>
                         </div>
-                    </div>
+                    </article>
                 </article>
 
                 {!isSubmitted ? (
@@ -83,6 +86,7 @@ function Contact() {
                         viewport={{once: true}}
                     >
                         <h2>Contactformulier</h2>
+                        {error && <p>{error}</p>}
                         <p className="warning">Let op! Velden met * zijn verplicht</p>
                         <input
                             type="text"
