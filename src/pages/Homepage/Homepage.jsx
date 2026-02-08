@@ -5,6 +5,8 @@ import Footer from "../../components/Footer/Footer.jsx";
 import {Helmet} from "react-helmet-async";
 import FigmaSection from "../../components/FigmaSection/FigmaSection.jsx";
 import {Link} from "react-router-dom";
+import MovingBar from "../../components/movingbar/movingBar.jsx";
+import IntentSection from "../../components/intent_section/IntentSection.jsx";
 
 
 function Homepage() {
@@ -21,50 +23,16 @@ function Homepage() {
                 <meta property="og:type" content="website"/>
             </Helmet>
 
+            <MovingBar/>
             <Header
                 title="Wij bouwen digitale ervaringen die indruk maken."
                 subtitle="Van doordacht design tot razendsnelle websites — bij Oosterom Studio komen creativiteit en techniek samen om digitale oplossingen te bouwen die niet alleen mooi zijn, maar ook daadwerkelijk resultaat opleveren."
                 buttonText="Ontvang een gratis offerte"
             />
-
-            <section className="moving-bar">
-                <div className="moving-track">
-                    <div className="track">
-                        <span>Webdesign</span>
-                        <span className="dot">•</span>
-                        <span>Webdevelopment</span>
-                        <span className="dot">•</span>
-                        <span>SEO</span>
-                        <span className="dot">•</span>
-                        <span>SEA</span>
-                        <span className="dot">•</span>
-                        <span>Webshops</span>
-                        <span className="dot">•</span>
-                        <span>Branding</span>
-                        <span className="dot">•</span>
-                        <span>Digitale strategie</span>
-                    </div>
+            <IntentSection/>
 
 
-                    <div className="track">
-                        <span>•</span>
-                        <span >Webdesign</span>
-                        <span className="dot">•</span>
-                        <span>Webdevelopment</span>
-                        <span className="dot">•</span>
-                        <span>SEO</span>
-                        <span className="dot">•</span>
-                        <span>SEA</span>
-                        <span className="dot">•</span>
-                        <span>Webshops</span>
-                        <span className="dot">•</span>
-                        <span>Branding</span>
-                        <span className="dot">•</span>
-                        <span>Digitale strategie</span>
-                    </div>
 
-                </div>
-            </section>
 
             {/* Section 1: Onze Kernwaarden */}
             <section className="values-section">
@@ -176,23 +144,27 @@ function Homepage() {
             <section className="pricing-section">
                 <motion.div
                     className="pricing-container"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.8}}
                 >
                     <h2>Prijzen</h2>
                     <p>
-                        Wij werken niet met standaard pakketten of vaste tarieven, omdat we geloven dat elke website uniek is.
-                        Elk project heeft zijn eigen doel, uitstraling en technische wensen. Daarom kijken we zorgvuldig naar wat jouw
+                        Wij werken niet met standaard pakketten of vaste tarieven, omdat we geloven dat elke website
+                        uniek is.
+                        Elk project heeft zijn eigen doel, uitstraling en technische wensen. Daarom kijken we zorgvuldig
+                        naar wat jouw
                         website écht nodig heeft — van design tot functionaliteit.
                     </p>
                     <p>
-                        De prijs wordt bepaald aan de hand van verschillende factoren, zoals de complexiteit van het ontwerp, het aantal
+                        De prijs wordt bepaald aan de hand van verschillende factoren, zoals de complexiteit van het
+                        ontwerp, het aantal
                         pagina’s, eventuele koppelingen met systemen, de gewenste doorlooptijd en de mate van maatwerk.
                     </p>
                     <p>
-                        Zo betaal je nooit te veel, maar krijg je precies wat bij jouw bedrijf past. Samen bespreken we jouw wensen en
+                        Zo betaal je nooit te veel, maar krijg je precies wat bij jouw bedrijf past. Samen bespreken we
+                        jouw wensen en
                         stellen we een transparante, eerlijke offerte op die aansluit bij jouw visie en doelen.
                     </p>
                 </motion.div>

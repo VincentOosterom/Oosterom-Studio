@@ -8,7 +8,7 @@
     align-items: center;
     padding: 0 2rem;
     height: 80px;
-    margin: 0 20px;
+    margin: 10px 20px;
     border-radius: 20px;
     position: relative;
     z-index: 3;
@@ -21,8 +21,9 @@
 .navbar-logo .logo {
     color: var(--color-text);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
 }
+
 
 /* =========================
    DESKTOP LINKS

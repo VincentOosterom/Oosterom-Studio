@@ -85,7 +85,7 @@
 
 @media (max-width: 480px) {
     .availability {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .status-dot {

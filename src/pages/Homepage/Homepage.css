@@ -6,7 +6,13 @@
     padding: 6rem 2rem;
     text-align: center;
     background-color: var(--color-text);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
+    clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 96%,
+            0 100%
+    );
+
 }
 
 .values-section h2 {
@@ -91,7 +97,12 @@
     padding: 6rem 2rem;
     text-align: center;
     background-color: var(--color-text);
-    clip-path: polygon(0 3%, 100% 0, 100% 98%, 0 100%);
+    clip-path: polygon(
+            0 4%,
+            100% 0,
+            100% 100%,
+            0 96%
+    );
 
 }
 
@@ -145,7 +156,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+    clip-path: polygon(
+            0 3%,
+            100% 0,
+            100% 100%,
+            0 100%
+    );
 }
 
 .cta-container {
@@ -210,49 +226,6 @@
     margin-bottom: 1rem;
     line-height: 1.6;
     color: var(--color-text);
-}
-
-.moving-bar {
-    overflow: hidden;
-    background: rgba(100, 255, 218, 0.08);
-    padding: 1rem 0;
-}
-
-.moving-track {
-    display: flex;
-    width: max-content;
-    animation: marquee 30s linear infinite;
-}
-
-.track {
-    display: flex;
-}
-
-.track .dot {
-    color: var(--color-accent);
-}
-
-.moving-bar-icon {
-    color: var(--color-accent);
-}
-
-.track span {
-    font-family: var(--font-title), serif;
-    font-size: 1rem;
-    color: white;
-    margin: 0 3rem;
-    white-space: nowrap;
-    opacity: 0.9;
-}
-
-/* 🔁 ECHTE INFINITE LOOP */
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
 }
 
 

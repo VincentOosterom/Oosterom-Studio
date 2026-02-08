@@ -1,0 +1,116 @@
+/* =========================
+   INTENT SECTION
+========================= */
+
+.intent-section {
+    padding: 4rem 2rem;
+}
+
+.intent-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 2rem;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.intent-eyebrow {
+    color: var(--color-accent);
+    font-family: var(--font-title), serif;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.intent-left h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.intent-left h2 span {
+    color: var(--color-accent);
+}
+
+.intent-left p {
+    color: var(--color-muted);
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+}
+
+.intent-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+    background: var(--color-accent);
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-text);
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+/* =========================
+   RIGHT
+========================= */
+
+.intent-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.intent-card {
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    font-family: var(--font-body), serif;
+    padding: 1.2rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.intent-card:hover {
+    transform: translateX(6px);
+    background: rgba(100, 255, 218, 0.12);
+}
+
+.intent-card.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .intent-container {
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+    }
+
+    .intent-left h2 {
+        font-size: 2rem;
+    }
+}

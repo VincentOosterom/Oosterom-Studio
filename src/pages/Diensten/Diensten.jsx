@@ -8,52 +8,68 @@ import {Link} from "react-router-dom";
 
 const services = [
     {
-        title: "Webdesign (Figma)",
-        description: "Pixel-perfect UI/UX ontwerpen in Figma, volledig afgestemd op jouw doelgroep en doelen.",
+        title: "Webdesign & UX",
+        description:
+            "Strategisch webdesign dat verder gaat dan alleen uitstraling. We ontwerpen gebruiksvriendelijke interfaces die bezoekers sturen richting conversie en groei.",
         bullets: [
             "UX research & wireframes",
             "High-end UI design",
             "Interactieve prototypes",
-            "Design klaar voor development"
+            "Conversiegericht ontwerp",
+            "Ontworpen met schaalbaarheid in gedachten"
         ],
+        extra:
+            "Een sterk design vormt de basis voor elke website of digitale applicatie. Daarom ontwerpen wij altijd met het oog op toekomstige uitbreiding, zoals dashboards, klantportalen of SaaS-functionaliteit.",
         icon: "🎨",
-        link: "/diensten/figma"
+        link: "/diensten/webdesign"
     },
     {
-        title: "Webdevelopment",
-        description: "Snelle, schaalbare en SEO-vriendelijke websites gebouwd met moderne technologie.",
+        title: "Webdevelopment & Applicaties",
+        description:
+            "Snelle, veilige en schaalbare websites en webapplicaties gebouwd met moderne technologie.",
         bullets: [
-            "React / moderne frontend",
-            "Responsive & performance-first",
+            "React & moderne frontend",
+            "Performance-first ontwikkeling",
             "SEO & toegankelijkheid",
-            "Onderhoudsvriendelijke code"
+            "Onderhoudsvriendelijke code",
+            "Voorbereid op API’s & koppelingen"
         ],
+        extra:
+            "Onze websites zijn niet alleen eindproducten, maar vormen vaak het startpunt van grotere systemen. Denk aan reserveringssystemen, klantomgevingen of SaaS-oplossingen die met je bedrijf meegroeien.",
         icon: "💻",
         link: "/diensten/webdevelopment"
     },
     {
-        title: "Branding & Strategie",
-        description: "Een sterke merkidentiteit die vertrouwen uitstraalt en herkenbaar blijft.",
+        title: "SaaS & Digitale Systemen",
+        description:
+            "Van idee naar digitaal product. Wij helpen bij het ontwerpen en bouwen van schaalbare online systemen en SaaS-oplossingen.",
         bullets: [
-            "Merkstrategie & positionering",
-            "Logo & visuele identiteit",
-            "Consistente merkuitstraling",
-            "Langetermijnvisie"
+            "Concept & productstructuur",
+            "MVP-ontwikkeling",
+            "Dashboard & gebruikersrollen",
+            "Schaalbare architectuur",
+            "Klaar voor groei en doorontwikkeling"
         ],
-        icon: "📈",
-        link: "/diensten/branding&strategie"
+        extra:
+            "Heb je een idee voor een platform of online dienst? Wij denken mee over structuur, functionaliteit en techniek, zodat jouw SaaS niet alleen werkt, maar ook toekomstbestendig is.",
+        icon: "🧩",
+        link: "/diensten/saas"
     },
     {
-        title: "Social Media Beheer",
-        description: "Doordachte content en consistente aanwezigheid op social media.",
+        title: "Branding & Digitale Strategie",
+        description:
+            "Een sterke merkidentiteit en duidelijke digitale koers vormen de basis voor online succes.",
         bullets: [
-            "Contentplanning",
-            "Creatie & publicatie",
-            "Merkconsistentie",
-            "Groei & zichtbaarheid"
+            "Merkstrategie & positionering",
+            "Visuele identiteit",
+            "Consistente online uitstraling",
+            "Digitale roadmap",
+            "Langetermijnvisie"
         ],
-        icon: "💬",
-        link: "/diensten/social-media-beheer"
+        extra:
+            "Wij helpen je niet alleen met hoe je eruitziet, maar ook met waar je naartoe wilt. Zo sluiten branding, website en eventuele systemen perfect op elkaar aan.",
+        icon: "📈",
+        link: "/diensten/branding-strategie"
     }
 ];
 
@@ -113,6 +129,7 @@ function Diensten() {
                                             <li key={i}>{item}</li>
                                         ))}
                                     </ul>
+                                    {service.extra && <p className="dienst-extra">{service.extra}</p>}
                                 </article>
                             </motion.div>
                         );

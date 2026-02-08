@@ -4,9 +4,11 @@ import './index.css'
 import App from './App.jsx'
 import {BrowserRouter as Router} from "react-router-dom";
 import {HelmetProvider} from 'react-helmet-async';
+import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
+
         <HelmetProvider>
             <Router>
                 <App/>
