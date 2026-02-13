@@ -1,16 +1,21 @@
 .moving-bar {
     overflow: hidden;
-    padding: 1rem 0;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
 }
 
 .moving-track {
     display: flex;
-    width: max-content;
+    align-items: center;
     animation: marquee 30s linear infinite;
 }
 
 .track {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .track .dot {
@@ -42,7 +47,7 @@
 
 @media (max-width: 480px) {
     .moving-bar {
-        padding: 0.4rem
+        padding: 0.8rem
     }
 
     .track span {

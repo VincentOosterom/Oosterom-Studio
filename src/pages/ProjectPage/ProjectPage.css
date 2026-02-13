@@ -27,6 +27,7 @@
     height: auto;
     border: 1px   solid white;
     border-radius: 1rem;
+    padding: 1.5rem;
 }
 
 /* ================= PROJECT CONTENT ================= */
@@ -110,6 +111,16 @@
     width: 100%;
     max-width: 1000px;
     border-radius: 1rem;
+}
+
+/*PROJECT CTA*/
+
+.project-cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 /* ================= RESPONSIVE ================= */

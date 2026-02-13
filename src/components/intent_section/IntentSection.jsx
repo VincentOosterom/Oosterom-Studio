@@ -8,24 +8,26 @@ function intentSection() {
                 <article className="intent-container">
 
                     <article className="intent-left">
-                        <span className="intent-eyebrow">Om te beginnen</span>
+                        <span className="intent-eyebrow">Digitale groei</span>
                         <h2>
-                            Waar ben <span>jij</span> naar op zoek?
+                            Welke <span>digitale uitdaging</span> wil jij oplossen?
                         </h2>
                         <p>
-                            Of je nu een nieuwe website wilt laten bouwen, je huidige design wilt verbeteren
-                            of meer resultaat uit je online aanwezigheid wilt halen — wij denken met je mee
-                            en bouwen oplossingen die écht werken.
+                            Of je nu een schaalbare website wilt ontwikkelen, je online prestaties wilt verbeteren
+                            of processen wilt automatiseren — wij denken strategisch met je mee en bouwen
+                            oplossingen die meetbaar bijdragen aan groei.
                         </p>
+
                     </article>
 
 
                     <div className="intent-right">
-                        <div className="intent-card">🚀 Nieuwe website</div>
-                        <div className="intent-card">🎨 Huidig design verbeteren</div>
-                        <div className="intent-card">📈 Meer conversie behalen</div>
-                        <div className="intent-card">🔍 Beter vindbaar worden</div>
-                        <div className="intent-card disabled">✨ Nieuwe branding</div>
+                        <div className="intent-card">⚙️ Schaalbare website ontwikkelen</div>
+                        <div className="intent-card">🛒 Conversiegerichte webshop bouwen</div>
+                        <div className="intent-card">📈 Online prestaties optimaliseren</div>
+                        <div className="intent-card">🔎 Technische SEO verbeteren</div>
+                        <div className="intent-card">🔗 Processen automatiseren</div>
+
                     </div>
                 </article>
             </section>

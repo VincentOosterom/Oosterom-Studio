@@ -4,7 +4,6 @@ import './Diensten.css';
 import Navigate from "../../components/Navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
-import {Link} from "react-router-dom";
 
 const services = [
     {

@@ -61,7 +61,7 @@ function Contact() {
                         Vul het formulier in en we nemen snel contact met je op.
                     </p>
                     <article className="contact-details">
-                        <p><strong>E-mail</strong>info@oosteromstudio.nl</p>
+                        <p><strong>E-mail</strong>vincent@oosteromstudio.nl</p>
                         <p><strong>Reactietijd</strong>Binnen 24 uur</p>
                     </article>
                     <article className="company-details">

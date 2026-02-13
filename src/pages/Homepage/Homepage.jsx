@@ -45,29 +45,24 @@ function Homepage() {
                     <h2>Onze Kernwaarden</h2>
                     <section className="values-grid">
                         <article className="value-card">
-                            <div className="value-icon">🎨</div>
-                            <h3>Creativiteit</h3>
+                            <div className="value-icon">⚡</div>
+                            <h3>Performance First</h3>
                             <p>
-                                We ontwerpen unieke, opvallende en memorabele visuals die jouw merk echt laten opvallen.
-                                Elk ontwerp wordt afgestemd op jouw doelgroep en versterkt de identiteit van je bedrijf.
+                                Wij ontwikkelen snelle en technisch geoptimaliseerde websites die voldoen aan moderne performance standaarden.
                             </p>
                         </article>
                         <article className="value-card">
-                            <div className="value-icon">🤝</div>
-                            <h3>Betrouwbaarheid</h3>
+                            <div className="value-icon">🔐</div>
+                            <h3>Security by Default</h3>
                             <p>
-                                Duidelijke communicatie, realistische planning en consistente kwaliteit zijn bij ons
-                                vanzelfsprekend.
-                                Jij kunt altijd rekenen op een betrouwbare partner voor elk project.
+                                Veiligheid is geen extra optie. Wij bouwen volgens best practices met aandacht voor stabiliteit en bescherming.
                             </p>
                         </article>
                         <article className="value-card">
                             <div className="value-icon">🚀</div>
-                            <h3>Innovatie</h3>
+                            <h3>Resultaatgericht</h3>
                             <p>
-                                We gebruiken de nieuwste technologieën en creatieve oplossingen om jouw website of
-                                applicatie
-                                efficiënt, modern en toekomstbestendig te maken.
+                                Elke keuze — van structuur tot techniek — is gericht op conversie, groei en schaalbaarheid.
                             </p>
                         </article>
                     </section>
@@ -83,7 +78,7 @@ function Homepage() {
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
                 >
-                    <h2>Waarom SEO belangrijk is</h2>
+                    <h2>Technische SEO & Performance</h2>
                     <p>
                         Goede SEO is cruciaal om online zichtbaar te zijn. Een hoge ranking in zoekmachines trekt
                         relevante bezoekers aan, verhoogt de geloofwaardigheid van je merk en zorgt voor
@@ -105,16 +100,16 @@ function Homepage() {
                     <h2>Onze aanpak</h2>
                     <div className="approach-grid">
                         <div className="approach-card">
-                            <h3>1. Strategie</h3>
-                            <p>We beginnen met een duidelijke strategie en doelen voor jouw project.</p>
+                            <h3>1. Analyse & Strategie</h3>
+                            <p>We analyseren je markt, doelgroep en technische situatie.</p>
                         </div>
                         <div className="approach-card">
-                            <h3>2. Design</h3>
-                            <p>Pixel-perfect designs in Figma die gebruikerservaring centraal zetten.</p>
+                            <h3>2. Architectuur & Design</h3>
+                            <p>We ontwerpen een schaalbare en conversiegerichte structuur.</p>
                         </div>
                         <div className="approach-card">
-                            <h3>3. Development</h3>
-                            <p>Responsive en snelle websites met React en moderne technologieën.</p>
+                            <h3>3. Development & Optimalisatie</h3>
+                            <p>We bouwen, testen en optimaliseren voor performance en veiligheid.</p>
                         </div>
                     </div>
                 </motion.div>
@@ -149,23 +144,19 @@ function Homepage() {
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
                 >
-                    <h2>Prijzen</h2>
+                    <h2>Investering</h2>
+
                     <p>
-                        Wij werken niet met standaard pakketten of vaste tarieven, omdat we geloven dat elke website
-                        uniek is.
-                        Elk project heeft zijn eigen doel, uitstraling en technische wensen. Daarom kijken we zorgvuldig
-                        naar wat jouw
-                        website écht nodig heeft — van design tot functionaliteit.
+                        Wij bouwen maatwerk digitale oplossingen. Daarom werken we niet met standaard templates of vaste pakketten, maar met een gerichte aanpak afgestemd op jouw doelstellingen.
                     </p>
+
                     <p>
-                        De prijs wordt bepaald aan de hand van verschillende factoren, zoals de complexiteit van het
-                        ontwerp, het aantal
-                        pagina’s, eventuele koppelingen met systemen, de gewenste doorlooptijd en de mate van maatwerk.
+                        De investering voor een professionele maatwerk website start doorgaans vanaf €1.500.
+                        Complexere platformen, webshops of maatwerk functionaliteiten worden bepaald op basis van scope, integraties en technische vereisten.
                     </p>
+
                     <p>
-                        Zo betaal je nooit te veel, maar krijg je precies wat bij jouw bedrijf past. Samen bespreken we
-                        jouw wensen en
-                        stellen we een transparante, eerlijke offerte op die aansluit bij jouw visie en doelen.
+                        Tijdens een vrijblijvend strategiegesprek brengen we jouw wensen, groeidoelen en technische behoeften in kaart. Op basis daarvan ontvang je een heldere en transparante offerte zonder verrassingen achteraf.
                     </p>
                 </motion.div>
             </section>

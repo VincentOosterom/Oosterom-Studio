@@ -11,7 +11,7 @@ function FigmaSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Waarom we altijd beginnen met een ontwerp
+                    Een sterke digitale oplossing begint met strategie
                 </motion.h2>
                 <motion.p
                     className="figma-description"
@@ -19,7 +19,7 @@ function FigmaSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                    Bij Oosterom Studio starten we elk project met een doordachte ontwerpfase. Door eerst een helder en interactief prototype uit te werken, krijg je vooraf een duidelijk beeld van het eindresultaat. Dit geeft ruimte om in een vroeg stadium te finetunen, zodat het ontwerp en de functionaliteit perfect aansluiten op jouw wensen. Zo bouwen we efficiënt, voorkomen we misverstanden en leggen we een sterke basis voor een hoogwaardige website.
+                    Wij starten elk project met een grondige analyse van jouw bedrijf, doelgroep en groeidoelstellingen. We kijken niet alleen naar design, maar naar structuur, prestaties en schaalbaarheid. Door vooraf de juiste architectuur en strategie te bepalen, bouwen we een digitale oplossing die niet alleen vandaag werkt — maar ook meegroeit met jouw organisatie.
                 </motion.p>
             </div>
         </section>

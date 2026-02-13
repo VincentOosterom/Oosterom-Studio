@@ -1,6 +1,6 @@
 import "./ProjectPage.css";
 import { motion } from "framer-motion";
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navigate from "../../components/Navigate/Navigate.jsx";
 import projects from "/src/Projects.js";
@@ -44,7 +44,7 @@ function ProjectPage() {
     return (
         <>
             <Helmet>
-                <title>{project.subtitle} | Portfolio</title>
+                <title>{project.subtitle} | Case Study | Oosterom Studio</title>
                 <meta
                     name="description"
                     content={project.intro}
@@ -114,7 +114,15 @@ function ProjectPage() {
                     )}
                 </section>
             </main>
-
+            <section className="project-cta">
+                <h2>Ook werken aan een schaalbare digitale oplossing?</h2>
+                <p>
+                    Plan een vrijblijvend strategiegesprek en ontdek hoe wij jouw digitale platform kunnen optimaliseren.
+                </p>
+                <Link to="/contact" className="cta-button">
+                    Plan een gesprek
+                </Link>
+            </section>
             <Footer />
         </>
     );
