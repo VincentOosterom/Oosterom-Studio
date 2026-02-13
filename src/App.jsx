@@ -10,12 +10,14 @@ import AboutUs from "./pages/Over Ons/OverOns.jsx";
 import ProjectPage from "./pages/ProjectPage/ProjectPage.jsx";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 import AnalyticsTracker from "./components/AnalyticsTracker/AnalyticsTracker.jsx";
+import CookieBanner from "./components/cookies/CookiesBanner.jsx";
 
 function App() {
 
     return (
         <>
             <ScrollToTop/>
+            <CookieBanner/>
             <AnalyticsTracker />
             <Routes>
                 <Route path="/" element={<Homepage />}/>
