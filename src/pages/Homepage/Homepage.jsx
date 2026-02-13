@@ -1,27 +1,58 @@
 import './Homepage.css';
-import Header from "../../components/Header/Header.jsx";
+import Header from "../../components/header/Header.jsx";
 import {motion} from "framer-motion";
 import Footer from "../../components/Footer/Footer.jsx";
 import {Helmet} from "react-helmet-async";
-import FigmaSection from "../../components/FigmaSection/FigmaSection.jsx";
+import FigmaSection from "../../components/figma-section/FigmaSection.jsx";
 import {Link} from "react-router-dom";
 import MovingBar from "../../components/movingbar/movingBar.jsx";
-import IntentSection from "../../components/intent_section/IntentSection.jsx";
+import IntentSection from "../../components/intent-section/IntentSection.jsx";
 
 
 function Homepage() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio | Webdesign & Development</title>
+                <title>
+                    Oosterom Studio – Webdevelopment & Digitale Oplossingen
+                </title>
+
                 <meta
                     name="description"
-                    content="Professionele websites en webapplicaties op maat, ontwikkeld door Oosterom Studio."
+                    content="Oosterom Studio ontwikkelt schaalbare websites, webshops en digitale oplossingen met focus op performance, veiligheid en groei. Wij bouwen toekomstbestendige platformen voor ambitieuze bedrijven."
                 />
-                <meta property="og:title" content="Oosterom Studio"/>
-                <meta property="og:description" content="Webdesign en development op maat."/>
-                <meta property="og:type" content="website"/>
+
+                <meta property="og:title" content="Oosterom Studio – Digitale Oplossingen" />
+
+                <meta
+                    property="og:description"
+                    content="Van maatwerk webdevelopment tot technische optimalisatie — wij bouwen snelle, veilige en schaalbare digitale platformen."
+                />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.oosteromstudio.nl/" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Oosterom Studio",
+                        "url": "https://www.oosteromstudio.nl",
+                        "logo": "https://www.oosteromstudio.nl/logo.png",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Vincent Oosterom"
+                        },
+                        "sameAs": [
+                            "https://www.linkedin.com/in/jouw-profiel",
+                            "https://www.instagram.com/jouw-profiel"
+                        ],
+                        "description": "Oosterom Studio ontwikkelt schaalbare websites en digitale oplossingen met focus op performance en veiligheid."
+                    })}
+                </script>
             </Helmet>
+
 
             <MovingBar/>
             <Header
@@ -127,7 +158,13 @@ function Homepage() {
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
                 >
-                    <h2>Klaar om jouw project te starten?</h2>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                    >
+                        Klaar om jouw project te starten?
+                    </motion.h2>
                     <p>
                         Of je nu een nieuwe website nodig hebt, je huidige design wilt vernieuwen of online beter
                         gevonden wilt worden — wij helpen je graag verder.

@@ -19,6 +19,7 @@ function Footer() {
                         <NavLink to="/diensten" className={({ isActive }) => isActive ? "active" : ""}>
                             Diensten
                         </NavLink>
+                        <NavLink to="/over-ons" className={({ isActive }) => isActive ? "active" : ""}>Over ons</NavLink>
                         <NavLink to="/portfolio" className={({ isActive }) => isActive ? "active" : ""}>
                             Portfolio
                         </NavLink>

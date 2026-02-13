@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import './OfferteAanvragen.css';
-import Navigate from "../../components/Navigate/Navigate.jsx";
+import Navigate from "../../components/navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
 
@@ -39,18 +39,28 @@ function OfferteAanvragen() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio | Offerte Aanvragen</title>
+                <title>
+                    Strategiegesprek aanvragen | Oosterom Studio
+                </title>
+
                 <meta
                     name="description"
-                    content="Vraag een offerte aan bij Oosterom Studio. Vertel wat je nodig hebt en ontvang snel een professionele prijsopgave."
+                    content="Plan een vrijblijvend strategiegesprek met Oosterom Studio. Wij analyseren jouw digitale uitdaging en ontwikkelen een maatwerk voorstel voor schaalbare weboplossingen."
                 />
-                <meta name="keywords" content="offerte, prijsopgave, webdevelopment, webdesign, Oosterom Studio"/>
-                <meta property="og:title" content="Oosterom Studio | Offerte Aanvragen"/>
-                <meta property="og:description" content="Snel en eenvoudig een offerte aanvragen voor jouw project."/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://www.oosteromstudio.nl/offerte-aanvragen"/>
-                <meta name="twitter:card" content="summary_large_image"/>
+
+                <meta property="og:title" content="Strategiegesprek aanvragen | Oosterom Studio" />
+
+                <meta
+                    property="og:description"
+                    content="Bespreek jouw digitale doelen en ontvang een maatwerk voorstel voor een schaalbare en toekomstbestendige oplossing."
+                />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.oosteromstudio.nl/offerte-aanvragen" />
+
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
+
 
             <Navigate/>
 
@@ -133,7 +143,7 @@ function OfferteAanvragen() {
                             placeholder="Vertel kort over je project *"
                             value={formData.message}
                             onChange={handleChange}
-                            rows="5"
+                            rows={5}
                             required
                         />
 

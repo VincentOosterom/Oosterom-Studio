@@ -9,6 +9,7 @@ function intentSection() {
 
                     <article className="intent-left">
                         <span className="intent-eyebrow">Digitale groei</span>
+                        <div className="streepje"></div>
                         <h2>
                             Welke <span>digitale uitdaging</span> wil jij oplossen?
                         </h2>

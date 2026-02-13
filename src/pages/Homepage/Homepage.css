@@ -6,13 +6,6 @@
     padding: 6rem 2rem;
     text-align: center;
     background-color: var(--color-text);
-    clip-path: polygon(
-            0 0,
-            100% 0,
-            100% 96%,
-            0 100%
-    );
-
 }
 
 .values-section h2 {
@@ -97,12 +90,6 @@
     padding: 6rem 2rem;
     text-align: center;
     background-color: var(--color-text);
-    clip-path: polygon(
-            0 4%,
-            100% 0,
-            100% 100%,
-            0 96%
-    );
 
 }
 
@@ -140,7 +127,7 @@
 .approach-card h3 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    color: #0A192F;
+    color: #000000
 }
 
 .approach-card p {
@@ -156,12 +143,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(
-            0 3%,
-            100% 0,
-            100% 100%,
-            0 100%
-    );
 }
 
 .cta-container {
@@ -288,12 +269,10 @@
 @media (max-width: 480px) {
     /* Clip-path aanpassingen */
     .values-section {
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 97%);
         padding: 3rem 1rem;
     }
 
     .approach-section {
-        clip-path: polygon(0 3%, 100% 0, 100% 98%, 0 100%);
         padding: 5rem 1rem;
     }
 

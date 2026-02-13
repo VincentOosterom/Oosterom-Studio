@@ -1,42 +1,23 @@
 import "./ProjectPage.css";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import {Link, useParams} from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import Navigate from "../../components/Navigate/Navigate.jsx";
+import {Helmet} from "react-helmet-async";
+import Navigate from "../../components/navigate/Navigate.jsx";
 import projects from "/src/Projects.js";
 import Footer from "../../components/Footer/Footer.jsx";
 
 function ProjectPage() {
-    const { slug } = useParams();
+    const {slug} = useParams();
     const project = projects.find(p => p.slug === slug);
-
-    const sections = [
-        { title: "De uitdaging", content: project?.challenge },
-        { title: "De oplossing", content: project?.solution },
-        { title: "Het resultaat", content: project?.result }
-    ];
-
-    const fadeUp = {
-        hidden: { opacity: 0, y: 40 },
-        visible: (i) => ({
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                delay: i * 0.15,
-                ease: "easeOut"
-            }
-        })
-    };
 
     if (!project) {
         return (
             <>
-                <Navigate />
+                <Navigate/>
                 <section className="project-not-found">
                     <h1>Project niet gevonden</h1>
                 </section>
-                <Footer />
+                <Footer/>
             </>
         );
     }
@@ -44,62 +25,113 @@ function ProjectPage() {
     return (
         <>
             <Helmet>
-                <title>{project.subtitle} | Case Study | Oosterom Studio</title>
+                <title>
+                    {project.subtitle} | Case Study | Oosterom Studio
+                </title>
+
                 <meta
                     name="description"
-                    content={project.intro}
+                    content={`${project.subtitle} – ${project.intro}`}
                 />
+
+                <meta
+                    property="og:title"
+                    content={`${project.subtitle} | Case Study | Oosterom Studio`}
+                />
+
+                <meta
+                    property="og:description"
+                    content={`${project.intro}`}
+                />
+
+                <meta
+                    property="og:type"
+                    content="article"
+                />
+
+                <meta
+                    property="og:url"
+                    content={`https://www.oosteromstudio.nl/portfolio/${project.slug}`}
+                />
+                <meta
+                    property="og:image"
+                    content={project.image}
+                />
+                <meta name="twitter:card" content="summary_large_image"/>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "name": project.subtitle,
+                        "description": project.intro,
+                        "author": {
+                            "@type": "Organization",
+                            "name": "Oosterom Studio"
+                        }
+                    })}
+                </script>
             </Helmet>
 
-            <header className="project-page-header">
-                <Navigate />
 
-                <section className="hero">
-                    <div className="hero-left">
-                        <motion.h1
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            {project.subtitle}
-                        </motion.h1>
+            <Navigate/>
+            <header className="project-hero">
+                <div className="project-hero-content">
+                    <motion.span
+                        className="project-eyebrow"
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{duration: 0.6}}
+                    >
+                        Case Study
+                    </motion.span>
 
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            {project.intro}
-                        </motion.p>
-                    </div>
+                    <motion.h1
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.7}}
+                    >
+                        {project.subtitle}
+                    </motion.h1>
 
-                    <div className="hero-right">
-                        <img
-                            src={project.image}
-                            alt={`${project.subtitle} project preview`}
-                        />
-                    </div>
-                </section>
+                    <motion.p
+                        className="project-intro"
+                        initial={{opacity: 0, y: 15}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.9}}
+                    >
+                        {project.intro}
+                    </motion.p>
+                </div>
+
+                <motion.div
+                    className="project-hero-image"
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 1.1}}
+                >
+                    <img
+                        src={project.image}
+                        alt={`${project.subtitle} project preview`}
+                    />
+                </motion.div>
             </header>
 
-            <main className="main-content">
-                <section className="project-content">
-                    {sections.map((section, index) => (
-                        <motion.section
-                            key={section.title}
-                            className="usp-card"
-                            variants={fadeUp}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.2 }}
-                            custom={index}
-                        >
-                            <div className="strikje">
-                                <h2>{section.title}</h2>
-                            </div>
-                            <p>{section.content}</p>
-                        </motion.section>
-                    ))}
+
+            <main className="project-editorial">
+
+                <section className="editorial-block">
+                    <h2>De uitdaging</h2>
+                    <p>{project.challenge}</p>
+                </section>
+
+                <section className="editorial-block reverse">
+                    <h2>De oplossing</h2>
+                    <p>{project.solution}</p>
+                </section>
+
+                <section className="editorial-block">
+                    <h2>Het resultaat</h2>
+                    <p>{project.result}</p>
                 </section>
 
                 <section className="sfeer">
@@ -117,13 +149,14 @@ function ProjectPage() {
             <section className="project-cta">
                 <h2>Ook werken aan een schaalbare digitale oplossing?</h2>
                 <p>
-                    Plan een vrijblijvend strategiegesprek en ontdek hoe wij jouw digitale platform kunnen optimaliseren.
+                    Plan een vrijblijvend strategiegesprek en ontdek hoe wij jouw digitale platform kunnen
+                    optimaliseren.
                 </p>
                 <Link to="/contact" className="cta-button">
                     Plan een gesprek
                 </Link>
             </section>
-            <Footer />
+            <Footer/>
         </>
     );
 }

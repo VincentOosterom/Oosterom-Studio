@@ -4,31 +4,47 @@
     min-height: 70vh;
 }
 
-/* ================= HERO ================= */
-
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 70vh;
-    margin: 0 2rem;
-    gap: 3rem;
+.project-hero {
+    margin-top: 5vh;
+    padding: 2rem 2rem 6rem;
+    text-align: center;
 }
 
-.hero-left,
-.hero-right {
-    flex: 1;
-    max-width: 600px;
+.project-hero-content {
+    max-width: 760px;
+    margin: 0 auto 4rem;
 }
 
-.hero-right img {
+.project-eyebrow {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-body), serif;
+
+}
+
+.project-hero h1 {
+    font-family: var(--font-title), serif;
+    font-size: clamp(2.6rem, 5vw, 2.9rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.project-intro {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-muted);
+}
+
+.project-hero-image img {
     width: 100%;
-    max-width: 500px;
-    height: auto;
-    border: 1px   solid white;
-    border-radius: 1rem;
-    padding: 1.5rem;
+    max-width: 800px;
+    border-radius: 12px;
 }
+
 
 /* ================= PROJECT CONTENT ================= */
 
@@ -40,57 +56,52 @@
     max-width: 1200px;
 }
 
-/* ================= USP CARD (VERBETERD) ================= */
-
-.usp-card {
-    position: relative;
-    padding: 4rem 2rem 2rem 2rem;
-    border-radius: 1.2rem;
-    background: #ffffff;
+.project-editorial {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem 8rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-    min-height: 350px;
-    transition: all 0.35s ease;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    gap: 8rem;
 }
 
-.usp-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+.editorial-block {
+    max-width: 720px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
-/* Accent header strip */
+.editorial-block.reverse {
+    margin-left: auto;
+}
 
-.strikje {
+.editorial-block h2 {
+    font-family: var(--font-title), serif;
+    font-size: 2.2rem;
+    letter-spacing: -0.015em;
+    margin-bottom: 2rem;
+    color: var(--color-bg);
+    position: relative;
+}
+
+.editorial-block h2::before {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--color-accent);
-    width: 220px;
-    height: 3.2rem;
-    border-radius: 0 0 1rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 4rem;
+    left: 0;
+    width: 56px;
+    height: 3px;
+    background-color: var(--color-bg);
+    border-radius: 2px;
 }
 
-.strikje h2 {
-    margin: 0;
-    color: #000000;
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-.usp-card p {
-    margin-top: 2rem;
-    line-height: 1.6;
-    color: #555;
-    font-size: 0.95rem;
+.editorial-block p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--color-bg);
+    margin-bottom: 1.4rem;
 }
 
 /* ================= SFEER ================= */
@@ -135,21 +146,29 @@
     .hero {
         flex-direction: column;
         text-align: center;
-        margin: 4rem 1.5rem;
+        margin: 3rem 1.5rem 1rem 1.5rem;
     }
 
     .project-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        margin: 1rem;
     }
 
     .usp-card {
         min-height: auto;
         padding: 3.5rem 1.5rem 2rem 1.5rem;
     }
+
+
 }
 
 @media (max-width: 480px) {
+    .project-hero {
+        padding: 2rem 2rem 6rem;
+        margin-top: 2rem;
+
+    }
     .hero-left h1 {
         font-size: 1.4rem;
     }
@@ -165,4 +184,14 @@
     .sfeer img {
         max-width: 320px;
     }
+
+    .project-cta {
+        margin: 0.7rem;
+        text-align: center;
+    }
+
+    .project-editorial {
+        gap: 3rem;
+    }
+
 }

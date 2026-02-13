@@ -66,7 +66,7 @@
 }
 
 .portfolio-image img {
-    width: 400px;
+    max-width: 400px;
     height: 100%;
     object-fit: fill;
     display: block;
@@ -136,5 +136,12 @@
 
     .portfolio-content p {
         max-width: 100%;
+    }
+
+    .portfolio-image img {
+        width: 100%;
+        object-fit: fill;
+        display: block;
+        transition: transform 0.8s ease;
     }
 }

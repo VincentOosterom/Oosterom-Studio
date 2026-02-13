@@ -1,5 +1,5 @@
 import './Header.css'
-import Navigate from "../Navigate/Navigate.jsx";
+import Navigate from "../navigate/Navigate.jsx";
 import {useNavigate} from "react-router-dom";
 
 function Header({title, subtitle, buttonText}) {

@@ -9,12 +9,14 @@ import Portfolio from "./pages/Portfolio/Portfolio.jsx";
 import AboutUs from "./pages/Over Ons/OverOns.jsx";
 import ProjectPage from "./pages/ProjectPage/ProjectPage.jsx";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
+import AnalyticsTracker from "./components/AnalyticsTracker/AnalyticsTracker.jsx";
 
 function App() {
 
     return (
         <>
             <ScrollToTop/>
+            <AnalyticsTracker />
             <Routes>
                 <Route path="/" element={<Homepage />}/>
                 <Route path="/diensten" element={<Diensten />}/>

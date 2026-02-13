@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {color, motion} from 'framer-motion';
 import './Contact.css';
-import Navigate from "../../components/Navigate/Navigate.jsx";
+import Navigate from "../../components/navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
 import algemene from "../../assets/Algemene Voorwaarden - Oosterom Studio.pdf";
@@ -38,20 +38,23 @@ function Contact() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio | Contact</title>
+                <title>Contact | Oosterom Studio – Webdevelopment & Digitale Oplossingen</title>
+
                 <meta
                     name="description"
-                    content="Neem contact op met Oosterom Studio voor vragen, samenwerkingen of projecten. Snel antwoord gegarandeerd."
+                    content="Plan een vrijblijvend strategiegesprek met Oosterom Studio. Wij ontwikkelen schaalbare websites, webshops en digitale oplossingen met focus op performance en veiligheid."
                 />
-                <meta name="keywords"
-                      content="contact, vragen, samenwerking, website, SEO, Oosterom Studio, webdevelopment"/>
-                <meta property="og:title" content="Oosterom Studio | Contact"/>
-                <meta property="og:description" content="Bereik Vincent Oosterom voor jouw webproject of vraag."/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://www.oosteromstudio.nl/contact"/>
-                <meta name="twitter:card" content="summary_large_image"/>
-            </Helmet>
 
+                <meta property="og:title" content="Contact | Oosterom Studio" />
+                <meta
+                    property="og:description"
+                    content="Bespreek jouw digitale uitdaging met Oosterom Studio en ontdek hoe wij schaalbare weboplossingen realiseren."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.oosteromstudio.nl/contact" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
             <Navigate/>
             <section className="contact-layout">
                 <article className="contact-info">
@@ -134,7 +137,9 @@ function Contact() {
             </section>
 
             <Footer/>
+
         </>
+
     );
 }
 

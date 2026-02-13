@@ -1,5 +1,5 @@
 import './OverOns.css';
-import Navigate from "../../components/Navigate/Navigate.jsx";
+import Navigate from "../../components/navigate/Navigate.jsx";
 import {motion} from "framer-motion";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
@@ -23,19 +23,26 @@ function OverOns() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio | Over Ons</title>
+                <title>
+                    Over Oosterom Studio – Visie & Technische Expertise
+                </title>
+
                 <meta
                     name="description"
-                    content="Ontmoet Vincent Oosterom, oprichter van Oosterom Studio. Full Stack developer met focus op webdevelopment, AI en cybersecurity."
+                    content="Lees meer over de visie achter Oosterom Studio. Oprichter Vincent Oosterom combineert full stack development met een groeiende specialisatie in cybersecurity om veilige en schaalbare digitale oplossingen te realiseren."
                 />
-                <meta name="keywords"
-                      content="over ons, Vincent Oosterom, full stack development, AI, cybersecurity, webdevelopment, Oosterom Studio"/>
-                <meta property="og:title" content="Oosterom Studio | Over Ons"/>
-                <meta property="og:description"
-                      content="Maak kennis met Vincent en ontdek zijn passie voor webontwikkeling en technologie."/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://www.oosteromstudio.nl/over-ons"/>
+
+                <meta property="og:title" content="Over Oosterom Studio" />
+
+                <meta
+                    property="og:description"
+                    content="Ontdek de technische achtergrond, visie en toekomstgerichte aanpak van Oosterom Studio op het gebied van webdevelopment en digitale veiligheid."
+                />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.oosteromstudio.nl/over-ons" />
             </Helmet>
+
             <Navigate/>
             <section className="overons-hero">
                 <h1>Over Oosterom Studio</h1>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import './Diensten.css';
-import Navigate from "../../components/Navigate/Navigate.jsx";
+import Navigate from "../../components/navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
 
@@ -78,18 +78,26 @@ function Diensten() {
     return (
         <div>
             <Helmet>
-                <title>Oosterom Studio | Diensten</title>
+                <title>Diensten | Oosterom Studio – Webdevelopment & Digitale Oplossingen</title>
+
                 <meta
                     name="description"
-                    content="Ontdek de diensten van Oosterom Studio: Webdesign (Figma), Webdevelopment en Branding op maat voor jouw bedrijf."
+                    content="Ontdek de diensten van Oosterom Studio: maatwerk webdevelopment, e-commerce oplossingen, technische SEO en performance optimalisatie. Wij bouwen schaalbare en veilige digitale platformen voor groeiende bedrijven."
                 />
-                <meta name="keywords" content="webdesign, Figma, webdevelopment, branding, UI/UX, Oosterom Studio" />
-                <meta property="og:title" content="Oosterom Studio | Diensten" />
-                <meta property="og:description" content="Professionele webdesign en development diensten voor ondernemers." />
+
+                <meta property="og:title" content="Diensten | Oosterom Studio" />
+
+                <meta
+                    property="og:description"
+                    content="Van schaalbare websites tot technische optimalisatie — ontdek hoe Oosterom Studio digitale oplossingen ontwikkelt die prestaties en groei stimuleren."
+                />
+
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.oosteromstudio.nl/diensten" />
+
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
+
             {/* Navbar */}
             <Navigate/>
 

@@ -3,7 +3,16 @@
 ========================= */
 
 .intent-section {
+    display: flex;
     padding: 4rem 2rem;
+
+}
+
+.streepje {
+   width: 40px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
 }
 
 .intent-container {
