@@ -1,6 +1,6 @@
 .header {
     position: relative; /* 🔥 essentieel */
-    background-image: url("../../assets/charlesdeluvio-Lks7vei-eAg-unsplash.jpg");
+    background-image: url("../../assets/fabio-oyXis2kALVg-unsplash.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(81, 81, 81, 0.2);
+    background: rgba(0.2);
     z-index: 1;
     pointer-events: none; /* 🔥 fixes button clicks */
 }

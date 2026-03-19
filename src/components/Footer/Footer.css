@@ -86,13 +86,14 @@
     }
 
     .footer-links {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 
     .status-dot {
         width: 8px;
         height: 8px;
     }
+
 }
 
 

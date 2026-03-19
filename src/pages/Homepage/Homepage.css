@@ -87,6 +87,7 @@
 
 /* Section 3: Onze aanpak */
 .approach-section {
+    display: grid;
     padding: 6rem 2rem;
     text-align: center;
     background-color: var(--color-text);
@@ -115,8 +116,9 @@
     padding: 2rem;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 450px;
-    height: 250px;
+    max-width: 550px;
+    width: 100%;
+    max-height: 350px;
 }
 
 .approach-card:hover {
