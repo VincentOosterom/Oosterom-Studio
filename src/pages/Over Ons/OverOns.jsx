@@ -23,24 +23,44 @@ function OverOns() {
     return (
         <>
             <Helmet>
-                <title>
-                    Over Oosterom Studio – Visie & Technische Expertise
-                </title>
+                <title>Over Vincent Oosterom – Webdeveloper & Cybersecurity Specialist</title>
 
                 <meta
                     name="description"
-                    content="Lees meer over de visie achter Oosterom Studio. Oprichter Vincent Oosterom combineert full stack development met een groeiende specialisatie in cybersecurity om veilige en schaalbare digitale oplossingen te realiseren."
+                    content="Vincent Oosterom is oprichter van Oosterom Studio — een webdeveloper en cybersecurity specialist die maatwerk digitale oplossingen bouwt voor MKB en startups in Nederland."
                 />
 
-                <meta property="og:title" content="Over Oosterom Studio" />
-
+                <meta property="og:title" content="Over Vincent Oosterom | Oosterom Studio"/>
                 <meta
                     property="og:description"
-                    content="Ontdek de technische achtergrond, visie en toekomstgerichte aanpak van Oosterom Studio op het gebied van webdevelopment en digitale veiligheid."
+                    content="Webdeveloper, Shopify specialist en cybersecurity expert. Ontdek de visie en aanpak achter Oosterom Studio."
                 />
+                <meta property="og:type" content="profile"/>
+                <meta property="og:url" content="https://www.oosteromstudio.nl/over-ons"/>
+                <meta property="og:site_name" content="Oosterom Studio"/>
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
 
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/over-ons" />
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
+
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Vincent Oosterom",
+                        "jobTitle": "Webdeveloper & Cybersecurity Specialist",
+                        "url": "https://www.oosteromstudio.nl/over-ons",
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "Oosterom Studio",
+                            "url": "https://www.oosteromstudio.nl"
+                        },
+                        "sameAs": [
+                            "https://www.linkedin.com/in/vincent-oosterom-05017176/",
+                            "https://www.instagram.com/oosteromstudio"
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             <Navigate/>

@@ -11,6 +11,7 @@ import ProjectPage from "./pages/ProjectPage/ProjectPage.jsx";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 import AnalyticsTracker from "./components/AnalyticsTracker/AnalyticsTracker.jsx";
 import CookieBanner from "./components/cookies/CookiesBanner.jsx";
+import {BrandingPage, SaasPage, WebdesignPage, WebdevelopmentPage} from "./pages/DienstPage/DienstPages.jsx";
 
 function App() {
 
@@ -26,6 +27,10 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />}/>
                 <Route path="/over-ons" element={<AboutUs />}/>
                 <Route path="/offerte-aanvragen" element={<OfferteAanvragen />}/>
+                <Route path="/diensten/webdesign" element={<WebdesignPage />} />
+                <Route path="/diensten/webdevelopment" element={<WebdevelopmentPage />} />
+                <Route path="/diensten/saas" element={<SaasPage />} />
+                <Route path="/diensten/branding" element={<BrandingPage />} />
                 <Route path="/portfolio/:slug" element={<ProjectPage />} />
                 <Route path="*" element={<NotFound/>}/>
 

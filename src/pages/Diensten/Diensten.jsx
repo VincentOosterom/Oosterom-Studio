@@ -20,7 +20,8 @@ const services = [
             extra:
                 "Een sterk design vormt de basis voor elke website of digitale applicatie. Daarom ontwerpen wij altijd met het oog op toekomstige uitbreiding, zoals dashboards, klantportalen of SaaS-functionaliteit.",
             icon: "🎨",
-            link: "/diensten/webdesign"
+            link: "/diensten/webdesign",
+
         },
         {
             title: "Webdevelopment & Applicaties",
@@ -68,7 +69,7 @@ const services = [
             extra:
                 "Wij helpen je niet alleen met hoe je eruitziet, maar ook met waar je naartoe wilt. Zo sluiten branding, website en eventuele systemen perfect op elkaar aan.",
             icon: "📈",
-            link: "/diensten/branding-strategie"
+            link: "/diensten/branding"
         }
 ];
 
@@ -78,24 +79,25 @@ function Diensten() {
     return (
         <div>
             <Helmet>
-                <title>Diensten | Oosterom Studio – Webdevelopment & Digitale Oplossingen</title>
+                <title>Diensten | Oosterom Studio – Webdesign, Webshops & Cybersecurity</title>
 
                 <meta
                     name="description"
-                    content="Ontdek de diensten van Oosterom Studio: maatwerk webdevelopment, e-commerce oplossingen, technische SEO en performance optimalisatie. Wij bouwen schaalbare en veilige digitale platformen voor groeiende bedrijven."
+                    content="Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale platformen voor MKB en startups. Inclusief technische SEO, performance optimalisatie en cybersecurity."
                 />
 
-                <meta property="og:title" content="Diensten | Oosterom Studio" />
-
+                <meta property="og:title" content="Diensten | Oosterom Studio"/>
                 <meta
                     property="og:description"
-                    content="Van schaalbare websites tot technische optimalisatie — ontdek hoe Oosterom Studio digitale oplossingen ontwikkelt die prestaties en groei stimuleren."
+                    content="Webdesign, Shopify webshops en cybersecurity onder één dak. Bekijk wat Oosterom Studio voor jouw bedrijf kan betekenen."
                 />
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.oosteromstudio.nl/diensten"/>
+                <meta property="og:site_name" content="Oosterom Studio"/>
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
 
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/diensten" />
-
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
             </Helmet>
 
             {/* Navbar */}
@@ -138,6 +140,7 @@ function Diensten() {
                                     </ul>
                                     {service.extra && <p className="dienst-extra">{service.extra}</p>}
                                 </article>
+                                <a href={service.link} className="card-link">Meer informatie</a>
                             </motion.div>
                         );
                     })}

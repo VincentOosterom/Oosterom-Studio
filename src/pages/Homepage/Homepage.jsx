@@ -54,35 +54,52 @@ function Homepage() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio – Webdevelopment & Digitale Oplossingen</title>
+                <title>Oosterom Studio – Webdesign, Shopify & Cybersecurity</title>
+
                 <meta
                     name="description"
-                    content="Oosterom Studio ontwikkelt schaalbare websites, webshops en digitale oplossingen met focus op performance, veiligheid en groei. Wij bouwen toekomstbestendige platformen voor ambitieuze bedrijven."
+                    content="Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht."
                 />
-                <meta property="og:title" content="Oosterom Studio – Digitale Oplossingen"/>
+
+                <meta property="og:title" content="Oosterom Studio – Webdesign, Shopify & Cybersecurity"/>
                 <meta
                     property="og:description"
-                    content="Van maatwerk webdevelopment tot technische optimalisatie — wij bouwen snelle, veilige en schaalbare digitale platformen."
+                    content="Digitaal sterk van buiten én van binnen. Oosterom Studio combineert scherp webdesign met cybersecurity voor MKB en startups."
                 />
                 <meta property="og:type" content="website"/>
                 <meta property="og:url" content="https://www.oosteromstudio.nl/"/>
+                <meta property="og:site_name" content="Oosterom Studio"/>
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
+
                 <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
+
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Organization",
                         "name": "Oosterom Studio",
                         "url": "https://www.oosteromstudio.nl",
-                        "logo": "https://www.oosteromstudio.nl/logo.png",
+                        "logo": "https://www.oosteromstudio.nl/og-image.jpg",
                         "founder": {
                             "@type": "Person",
                             "name": "Vincent Oosterom"
                         },
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "email": "vincent@oosteromstudio.nl",
+                            "contactType": "customer service",
+                            "availableLanguage": "Dutch"
+                        },
+                        "areaServed": {
+                            "@type": "Country",
+                            "name": "Netherlands"
+                        },
                         "sameAs": [
-                            "https://www.linkedin.com/in/vincent-oosterom",
+                            "https://www.linkedin.com/in/vincent-oosterom-05017176/",
                             "https://www.instagram.com/oosteromstudio"
                         ],
-                        "description": "Oosterom Studio ontwikkelt schaalbare websites en digitale oplossingen met focus op performance en veiligheid."
+                        "description": "Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale oplossingen voor MKB en startups in Nederland."
                     })}
                 </script>
             </Helmet>

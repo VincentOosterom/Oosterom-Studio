@@ -54,6 +54,11 @@
     border-radius: 2px;
 }
 
+.document-linkin {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
 .contact-info p {
     font-size: 1.05rem;
     color: var(--color-muted);
@@ -171,11 +176,7 @@
 
 .contact-form button {
     margin-top: 1.5rem;
-    background: linear-gradient(
-            135deg,
-            var(--color-accent),
-            #3fe0c5
-    );
+    background: var(--color-accent);
     color: #000;
     border: none;
     border-radius: 14px;

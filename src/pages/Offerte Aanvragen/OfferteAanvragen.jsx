@@ -39,26 +39,28 @@ function OfferteAanvragen() {
     return (
         <>
             <Helmet>
-                <title>
-                    Strategiegesprek aanvragen | Oosterom Studio
-                </title>
+                <title>Strategiegesprek aanvragen | Oosterom Studio</title>
 
                 <meta
                     name="description"
-                    content="Plan een vrijblijvend strategiegesprek met Oosterom Studio. Wij analyseren jouw digitale uitdaging en ontwikkelen een maatwerk voorstel voor schaalbare weboplossingen."
+                    content="Vraag een gratis strategiegesprek aan bij Oosterom Studio. Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie."
                 />
 
-                <meta property="og:title" content="Strategiegesprek aanvragen | Oosterom Studio" />
+                {/* Conversiepagina — niet indexeren */}
+                <meta name="robots" content="noindex, nofollow"/>
 
+                <meta property="og:title" content="Strategiegesprek aanvragen | Oosterom Studio"/>
                 <meta
                     property="og:description"
-                    content="Bespreek jouw digitale doelen en ontvang een maatwerk voorstel voor een schaalbare en toekomstbestendige oplossing."
+                    content="Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie van Oosterom Studio."
                 />
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.oosteromstudio.nl/offerte-aanvragen"/>
+                <meta property="og:site_name" content="Oosterom Studio"/>
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
 
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/offerte-aanvragen" />
-
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
             </Helmet>
 
 

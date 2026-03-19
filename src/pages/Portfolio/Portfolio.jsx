@@ -11,26 +11,39 @@ function Portfolio() {
     return (
         <>
             <Helmet>
-                <title>
-                    Case Studies | Oosterom Studio – Digitale Oplossingen
-                </title>
+                <title>Portfolio & Cases | Oosterom Studio – Webdesign & Cybersecurity</title>
 
                 <meta
                     name="description"
-                    content="Bekijk hoe Oosterom Studio schaalbare websites en digitale oplossingen ontwikkelt die prestaties verbeteren, conversies verhogen en duurzame online groei realiseren."
+                    content="Bekijk gerealiseerde projecten van Oosterom Studio — van maatwerk websites en Shopify webshops tot beveiligde digitale platformen voor MKB en startups in Nederland."
                 />
 
-                <meta property="og:title" content="Case Studies | Oosterom Studio" />
-
+                <meta property="og:title" content="Portfolio & Cases | Oosterom Studio"/>
                 <meta
                     property="og:description"
-                    content="Ontdek gerealiseerde digitale oplossingen en case studies met focus op performance, schaalbaarheid en technische optimalisatie."
+                    content="Van webdesign tot cybersecurity — bekijk wat Oosterom Studio heeft gebouwd voor MKB en startups."
                 />
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.oosteromstudio.nl/portfolio"/>
+                <meta property="og:site_name" content="Oosterom Studio"/>
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
 
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/portfolio" />
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
 
-                <meta name="twitter:card" content="summary_large_image" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "CollectionPage",
+                        "name": "Portfolio & Cases | Oosterom Studio",
+                        "url": "https://www.oosteromstudio.nl/portfolio",
+                        "description": "Gerealiseerde projecten van Oosterom Studio op het gebied van webdesign, Shopify en cybersecurity.",
+                        "author": {
+                            "@type": "Organization",
+                            "name": "Oosterom Studio"
+                        }
+                    })}
+                </script>
             </Helmet>
 
             <Navigate/>

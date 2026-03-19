@@ -11,7 +11,7 @@ function intentSection() {
                         <span className="intent-eyebrow">Digitale groei</span>
                         <div className="streepje"></div>
                         <h2>
-                            Welke <span>digitale uitdaging</span> wil jij oplossen?
+                            Welke digitale <span>uitdaging</span> wil jij oplossen?
                         </h2>
                         <p>
                             Of je nu een schaalbare website wilt ontwikkelen, je online prestaties wilt verbeteren

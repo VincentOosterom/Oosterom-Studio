@@ -150,11 +150,7 @@
 
 .offerte-form button {
     margin-top: 1.5rem;
-    background: linear-gradient(
-            135deg,
-            var(--color-accent),
-            #3fe0c5
-    );
+    background: var(--color-accent);
     color: #000;
     border: none;
     border-radius: 14px;

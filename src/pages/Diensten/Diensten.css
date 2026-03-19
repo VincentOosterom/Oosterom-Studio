@@ -20,6 +20,15 @@
     line-height: 1.7;
 }
 
+.card-link {
+    text-decoration: none;
+    color: var(--color-bg);
+    background-color: var(--color-accent);
+    padding: 0.8rem 0.8rem;
+    border-radius: 1rem;
+    font-family: var(--font-body), serif;
+    font-size: 0.8rem;
+}
 /* =========================
    OVERVIEW
 ========================= */

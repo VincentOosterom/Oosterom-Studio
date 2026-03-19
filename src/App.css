@@ -15,10 +15,10 @@
 
     /* Colors */
     --color-bg: #000000; /* Achtergrond hoofdkleur */
-    --color-accent: #64FFDA; /* Accent (buttons, links,hover) */
+    --color-accent: #88e8f4; /* Accent (buttons, links,hover) */
     --color-text: #F9FAFB; /* Primaire tekstkleur */
     --color-muted: #94A3B8; /* Secundaire tekst */
-    --color-dark: #1F2937;
+    --color-dark: #000000;
 
     --color-nav-bg: rgb(255, 255, 255); /* Semi-transparant donkerblauw */
     --color-nav-border: rgb(136, 232, 244);

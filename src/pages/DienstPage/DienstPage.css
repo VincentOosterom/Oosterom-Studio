@@ -1,0 +1,418 @@
+/* ── DienstPage Styles ───────────────────────────────────────────────────── */
+
+/* HERO */
+.dienst-hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 120px 4rem 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dienst-hero__bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+            linear-gradient(rgba(77, 255, 195, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77, 255, 195, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 100%, black 30%, transparent 100%);
+    pointer-events: none;
+}
+
+.dienst-hero__glow {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(77, 255, 195, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+
+}
+
+.dienst-hero__content {
+    position: relative;
+    max-width: 800px;
+}
+
+.dienst-hero__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 28px;
+    padding: 8px 14px;
+    border: 1px solid rgba(77, 255, 195, 0.2);
+    border-radius: 100px;
+    background: rgba(77, 255, 195, 0.05);
+    width: fit-content;
+
+}
+
+.dienst-hero__tag-icon {
+    display: flex;
+    align-items: center;
+    color: var(--color-accent);
+}
+
+.dienst-hero__title {
+    font-size: clamp(2rem, 7vw, 10rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin-bottom: 28px;
+    font-family: var(--font-title), sans-serif;
+}
+
+.dienst-hero__subtitle {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    max-width: 540px;
+    margin-bottom: 44px;
+    font-family: var(--font-body), sans-serif;
+}
+
+.dienst-hero__actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: var(--font-body), sans-serif;
+}
+
+/* BUTTONS */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #080808;
+    background: var(--color-accent);
+    padding: 14px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+    letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+.btn-primary--large {
+    padding: 18px 40px;
+    font-size: 14px;
+    font-family: var(--font-body), sans-serif;
+}
+
+.btn-ghost {
+    font-size: 13px;
+    color: var(--color-muted, #999);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+}
+
+.btn-ghost:hover {
+    color: var(--color-text);
+}
+
+/* SECTION BASE */
+.dienst-section {
+    padding: 100px 4rem;
+}
+
+.dienst-section--dark {
+    background: var(--color-dark, #141414);
+}
+
+.dienst-section__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dienst-section__inner--narrow {
+    max-width: 720px;
+}
+
+/* SECTION LABELS */
+.section-tag {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: var(--color-accent);
+    margin-bottom: 56px;
+    font-family: var(--font-title), sans-serif;
+}
+
+
+.section-title em {
+    color: var(--color-accent);
+    font-style: normal;
+}
+
+/* DIENST CARDS */
+.dienst-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.dienst-card {
+    background: var(--color-dark, #141414);
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 36px 32px;
+    transition: border-color 0.25s;
+}
+
+.dienst-card:hover {
+    border-color: rgba(77, 255, 195, 0.3);
+}
+
+.dienst-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(77, 255, 195, 0.08);
+    border: 1px solid rgba(77, 255, 195, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+.dienst-card__title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+    font-family: var(--font-title), sans-serif;
+}
+
+.dienst-card__desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-family: var(--font-body), sans-serif;
+}
+
+.dienst-card__features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dienst-card__features li {
+    font-size: 12px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.01em;
+}
+
+.dienst-card__features li::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* STAPPEN */
+.stappen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.stap {
+    padding: 36px 28px;
+    border-right: 1px solid #2a2a2a;
+    position: relative;
+    background: var(--color-bg, #080808);
+}
+
+.stap:last-child {
+    border-right: none;
+}
+
+.stap__num {
+    display: block;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+.stap__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+    font-family: var(--font-title), sans-serif;
+}
+
+.stap__desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+}
+
+/* FAQ */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.faq-item {
+    border-bottom: 1px solid #2a2a2a;
+
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item__trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-accent);
+    font-family: inherit;
+    transition: color 0.2s;
+    gap: 16px;
+}
+
+.faq-item--open .faq-item__trigger {
+    color: var(--color-accent);
+}
+
+.faq-item__icon {
+    color: var(--color-muted, #999);
+    flex-shrink: 0;
+    transition: transform 0.25s ease, color 0.2s;
+}
+
+.faq-item__icon--open {
+    transform: rotate(180deg);
+    color: var(--color-accent);
+
+}
+
+.faq-item__answer {
+    overflow: hidden;
+}
+
+.faq-item__answer p {
+    padding: 0 24px 20px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+}
+
+/* CTA */
+.dienst-cta {
+    padding: 120px 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dienst-cta__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(77, 255, 195, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.dienst-cta__inner {
+    position: relative;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.dienst-cta__inner h2 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    font-family: var(--font-title), sans-serif;
+}
+
+.dienst-cta__inner p {
+    font-size: 16px;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    font-family: var(--font-body), sans-serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .dienst-hero { padding: 100px 1.5rem 60px; }
+    .dienst-section { padding: 72px 1.5rem; }
+    .dienst-cta { padding: 80px 1.5rem; }
+    .stappen-grid { grid-template-columns: 1fr; }
+    .stap { border-right: none; border-bottom: 1px solid #2a2a2a; }
+    .stap:last-child { border-bottom: none; }
+    .dienst-hero__actions { flex-direction: column; align-items: flex-start; }
+}

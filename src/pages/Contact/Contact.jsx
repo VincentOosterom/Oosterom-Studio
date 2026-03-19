@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {color, motion} from 'framer-motion';
+import { motion} from 'framer-motion';
 import './Contact.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/Footer/Footer.jsx";
 import algemene from "../../assets/Algemene Voorwaarden - Oosterom Studio.pdf";
+
 
 function Contact() {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -29,7 +30,7 @@ function Contact() {
         if (response.ok) {
             setFormData({name: "", company: "", email: "", message: ""});
         } else {
-            setError("Er is iets mis gegaan. Probeer het opnieuw")
+            setError("Er is een fout opgetreden. Probeer het opnieuw")
         }
         setIsSubmitted(true);
     };
@@ -38,22 +39,25 @@ function Contact() {
     return (
         <>
             <Helmet>
-                <title>Contact | Oosterom Studio – Webdevelopment & Digitale Oplossingen</title>
+                <title>Contact | Oosterom Studio – Gratis Strategiegesprek</title>
 
                 <meta
                     name="description"
-                    content="Plan een vrijblijvend strategiegesprek met Oosterom Studio. Wij ontwikkelen schaalbare websites, webshops en digitale oplossingen met focus op performance en veiligheid."
+                    content="Vraag een gratis strategiegesprek aan bij Oosterom Studio. Binnen 24 uur reactie. Wij bouwen websites, webshops en beveiligde digitale oplossingen voor MKB en startups."
                 />
 
-                <meta property="og:title" content="Contact | Oosterom Studio" />
+                <meta property="og:title" content="Contact | Oosterom Studio"/>
                 <meta
                     property="og:description"
-                    content="Bespreek jouw digitale uitdaging met Oosterom Studio en ontdek hoe wij schaalbare weboplossingen realiseren."
+                    content="Klaar om jouw project te starten? Plan een vrijblijvend gesprek en ontvang binnen 24 uur een reactie."
                 />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/contact" />
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.oosteromstudio.nl/contact"/>
+                <meta property="og:site_name" content="Oosterom Studio"/>
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
 
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
             </Helmet>
             <Navigate/>
             <section className="contact-layout">
@@ -70,10 +74,22 @@ function Contact() {
                     <article className="company-details">
                         <h3>Oosterom Studio is onderdeel van Oosterom Creative</h3>
                         <div className="company-details-extra">
-                            <p><strong>KVK Nummer:</strong><br/>85118028</p>
-                            <p><strong>BTW Nummer</strong><br/>NL004057297B50</p>
+                            <p><strong>KVK:</strong><br/>85118028</p>
+                            <p><strong>BTW:</strong><br/>NL004057297B50</p>
                             <a href={algemene} target="_blank" rel="noopener noreferrer" className="document-link">
                                 Algemene Voorwaarden
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/vincent-oosterom-05017176/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="document-link"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
                             </a>
                         </div>
                     </article>
