@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { motion, AnimatePresence } from "framer-motion";
 import './DienstPage.css'
 import Navigate from "../../components/navigate/Navigate.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 // ── Animation variants ────────────────────────────────────────────────────────
 
 const fadeUp = {
@@ -241,6 +242,7 @@ function DienstPage({
                     </motion.div>
                 </motion.div>
             </section>
+            <Footer />
         </>
     );
 }

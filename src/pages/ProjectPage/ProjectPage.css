@@ -6,7 +6,7 @@
 
 .project-hero {
     margin-top: 5vh;
-    padding: 2rem 2rem 6rem;
+    padding: 6rem 2rem 6rem;
     text-align: center;
 }
 
@@ -41,8 +41,7 @@
 
 .project-hero-image img {
     width: 100%;
-    max-width: 800px;
-    border-radius: 12px;
+    max-width: 600px;
 }
 
 

@@ -3,7 +3,7 @@ import Navigate from "../../components/navigate/Navigate.jsx";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
 import {Helmet} from "react-helmet-async";
-import Footer from "../../components/Footer/Footer.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 import projects from "../../Projects.js";
 
 

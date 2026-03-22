@@ -2,7 +2,7 @@ import './OverOns.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
 import {motion} from "framer-motion";
 import {Helmet} from "react-helmet-async";
-import Footer from "../../components/Footer/Footer.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 function OverOns() {
     const AnimatedWord = ({ children }) => (
@@ -19,6 +19,16 @@ function OverOns() {
             {children}
         </motion.span>
     );
+
+    const fadeUp = {
+        hidden: { opacity: 0, y: 40 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+    };
+
+    const stagger = {
+        hidden: {},
+        visible: { transition: { staggerChildren: 0.15 } },
+    };
 
     return (
         <>
@@ -68,13 +78,17 @@ function OverOns() {
                 <h1>Over Oosterom Studio</h1>
                 <p>Gedreven door passie voor design, technologie en veiligheid.</p>
             </section>
-            <section className="overons-content">
-
-                <article className="overons-text">
+            <motion.section
+                className="overons-content"
+                variants={stagger}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.15 }}
+            >
+                <motion.article className="overons-text" variants={fadeUp}>
                     <h2>
                         De <AnimatedWord>basis</AnimatedWord> van Oosterom Studio
                     </h2>
-
                     <p>
                         Mijn naam is <strong>Vincent Oosterom</strong>, oprichter van
                         <strong> Oosterom Studio</strong>. Vanuit een sterke interesse in
@@ -87,13 +101,12 @@ function OverOns() {
                         niet alleen visueel overtuigen, maar ook technisch robuust,
                         veilig en toekomstbestendig zijn.
                     </p>
-                </article>
+                </motion.article>
 
-                <article className="overons-text reverse">
+                <motion.article className="overons-text reverse" variants={fadeUp}>
                     <h2>
                         Ontwikkeling en <AnimatedWord>expertise</AnimatedWord>
                     </h2>
-
                     <p>
                         Momenteel volg ik de <strong>HBO-opleiding Full Stack Development</strong>,
                         waarin ik mij richt op het ontwerpen en realiseren van complete
@@ -110,12 +123,11 @@ function OverOns() {
                         binnen <strong>cybersecurity</strong>. Door mijn technische basis in
                         full stack development te combineren met security-kennis, kan ik
                         software niet alleen bouwen, maar ook onderbouwd beveiligen en
-                        strategisch adviseren over architectuur en risico’s.
+                        strategisch adviseren over architectuur en risico's.
                     </p>
+                </motion.article>
 
-                </article>
-
-                <article className="overons-text">
+                <motion.article className="overons-text" variants={fadeUp}>
                     <h2>
                         Visie en <AnimatedWord>richting</AnimatedWord>
                     </h2>
@@ -140,9 +152,9 @@ function OverOns() {
                         adviseren — over <strong>hoe</strong> systemen worden opgezet en
                         <strong> waarom</strong> bepaalde keuzes worden gemaakt.
                     </p>
-                </article>
+                </motion.article>
 
-            </section>
+            </motion.section>
 
             <Footer />
 

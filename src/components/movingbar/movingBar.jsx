@@ -23,7 +23,7 @@ function movingBar () {
 
 
                     <div className="track">
-                        <span>•</span>
+                        <span className="dot">•</span>
                         <span >Webdesign</span>
                         <span className="dot">•</span>
                         <span>Webdevelopment</span>

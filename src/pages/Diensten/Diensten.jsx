@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import './Diensten.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
-import Footer from "../../components/Footer/Footer.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 const services = [
         {
@@ -116,7 +116,7 @@ function Diensten() {
 
             {/* Services overzicht */}
             <section className="diensten-overview">
-                <div className="diensten-container">
+                <article className="diensten-container">
                     {services.map((service, index) => {
                         const isReversed = index % 2 !== 0;
 
@@ -144,7 +144,7 @@ function Diensten() {
                             </motion.div>
                         );
                     })}
-                </div>
+                </article>
             </section>
             <Footer/>
         </div>

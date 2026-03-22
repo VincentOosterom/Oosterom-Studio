@@ -4,7 +4,7 @@ import {Link, useParams} from "react-router-dom";
 import {Helmet} from "react-helmet-async";
 import Navigate from "../../components/navigate/Navigate.jsx";
 import projects from "/src/Projects.js";
-import Footer from "../../components/Footer/Footer.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 function ProjectPage() {
     const {slug} = useParams();

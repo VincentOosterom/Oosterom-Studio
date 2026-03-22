@@ -1,21 +1,38 @@
+/* ── Header ──────────────────────────────────────────────────────────────── */
+
 .header {
-    position: relative; /* 🔥 essentieel */
+    position: relative;
     background-image: url("../../assets/fabio-oyXis2kALVg-unsplash.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-
+    display: flex;
+    flex-direction: column;
 }
 
-/* Overlay */
+/* Overlay — fix: rgba had geen geldige kleur */
 .header::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0.2);
+    background: rgba(0, 0, 0, 0.55);
     z-index: 1;
-    pointer-events: none; /* 🔥 fixes button clicks */
+    pointer-events: none;
+}
+
+/* Grid achtergrond zoals dienstpagina's */
+.header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+            linear-gradient(rgba(77, 255, 195, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77, 255, 195, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 30% 100%, black 30%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Content boven overlay */
@@ -25,28 +42,72 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 4rem;
     gap: 2rem;
-    color: var(--color-bg);
+    flex: 1;
 }
 
 /* Linker content */
 .content-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 24px;
     align-items: flex-start;
-    padding: 20px;
-    margin: 20px 0;
-    height: 70vh;
-    max-width: 800px;
+    padding: 120px 0 80px;
+    min-height: 90vh;
+    max-width: 760px;
     width: 100%;
 }
 
 .content-left h1 {
-    font-size: 3rem;
-    line-height: 1.2;
+    font-size: clamp(42px, 7vw, 88px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: whitesmoke;
+    white-space: pre-line;
+}
+
+.content-left p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 300;
+    max-width: 520px;
+}
+
+/* CTA knop in stijl van dienstpagina's */
+.call-to-action-btn button {
+    font-size: 13px;
+    font-weight: 600;
+    color: #080808;
+    background: var(--color-accent);
+    padding: 16px 32px;
+    border-radius: 100px;
+    border: none;
+    font-family: var(--font-body), sans-serif;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    letter-spacing: 0.01em;
+
+}
+
+.call-to-action-btn button:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content { padding: 0 1.5rem; }
+    .content-left { padding: 100px 0 60px; gap: 20px; }
+}
+
+.content-left h1 {
+    font-size: clamp(2rem, 5vw, 7rem);
+    font-weight: 800;
+    line-height: 0.95;
 }
 
 .call-to-action-btn button {
@@ -66,36 +127,47 @@
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
     .content-left {
-        height: 40vh;
+        min-height: 70svh;
+        padding: 100px 0 60px;
     }
 }
 
 /* Mobiel */
 @media (max-width: 768px) {
+    .header {
+        width: 100%;
+        min-height: 100svh;
+    }
+
     .header-content {
         flex-direction: column;
-        text-align: center;
-        padding: 1rem;
+        text-align: left;
+        padding: 0 1.25rem;
         gap: 1.5rem;
-        margin-top: 7rem;
     }
 
     .content-left {
-        align-items: center;
-        height: auto;
+        align-items: flex-start;
+        min-height: 80svh;
         max-width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 100px 0 48px;
+        justify-content: flex-end;
     }
 
     .content-left h1 {
-        font-size: 1.8rem;
+        font-size: clamp(2rem, 8vw, 4rem);
+    }
+
+    .content-left p {
+        font-size: 15px;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .content-left h1 {
-        font-size: 1.5rem;
+        font-size: clamp(2rem, 7vw, 3rem);
     }
 
     .content-left p {

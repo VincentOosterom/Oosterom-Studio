@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
-import {motion} from 'framer-motion';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './OfferteAanvragen.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
-import {Helmet} from "react-helmet-async";
-import Footer from "../../components/Footer/Footer.jsx";
+import { Helmet } from "react-helmet-async";
+import Footer from "../../components/footer/Footer.jsx";
 
 function OfferteAanvragen() {
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState(null);
     const [formData, setFormData] = useState({
         name: "",
         company: "",
@@ -16,147 +17,163 @@ function OfferteAanvragen() {
         message: ""
     });
 
-
     const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const response = await fetch("https://formspree.io/f/mldpazoo", {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
         });
         if (response.ok) {
-            setFormData({name: "", email: "", service: "", budget: "", message: ""});
+            setFormData({ name: "", company: "", email: "", service: "", budget: "", message: "" });
+            setIsSubmitted(true);
         } else {
-            alert("Er is iets misgegaan, probeer het later opnieuw.");
+            setError("Er is iets misgegaan, probeer het later opnieuw.");
         }
-        setIsSubmitted(true);
     };
 
     return (
         <>
             <Helmet>
                 <title>Strategiegesprek aanvragen | Oosterom Studio</title>
-
                 <meta
                     name="description"
                     content="Vraag een gratis strategiegesprek aan bij Oosterom Studio. Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie."
                 />
-
-                {/* Conversiepagina — niet indexeren */}
                 <meta name="robots" content="noindex, nofollow"/>
-
                 <meta property="og:title" content="Strategiegesprek aanvragen | Oosterom Studio"/>
-                <meta
-                    property="og:description"
-                    content="Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie van Oosterom Studio."
-                />
+                <meta property="og:description" content="Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie van Oosterom Studio."/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:url" content="https://www.oosteromstudio.nl/offerte-aanvragen"/>
                 <meta property="og:site_name" content="Oosterom Studio"/>
                 <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
-
                 <meta name="twitter:card" content="summary_large_image"/>
                 <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
             </Helmet>
 
-
             <Navigate/>
 
-            <section className="offerte-layout">
-                <article className="offerte-info">
-                    <h2>Offerte aanvragen</h2>
-                    <p>
-                        Vertel ons wat je nodig hebt.
-                        Op basis van je wensen ontvang je binnen 24 uur een vrijblijvende offerte.
-                    </p>
+            {/* ← zelfde structuur als Contact */}
+            <section className="offerte-section">
+                <div className="offerte-container">
+                    <div className="offerte-layout">
 
-                    <div className="offerte-details">
-                        <p><strong>Reactietijd</strong>Binnen 24 uur</p>
-                        <p><strong>Vrijblijvend</strong>Geen verplichtingen</p>
+                        {/* LEFT — info */}
+                        <article className="offerte-info">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                <h2>Offerte aanvragen</h2>
+                                <p>
+                                    Vertel ons wat je nodig hebt.
+                                    Op basis van je wensen ontvang je binnen 24 uur
+                                    een vrijblijvende offerte.
+                                </p>
+
+                                <div className="offerte-details">
+                                    <p>
+                                        <strong>Reactietijd</strong>
+                                        Binnen 24 uur
+                                    </p>
+                                    <p>
+                                        <strong>Vrijblijvend</strong>
+                                        Geen verplichtingen
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </article>
+
+                        {/* RIGHT — form */}
+                        {!isSubmitted ? (
+                            <motion.form
+                                className="offerte-form"
+                                onSubmit={handleSubmit}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true }}
+                            >
+                                <h2>Offerte aanvragen</h2>
+                                {error && <p className="form-error">{error}</p>}
+                                <p className="warning">Let op! Velden met * zijn verplicht</p>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Naam *"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="E-mailadres *"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="text"
+                                    name="company"
+                                    placeholder="Bedrijfsnaam"
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                />
+                                <select
+                                    name="service"
+                                    value={formData.service}
+                                    onChange={handleChange}
+                                    required
+                                >
+                                    <option value="">Waar ben je naar op zoek? *</option>
+                                    <option value="design">Webdesign (Figma)</option>
+                                    <option value="development">Webdevelopment</option>
+                                    <option value="complete">Complete website</option>
+                                    <option value="webshop">Webshop (Shopify)</option>
+                                    <option value="security">Cybersecurity</option>
+                                    <option value="seo">SEO & Performance</option>
+                                </select>
+                                <select
+                                    name="budget"
+                                    value={formData.budget}
+                                    onChange={handleChange}
+                                >
+                                    <option value="">Geschat budget</option>
+                                    <option value="500-1500">€500 – €1.500</option>
+                                    <option value="1500-3000">€1.500 – €3.000</option>
+                                    <option value="3000-plus">€3.000+</option>
+                                </select>
+                                <textarea
+                                    name="message"
+                                    placeholder="Vertel kort over je project *"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    rows={5}
+                                    required
+                                />
+                                <button type="submit">Verstuur aanvraag</button>
+                            </motion.form>
+                        ) : (
+                            <motion.div
+                                className="thank-you-message"
+                                initial={{ opacity: 0, scale: 0.97 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <h2>Bedankt voor je aanvraag!</h2>
+                                <p>We nemen zo snel mogelijk contact met je op.</p>
+                            </motion.div>
+                        )}
+
                     </div>
-                </article>
-
-                {!isSubmitted ? (
-                    <motion.form
-                        className="offerte-form"
-                        onSubmit={handleSubmit}
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2>Offerte aanvragen</h2>
-                        <p className="warning">Let op! Velden met * zijn verplicht</p>
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Naam *"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="E-mailadres *"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-
-                        <input
-                            type="text"
-                            name="company"
-                            placeholder="Bedrijfsnaam"
-                            value={formData.company}
-                            onChange={handleChange}
-                        />
-
-                        <select
-                            name="service"
-                            value={formData.service}
-                            onChange={handleChange}
-                            required
-                        >
-                            <option value="">Waar ben je naar op zoek?</option>
-                            <option value="design">Webdesign (Figma)</option>
-                            <option value="development">Webdevelopment</option>
-                            <option value="complete">Complete website</option>
-                        </select>
-
-                        <select
-                            name="budget"
-                            value={formData.budget}
-                            onChange={handleChange}
-                        >
-                            <option value="">Geschat budget</option>
-                            <option value="500-1500">€500 – €1.500</option>
-                            <option value="1500-3000">€1.500 – €3.000</option>
-                            <option value="3000-plus">€3.000+</option>
-                        </select>
-
-                        <textarea
-                            name="message"
-                            placeholder="Vertel kort over je project *"
-                            value={formData.message}
-                            onChange={handleChange}
-                            rows={5}
-                            required
-                        />
-
-                        <button type="submit">Verstuur aanvraag</button>
-                    </motion.form>
-                ) : (
-                    <div className="thank-you-message">
-                        <h2>Bedankt voor je aanvraag</h2>
-                        <p>We nemen zo snel mogelijk contact met je op.</p>
-                    </div>
-                )}
+                </div>
             </section>
 
             <Footer/>

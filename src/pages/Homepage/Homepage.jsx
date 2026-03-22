@@ -1,7 +1,7 @@
 import './Homepage.css';
 import Header from "../../components/header/Header.jsx";
 import {motion} from "framer-motion";
-import Footer from "../../components/Footer/Footer.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 import {Helmet} from "react-helmet-async";
 import FigmaSection from "../../components/figma-section/FigmaSection.jsx";
 import {Link} from "react-router-dom";
@@ -104,14 +104,15 @@ function Homepage() {
                 </script>
             </Helmet>
 
-            <MovingBar/>
+
 
             <Header
-                title="Je website ziet er goed uit.
-Maar is hij ook veilig?"
-                subtitle="Oosterom Studio combineert scherp webdesign met digitale beveiliging — zodat jouw bedrijf online niet alleen opvalt, maar ook bestand is tegen wat er op je afkomt."
-                buttonText="Ontvang een gratis offerte"
+                title="Digitaal sterk.
+Van buiten en van binnen."
+                subtitle="Of je nu een nieuwe website nodig hebt, wil opschalen of je digitale veiligheid wil verbeteren — Oosterom Studio heeft de expertise om het goed te doen."
+                buttonText="Start jouw project"
             />
+            <MovingBar/>
 
             <IntentSection/>
 
