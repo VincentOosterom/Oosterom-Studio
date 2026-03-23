@@ -125,14 +125,14 @@ Van buiten en van binnen."
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    <motion.h2 variants={fadeUp}>Onze Kernwaarden</motion.h2>
+                    <motion.h2 variants={fadeUp}>Kernwaarden</motion.h2>
                     <section className="values-grid">
                         <motion.article className="value-card" variants={fadeUp}>
                             <div className="value-icon"><IconBolt/></div>
                             <h3>Performance First</h3>
                             <p>
                                 Wij ontwikkelen snelle en technisch geoptimaliseerde websites die voldoen aan
-                                moderne performance standaarden — met hoge scores op Core Web Vitals als uitgangspunt.
+                                moderne performance standaarden, met hoge scores op Core Web Vitals als uitgangspunt.
                             </p>
                         </motion.article>
                         <motion.article className="value-card" variants={fadeUp}>
@@ -147,7 +147,7 @@ Van buiten en van binnen."
                             <div className="value-icon"><IconTarget/></div>
                             <h3>Resultaatgericht</h3>
                             <p>
-                                Elke keuze — van structuur tot techniek — is gericht op conversie, groei en
+                                Elke keuze, van structuur tot techniek, is gericht op conversie, groei en
                                 schaalbaarheid. Een mooie website die niet converteert, is geen goede website.
                             </p>
                         </motion.article>
@@ -170,7 +170,7 @@ Van buiten en van binnen."
                     <motion.h2 variants={fadeUp}>Technische SEO & Performance</motion.h2>
                     <motion.p variants={fadeUp}>
                         Gevonden worden begint bij een technisch solide website. Oosterom Studio optimaliseert
-                        laadtijden, paginastructuur en metadata zodat zoekmachines jouw site begrijpen — en
+                        laadtijden, paginastructuur en metadata zodat zoekmachines jouw site begrijpen en
                         bezoekers hem vertrouwen. Van schone URL-structuur tot gestructureerde data en Core Web
                         Vitals: wij zorgen dat de basis goed staat.
                     </motion.p>
@@ -186,13 +186,13 @@ Van buiten en van binnen."
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    <motion.h2 variants={fadeUp}>Onze aanpak</motion.h2>
+                    <motion.h2 variants={fadeUp}>De aanpak</motion.h2>
                     <div className="approach-grid">
                         {[
                             {
 
                                 title: "Analyse & Strategie",
-                                desc: "We analyseren je markt, doelgroep en technische situatie. Geen aannames — wel een helder beeld van waar je staat en waar je naartoe wilt."
+                                desc: "We analyseren je markt, doelgroep en technische situatie. Geen aannames, wel een helder beeld van waar je staat en waar je naartoe wilt."
                             },
                             {
 
@@ -237,7 +237,7 @@ Van buiten en van binnen."
                     </motion.h2>
                     <motion.p variants={fadeUp}>
                         Of je nu een nieuwe website nodig hebt, je huidige design wilt vernieuwen of online beter
-                        gevonden wilt worden — wij helpen je graag verder.
+                        gevonden wilt worden, wij helpen je graag verder.
                     </motion.p>
                     <motion.div variants={fadeUp}>
                         <Link to="/contact" className="cta-button">Neem contact op</Link>
@@ -262,7 +262,7 @@ Van buiten en van binnen."
                     <motion.p variants={fadeUp}>
                         Tijdens een vrijblijvend strategiegesprek brengen we jouw wensen, groeidoelen en
                         technische behoeften in kaart. Op basis daarvan ontvang je een heldere en transparante
-                        offerte — zonder verrassingen achteraf.
+                        offerte, zonder verrassingen achteraf.
                     </motion.p>
                     <motion.div variants={fadeUp}>
                         <Link to="/contact" className="cta-button cta-button--secondary">
