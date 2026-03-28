@@ -92,8 +92,8 @@
     left: 0;
     width: 56px;
     height: 3px;
-    background-color: var(--color-bg);
-    border-radius: 2px;
+    background-color: var(--color-accent);
+    border-radius: 10px;
 }
 
 .editorial-block p {
@@ -164,9 +164,13 @@
 
 @media (max-width: 480px) {
     .project-hero {
-        padding: 2rem 2rem 6rem;
+        padding: 4rem 2rem 2rem;
         margin-top: 2rem;
 
+    }
+
+    .editorial-block h2  {
+        font-size: 1.5rem;
     }
     .hero-left h1 {
         font-size: 1.4rem;
@@ -191,6 +195,7 @@
 
     .project-editorial {
         gap: 3rem;
+        padding: 2rem;
     }
 
 }
