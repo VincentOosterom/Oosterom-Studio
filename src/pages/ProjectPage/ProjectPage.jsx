@@ -22,21 +22,22 @@ function ProjectPage() {
         );
     }
 
+
     return (
         <>
             <Helmet>
-                <title>
-                    {project.subtitle} | Case Study | Oosterom Studio
-                </title>
+                <title>{`Case Study ${project.title} | Oosterom Studio`}</title>
 
+                // Helmet meta description
                 <meta
                     name="description"
-                    content={`${project.subtitle} – ${project.intro}`}
+                    content={`${project.title} – ${project.intro}`}
                 />
 
+                // Helmet og:title
                 <meta
                     property="og:title"
-                    content={`${project.subtitle} | Case Study | Oosterom Studio`}
+                    content={`${project.title} | Case Study | Oosterom Studio`}
                 />
 
                 <meta
@@ -62,7 +63,7 @@ function ProjectPage() {
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Article",
-                        "name": project.subtitle,
+                        "name": project.title,
                         "description": project.intro,
                         "author": {
                             "@type": "Organization",

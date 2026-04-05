@@ -33,7 +33,7 @@ function OverOns() {
     return (
         <>
             <Helmet>
-                <title>Over Vincent Oosterom – Webdeveloper & Cybersecurity Specialist</title>
+                <title>Over Oosterom Studio – Webdeveloper & Cybersecurity Specialist</title>
 
                 <meta
                     name="description"

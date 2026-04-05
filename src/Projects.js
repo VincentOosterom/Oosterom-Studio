@@ -4,6 +4,7 @@ import logo_casino from "./assets/logo_jp_casino.svg"
 
 import sfeer from "./assets/sfeer_dave.png"
 import work_oliebollenalphen from "./assets/OliebollenAlphen_work.png"
+import work_jp from "./assets/portfolio_JP.png"
 
 const projects = [
     {
@@ -22,31 +23,13 @@ const projects = [
         slug: "jp-casino-verhuur",
         title: "JP Casino-Verhuur",
         image: logo_casino,
-
-        card_description: `Voor JP Casino-Verhuur hebben we een professioneel en doordacht ontwerp ontwikkeld
-    als basis voor een toekomstige website. In deze fase lag de focus op uitstraling, merkbeleving en
-    gebruiksvriendelijkheid. Het ontwerp vormt een solide fundament waarop momenteel wordt voortgebouwd
-    richting een volledige realisatie.`,
-
+        card_description: `Voor JP Casino-Verhuur hebben we een complete rebranding verzorgd met sterke focus op SEO. De kleuren zijn afgestemd op het bestaande logo — daar hebben we omheen gebouwd voor een samenhangend geheel.`,
         subtitle: "Diensten van Oosterom Studio",
-
-        intro: `Voor JP Casino-Verhuur hebben we een luxe en speelse online uitstraling ontworpen die past
-    bij de beleving van casinospellen en evenementen. Het doel was om een sterk visueel concept neer
-    te zetten dat het merk professioneel positioneert en klaar is voor verdere uitwerking.`,
-
-        challenge: `JP Casino-Verhuur beschikte nog niet over een duidelijke online identiteit.
-    De uitdaging was om een visueel concept te ontwikkelen dat vertrouwen uitstraalt, aansluit bij
-    de doelgroep en tegelijkertijd flexibel genoeg is om in een volgende fase door te groeien
-    naar een volledige website.`,
-
-        solution: `We zijn gestart met een uitgebreide ontwerpfase waarin structuur, uitstraling en
-    gebruikerservaring centraal stonden. Door een high-end en interactief ontwerp te creëren,
-    ontstond er een helder beeld van hoe de website eruit zal zien en functioneren. Dit ontwerp
-    dient als leidraad voor de verdere ontwikkeling en realisatie van de website.`,
-
-        result: `Het resultaat is een schaalbaar en toekomstgericht ontwerp dat de basis vormt voor
-    een professionele website. De realisatie van de website is momenteel in voorbereiding, waarbij
-    het bestaande ontwerp stap voor stap wordt omgezet naar een volledig functionele online omgeving.`
+        intro: `JP Casino-Verhuur had al een website, maar die was toe aan een frisse start. Wij hebben een volledige rebranding uitgevoerd: nieuwe uitstraling, betere SEO-structuur en een ontwerp dat perfect aansluit bij het bestaande logo en de merkbeleving.`,
+        challenge: `De website van JP Casino-Verhuur bestond al, maar miste een sterke online identiteit en SEO-fundament. De uitdaging was om de bestaande basis te transformeren naar een professionele, vindbare website — zonder het vertrouwde merk los te laten.`,
+        solution: `We zijn gestart met een rebranding op basis van het bestaande logo. Kleuren, typografie en opzet zijn hier volledig op afgestemd. Daarnaast hebben we de site SEO-technisch opgebouwd voor betere vindbaarheid. Als extra hebben we een professioneel portaal ontwikkeld via Supabase, waarmee JP zelf alle aanvragen kan bekijken en de status ervan kan beheren.`,
+        result: `Het resultaat is een volledig herbouwde website met een herkenbare uitstraling die aansluit bij het logo, versterkte SEO en een werkend portaal. JP Casino-Verhuur heeft nu een professionele online aanwezigheid én een eigen dashboard om aanvragen te beheren.`,
+        sfeer: work_jp
     },
     {
         slug: "oliebollenalphen",

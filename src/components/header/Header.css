@@ -66,8 +66,15 @@
     line-height: 0.95;
     letter-spacing: -0.02em;
     color: whitesmoke;
+    animation: fadeLeft 0.6s ease 0.2s both;
     white-space: pre-line;
 }
+
+@keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
 
 .content-left p {
     font-size: 17px;
@@ -75,7 +82,15 @@
     color: rgba(255, 255, 255, 0.65);
     font-weight: 300;
     max-width: 520px;
+    animation: fadeDown 0.9s ease 0.2s both;
 }
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
 
 /* CTA knop in stijl van dienstpagina's */
 .call-to-action-btn button {
