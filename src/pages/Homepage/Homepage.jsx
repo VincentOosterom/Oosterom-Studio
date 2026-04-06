@@ -54,7 +54,7 @@ function Homepage() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio – Webdesign, Shopify & Cybersecurity</title>
+                <title>Oosterom Studio – Digitaal sterk van buiten én van binnen</title>
 
                 <meta
                     name="description"

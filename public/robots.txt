@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Conversiepagina's niet indexeren
+Disallow: /offerte-aanvragen
+
+# Sitemap
+Sitemap: https://www.oosteromstudio.nl/sitemap.xml
