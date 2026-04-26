@@ -5,6 +5,8 @@ import logo_casino from "./assets/logo_jp_casino.svg"
 import sfeer from "./assets/sfeer_dave.png"
 import work_oliebollenalphen from "./assets/OliebollenAlphen_work.png"
 import work_jp from "./assets/portfolio_JP.png"
+import logo_smart from "./assets/logo_smart.jpg"
+import work_smart from "./assets/work_smart.png"
 
 const projects = [
     {
@@ -61,6 +63,18 @@ const projects = [
     bestellen, terwijl de ondernemer beschikt over een betrouwbare online verkoopomgeving die
     bijdraagt aan een soepel en succesvol verkoopseizoen.`,
         sfeer: work_oliebollenalphen
+    },
+    {
+        slug: "smart-telecom-store",
+        title: "Smart Telecom Store",
+        image: logo_smart,
+        card_description: `Voor Smart Telecom Store hebben we een volledig custom WordPress thema gebouwd met meer dan 15 pagina's voor optimale SEO. Inclusief blog, WooCommerce webshop koppeling en doorlopend onderhoud van de website en zoekwoorden.`,
+        subtitle: "Diensten van Oosterom Studio",
+        intro: `Smart Telecom Store had een professionele online aanwezigheid nodig die niet alleen goed oogt, maar ook gevonden wordt. Wij hebben een custom WordPress thema gebouwd, de SEO volledig opgezet en zorgen voor doorlopend onderhoud.`,
+        challenge: `De klant had behoefte aan een website die écht scoort in Google — niet alleen mooi van buiten, maar technisch sterk van binnen. Daarnaast moest er een webshop komen voor online verkoop, en was er behoefte aan een betrouwbare partner voor langdurig onderhoud en groei.`,
+        solution: `We hebben een volledig custom WordPress thema ontwikkeld in de huisstijl van Smart Telecom Store. Om de beste SEO-resultaten te behalen zijn er meer dan 15 pagina's aangemaakt met gerichte zoekwoorden. Via Google Site Kit houden we de prestaties bij. Een blog is toegevoegd voor continue vindbaarheid. WooCommerce is gekoppeld voor online verkoop en we beheren doorlopend de website, content en zoekwoordstrategie.`,
+        result: `Het resultaat is een professionele, goed vindbare website met een groeiende online aanwezigheid. Door de combinatie van een sterk technisch fundament, gerichte SEO en doorlopend onderhoud groeit het organisch verkeer maandelijks. De WooCommerce integratie zorgt daarnaast voor een extra verkoopkanaal dat dag en nacht open is.`,
+        sfeer: work_smart
     }
 
 ];

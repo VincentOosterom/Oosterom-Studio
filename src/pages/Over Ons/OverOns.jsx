@@ -109,7 +109,7 @@ function OverOns() {
                     </h2>
                     <p>
                         Momenteel volg ik de <strong>HBO-opleiding Full Stack Development</strong>,
-                        gericht op het ontwerpen en bouwen van complete webapplicaties —
+                        gericht op het ontwerpen en bouwen van complete webapplicaties,
                         van frontend tot backend en datalaag.
                     </p>
                     <p>
@@ -120,7 +120,7 @@ function OverOns() {
                     </p>
                     <p>
                         Die combinatie is geen toeval. Na mijn opleiding specialiseer ik
-                        mij verder in <strong>cybersecurity</strong> — zodat ik software
+                        mij verder in <strong>cybersecurity</strong>, zodat ik software
                         niet alleen kan bouwen, maar ook onderbouwd beveiligen en adviseren
                         over architectuur en risico's.
                     </p>
