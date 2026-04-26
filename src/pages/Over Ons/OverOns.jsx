@@ -92,12 +92,12 @@ function OverOns() {
                     <p>
                         Mijn naam is <strong>Vincent Oosterom</strong>, oprichter van
                         <strong> Oosterom Studio</strong>. Vanuit een sterke interesse in
-                        technologie en digitale kwaliteit ben ik gestart met het bouwen
-                        van professionele weboplossingen voor ondernemers.
+                        technologie en digitale kwaliteit bouw ik professionele
+                        weboplossingen voor ondernemers die verder willen.
                     </p>
                     <p>
                         Wat begon als nieuwsgierigheid naar hoe websites écht functioneren,
-                        groeide uit tot een duidelijke visie: digitale producten moeten
+                        is uitgegroeid tot een duidelijke visie: digitale producten moeten
                         niet alleen visueel overtuigen, maar ook technisch robuust,
                         veilig en toekomstbestendig zijn.
                     </p>
@@ -109,21 +109,20 @@ function OverOns() {
                     </h2>
                     <p>
                         Momenteel volg ik de <strong>HBO-opleiding Full Stack Development</strong>,
-                        waarin ik mij richt op het ontwerpen en realiseren van complete
-                        webapplicaties — met aandacht voor frontend, backend en datalaag.
+                        gericht op het ontwerpen en bouwen van complete webapplicaties —
+                        van frontend tot backend en datalaag.
                     </p>
                     <p>
-                        Parallel hieraan verdiep ik mij actief in <strong>cybersecurity</strong>,
-                        via praktijkgerichte leeromgevingen zoals TryHackMe, waar ik
+                        Parallel verdiep ik mij actief in <strong>cybersecurity</strong>,
+                        via praktijkgerichte omgevingen zoals TryHackMe, waar ik
                         hands-on ervaring opdoe met kwetsbaarheden, aanvalstechnieken en
                         verdedigingsprincipes binnen moderne IT-omgevingen.
                     </p>
                     <p>
-                        Na afronding van deze opleiding ligt mijn focus op verdere specialisatie
-                        binnen <strong>cybersecurity</strong>. Door mijn technische basis in
-                        full stack development te combineren met security-kennis, kan ik
-                        software niet alleen bouwen, maar ook onderbouwd beveiligen en
-                        strategisch adviseren over architectuur en risico's.
+                        Die combinatie is geen toeval. Na mijn opleiding specialiseer ik
+                        mij verder in <strong>cybersecurity</strong> — zodat ik software
+                        niet alleen kan bouwen, maar ook onderbouwd beveiligen en adviseren
+                        over architectuur en risico's.
                     </p>
                 </motion.article>
 
@@ -132,25 +131,19 @@ function OverOns() {
                         Visie en <AnimatedWord>richting</AnimatedWord>
                     </h2>
                     <p>
-                        Oosterom Studio bevindt zich in een fase van ontwikkeling en groei.
-                        Wat vaststaat, is de richting: wij geloven dat software, beveiliging
-                        en strategisch inzicht onlosmakelijk met elkaar verbonden zijn.
+                        Ik geloof dat software, beveiliging en strategisch inzicht
+                        onlosmakelijk met elkaar verbonden zijn. Bedrijven verdienen
+                        technologie die onderbouwd, uitlegbaar en toekomstbestendig is.
                     </p>
                     <p>
-                        In de toekomst willen wij organisaties ondersteunen bij het bouwen
+                        Vanuit die overtuiging ondersteun ik organisaties bij het bouwen
                         van doordachte softwareoplossingen, waarbij veiligheid geen
                         bijzaak is maar een fundamenteel onderdeel van het ontwerp.
                     </p>
                     <p>
-                        Hoe deze dienstverlening zich exact zal ontwikkelen, staat nog
-                        niet volledig vast. Wel is onze overtuiging helder: bedrijven
-                        verdienen technologie die onderbouwd, uitlegbaar en
-                        toekomstbestendig is.
-                    </p>
-                    <p>
-                        Vanuit die visie willen wij niet alleen bouwen, maar ook
-                        adviseren — over <strong>hoe</strong> systemen worden opgezet en
-                        <strong> waarom</strong> bepaalde keuzes worden gemaakt.
+                        Ik bouw niet alleen, ik denk mee over <strong>hoe</strong> systemen
+                        worden opgezet en <strong>waarom</strong> bepaalde keuzes
+                        worden gemaakt.
                     </p>
                 </motion.article>
 
