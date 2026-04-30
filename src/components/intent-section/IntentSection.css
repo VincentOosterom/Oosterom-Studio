@@ -110,6 +110,10 @@
     pointer-events: none;
 }
 
+.color-primary{
+    color: var(--color-accent);
+}
+
 /* =========================
    RESPONSIVE
 ========================= */

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 
 * {
@@ -11,7 +12,7 @@
 :root {
     /* Typography */
     --font-title: 'BBH Sans Hegarty', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
 
     /* Colors */
     --color-bg: #000000; /* Achtergrond hoofdkleur */
@@ -69,6 +70,13 @@ body::before {
 .warning {
     color: #ef5d5d;
 }
+.cta-button {
+    background: #88e7f3;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: var(--font-title), sans-serif;
+}
+
 
 button {
     border: none;
@@ -76,7 +84,6 @@ button {
     font-family: var(--font-title), sans-serif;
     outline: none;
     padding: 14px 32px;
-    border-radius: 15px;
     transition: all var(--transition-fast);
 }
 

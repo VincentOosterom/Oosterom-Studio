@@ -107,9 +107,8 @@ function Homepage() {
 
 
             <Header
-                title="Digitaal sterk.
-Van buiten en van binnen."
-                subtitle="Of je nu een nieuwe website nodig hebt, wil opschalen of je digitale veiligheid wil verbeteren — Oosterom Studio heeft de expertise om het goed te doen."
+                title="Software die standhoudt ."
+                subtitle="Ik ben Oosterom Studio. een eenmanszaak in Alphen aan den rijn die webapps, SaaS-platformen en mobiele software bouwt voor MKB en enterprise. Doordacht ontworpen, technisch solide, en veilig vanaf de eerste regel code."
                 buttonText="Start jouw project"
             />
             <MovingBar/>
@@ -155,26 +154,47 @@ Van buiten en van binnen."
                 </motion.div>
             </section>
 
-            {/* Section 2: Technische SEO */}
-            <section className="seo-section">
-                <motion.div
-                    className="seo-container"
-                    variants={staggerChildren}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    <motion.div className="seo-icon" variants={fadeUp}>
-                        <IconSearch/>
-                    </motion.div>
-                    <motion.h2 variants={fadeUp}>Technische SEO & Performance</motion.h2>
-                    <motion.p variants={fadeUp}>
-                        Gevonden worden begint bij een technisch solide website. Oosterom Studio optimaliseert
-                        laadtijden, paginastructuur en metadata zodat zoekmachines jouw site begrijpen en
-                        bezoekers hem vertrouwen. Van schone URL-structuur tot gestructureerde data en Core Web
-                        Vitals: wij zorgen dat de basis goed staat.
-                    </motion.p>
-                </motion.div>
+            <section className="wat-we-bouwen">
+                <h2>Wat ik bouw</h2>
+                <div className="line"></div>
+                <section className="wat-we-bouwen-cards">
+                    <article className="wat-we-bouwen-card card-line">
+                        <p className="color-primary">01 / 03</p>
+                        <h3>Web apps & Saas</h3>
+                        <p>Productiesystemen, klantportalen, interne tools. Postgres als bron van waarheid, deploys waar je niet van wakker ligt.</p>
+                        <div className="bouwen-card-list">
+                            <ul className="bouwen-card-list">
+                                <li>PostgreSQL</li>
+                                <li>React</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article className="wat-we-bouwen-card card-line">
+                        <p className="color-primary">02 / 03</p>
+                        <h3>Custom Software</h3>
+                        <p>Maatwerk waar standaardpakketten ophouden — integraties, dataplatforms, automatisering. Eerst je proces begrijpen, dan pas typen.</p>
+                        <div className="bouwen-card-list">
+                            <ul className="bouwen-card-list">
+                                <li>PostgreSQL</li>
+                                <li>React</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article className="wat-we-bouwen-card">
+                        <p className="color-primary">03 / 03</p>
+                        <h3>Mobile Apps</h3>
+                        <p>iOS en Android via React Native. Offline-first, biometrische auth, encrypted-at-rest. Geen webview-omhulsel.</p>
+                        <div className="bouwen-card-list">
+                            <ul className="bouwen-card-list">
+                                <li>PostgreSQL</li>
+                                <li>React Native</li>
+                                <li>IOS & Android</li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
             </section>
 
             {/* Section 3: Aanpak */}
