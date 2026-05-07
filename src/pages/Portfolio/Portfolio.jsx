@@ -101,8 +101,8 @@ function Portfolio() {
                         Wat we<br /><em>hebben gebouwd.</em>
                     </h1>
                     <p className="pf-hero__sub">
-                        Van maatwerk websites tot complete digitale platformen —
-                        elk project is een samenwerking met een ambitieuze ondernemer.
+                        Van maatwerk websites tot complete digitale platformen.
+                        Elk project is een samenwerking met een ambitieuze ondernemer.
                     </p>
                 </motion.div>
 

@@ -6,14 +6,11 @@ function intentSection() {
         <>
             <section className="intent-section">
                 <article className="intent-container">
-
                     <article className="intent-left">
-                        <div className="streepje"></div>
-                        <h2>Manifest</h2>
+                        <h2>Een sterke digitale oplossing begint met strategie</h2>
                         <p>
-                            Wat ik lever moet er uitzien als een doordacht product, en zich gedragen als een <span className="color-primary">kluis</span>. Geen overhead, geen tussenlagen, één ervaren engineer die met je meedenkt, code schrijft die je over drie jaar nog wil onderhouden, en security niet achteraf opplakt maar in de fundering legt.
+                            Wij starten elk project met een grondige analyse van jouw bedrijf, doelgroep en groeidoelstellingen. We kijken niet alleen naar design, maar naar structuur, prestaties en schaalbaarheid. Door vooraf de juiste architectuur en strategie te bepalen, bouwen we een digitale oplossing die niet alleen vandaag werkt, maar ook meegroeit met jouw organisatie.
                         </p>
-
                     </article>
                 </article>
             </section>

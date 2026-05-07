@@ -5,31 +5,25 @@
 .intent-section {
     display: flex;
     padding: 4rem 2rem;
-
 }
 
-.streepje {
-   width: 40px;
-    height: 2px;
-    border-radius: 2px;
-    background-color: #ffffff;
-}
 
 .intent-container {
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 2rem;
     padding: 4rem;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    display: flex;
+    text-align: center;
     gap: 4rem;
-
 }
+
+
+
 
 /* =========================
    LEFT
 ========================= */
-
 .intent-eyebrow {
     color: var(--color-accent);
     font-family: var(--font-title), serif;
@@ -49,8 +43,8 @@
 .intent-left p {
     color: var(--color-muted);
     line-height: 1.7;
-    max-width: 520px;
-    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .intent-actions {
@@ -110,7 +104,7 @@
     pointer-events: none;
 }
 
-.color-primary{
+.color-primary {
     color: var(--color-accent);
 }
 

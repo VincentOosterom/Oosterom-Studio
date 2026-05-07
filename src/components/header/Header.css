@@ -64,7 +64,7 @@
     font-size: clamp(42px, 7vw, 88px);
     font-weight: 800;
     line-height: 0.95;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     color: whitesmoke;
     animation: fadeLeft 0.6s ease 0.2s both;
     white-space: pre-line;

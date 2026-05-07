@@ -25,7 +25,7 @@ const projects = [
         slug: "jp-casino-verhuur",
         title: "JP Casino-Verhuur",
         image: logo_casino,
-        card_description: `Voor JP Casino-Verhuur hebben we een complete rebranding verzorgd met sterke focus op SEO. De kleuren zijn afgestemd op het bestaande logo — daar hebben we omheen gebouwd voor een samenhangend geheel.`,
+        card_description: `Voor JP Casino-Verhuur hebben we een complete rebranding verzorgd met sterke focus op SEO. De kleuren zijn afgestemd op het bestaande logo, daar hebben we omheen gebouwd voor een samenhangend geheel.`,
         subtitle: "Diensten van Oosterom Studio",
         intro: `JP Casino-Verhuur had al een website, maar die was toe aan een frisse start. Wij hebben een volledige rebranding uitgevoerd: nieuwe uitstraling, betere SEO-structuur en een ontwerp dat perfect aansluit bij het bestaande logo en de merkbeleving.`,
         challenge: `De website van JP Casino-Verhuur bestond al, maar miste een sterke online identiteit en SEO-fundament. De uitdaging was om de bestaande basis te transformeren naar een professionele, vindbare website — zonder het vertrouwde merk los te laten.`,

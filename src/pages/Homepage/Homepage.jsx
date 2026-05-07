@@ -7,6 +7,7 @@ import FigmaSection from "../../components/figma-section/FigmaSection.jsx";
 import {Link} from "react-router-dom";
 import MovingBar from "../../components/movingbar/movingBar.jsx";
 import IntentSection from "../../components/intent-section/IntentSection.jsx";
+import WatWeBouwen from "../../components/wat_we_bouwen/WatWeBouwen.jsx";
 
 const IconBolt = () => (
     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -127,7 +128,6 @@ function Homepage() {
                     <motion.h2 variants={fadeUp}>Kernwaarden</motion.h2>
                     <section className="values-grid">
                         <motion.article className="value-card" variants={fadeUp}>
-                            <div className="value-icon"><IconBolt/></div>
                             <h3>Performance First</h3>
                             <p>
                                 Wij ontwikkelen snelle en technisch geoptimaliseerde websites die voldoen aan
@@ -135,7 +135,6 @@ function Homepage() {
                             </p>
                         </motion.article>
                         <motion.article className="value-card" variants={fadeUp}>
-                            <div className="value-icon"><IconShield/></div>
                             <h3>Security by Default</h3>
                             <p>
                                 Veiligheid is geen extra optie. Wij bouwen volgens best practices met aandacht voor
@@ -143,7 +142,6 @@ function Homepage() {
                             </p>
                         </motion.article>
                         <motion.article className="value-card" variants={fadeUp}>
-                            <div className="value-icon"><IconTarget/></div>
                             <h3>Resultaatgericht</h3>
                             <p>
                                 Elke keuze, van structuur tot techniek, is gericht op conversie, groei en
@@ -154,48 +152,7 @@ function Homepage() {
                 </motion.div>
             </section>
 
-            <section className="wat-we-bouwen">
-                <h2>Wat ik bouw</h2>
-                <div className="line"></div>
-                <section className="wat-we-bouwen-cards">
-                    <article className="wat-we-bouwen-card card-line">
-                        <p className="color-primary">01 / 03</p>
-                        <h3>Web apps & Saas</h3>
-                        <p>Productiesystemen, klantportalen, interne tools. Postgres als bron van waarheid, deploys waar je niet van wakker ligt.</p>
-                        <div className="bouwen-card-list">
-                            <ul className="bouwen-card-list">
-                                <li>PostgreSQL</li>
-                                <li>React</li>
-                                <li>Javascript</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article className="wat-we-bouwen-card card-line">
-                        <p className="color-primary">02 / 03</p>
-                        <h3>Custom Software</h3>
-                        <p>Maatwerk waar standaardpakketten ophouden — integraties, dataplatforms, automatisering. Eerst je proces begrijpen, dan pas typen.</p>
-                        <div className="bouwen-card-list">
-                            <ul className="bouwen-card-list">
-                                <li>PostgreSQL</li>
-                                <li>React</li>
-                                <li>Javascript</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article className="wat-we-bouwen-card">
-                        <p className="color-primary">03 / 03</p>
-                        <h3>Mobile Apps</h3>
-                        <p>iOS en Android via React Native. Offline-first, biometrische auth, encrypted-at-rest. Geen webview-omhulsel.</p>
-                        <div className="bouwen-card-list">
-                            <ul className="bouwen-card-list">
-                                <li>PostgreSQL</li>
-                                <li>React Native</li>
-                                <li>IOS & Android</li>
-                            </ul>
-                        </div>
-                    </article>
-                </section>
-            </section>
+            <WatWeBouwen/>
 
             {/* Section 3: Aanpak */}
             <section className="approach-section">
@@ -240,31 +197,6 @@ function Homepage() {
                 </motion.div>
             </section>
 
-            {/* Section 4: Figma */}
-            <FigmaSection/>
-
-            {/* Section 5: CTA */}
-            <section className="cta-section">
-                <motion.div
-                    className="cta-container"
-                    variants={staggerChildren}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    <motion.h2 variants={fadeUp}>
-                        Klaar om jouw project te starten?
-                    </motion.h2>
-                    <motion.p variants={fadeUp}>
-                        Of je nu een nieuwe website nodig hebt, je huidige design wilt vernieuwen of online beter
-                        gevonden wilt worden, wij helpen je graag verder.
-                    </motion.p>
-                    <motion.div variants={fadeUp}>
-                        <Link to="/contact" className="cta-button">Neem contact op</Link>
-                    </motion.div>
-                </motion.div>
-            </section>
-
             {/* Section 6: Investering */}
             <section className="pricing-section">
                 <motion.div
@@ -288,6 +220,28 @@ function Homepage() {
                         <Link to="/contact" className="cta-button cta-button--secondary">
                             Plan een gratis gesprek
                         </Link>
+                    </motion.div>
+                </motion.div>
+            </section>
+
+            {/* Section 5: CTA */}
+            <section className="cta-section">
+                <motion.div
+                    className="cta-container"
+                    variants={staggerChildren}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    <motion.h2 variants={fadeUp}>
+                        Klaar om jouw project te starten?
+                    </motion.h2>
+                    <motion.p variants={fadeUp}>
+                        Of je nu een nieuwe website nodig hebt, je huidige design wilt vernieuwen of online beter
+                        gevonden wilt worden, wij helpen je graag verder.
+                    </motion.p>
+                    <motion.div variants={fadeUp}>
+                        <Link to="/contact" className="cta-button">Neem contact op</Link>
                     </motion.div>
                 </motion.div>
             </section>
