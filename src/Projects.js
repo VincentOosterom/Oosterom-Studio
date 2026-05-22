@@ -2,7 +2,7 @@ import logo_dave from "./assets/logo-dave.jpg"
 import logo_oliebollen from "./assets/logo-oliebollenalphen.png"
 import logo_casino from "./assets/logo_jp_casino.svg"
 
-import sfeer from "./assets/sfeer_dave.png"
+import website_dave from "./assets/website_dave.png"
 import work_oliebollenalphen from "./assets/OliebollenAlphen_work.png"
 import work_jp from "./assets/portfolio_JP.png"
 import logo_smart from "./assets/logo_smart.jpg"
@@ -19,7 +19,7 @@ const projects = [
         challenge: "De klant had behoefte aan een overzichtelijke en professionele website die vertrouwen uitstraalt bij nieuwe bezoekers. De bestaande online aanwezigheid sloot niet meer aan bij de kwaliteit van het werk en bood onvoldoende structuur om diensten en afgeronde projecten duidelijk te presenteren. Het was belangrijk dat bezoekers snel begrepen wat het bedrijf doet en met vertrouwen contact konden opnemen.",
         solution: "We hebben gekozen voor een heldere en gebruiksvriendelijke structuur waarin de belangrijkste diensten centraal staan, ondersteund door visuele voorbeelden van afgeronde projecten. Door het ontwerp rustig en overzichtelijk te houden, ontstaat er direct duidelijkheid voor de bezoeker. Daarnaast is er veel aandacht besteed aan logische navigatie, leesbaarheid en een consistente uitstraling die aansluit bij het vakmanschap van de klant.",
         result: "Het eindresultaat is een professionele en betrouwbare website die vertrouwen wekt en bezoekers actief begeleidt richting contact. De nieuwe structuur zorgt voor meer overzicht, betere vindbaarheid van informatie en een hogere betrokkenheid van potentiële klanten. Hierdoor fungeert de website nu als een effectief online visitekaartje dat bijdraagt aan het genereren van nieuwe aanvragen.",
-        sfeer: sfeer
+        sfeer: website_dave
     },
     {
         slug: "jp-casino-verhuur",
