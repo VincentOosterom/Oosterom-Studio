@@ -11,14 +11,14 @@ import work_smart from "./assets/work_smart.png"
 const projects = [
     {
         slug: "daves-dakwerken",
-        title: "Dave’s Dakwerken",
+        title: "Dave's Dakwerken",
         image: logo_dave,
-        card_description: "Voor Dave hebben we een volledig nieuwe website ontwikkeld via een no-code platform. Voor dit project was een overzichtelijke basiswebsite nodig die duidelijk zijn werkzaamheden, werkwijze en eindresultaten presenteert. Daarnaast beheren we inmiddels ook zijn bijbehorende socialmedia-account, waar we afgeronde projecten delen.",
+        card_description: "Voor Dave hebben we een volledig nieuwe website ontwikkeld in React. De website beschikt over een AI-chatbot, realtime weer alerts, een dakinspectie checker en een geïntegreerd offertesysteem.",
         subtitle: "Diensten van Oosterom Studio",
-        intro: "Voor Dave hebben we een volledig nieuwe website ontwikkeld via een no-code platform. Voor dit project was een overzichtelijke basiswebsite nodig die duidelijk zijn werkzaamheden, werkwijze en eindresultaten presenteert. ",
-        challenge: "De klant had behoefte aan een overzichtelijke en professionele website die vertrouwen uitstraalt bij nieuwe bezoekers. De bestaande online aanwezigheid sloot niet meer aan bij de kwaliteit van het werk en bood onvoldoende structuur om diensten en afgeronde projecten duidelijk te presenteren. Het was belangrijk dat bezoekers snel begrepen wat het bedrijf doet en met vertrouwen contact konden opnemen.",
-        solution: "We hebben gekozen voor een heldere en gebruiksvriendelijke structuur waarin de belangrijkste diensten centraal staan, ondersteund door visuele voorbeelden van afgeronde projecten. Door het ontwerp rustig en overzichtelijk te houden, ontstaat er direct duidelijkheid voor de bezoeker. Daarnaast is er veel aandacht besteed aan logische navigatie, leesbaarheid en een consistente uitstraling die aansluit bij het vakmanschap van de klant.",
-        result: "Het eindresultaat is een professionele en betrouwbare website die vertrouwen wekt en bezoekers actief begeleidt richting contact. De nieuwe structuur zorgt voor meer overzicht, betere vindbaarheid van informatie en een hogere betrokkenheid van potentiële klanten. Hierdoor fungeert de website nu als een effectief online visitekaartje dat bijdraagt aan het genereren van nieuwe aanvragen.",
+        intro: "Voor Dave hebben we een moderne React website gebouwd die ver uitstijgt boven een standaard bedrijfswebsite. Met slimme features zoals een AI-assistent en realtime integraties onderscheidt Dave zich direct van de concurrentie.",
+        challenge: "Dave had een verouderde Squarespace website die niet meer aansloot bij de groei van zijn bedrijf. De website bood onvoldoende mogelijkheden om leads te genereren, bezoekers actief te begeleiden naar een offerte aanvraag en zijn vakmanschap goed te presenteren. Daarnaast ontbrak een systeem om nieuwe aanvragen efficiënt op te vangen.",
+        solution: "We hebben gekozen voor een volledig maatwerk React website met een strak en professioneel ontwerp. De website beschikt over een AI-chatbot die bezoekers 24/7 te woord staat en offerte aanvragen verwerkt, een dakinspectie checker die bezoekers helpt de staat van hun dak te beoordelen, realtime weer alerts die automatisch verschijnen bij storm of extreme hitte in de regio, een uitgebreid portfolio met voor en na sliders en een volledig geautomatiseerd offerte en contactformulier gekoppeld aan een CRM.",
+        result: "Het eindresultaat is een snelle en professionele website die continu leads genereert, ook buiten kantooruren. De AI-chatbot vangt vragen op en begeleidt bezoekers naar een offerte aanvraag. Alle gesprekken en aanvragen worden automatisch opgeslagen in het CRM zodat Dave altijd een volledig overzicht heeft van nieuwe klanten en lopende aanvragen.",
         sfeer: website_dave
     },
     {
