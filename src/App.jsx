@@ -6,6 +6,7 @@ import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 import AnalyticsTracker from "./components/AnalyticsTracker/AnalyticsTracker.jsx";
 import CookieBanner from "./components/cookies/CookiesBanner.jsx";
+import ChatWidget from "./components/chatbot/ChatWidget.jsx";
 
 // Lazy laden — alleen als bezoeker naar die pagina gaat
 const Homepage           = lazy(() => import("./pages/Homepage/Homepage.jsx"));
@@ -50,6 +51,7 @@ function App() {
             <ScrollToTop />
             <CookieBanner />
             <AnalyticsTracker />
+            <ChatWidget/>
             <Suspense fallback={<PageLoader />}>
                 <Routes>
                     <Route path="/"                     element={<Homepage />} />
