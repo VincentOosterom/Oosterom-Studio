@@ -3,7 +3,6 @@ import Header from "../../components/header/Header.jsx";
 import {motion} from "framer-motion";
 import Footer from "../../components/footer/Footer.jsx";
 import {Helmet} from "react-helmet-async";
-import FigmaSection from "../../components/figma-section/FigmaSection.jsx";
 import {Link} from "react-router-dom";
 import MovingBar from "../../components/movingbar/movingBar.jsx";
 import IntentSection from "../../components/intent-section/IntentSection.jsx";
