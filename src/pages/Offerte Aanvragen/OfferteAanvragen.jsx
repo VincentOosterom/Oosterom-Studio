@@ -59,7 +59,7 @@
 
                 {/* ← zelfde structuur als Contact */}
                 <section className="offerte-section">
-                    <div className="offerte-container">
+                    <section className="offerte-container">
                         <div className="offerte-layout">
 
                             {/* LEFT — info */}
@@ -173,7 +173,7 @@
                             )}
 
                         </div>
-                    </div>
+                    </section>
                 </section>
 
                 <Footer/>

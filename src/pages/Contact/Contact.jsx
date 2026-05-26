@@ -55,7 +55,7 @@ function Contact() {
 
                 {/* ← section wrapper toegevoegd */}
                 <section className="contact-section">
-                    <div className="contact-container">
+                    <article className="contact-container">
                         <div className="contact-layout">
 
                             {/* LEFT — info */}
@@ -175,7 +175,7 @@ function Contact() {
                             )}
 
                         </div>
-                    </div>
+                    </article>
                 </section>
 
                 <Footer/>

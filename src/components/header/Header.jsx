@@ -13,8 +13,8 @@ function Header({title, subtitle, buttonText}) {
         <>
             <header className="header">
                 <Navigate/>
-                <div className="header-content">
-                    <div className="content-left">
+                <section className="header-content">
+                    <article className="content-left">
                         <h1>{title}</h1>
                         <p>{subtitle}</p>
                         {buttonText && (
@@ -22,8 +22,8 @@ function Header({title, subtitle, buttonText}) {
                                 <button onClick={handleClick}>{buttonText}</button>
                             </div>
                         )}
-                    </div>
-                </div>
+                    </article>
+                </section>
             </header>
         </>
     )

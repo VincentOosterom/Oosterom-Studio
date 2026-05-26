@@ -1,0 +1,17 @@
+.header-not-found {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-not-found button {
+    border: none;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+

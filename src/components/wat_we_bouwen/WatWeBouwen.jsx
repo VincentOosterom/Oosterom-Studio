@@ -24,11 +24,11 @@ const cards = [
 export default function WatWeBouwen() {
     return (
         <section className={styles.section}>
-            <div className={styles.header}>
+            <article className={styles.header}>
                 <h2 className={styles.title}>Wat ik bouw</h2>
                 <div className={styles.line} />
-            </div>
-            <div className={styles.grid}>
+            </article>
+            <a className={styles.grid}>
                 {cards.map((card) => (
                     <article key={card.title} className={styles.card}>
                         <i className={`ti ${card.icon} ${styles.icon}`} aria-hidden="true" />
@@ -41,7 +41,7 @@ export default function WatWeBouwen() {
                         </div>
                     </article>
                 ))}
-            </div>
+            </a>
         </section>
     );
 }
