@@ -1,7 +1,7 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 // Altijd direct laden — staan op elke pagina
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
@@ -52,7 +52,6 @@ function App() {
             <ScrollToTop />
             <CookieBanner />
             <AnalyticsTracker />
-            <SpeedInsights/>
             <ChatWidget/>
             <Suspense fallback={<PageLoader />}>
                 <Routes>
