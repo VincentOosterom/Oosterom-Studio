@@ -1,95 +1,89 @@
-import { useState, useRef, useEffect } from "react";
-import styles from "./ChatWidget.module.css";
-import assistantAvatar from "../../assets/assistant-avatar.svg";
+import { useState, useRef, useEffect } from 'react'
+import styles from './ChatWidget.module.css'
+import assistantAvatar from '../../assets/assistant-avatar.svg'
 
-const EDGE_FUNCTION_URL = import.meta.env.VITE_CHAT_PROXY_URL;
+const WELKOMST_BERICHT = {
+    role: 'assistant',
+    content: 'Goedendag! Ik ben de digitale assistent van Oosterom Studio. Hoe kan ik u assisteren?'
+}
 
 const SUGGESTIONS = [
-    "Wat doet Oosterom Studio?",
-    "Wat zijn de tarieven?",
-    "Hoe neem ik contact op?",
-];
+    'Wat doet Oosterom Studio?',
+    'Wat zijn de tarieven?',
+    'Hoe neem ik contact op?',
+]
+
+function maakSessieId() {
+    return Math.random().toString(36).substring(2) + Date.now().toString(36)
+}
 
 export default function ChatWidget() {
-    const [open, setOpen] = useState(false);
-    const [messages, setMessages] = useState([
-        {
-            role: "bot",
-            text: "Goedendag! Ik ben de digitale assistent van Oosterom Studio. Hoe kan ik u assisteren?",
-        },
-    ]);
-    const [input, setInput] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [showSuggestions, setShowSuggestions] = useState(true);
-    const [history, setHistory] = useState([]);
+    const [open, setOpen] = useState(false)
+    const [berichten, setBerichten] = useState([WELKOMST_BERICHT])
+    const [input, setInput] = useState('')
+    const [laden, setLaden] = useState(false)
+    const [toonSuggestions, setToonSuggestions] = useState(true)
 
-    // Sessie ID wordt direct aangemaakt bij mount — nooit null
-    const sessieId = useRef(crypto.randomUUID());
-
-    const messagesEndRef = useRef(null);
-    const inputRef = useRef(null);
+    const sessieId = useRef(maakSessieId())
+    const berichtenRef = useRef(null)
+    const inputRef = useRef(null)
 
     useEffect(() => {
-        if (open) setTimeout(() => inputRef.current?.focus(), 100);
-    }, [open]);
+        if (berichtenRef.current) {
+            berichtenRef.current.scrollTop = berichtenRef.current.scrollHeight
+        }
+    }, [berichten, laden])
 
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages, loading]);
+        if (open && inputRef.current) {
+            setTimeout(() => inputRef.current?.focus(), 100)
+        }
+    }, [open])
 
-    const send = async (text) => {
-        const trimmed = text.trim();
-        if (!trimmed || loading) return;
+    async function stuurBericht(tekst) {
+        if (!tekst.trim() || laden) return
 
-        setShowSuggestions(false);
-        setInput("");
-        setLoading(true);
-
-        const newHistory = [...history, { role: "user", content: trimmed }];
-        setHistory(newHistory);
-        setMessages((prev) => [...prev, { role: "user", text: trimmed }]);
+        const gebruikersBericht = { role: 'user', content: tekst }
+        const nieuweBerichten = [...berichten, gebruikersBericht]
+        setBerichten(nieuweBerichten)
+        setInput('')
+        setLaden(true)
+        setToonSuggestions(false)
 
         try {
-            const res = await fetch(EDGE_FUNCTION_URL, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
+            const response = await fetch('/api/chatbot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    berichten: newHistory,
-                    sessieId: sessieId.current, // altijd meesturen
-                }),
-            });
+                    berichten: nieuweBerichten.filter(b => b.role !== 'system'),
+                    sessieId: sessieId.current
+                })
+            })
 
-            const data = await res.json();
-            const reply =
-                data.content?.[0]?.text || "Er is iets misgegaan. Probeer het opnieuw.";
+            const data = await response.json()
+            const antwoord = data.antwoord || 'Er is iets misgegaan. Probeer het opnieuw.'
 
-            setMessages((prev) => [...prev, { role: "bot", text: reply }]);
-            setHistory((prev) => [...prev, { role: "assistant", content: reply }]);
+            setBerichten(prev => [...prev, { role: 'assistant', content: antwoord }])
         } catch {
-            setMessages((prev) => [
-                ...prev,
-                {
-                    role: "bot",
-                    text: "Er is een verbindingsfout opgetreden. Probeer het later opnieuw.",
-                },
-            ]);
+            setBerichten(prev => [...prev, {
+                role: 'assistant',
+                content: 'Er is een verbindingsfout opgetreden. Probeer het later opnieuw.'
+            }])
         }
 
-        setLoading(false);
-    };
+        setLaden(false)
+    }
 
-    const handleKey = (e) => {
-        if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
-            send(input);
-        }
-    };
+    function handleSubmit(e) {
+        e.preventDefault()
+        stuurBericht(input)
+    }
 
     return (
         <>
             <button
                 className={styles.toggleBtn}
-                onClick={() => setOpen((v) => !v)}
+                onClick={() => setOpen(v => !v)}
                 aria-label="Open chat"
             >
                 {open ? (
@@ -129,25 +123,25 @@ export default function ChatWidget() {
                         </button>
                     </div>
 
-                    {/* Messages */}
-                    <div className={styles.messages}>
-                        {messages.map((msg, i) => (
+                    {/* Berichten */}
+                    <div className={styles.messages} ref={berichtenRef}>
+                        {berichten.map((bericht, i) => (
                             <div
                                 key={i}
-                                className={`${styles.msgRow} ${msg.role === "user" ? styles.msgRowUser : styles.msgRowBot}`}
+                                className={`${styles.msgRow} ${bericht.role === 'user' ? styles.msgRowUser : styles.msgRowBot}`}
                             >
-                                {msg.role === "bot" && (
+                                {bericht.role === 'assistant' && (
                                     <div className={styles.msgAvatar}>
                                         <img src={assistantAvatar} alt="Assistent" className={styles.msgAvatarImg} />
                                     </div>
                                 )}
-                                <div className={msg.role === "user" ? styles.bubbleUser : styles.bubbleBot}>
-                                    {msg.text}
+                                <div className={bericht.role === 'user' ? styles.bubbleUser : styles.bubbleBot}>
+                                    {bericht.content}
                                 </div>
                             </div>
                         ))}
 
-                        {loading && (
+                        {laden && (
                             <div className={styles.msgRow}>
                                 <div className={styles.msgAvatar}>
                                     <img src={assistantAvatar} alt="Assistent" className={styles.msgAvatarImg} />
@@ -159,15 +153,13 @@ export default function ChatWidget() {
                                 </div>
                             </div>
                         )}
-
-                        <div ref={messagesEndRef} />
                     </div>
 
                     {/* Suggestions */}
-                    {showSuggestions && (
+                    {toonSuggestions && !laden && (
                         <div className={styles.suggestions}>
-                            {SUGGESTIONS.map((s) => (
-                                <button key={s} className={styles.suggestionBtn} onClick={() => send(s)}>
+                            {SUGGESTIONS.map(s => (
+                                <button key={s} className={styles.suggestionBtn} onClick={() => stuurBericht(s)}>
                                     {s}
                                 </button>
                             ))}
@@ -175,20 +167,19 @@ export default function ChatWidget() {
                     )}
 
                     {/* Input */}
-                    <div className={styles.inputArea}>
+                    <form className={styles.inputArea} onSubmit={handleSubmit}>
                         <input
                             ref={inputRef}
                             type="text"
                             value={input}
-                            onChange={(e) => setInput(e.target.value)}
-                            onKeyDown={handleKey}
+                            onChange={e => setInput(e.target.value)}
                             placeholder="Stel een vraag..."
-                            disabled={loading}
+                            disabled={laden}
                             className={styles.input}
                         />
                         <button
-                            onClick={() => send(input)}
-                            disabled={loading || !input.trim()}
+                            type="submit"
+                            disabled={laden || !input.trim()}
                             className={styles.sendBtn}
                         >
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -196,10 +187,10 @@ export default function ChatWidget() {
                                 <polygon points="22 2 15 22 11 13 2 9 22 2" />
                             </svg>
                         </button>
-                    </div>
+                    </form>
 
                 </div>
             )}
         </>
-    );
+    )
 }
