@@ -4,7 +4,7 @@ import assistantAvatar from '../../assets/oosterom_assistant_avatar.svg'
 
 const WELKOMST_BERICHT = {
     role: 'assistant',
-    content: 'Goedendag! Ik ben de digitale assistent van Oosterom Studio. Hoe kan ik u assisteren?'
+    content: 'Hi! Ik ben de digitale assistent van Oosterom Studio. Hoe kan ik u assisteren?'
 }
 
 const SUGGESTIONS = [
