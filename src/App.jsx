@@ -52,7 +52,7 @@ function App() {
             <ScrollToTop />
             <CookieBanner />
             <AnalyticsTracker />
-            <SpeedInsights
+            <SpeedInsights/>
             <ChatWidget/>
             <Suspense fallback={<PageLoader />}>
                 <Routes>
