@@ -6,6 +6,7 @@ const supabase = createClient(
     process.env.SUPABASE_SERVICE_KEY
 )
 
+// eslint-disable-next-line no-undef
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 const rateLimiter = new Map()
