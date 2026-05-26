@@ -1,32 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./ChatWidget.module.css";
-import assistantAvatar from "../../assets/oosterom_assistant_avatar.svg";
+import assistantAvatar from "../../assets/assistant-avatar.svg";
 
-const SYSTEM_PROMPT = `Je bent de professionele digitale assistent van Oosterom Studio, een Nederlands webburo gespecialiseerd in webdesign, webontwikkeling, SEO en digitale strategie voor MKB-bedrijven en startups. Je communiceert altijd in het Nederlands, professioneel en zakelijk maar toegankelijk.
-
-Over Oosterom Studio:
-- Opgericht door Vincent Oosterom, KvK: 85118028, gevestigd in Alphen aan den Rijn
-- Diensten: webdesign (React, WordPress), SEO-optimalisatie, maandelijks onderhoud en retainers, digitale strategie, cybersecurity
-- Klanten: MKB-bedrijven en startups in Nederland
-- Werkwijze: persoonlijk contact, maatwerk, geen standaard templates
-- Contact: via de website of WhatsApp
-
-Richtlijnen:
-- Beantwoord vragen over webdesign, SEO, onderhoud, prijzen, werkwijze en digitale strategie
-- Voor specifieke prijsopgaves: verwijs naar een vrijblijvend gesprek
-- Beantwoord ook algemene vragen over webtechnologie, SEO, marketing en digitale business
-- Wees bondig maar volledig — maximaal 3 à 4 zinnen per antwoord tenzij meer detail nodig is
-- Gebruik geen markdown in je antwoorden, schrijf in gewone tekst
-- Sluit complexe vragen af met een suggestie om contact op te nemen`;
+const EDGE_FUNCTION_URL = import.meta.env.VITE_CHAT_PROXY_URL;
 
 const SUGGESTIONS = [
     "Wat doet Oosterom Studio?",
     "Wat zijn de tarieven?",
     "Hoe neem ik contact op?",
 ];
-
-const EDGE_FUNCTION_URL =
-    "https://avocqybnotohdiqspket.supabase.co/functions/v1/chat-proxy";
 
 export default function ChatWidget() {
     const [open, setOpen] = useState(false);
@@ -40,6 +22,10 @@ export default function ChatWidget() {
     const [loading, setLoading] = useState(false);
     const [showSuggestions, setShowSuggestions] = useState(true);
     const [history, setHistory] = useState([]);
+
+    // Sessie ID wordt direct aangemaakt bij mount — nooit null
+    const sessieId = useRef(crypto.randomUUID());
+
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
 
@@ -66,11 +52,11 @@ export default function ChatWidget() {
         try {
             const res = await fetch(EDGE_FUNCTION_URL, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-                },
-                body: JSON.stringify({ system: SYSTEM_PROMPT, messages: newHistory }),
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    berichten: newHistory,
+                    sessieId: sessieId.current, // altijd meesturen
+                }),
             });
 
             const data = await res.json();
@@ -101,7 +87,6 @@ export default function ChatWidget() {
 
     return (
         <>
-            {/* Toggle button */}
             <button
                 className={styles.toggleBtn}
                 onClick={() => setOpen((v) => !v)}
@@ -136,7 +121,7 @@ export default function ChatWidget() {
                             className={styles.closeBtn}
                             onClick={() => setOpen(false)}
                             aria-label="Sluit chat"
-                        > X
+                        >
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                                 <line x1="18" y1="6" x2="6" y2="18" />
                                 <line x1="6" y1="6" x2="18" y2="18" />
@@ -205,7 +190,7 @@ export default function ChatWidget() {
                             onClick={() => send(input)}
                             disabled={loading || !input.trim()}
                             className={styles.sendBtn}
-                        > Verstuur
+                        >
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="22" y1="2" x2="11" y2="13" />
                                 <polygon points="22 2 15 22 11 13 2 9 22 2" />

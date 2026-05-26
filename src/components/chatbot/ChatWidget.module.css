@@ -2,10 +2,10 @@
     position: fixed;
     bottom: 24px;
     right: 24px;
-    width: 45px;
-    height: 45px;
+    width: 65px;
+    height: 65px;
     border-radius: 20%;
-    background: #88e8f4;
+    background: #000000;
     border: none;
     cursor: pointer;
     display: flex;
@@ -19,28 +19,31 @@
 }
 
 .toggleBtn:hover {
+    background: var(--color-accent);
+}
+
+.toggleBtn:hover {
     transform: scale(1.08);
 }
 
 .toggleAvatar {
-    width: 56px;
-    height: 56px;
+    width: 65px;
+    height: 65px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 .headerAvatarWrap {
-    width: 38px;
-    height: 38px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
-    background: #0f0f0f;
     overflow: hidden;
     flex-shrink: 0;
 }
 
 .headerAvatarImg {
-    width: 38px;
-    height: 38px;
+    width: 65px;
+    height: 65px;
     object-fit: cover;
 }
 
@@ -64,7 +67,6 @@
     height: 10px;
     border-radius: 15px;
     border: none;
-    background: var(--color-text);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -72,6 +74,8 @@
     transition: background 0.15s, color 0.15s;
     flex-shrink: 0;
 }
+
+
 
 .closeBtn:hover {
     background: #88e8f4;
@@ -83,7 +87,7 @@
     bottom: 92px;
     right: 24px;
     width: 360px;
-    max-height: 520px;
+    max-height: 620px;
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 16px;
@@ -217,7 +221,7 @@
 }
 
 .suggestionBtn {
-    font-size: 11.5px;
+    font-size: 12px;
     padding: 5px 11px;
     border: 1px solid #e0e0e0;
     border-radius: 20px;
@@ -247,7 +251,7 @@
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     padding: 8px 12px;
-    font-size: 13px;
+    font-size: 16px;
     font-family: inherit;
     outline: none;
     background: #fafafa;
@@ -266,6 +270,7 @@
     background: #88e8f4;
     border: none;
     cursor: pointer;
+    color: whitesmoke;
     font-size: 0.8rem;
     font-family: inherit;
     display: flex;
@@ -277,5 +282,5 @@
 
 .sendBtn:disabled {
     opacity: 0.35;
-    cursor: default;
+    cursor: not-allowed;
 }
