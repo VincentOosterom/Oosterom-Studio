@@ -110,16 +110,14 @@ function Homepage() {
 
 
             <Header
-                title="Software die standhoudt ."
-                subtitle="Ik ben Oosterom Studio. een eenmanszaak in Alphen aan den rijn die webapps, SaaS-platformen en mobiele software bouwt voor MKB en enterprise. Doordacht ontworpen, technisch solide, en veilig vanaf de eerste regel code."
-                buttonText="Start jouw project"
+                title="Van idee naar software die echt gebruikt wordt."
+                subtitle="Ik ben Oosterom Studio. Een eenmanszaak die webapps, SaaS-platformen en mobiele software bouwt voor MKB. Doordacht ontworpen, technisch solide, en veilig vanaf de eerste regel code."
+                buttonText="Klaar om te beginnen?"
             />
             <MovingBar/>
 
             <main>
-
                 <IntentSection/>
-
                 {/* Section 1: Kernwaarden */}
                 <section className="values-section">
                     <motion.div
