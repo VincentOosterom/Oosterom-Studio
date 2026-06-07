@@ -42,7 +42,6 @@ function Footer() {
         <footer className="footer">
             <section className="footer-main">
 
-                {/* LEFT — logo + beschrijving + socials */}
                 <article className="footer-brand">
                     <Link to="/" className="footer-logo">
                         Oosterom <span>Studio</span>
@@ -52,7 +51,6 @@ function Footer() {
                         webshops en beveiligde digitale oplossingen voor MKB en startups.
                     </p>
                     <section className="footer-socials">
-                        {/* LinkedIn */}
                         <a
                             href="https://www.linkedin.com/in/vincent-oosterom-05017176/"
                             target="_blank"
@@ -66,7 +64,6 @@ function Footer() {
                                 <circle cx="4" cy="4" r="2"/>
                             </svg>
                         </a>
-                        {/* Instagram */}
                         <a
                             href="https://www.instagram.com/oosteromstudio"
                             target="_blank"
@@ -83,7 +80,6 @@ function Footer() {
                     </section>
                 </article>
 
-                {/* RIGHT — link kolommen */}
                 <section className="footer-columns">
                     <article className="footer-column">
                         <h4>Diensten</h4>
@@ -117,10 +113,10 @@ function Footer() {
 
             </section>
 
-            {/* BOTTOM BAR */}
+
             <section className="footer-bottom">
                 <p className="footer-copyright">
-                    © {new Date().getFullYear()} Oosterom Studio — onderdeel van Oosterom Creative
+                    © {new Date().getFullYear()} Oosterom Studio
                 </p>
                 <a
                     href="https://stats.uptimerobot.com/qBeLzHbru4"
