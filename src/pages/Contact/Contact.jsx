@@ -5,6 +5,7 @@ import Navigate from "../../components/navigate/Navigate.jsx";
 import { Helmet } from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
 import algemene from "../../assets/Algemene Voorwaarden - Oosterom Studio.pdf";
+import privacy from "../../assets/Privacybeleid Oosterom Studio.pdf";
 
 function Contact() {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -91,6 +92,9 @@ function Contact() {
                                         <p><strong>BTW:</strong> NL004057297B50</p>
                                         <a href={algemene} target="_blank" rel="noopener noreferrer" className="document-link">
                                             Algemene Voorwaarden
+                                        </a>
+                                        <a href={privacy} target="_blank" rel="noopener noreferrer" className="document-link">
+                                            Privacy Policy
                                         </a>
                                         <a
                                             href="https://www.linkedin.com/in/vincent-oosterom-05017176/"

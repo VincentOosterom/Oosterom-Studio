@@ -1,6 +1,8 @@
 import { NavLink, Link } from "react-router-dom";
 import './Footer.css';
 import algemene from "../../assets/Algemene Voorwaarden - Oosterom Studio.pdf";
+import privacy from "../../assets/Privacybeleid Oosterom Studio.pdf";
+
 
 
 function Footer() {
@@ -102,7 +104,7 @@ function Footer() {
                 </p>
                 <div className="footer-bottom-links">
                     <Link to={algemene} target="_blank" rel="noopener noreferrer" className="document-link">Algemene Voorwaarden</Link>
-                    <Link to="/privacy">Privacybeleid</Link>
+                    <Link to={privacy} target="_blank" rel="noopener norefferrer" className="document-link">Privacybeleid</Link>
                 </div>
             </section>
         </footer>
