@@ -171,6 +171,29 @@
     }
 }
 
+/* Status indicator */
+.footer-status-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color:  #888;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.footer-status-link:hover {
+    color:  #ccc;
+}
+
+.footer-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: background 0.3s;
+}
+
 /* =========================
    BOTTOM BAR
 ========================= */
