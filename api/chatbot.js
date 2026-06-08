@@ -105,6 +105,10 @@
     4. Oplevering & begeleiding
     5. Optioneel: maandelijks onderhoud
     
+    ## Oosterom OS
+    
+    Oosterom OS is ons eigen beheer platform, voor jou en voor ons zelf. Klanten kunnen indien geweest zelf de website beheren. 
+    
     ## Levertijden
     - Eenvoudige website: 2–4 weken
     - Complexe applicatie: 4–8 weken of meer

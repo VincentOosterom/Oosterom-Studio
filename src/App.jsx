@@ -13,6 +13,7 @@ import ChatWidget from "./components/chatbot/ChatWidget.jsx";
 const Homepage           = lazy(() => import("./pages/Homepage/Homepage.jsx"));
 const Diensten           = lazy(() => import("./pages/Diensten/Diensten.jsx"));
 const Contact            = lazy(() => import("./pages/Contact/Contact.jsx"));
+const OosteromOS = lazy(() => import("./pages/OosteromOS/OosteromOS.jsx"));
 const OfferteAanvragen   = lazy(() => import("./pages/Offerte Aanvragen/OfferteAanvragen.jsx"));
 const NotFound           = lazy(() => import("./pages/NotFound/NotFound.jsx"));
 const Portfolio          = lazy(() => import("./pages/Portfolio/Portfolio.jsx"));
@@ -60,6 +61,7 @@ function App() {
                     <Route path="/contact"              element={<Contact />} />
                     <Route path="/portfolio"            element={<Portfolio />} />
                     <Route path="/over-ons"             element={<AboutUs />} />
+                    <Route path="/oosterom-os" element={<OosteromOS />} />
                     <Route path="/offerte-aanvragen"    element={<OfferteAanvragen />} />
                     <Route path="/diensten/webdesign"   element={<WebdesignPage />} />
                     <Route path="/diensten/webdevelopment" element={<WebdevelopmentPage />} />

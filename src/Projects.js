@@ -8,6 +8,7 @@ import work_jp from "./assets/portfolio_JP.png"
 import logo_smart from "./assets/logo_smart.jpg"
 import work_smart from "./assets/work_smart.png"
 
+
 const projects = [
     {
         slug: "daves-dakwerken",
@@ -19,19 +20,21 @@ const projects = [
         challenge: "Dave had een verouderde Squarespace website die niet meer aansloot bij de groei van zijn bedrijf. De website bood onvoldoende mogelijkheden om leads te genereren, bezoekers actief te begeleiden naar een offerte aanvraag en zijn vakmanschap goed te presenteren. Daarnaast ontbrak een systeem om nieuwe aanvragen efficiënt op te vangen.",
         solution: "We hebben gekozen voor een volledig maatwerk React website met een strak en professioneel ontwerp. De website beschikt over een AI-chatbot die bezoekers 24/7 te woord staat en offerte aanvragen verwerkt, een dakinspectie checker die bezoekers helpt de staat van hun dak te beoordelen, realtime weer alerts die automatisch verschijnen bij storm of extreme hitte in de regio, een uitgebreid portfolio met voor en na sliders en een volledig geautomatiseerd offerte en contactformulier gekoppeld aan een CRM.",
         result: "Het eindresultaat is een snelle en professionele website die continu leads genereert, ook buiten kantooruren. De AI-chatbot vangt vragen op en begeleidt bezoekers naar een offerte aanvraag. Alle gesprekken en aanvragen worden automatisch opgeslagen in het CRM zodat Dave altijd een volledig overzicht heeft van nieuwe klanten en lopende aanvragen.",
-        sfeer: website_dave
+        sfeer: website_dave,
+        website: "https://www.davesdakwerken.nl"
     },
     {
-        slug: "jp-casino-verhuur",
-        title: "JP Casino-Verhuur",
+        slug: "casino-on-tour",
+        title: "Casino On Tour",
         image: logo_casino,
-        card_description: `Voor JP Casino-Verhuur hebben we een complete rebranding verzorgd met sterke focus op SEO. De kleuren zijn afgestemd op het bestaande logo, daar hebben we omheen gebouwd voor een samenhangend geheel.`,
+        card_description: `Voor Casino On Tour hebben we een complete rebranding verzorgd met sterke focus op SEO. De kleuren zijn afgestemd op het bestaande logo, daar hebben we omheen gebouwd voor een samenhangend geheel.`,
         subtitle: "Diensten van Oosterom Studio",
-        intro: `JP Casino-Verhuur had al een website, maar die was toe aan een frisse start. Wij hebben een volledige rebranding uitgevoerd: nieuwe uitstraling, betere SEO-structuur en een ontwerp dat perfect aansluit bij het bestaande logo en de merkbeleving.`,
-        challenge: `De website van JP Casino-Verhuur bestond al, maar miste een sterke online identiteit en SEO-fundament. De uitdaging was om de bestaande basis te transformeren naar een professionele, vindbare website — zonder het vertrouwde merk los te laten.`,
+        intro: `Casino On Tour had al een website, maar die was toe aan een frisse start. Wij hebben een volledige rebranding uitgevoerd: nieuwe uitstraling, betere SEO-structuur en een ontwerp dat perfect aansluit bij het bestaande logo en de merkbeleving.`,
+        challenge: `De website van Casino On Tour bestond al, maar miste een sterke online identiteit en SEO-fundament. De uitdaging was om de bestaande basis te transformeren naar een professionele, vindbare website — zonder het vertrouwde merk los te laten.`,
         solution: `We zijn gestart met een rebranding op basis van het bestaande logo. Kleuren, typografie en opzet zijn hier volledig op afgestemd. Daarnaast hebben we de site SEO-technisch opgebouwd voor betere vindbaarheid. Als extra hebben we een professioneel portaal ontwikkeld via Supabase, waarmee JP zelf alle aanvragen kan bekijken en de status ervan kan beheren.`,
-        result: `Het resultaat is een volledig herbouwde website met een herkenbare uitstraling die aansluit bij het logo, versterkte SEO en een werkend portaal. JP Casino-Verhuur heeft nu een professionele online aanwezigheid én een eigen dashboard om aanvragen te beheren.`,
-        sfeer: work_jp
+        result: `Het resultaat is een volledig herbouwde website met een herkenbare uitstraling die aansluit bij het logo, versterkte SEO en een werkend portaal. Casino On Tour heeft nu een professionele online aanwezigheid én een eigen dashboard om aanvragen te beheren.`,
+        sfeer: work_jp,
+        website: "https://www.casinoontour.nl"
     },
     {
         slug: "oliebollenalphen",
@@ -62,7 +65,8 @@ const projects = [
     bezoekersaantallen en bestellingen tijdens de drukke eindejaarsperiode. Klanten kunnen eenvoudig
     bestellen, terwijl de ondernemer beschikt over een betrouwbare online verkoopomgeving die
     bijdraagt aan een soepel en succesvol verkoopseizoen.`,
-        sfeer: work_oliebollenalphen
+        sfeer: work_oliebollenalphen,
+        website: "https://www.oliebollenalphen.nl"
     },
     {
         slug: "smart-telecom-store",
@@ -74,7 +78,8 @@ const projects = [
         challenge: `De klant had behoefte aan een website die écht scoort in Google — niet alleen mooi van buiten, maar technisch sterk van binnen. Daarnaast moest er een webshop komen voor online verkoop, en was er behoefte aan een betrouwbare partner voor langdurig onderhoud en groei.`,
         solution: `We hebben een volledig custom WordPress thema ontwikkeld in de huisstijl van Smart Telecom Store. Om de beste SEO-resultaten te behalen zijn er meer dan 15 pagina's aangemaakt met gerichte zoekwoorden. Via Google Site Kit houden we de prestaties bij. Een blog is toegevoegd voor continue vindbaarheid. WooCommerce is gekoppeld voor online verkoop en we beheren doorlopend de website, content en zoekwoordstrategie.`,
         result: `Het resultaat is een professionele, goed vindbare website met een groeiende online aanwezigheid. Door de combinatie van een sterk technisch fundament, gerichte SEO en doorlopend onderhoud groeit het organisch verkeer maandelijks. De WooCommerce integratie zorgt daarnaast voor een extra verkoopkanaal dat dag en nacht open is.`,
-        sfeer: work_smart
+        sfeer: work_smart,
+        website: "https://www.smarttelecomstore.nl"
     }
 
 ];
