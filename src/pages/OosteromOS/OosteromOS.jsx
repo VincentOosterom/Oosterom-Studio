@@ -75,6 +75,67 @@ const stappen = [
     {nummer: '04', titel: 'Zelf beheren', omschrijving: 'Teksten aanpassen, aanvragen bekijken, chatbot monitoren.'},
 ]
 
+const pakketten = [
+    {
+        naam: 'Starter',
+        prijs: 49,
+        featured: false,
+        gebruikers: '1 gebruiker',
+        features: [
+            'Persoonlijk klantportaal',
+            'Projectvoortgang inzien',
+            'Facturen bekijken',
+            'Berichten met Oosterom Studio',
+            'Bestanden downloaden',
+        ],
+        cta: 'Interesse aanvragen',
+    },
+    {
+        naam: 'Groei',
+        prijs: 99,
+        featured: true,
+        populair: true,
+        gebruikers: '3 gebruikers',
+        features: [
+            'Alles van Starter',
+            'Website teksten beheren',
+            'Vacatures plaatsen',
+            'Referentieprojecten beheren',
+            'Medewerkers uitnodigen',
+        ],
+        cta: 'Interesse aanvragen',
+    },
+    {
+        naam: 'Pro',
+        prijs: 199,
+        featured: false,
+        gebruikers: 'Onbeperkt gebruikers',
+        features: [
+            'Alles van Groei',
+            'AI tekst verbetering',
+            'Social media beheer',
+            'Portfolio beheren',
+            'Aanvragen systeem',
+            'Prioriteit support',
+        ],
+    },
+    {
+        naam: 'Op aanvraag',
+        prijs: '?',
+        featured: false,
+        gebruikers: 'Onbeperkt gebruikers',
+        features: [
+            'Alles van Pro',
+            'Social media beheer',
+            'Portfolio beheren',
+            'Aanvragen systeem',
+            'SEO Agent',
+            'Prioriteit support',
+            'Features op aanvraag',
+        ],
+    }
+]
+
 export default function OosteromOS() {
     const [activeFeature, setActiveFeature] = useState(null)
 
@@ -101,14 +162,6 @@ export default function OosteromOS() {
                         <div className="os-glow"/>
                     </div>
                     <div className="os-hero-inner">
-                        <motion.div
-                            initial={{opacity: 0, y: 40}}
-                            animate={{opacity: 1, y: 0}}
-                            transition={{duration: 0.8}}
-                            className="os-badge"
-                        >
-                            Exclusief voor klanten van Oosterom Studio
-                        </motion.div>
                         <motion.h1
                             initial={{opacity: 0, y: 40}}
                             animate={{opacity: 1, y: 0}}
@@ -132,7 +185,7 @@ export default function OosteromOS() {
                             className="os-hero-desc"
                         >
                             Als klant van Oosterom Studio krijg je toegang tot een persoonlijk portaal waar je je
-                            project beheert, teksten aanpast, facturen inziet en direct communiceert. Allemaal op één
+                            project beheert, teksten aanpast in jouw eigen project, facturen inziet en direct communiceert. Allemaal op één
                             plek.
                         </motion.p>
                         <motion.div
@@ -165,7 +218,7 @@ export default function OosteromOS() {
                         </section>
                         <article className="os-preview-body">
                             <aside className="os-preview-sidebar">
-                                {['Dashboard', 'Projecten', 'Facturen', 'Bestanden', 'Berichten', 'CMS'].map((item, i) => (
+                                {['Home', 'Projecten', 'Facturen', 'Bestanden', 'Berichten', 'AI'].map((item, i) => (
                                     <div key={item} className={`os-preview-nav-item ${i === 0 ? 'active' : ''}`}>
                                         {item}
                                     </div>
@@ -317,6 +370,48 @@ export default function OosteromOS() {
                         </motion.div>
                     </div>
                 </article>
+            </section>
+
+            {/* PRICING */}
+            <section className="os-pricing">
+                <div className="os-container">
+                    <article className="os-section-header">
+                        <h2 className="os-section-titel">Transparante prijzen</h2>
+                        <p className="os-section-sub">Kies het pakket dat bij jouw bedrijf past. Altijd opzegbaar.</p>
+                    </article>
+
+                    <article className="os-pricing-grid">
+                        {pakketten.map((p, i) => (
+                            <motion.div
+                                key={p.naam}
+                                className={`os-pricing-card ${p.featured ? 'featured' : ''}`}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                            >
+                                {p.populair && (
+                                    <div className="os-pricing-popular">Meest gekozen</div>
+                                )}
+                                <div className="os-pricing-naam">{p.naam}</div>
+                                <div className="os-pricing-bedrag">
+                                    €{p.prijs}
+                                    <span className="os-pricing-per">/maand</span>
+                                </div>
+                                <div className="os-pricing-eenmalig">{p.gebruikers}</div>
+                                <ul className="os-pricing-lijst">
+                                    {p.features.map(f => (
+                                        <li key={f}>{f}</li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </article>
+
+                    <p className="os-section-sub" style={{ textAlign: 'center', marginTop: 32, fontSize: 13 }}>
+                        Prijzen zijn exclusief BTW. Geen verborgen kosten. Maandelijks opzegbaar.
+                    </p>
+                </div>
             </section>
 
             {/* CTA */}
