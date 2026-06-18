@@ -7,6 +7,7 @@ import work_oliebollenalphen from "./assets/OliebollenAlphen_work.png"
 import work_jp from "./assets/portfolio_JP.png"
 import logo_smart from "./assets/logo_smart.jpg"
 import work_smart from "./assets/work_smart.png"
+import Logo from "./assets/Logo | Wit.png"
 
 
 const projects = [
@@ -80,8 +81,26 @@ const projects = [
         result: `Het resultaat is een professionele, goed vindbare website met een groeiende online aanwezigheid. Door de combinatie van een sterk technisch fundament, gerichte SEO en doorlopend onderhoud groeit het organisch verkeer maandelijks. De WooCommerce integratie zorgt daarnaast voor een extra verkoopkanaal dat dag en nacht open is.`,
         sfeer: work_smart,
         website: "https://www.smarttelecomstore.nl"
-    }
+    },
+    {
+        slug: "eigen-cms-systeem",
+        title: "Oosterom CMS",
+        image: Logo,
+        card_description: `Een volledig door Oosterom Studio ontwikkeld contentmanagementsysteem waarmee websites eenvoudig beheerd kunnen worden. Snel, veilig en volledig afgestemd op de wensen van de klant.`,
 
+        subtitle: "Ons eigen contentmanagementsysteem",
+
+        intro: `Niet iedere organisatie heeft baat bij een standaard CMS. Daarom hebben wij Oosterom CMS ontwikkeld: een gebruiksvriendelijk en flexibel beheersysteem waarmee content eenvoudig kan worden aangepast zonder onnodige complexiteit.`,
+
+        challenge: `Veel bestaande CMS-platformen bevatten functies die niet worden gebruikt of zijn juist beperkt in maatwerkmogelijkheden. Daarnaast kunnen externe plugins en updates zorgen voor beveiligingsrisico's en prestatieproblemen.`,
+
+        solution: `Met Oosterom CMS hebben we een volledig eigen contentmanagementsysteem gebouwd waarin snelheid, veiligheid en gebruiksgemak centraal staan. Klanten kunnen zelf pagina's, afbeeldingen en content beheren via een overzichtelijk dashboard, terwijl wij volledige controle houden over de techniek en doorontwikkeling. Hierdoor is het systeem eenvoudig uit te breiden met nieuwe functionaliteiten en perfect afgestemd op iedere maatwerkwebsite.`,
+
+        result: `Het resultaat is een stabiel, snel en toekomstbestendig CMS zonder overbodige functionaliteiten. Websites laden sneller, zijn eenvoudiger te beheren en kunnen probleemloos meegroeien met de ambities van de klant.`,
+
+        sfeer: work_smart,
+        website: "https://www.oosteromstudio.nl"
+    }
 ];
 
 export default projects;

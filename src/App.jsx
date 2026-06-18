@@ -8,6 +8,8 @@ import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 import AnalyticsTracker from "./components/AnalyticsTracker/AnalyticsTracker.jsx";
 import CookieBanner from "./components/cookies/CookiesBanner.jsx";
 import ChatWidget from "./components/chatbot/ChatWidget.jsx";
+import BlogPost from "./pages/Blogpost/BlogPost.jsx";
+import BlogOverview from "./pages/Blogoverview/BlogOverview.jsx";
 
 // Lazy laden — alleen als bezoeker naar die pagina gaat
 const Homepage           = lazy(() => import("./pages/Homepage/Homepage.jsx"));
@@ -23,6 +25,7 @@ const WebdesignPage      = lazy(() => import("./pages/DienstPage/DienstPages.jsx
 const WebdevelopmentPage = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.WebdevelopmentPage })));
 const SaasPage           = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.SaasPage })));
 const BrandingPage       = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.BrandingPage })));
+const AiPage    = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.AIAgentsPage })));
 
 // Loading spinner terwijl pagina laadt
 function PageLoader() {
@@ -65,10 +68,14 @@ function App() {
                     <Route path="/offerte-aanvragen"    element={<OfferteAanvragen />} />
                     <Route path="/diensten/webdesign"   element={<WebdesignPage />} />
                     <Route path="/diensten/webdevelopment" element={<WebdevelopmentPage />} />
+                    <Route path="/diensten/ai-agents" element={<AiPage />} />
                     <Route path="/diensten/saas"        element={<SaasPage />} />
+                    <Route path="/blog" element={<BlogOverview />} />
+                    <Route path="/blog/:slug" element={<BlogPost />} />
                     <Route path="/diensten/branding"    element={<BrandingPage />} />
                     <Route path="/portfolio/:slug"      element={<ProjectPage />} />
                     <Route path="*"                     element={<NotFound />} />
+
                 </Routes>
             </Suspense>
         </>

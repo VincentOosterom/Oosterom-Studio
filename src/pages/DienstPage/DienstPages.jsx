@@ -217,19 +217,101 @@ export function BrandingPage() {
                 },
             ]}
             stappen={[
-                { title: "Merkanalyse", desc: "We analyseren je huidige positie, doelgroep en concurrenten. Wat maakt jou anders?" },
-                { title: "Strategische richting", desc: "We definiëren je positionering, tone of voice en visuele richting." },
-                { title: "Identiteit bouwen", desc: "We werken de visuele identiteit uit en leggen alles vast in een brand guide." },
-                { title: "Implementatie & begeleiding", desc: "We helpen je de nieuwe identiteit consequent door te voeren op alle kanalen." },
+                {
+                    title: "Merkanalyse",
+                    desc: "We analyseren je huidige positie, doelgroep en concurrenten. Wat maakt jou anders?"
+                },
+                {
+                    title: "Strategische richting",
+                    desc: "We definiëren je positionering, tone of voice en visuele richting."
+                },
+                {
+                    title: "Identiteit bouwen",
+                    desc: "We werken de visuele identiteit uit en leggen alles vast in een brand guide."
+                },
+                {
+                    title: "Implementatie & begeleiding",
+                    desc: "We helpen je de nieuwe identiteit consequent door te voeren op alle kanalen."
+                },
             ]}
             faq={[
-                { vraag: "Ik heb al een logo — kunnen jullie daar mee verder?", antwoord: "Ja. We kunnen voortbouwen op wat er al is of adviseren of een refresh zinvol is." },
-                { vraag: "Wat is het verschil tussen branding en marketing?", antwoord: "Branding bepaalt wie je bent en hoe je eruitziet. Marketing bepaalt hoe je jezelf promoot. Goede marketing begint bij sterke branding." },
-                { vraag: "Lever je ook de bronbestanden op?", antwoord: "Altijd. Je krijgt alle bestanden in de juiste formaten zodat je niet afhankelijk bent van ons." },
-                { vraag: "Kan ik na het traject zelf verder?", antwoord: "Ja. We maken een duidelijke brand guide zodat jij — of toekomstige designers — consistent verder kunnen werken." },
+                {
+                    vraag: "Ik heb al een logo — kunnen jullie daar mee verder?",
+                    antwoord: "Ja. We kunnen voortbouwen op wat er al is of adviseren of een refresh zinvol is."
+                },
+                {
+                    vraag: "Wat is het verschil tussen branding en marketing?",
+                    antwoord: "Branding bepaalt wie je bent en hoe je eruitziet. Marketing bepaalt hoe je jezelf promoot. Goede marketing begint bij sterke branding."
+                },
+                {
+                    vraag: "Lever je ook de bronbestanden op?",
+                    antwoord: "Altijd. Je krijgt alle bestanden in de juiste formaten zodat je niet afhankelijk bent van ons."
+                },
+                {
+                    vraag: "Kan ik na het traject zelf verder?",
+                    antwoord: "Ja. We maken een duidelijke brand guide zodat jij — of toekomstige designers — consistent verder kunnen werken."
+                },
             ]}
             ctaTitle="Tijd om jouw merk scherp te zetten?"
             ctaSubtitle="Plan een strategiegesprek en ontdek hoe we jouw merk sterker maken."
         />
     );
+}
+
+    // ─────────────────────────────────────────────────────────────────────────────
+// pages/diensten/AIAgents.jsx
+// ─────────────────────────────────────────────────────────────────────────────
+
+    const aiIcon = (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <rect x="5" y="8" width="14" height="11" rx="2"/>
+            <path d="M9 8V5a3 3 0 016 0v3M9 13h.01M15 13h.01"/>
+        </svg>
+    );
+
+    export function AIAgentsPage() {
+        return (
+            <DienstPage
+                title="AI Agents"
+                metaDescription="Oosterom Studio bouwt AI-agents en workflow-automatisering voor MKB en startups. Chatbots, procesautomatisering en koppelingen met je bestaande tools — met de mens altijd in controle."
+                heroTag="AI Agents"
+                heroIcon={aiIcon}
+                heroTitle={"Slimme agents\ndie meedenken."}
+                heroSubtitle="Herhalend werk kost tijd die je niet hebt. Oosterom Studio bouwt AI-agents die taken overnemen, klanten te woord staan en processen automatiseren — met jou nog altijd aan het stuur."
+                diensten={[
+                    {
+                        icon: aiIcon,
+                        title: "Chatbots & klantcontact",
+                        desc: "Een AI-agent die vragen beantwoordt op basis van jouw eigen kennis, dag en nacht — zonder dat klanten merken dat het geen mens is.",
+                        features: ["Eigen kennisbank", "Geïntegreerd in je website of portal", "Escalatie naar een mens waar nodig", "Meertalig mogelijk"],
+                    },
+                    {
+                        icon: aiIcon,
+                        title: "Workflow-automatisering",
+                        desc: "Terugkerende taken die nu tijd kosten — leads categoriseren, rapportages samenstellen, statussen bijhouden — automatisch laten verlopen.",
+                        features: ["Koppeling met CRM & e-mail", "Telegram/Slack notificaties", "Foutafhandeling & logging", "Schaalbaar per proces"],
+                    },
+                    {
+                        icon: aiIcon,
+                        title: "Agents met goedkeuringsstap",
+                        desc: "Voor taken die impact hebben, bouwen we een controlemoment in: de agent stelt voor, jij keurt goed voordat iets definitief gebeurt.",
+                        features: ["Menselijke controle waar het telt", "Volledige audit trail", "Aanpasbare regels", "Veilig op te schalen"],
+                    },
+                ]}
+                stappen={[
+                    { title: "Proces in kaart brengen", desc: "We analyseren welke taken zich herhalen en waar een agent daadwerkelijk tijd bespaart." },
+                    { title: "Agent-ontwerp", desc: "We bepalen wat de agent zelf mag beslissen, en waar een mens het laatste woord houdt." },
+                    { title: "Bouw & koppelingen", desc: "We bouwen de agent en koppelen hem aan je bestaande tools — CRM, mail, Telegram of Slack." },
+                    { title: "Testen & livegang", desc: "We testen met echte scenario's voordat de agent zelfstandig aan de slag gaat, en blijven monitoren na livegang." },
+                ]}
+                faq={[
+                    { vraag: "Is een AI-agent niet onveilig of onvoorspelbaar?", antwoord: "Niet als hij goed is ontworpen. Wij bouwen altijd duidelijke grenzen en een goedkeuringsstap in bij taken met impact, zodat de agent nooit zelfstandig iets onomkeerbaars doet." },
+                    { vraag: "Heb ik veel data nodig om een agent te trainen?", antwoord: "Meestal niet. De meeste agents werken met de kennis en documenten die je al hebt — denk aan je website, handleidingen of FAQ's — in plaats van een apart trainingstraject." },
+                    { vraag: "Kan een agent met meerdere systemen tegelijk werken?", antwoord: "Ja. We koppelen agents vaak aan meerdere tools tegelijk, zoals je CRM, e-mail en Telegram, zodat informatie automatisch op de juiste plek terechtkomt." },
+                    { vraag: "Wat als de agent een fout maakt?", antwoord: "Elke actie wordt gelogd, en bij gevoelige stappen vraagt de agent eerst goedkeuring. Zo blijft de impact van een fout altijd beperkt en traceerbaar." },
+                ]}
+                ctaTitle="Klaar om tijd terug te winnen?"
+                ctaSubtitle="Plan een gratis gesprek en we kijken samen welke taken een AI-agent voor jou kan overnemen."
+            />
+        );
 }

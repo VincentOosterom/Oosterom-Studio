@@ -39,7 +39,8 @@ function Navigate() {
     const links = [
         { to: "/diensten", label: "Diensten" },
         { to: "/portfolio", label: "Portfolio" },
-        { to: "/oosterom-os", label: "Oosterom OS" },
+        { to: "/oosterom-os", label: "Oosterom CMS" },
+        { to: "/blog", label: "Informatie" },
         { to: "/over-ons", label: "Over ons" },
         { to: "/contact", label: "Contact" },
     ];

@@ -1,0 +1,201 @@
+.pagina {
+    background: var(--color-bg, #080808);
+    color: var(--color-text);
+    min-height: 100vh;
+    font-family: var(--font-body), sans-serif;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 4rem;
+}
+
+.merk {
+    font-family: var(--font-title), sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.docLabel {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--color-muted, #999);
+    text-decoration: none;
+}
+
+.docLabel:hover,
+.docLabel:focus-visible {
+    color: var(--color-accent);
+}
+
+.inhoud {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 100px 1.5rem 120px;
+}
+
+.categorie {
+    display: inline-flex;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding: 8px 14px;
+    border: 1px solid rgba(77, 255, 195, 0.2);
+    border-radius: 100px;
+    background: rgba(77, 255, 195, 0.05);
+}
+
+.titel {
+    font-family: var(--font-title), sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 20px 0 16px;
+}
+
+.meta {
+    display: flex;
+    gap: 8px;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--color-muted, #999);
+    margin-bottom: 48px;
+}
+
+.tekst {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+}
+
+.tekst p {
+    margin: 0 0 20px;
+}
+
+.tekst a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(77, 255, 195, 0.4);
+}
+
+.tekst a:hover,
+.tekst a:focus-visible {
+    text-decoration-color: var(--color-accent);
+}
+
+.tekst ul {
+    margin: 0 0 20px;
+    padding-left: 20px;
+}
+
+.tekst li {
+    margin-bottom: 8px;
+}
+
+.sectie {
+    margin-top: 48px;
+}
+
+.sectieKop {
+    font-family: var(--font-title), sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    margin: 0 0 18px;
+}
+
+.stempel {
+    margin-top: 64px;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    background: var(--color-dark, #141414);
+    padding: 28px 32px;
+}
+
+.stempelLabel {
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 16px;
+}
+
+.stempelLijst {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stempelLink {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.stempelLink:hover,
+.stempelLink:focus-visible {
+    color: var(--color-accent);
+}
+
+.relatedLijst {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.relatedLink {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 1px solid #2a2a2a;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.relatedLink:hover,
+.relatedLink:focus-visible {
+    border-color: rgba(77, 255, 195, 0.4);
+    color: var(--color-accent);
+}
+
+.terugLink {
+    display: inline-block;
+    margin-top: 64px;
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--color-muted, #999);
+    text-decoration: none;
+}
+
+.terugLink:hover,
+.terugLink:focus-visible {
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        padding: 24px 1.5rem;
+    }
+
+    .inhoud {
+        padding: 72px 1.5rem 96px;
+    }
+}
