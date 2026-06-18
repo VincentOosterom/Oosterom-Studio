@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { blogPosts } from "../../../data/blogPosts";
-import styles from "./BlogOverview.module.css";
+import styles from "./Blogoverview.module.css";
 import Navigate from "../../components/navigate/Navigate.jsx";
 import Footer from "../../components/footer/Footer.jsx";
 
