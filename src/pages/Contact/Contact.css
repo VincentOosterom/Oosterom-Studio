@@ -370,6 +370,10 @@
         padding: 1.5rem 1rem;
     }
 
+    .contact-info {
+        margin-top: 2rem;
+    }
+
     .company-details-extra {
         display: flex;
         gap: 0.75rem;

@@ -43,6 +43,12 @@
     </url>
 
     <url>
+        <loc>https://www.oosteromstudio.nl/diensten/ai-agents</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.oosteromstudio.nl/over-ons</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -53,5 +59,31 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://www.oosteromstudio.nl/blog/onderhoudsabonnement-of-losse-facturen</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.oosteromstudio.nl/blog/wanneer-loont-maatwerk-software</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.oosteromstudio.nl/blog/wat-is-een-ai-agent</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.oosteromstudio.nl/blog/ux-design-conversie</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.oosteromstudio.nl/oosterom-os</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
 
 </urlset>

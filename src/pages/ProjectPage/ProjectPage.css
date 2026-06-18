@@ -28,9 +28,10 @@
 
 .project-hero h1 {
     font-family: var(--font-title), serif;
-    font-size: clamp(2.6rem, 5vw, 2.9rem);
+    font-size: clamp(2rem, 5vw, 2.9rem);
     letter-spacing: -0.02em;
     margin-bottom: 1.5rem;
+    overflow-wrap: break-word;
 }
 
 .project-intro {
