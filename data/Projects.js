@@ -1,14 +1,19 @@
-import logo_dave from "../src/assets/logo-dave.jpg"
-import logo_oliebollen from "../src/assets/logo-oliebollenalphen.png"
-import logo_casino from "../src/assets/logo_jp_casino.svg"
+import logo_dave from "../src/assets/images/logo-dave.jpg"
+import logo_oliebollen from "../src/assets/images/logo-oliebollenalphen.png"
+import logo_casino from "../src/assets/images/logo_jp_casino.svg"
 
-import website_dave from "../src/assets/website_dave.png"
-import work_oliebollenalphen from "../src/assets/OliebollenAlphen_work.png"
-import work_jp from "../src/assets/portfolio_JP.png"
-import logo_smart from "../src/assets/logo_smart.jpg"
-import work_smart from "../src/assets/work_smart.png"
-import Logo from "../src/assets/Logo | Wit.png"
-import work_crm from "../src/assets/crm-image.png"
+import website_dave from "../src/assets/images/website_dave.png"
+import work_oliebollenalphen from "../src/assets/images/OliebollenAlphen_work.png"
+import work_jp from "../src/assets/images/portfolio_JP.png"
+import logo_smart from "../src/assets/images/logo_smart.jpg"
+import work_smart from "../src/assets/images/work_smart.png"
+import Logo from "../src/assets/images/Logo | Wit.png"
+import work_crm from "../src/assets/images/crm-image.png"
+import logo_vandervis from "../src/assets/images/logo-vandervis.webp"
+import work_vandervis from "../src/assets/images/work_vandervis.png"
+
+
+
 
 
 const projects = [
@@ -95,7 +100,19 @@ const projects = [
         result: `Het resultaat is een stabiel, snel en toekomstbestendig CMS zonder overbodige functionaliteiten. Websites laden sneller, zijn eenvoudiger te beheren en kunnen probleemloos meegroeien met de ambities van de klant.`,
         website: "https://www.oosteromstudio.nl",
         sfeer: work_crm
-
+    },
+    {
+        slug: "van-der-vis-bouw",
+        title: "Van der Vis Bouw",
+        image: logo_vandervis,
+        card_description: `Een volledig custom WordPress website voor Van der Vis Bouwbedrijf — mobielvriendelijk, voorzien van Yoast SEO en verschillende plugins, met een offerte- en contactformulier dat rechtstreeks per e-mail binnenkomt.`,
+        subtitle: "Diensten van Oosterom Studio",
+        intro: `Van der Vis Bouwbedrijf had nog geen eigen website. Wij hebben een volledig custom WordPress website gebouwd waarmee het bedrijf voor het eerst online vindbaar en bereikbaar is.`,
+        challenge: `Voor Van der Vis Bouwbedrijf was er nog geen website aanwezig, waardoor potentiële klanten geen manier hadden om het bedrijf online te vinden of een offerte aan te vragen. Er was behoefte aan een professionele, mobielvriendelijke website met een werkend contact- en offerteformulier.`,
+        solution: `We hebben een volledig custom WordPress website ontwikkeld, mobielvriendelijk opgezet en uitgerust met verschillende plugins, waaronder Yoast SEO voor de zoekmachineoptimalisatie. Bezoekers kunnen via de website eenvoudig een offerte aanvragen of contact opnemen; deze aanvragen komen rechtstreeks per e-mail binnen bij Van der Vis Bouwbedrijf.`,
+        result: `Het resultaat is een professionele website waarmee Van der Vis Bouwbedrijf voor het eerst goed vindbaar en bereikbaar is online. Potentiële klanten kunnen eenvoudig, ook vanaf mobiel, een offerte aanvragen of contact opnemen — aanvragen komen direct per e-mail binnen, zodat er niets tussen wal en schip valt.`,
+        website: "https://www.vandervisbouw.nl",
+        sfeer: work_vandervis
     }
 ];
 

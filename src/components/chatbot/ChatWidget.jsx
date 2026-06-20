@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import styles from './ChatWidget.module.css'
-import assistantAvatar from '../../assets/oosterom_assistant_avatar.svg'
+import assistantAvatar from '../../assets/images/oosterom_assistant_avatar.svg'
 
 const WELKOMST_BERICHT = {
     role: 'assistant',
