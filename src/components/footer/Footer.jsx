@@ -1,7 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import './Footer.css';
-import algemene from "../../assets/Algemene Voorwaarden - Oosterom Studio.pdf";
 import privacy from "../../assets/Privacybeleid Oosterom Studio.pdf";
 
 function useSystemStatus() {
@@ -132,8 +131,7 @@ function Footer() {
                     {statusLabel}
                 </a>
                 <div className="footer-bottom-links">
-                    <Link to={algemene} target="_blank" rel="noopener noreferrer" className="document-link">Algemene Voorwaarden</Link>
-                    <Link to={privacy} target="_blank" rel="noopener noreferrer" className="document-link">Privacybeleid</Link>
+                    <Link to={privacy} target="_blank" rel="noopener noreferrer" className="document-link">Cookiebeleid</Link>
                 </div>
             </section>
         </footer>

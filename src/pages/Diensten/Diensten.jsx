@@ -42,8 +42,10 @@ function Diensten() {
                 animate={{opacity: 1}}
                 transition={{duration: 0.8}}
             >
-                <h1>Onze Diensten</h1>
-                <p>Wij helpen je met design, development en branding om jouw digitale aanwezigheid te versterken.</p>
+                <h1>Digitale diensten</h1>
+                <p>
+                    Van design tot development en architectuur. We bouwen digitale producten die schaalbaar, snel en veilig zijn.
+                </p>
             </motion.section>
 
             {/* Services overzicht */}
@@ -72,7 +74,7 @@ function Diensten() {
                                     </ul>
                                     {service.extra && <p className="dienst-extra">{service.extra}</p>}
                                 </article>
-                                <a href={service.link} className="card-link">Meer informatie</a>
+                                <a href={service.link} className="card-link">Bekijk dienst</a>
                             </motion.div>
                         );
                     })}

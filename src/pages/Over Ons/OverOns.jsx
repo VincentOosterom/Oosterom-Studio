@@ -76,7 +76,7 @@ function OverOns() {
             <Navigate/>
             <section className="overons-hero">
                 <h1>Over Oosterom Studio</h1>
-                <p>Gedreven door passie voor design, technologie en veiligheid.</p>
+                <p>Webdevelopment, SaaS en cybersecurity vanuit één duidelijke visie.</p>
             </section>
             <motion.section
                 className="overons-content"
@@ -89,17 +89,15 @@ function OverOns() {
                     <h2>
                         De <AnimatedWord>basis</AnimatedWord> van Oosterom Studio
                     </h2>
+
                     <p>
-                        Mijn naam is <strong>Vincent Oosterom</strong>, oprichter van
-                        <strong> Oosterom Studio</strong>. Vanuit een sterke interesse in
-                        technologie en digitale kwaliteit bouw ik professionele
-                        weboplossingen voor ondernemers die verder willen.
+                        Mijn naam is <strong>Vincent Oosterom</strong>, oprichter van <strong>Oosterom Studio</strong>.
+                        Ik ontwikkel webapplicaties en digitale producten voor ondernemers en organisaties die hun processen willen moderniseren.
                     </p>
+
                     <p>
-                        Wat begon als nieuwsgierigheid naar hoe websites écht functioneren,
-                        is uitgegroeid tot een duidelijke visie: digitale producten moeten
-                        niet alleen visueel overtuigen, maar ook technisch robuust,
-                        veilig en toekomstbestendig zijn.
+                        Wat begon als interesse in hoe software werkt, is uitgegroeid tot een duidelijke focus:
+                        het bouwen van digitale producten die technisch sterk, schaalbaar en veilig zijn.
                     </p>
                 </motion.article>
 
@@ -107,22 +105,20 @@ function OverOns() {
                     <h2>
                         Ontwikkeling en <AnimatedWord>expertise</AnimatedWord>
                     </h2>
+
                     <p>
-                        Momenteel volg ik de <strong>HBO-opleiding Full Stack Development</strong>,
-                        gericht op het ontwerpen en bouwen van complete webapplicaties,
-                        van frontend tot backend en datalaag.
+                        Ik heb de HBO-opleiding <strong>Full Stack Development</strong> afgerond aan de Novi Hogeschool,
+                        gericht op het bouwen van complete webapplicaties van frontend tot backend en database-architectuur.
                     </p>
+
                     <p>
-                        Parallel verdiep ik mij actief in <strong>cybersecurity</strong>,
-                        via praktijkgerichte omgevingen zoals TryHackMe, waar ik
-                        hands-on ervaring opdoe met kwetsbaarheden, aanvalstechnieken en
-                        verdedigingsprincipes binnen moderne IT-omgevingen.
+                        Daarnaast verdiep ik mij actief in <strong>cybersecurity</strong>, met focus op kwetsbaarheden,
+                        systeembeveiliging en veilige software-architectuur via praktische omgevingen en real-world scenario’s.
                     </p>
+
                     <p>
-                        Die combinatie is geen toeval. Na mijn opleiding specialiseer ik
-                        mij verder in <strong>cybersecurity</strong>, zodat ik software
-                        niet alleen kan bouwen, maar ook onderbouwd beveiligen en adviseren
-                        over architectuur en risico's.
+                        Die combinatie gebruik ik in mijn werk om niet alleen software te bouwen, maar ook te zorgen dat deze
+                        vanaf de basis veilig, robuust en goed doordacht is.
                     </p>
                 </motion.article>
 
@@ -130,20 +126,19 @@ function OverOns() {
                     <h2>
                         Visie en <AnimatedWord>richting</AnimatedWord>
                     </h2>
+
                     <p>
-                        Ik geloof dat software, beveiliging en strategisch inzicht
-                        onlosmakelijk met elkaar verbonden zijn. Bedrijven verdienen
-                        technologie die onderbouwd, uitlegbaar en toekomstbestendig is.
+                        Software, beveiliging en architectuur horen bij elkaar. Ik geloof dat digitale producten alleen goed zijn
+                        wanneer ze technisch kloppen, veilig zijn ontworpen en logisch in elkaar zitten.
                     </p>
+
                     <p>
-                        Vanuit die overtuiging ondersteun ik organisaties bij het bouwen
-                        van doordachte softwareoplossingen, waarbij veiligheid geen
-                        bijzaak is maar een fundamenteel onderdeel van het ontwerp.
+                        Vanuit die visie bouw ik software voor organisaties die verder willen dan standaardoplossingen —
+                        met focus op kwaliteit, schaalbaarheid en veiligheid vanaf de basis.
                     </p>
+
                     <p>
-                        Ik bouw niet alleen, ik denk mee over <strong>hoe</strong> systemen
-                        worden opgezet en <strong>waarom</strong> bepaalde keuzes
-                        worden gemaakt.
+                        Ik bouw niet alleen systemen, maar denk mee over <strong>structuur, keuzes en toekomstbestendigheid</strong>.
                     </p>
                 </motion.article>
 

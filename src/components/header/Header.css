@@ -60,18 +60,18 @@
 }
 
 .content-left h1 {
-    font-size: clamp(38px, 6vw, 80px);
+    font-size: clamp(35px, 6vw, 68px);
     font-weight: 800;
     line-height: 0.99;
     color: whitesmoke;
-    animation: fadeLeft 0.9s ease 0.4s both;
+    animation: fadeLeft 0.9s ease 0.2s both;
     white-space: pre-line;
 }
 
 @keyframes fadeLeft {
     from {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateX(-40px);
     }
     to {
         opacity: 1;

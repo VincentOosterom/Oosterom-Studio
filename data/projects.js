@@ -111,7 +111,7 @@ const projects = [
         challenge: `Voor Van der Vis Bouwbedrijf was er nog geen website aanwezig, waardoor potentiële klanten geen manier hadden om het bedrijf online te vinden of een offerte aan te vragen. Er was behoefte aan een professionele, mobielvriendelijke website met een werkend contact- en offerteformulier.`,
         solution: `We hebben een volledig custom WordPress website ontwikkeld, mobielvriendelijk opgezet en uitgerust met verschillende plugins, waaronder Yoast SEO voor de zoekmachineoptimalisatie. Bezoekers kunnen via de website eenvoudig een offerte aanvragen of contact opnemen; deze aanvragen komen rechtstreeks per e-mail binnen bij Van der Vis Bouwbedrijf.`,
         result: `Het resultaat is een professionele website waarmee Van der Vis Bouwbedrijf voor het eerst goed vindbaar en bereikbaar is online. Potentiële klanten kunnen eenvoudig, ook vanaf mobiel, een offerte aanvragen of contact opnemen — aanvragen komen direct per e-mail binnen, zodat er niets tussen wal en schip valt.`,
-        website: "https://www.vandervisbouw.nl",
+        website: "https://www.vandervisbouw.com",
         sfeer: work_vandervis
     }
 ];

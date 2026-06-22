@@ -28,7 +28,7 @@ export default function BlogOverview() {
                 <h1 className={styles.titel}>Inzichten & praktijkkennis</h1>
                 <p className={styles.intro}>
                     Praktische artikelen over webdesign, beveiliging en software voor
-                    MKB-bedrijven — geschreven vanuit de praktijk, niet vanuit theorie.
+                    MKB-bedrijven. Geschreven vanuit de praktijk, niet vanuit theorie.
                 </p>
 
                 <div className={styles.grid}>

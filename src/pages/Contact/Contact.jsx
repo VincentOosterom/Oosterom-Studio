@@ -4,7 +4,6 @@ import './Contact.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
 import { Helmet } from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
-import algemene from "../../assets/Algemene Voorwaarden - Oosterom Studio.pdf";
 import privacy from "../../assets/Privacybeleid Oosterom Studio.pdf";
 
 function Contact() {
@@ -76,23 +75,21 @@ function Contact() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7 }}
                             >
-                                <h2>Neem contact op</h2>
+                                <h2>Plan een kennismaking</h2>
                                 <p>
-                                    Heb je een idee, project of vraag?
-                                    Vul het formulier in en we nemen snel contact met je op.
+                                    Heb je een idee, project of uitdaging?
+                                    We kijken graag mee naar de beste technische en strategische oplossing.
                                 </p>
+
                                 <div className="contact-details">
                                     <p><strong>E-mail</strong> vincent@oosteromstudio.nl</p>
-                                    <p><strong>Reactietijd</strong> Binnen 24 uur</p>
+                                    <p><strong>Reactietijd</strong> binnen 24 uur</p>
                                 </div>
                                 <div className="company-details">
-                                    <h3>Oosterom Studio is onderdeel van Oosterom Creative</h3>
+                                    <h3>Oosterom Studio</h3>
                                     <div className="company-details-extra">
                                         <p><strong>KVK:</strong> 85118028</p>
                                         <p><strong>BTW:</strong> NL004057297B50</p>
-                                        <a href={algemene} target="_blank" rel="noopener noreferrer" className="document-link">
-                                            Algemene Voorwaarden
-                                        </a>
                                         <a href={privacy} target="_blank" rel="noopener noreferrer" className="document-link">
                                             Privacy Policy
                                         </a>
@@ -124,7 +121,10 @@ function Contact() {
                                 transition={{ duration: 0.8 }}
                                 viewport={{ once: true }}
                             >
-                                <h2>Contactformulier</h2>
+                                <h2>Start je project</h2>
+                                <p>
+                                    Vul het formulier in en je ontvangt binnen 24 uur een reactie.
+                                </p>
                                 {error && <p className="form-error">{error}</p>}
                                 <p className="warning">Let op! Velden met * zijn verplicht</p>
                                 <input type="text" name="name" placeholder="Volledige naam *" value={formData.name} onChange={handleChange} required />

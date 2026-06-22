@@ -2,22 +2,40 @@ import styles from './WatWeBouwen.module.css';
 
 const cards = [
     {
-        title: 'Web apps & SaaS',
+        title: 'Webapps & SaaS',
         description:
-            'Productiesystemen, klantportalen, interne tools. Postgres als bron van waarheid, deploys waar je niet van wakker ligt.',
-        pills: ['PostgreSQL', 'React', 'Javascript'],
+            'Productiesystemen, klantportalen en interne tools. Gebouwd met schaalbaarheid, performance en betrouwbaarheid als uitgangspunt.',
+        pills: ['PostgreSQL', 'React', 'JavaScript'],
     },
     {
-        title: 'Custom Software',
+        title: 'Custom software',
         description:
-            'Maatwerk waar standaardpakketten ophouden, integraties, dataplatforms, automatisering. Eerst je proces begrijpen, dan pas typen.',
-        pills: ['PostgreSQL', 'React', 'Javascript'],
+            'Maatwerk software wanneer standaardoplossingen tekortschieten. Van procesanalyse tot integraties en automatisering.',
+        pills: ['PostgreSQL', 'React', 'JavaScript'],
     },
     {
-        title: 'Mobile Apps',
+        title: 'Mobile apps',
         description:
-            'iOS en Android via React Native. Offline-first, biometrische auth, encrypted-at-rest. Geen webview-omhulsel.',
-        pills: ['PostgreSQL', 'React Native', 'iOS & Android'],
+            'Native mobiele apps met React Native. Offline-first, veilige authenticatie en data-encryptie by design.',
+        pills: ['React Native', 'iOS & Android', 'APIs'],
+    },
+    {
+        title: 'UX & UI Design',
+        description:
+            'Heldere interfaces die gebruiksgemak en conversie combineren. Gebouwd op gedrag, niet op aannames.',
+        pills: ['Figma', 'Design Systems', 'UX Research'],
+    },
+    {
+        title: 'AI Agents & Automatisering',
+        description:
+            'Intelligente workflows en agents die repetitief werk automatiseren en processen slimmer laten draaien.',
+        pills: ['OpenAI', 'Automation', 'APIs'],
+    },
+    {
+        title: 'API & Integraties',
+        description:
+            'Koppelingen tussen systemen, databases en externe services. Robuuste API-architectuur als basis voor schaalbare software.',
+        pills: ['REST', 'GraphQL', 'Node.js'],
     },
 ];
 
@@ -25,23 +43,29 @@ export default function WatWeBouwen() {
     return (
         <section className={styles.section}>
             <article className={styles.header}>
-                <h2 className={styles.title}>Wat ik bouw</h2>
+                <h2 className={styles.title}>Digitale producten & systemen</h2>
                 <div className={styles.line} />
             </article>
-            <a className={styles.grid}>
+
+            <div className={styles.grid}>
                 {cards.map((card) => (
                     <article key={card.title} className={styles.card}>
-                        <i className={`ti ${card.icon} ${styles.icon}`} aria-hidden="true" />
                         <h3 className={styles.cardTitle}>{card.title}</h3>
-                        <p className={styles.cardDesc}>{card.description}</p>
+
+                        <p className={styles.cardDesc}>
+                            {card.description}
+                        </p>
+
                         <div className={styles.pills}>
                             {card.pills.map((pill) => (
-                                <span key={pill} className={styles.pill}>{pill}</span>
+                                <span key={pill} className={styles.pill}>
+                                    {pill}
+                                </span>
                             ))}
                         </div>
                     </article>
                 ))}
-            </a>
+            </div>
         </section>
     );
 }

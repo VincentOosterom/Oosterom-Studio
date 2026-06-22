@@ -7,9 +7,9 @@ function intentSection() {
             <section className="intent-section">
                 <article className="intent-container">
                     <article className="intent-left">
-                        <h2>Een sterke digitale oplossing begint met strategie</h2>
+                        <h2>Strategie vormt de basis van elke sterke digitale oplossing</h2>
                         <p>
-                            Wij starten elk project met een grondige analyse van jouw bedrijf, doelgroep en groeidoelstellingen. We kijken niet alleen naar design, maar naar structuur, prestaties en schaalbaarheid. Door vooraf de juiste architectuur en strategie te bepalen, bouwen we een digitale oplossing die niet alleen vandaag werkt, maar ook meegroeit met jouw organisatie.
+                            We starten elk project met een scherpe analyse van je bedrijf, doelgroep en groeidoelen. Niet alleen design staat centraal, maar ook structuur, performance en schaalbaarheid. Door vanaf het begin de juiste architectuur te kiezen, bouwen we software die vandaag werkt en meegroeit met je organisatie.
                         </p>
                     </article>
                 </article>
