@@ -117,7 +117,6 @@ function Homepage() {
             <MovingBar/>
 
             <main>
-                <IntentSection/>
                 {/* Section 1: Kernwaarden */}
                 <section className="values-section">
                     <motion.div
@@ -125,31 +124,74 @@ function Homepage() {
                         variants={staggerChildren}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{once: true}}
+                        viewport={{ once: true }}
                     >
-                        <motion.h2 variants={fadeUp}>Kernwaarden</motion.h2>
+                        <motion.span className="values-tag" variants={fadeUp}>
+                            Waar we voor staan
+                        </motion.span>
+
+                        <motion.h2 variants={fadeUp}>
+                            Gebouwd op <em>principes</em>,<br />niet op aannames.
+                        </motion.h2>
+
+                        <motion.p className="values-subtitle" variants={fadeUp}>
+                            Elke keuze die we maken — in design, code en samenwerking —
+                            komt voort uit dezelfde vier uitgangspunten.
+                        </motion.p>
+
                         <section className="values-grid">
                             <motion.article className="value-card" variants={fadeUp}>
+                                <div className="value-card__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </div>
                                 <h3>Performance First</h3>
                                 <p>
-                                    Wij ontwikkelen snelle en technisch geoptimaliseerde websites die voldoen aan
-                                    moderne performance standaarden, met hoge scores op Core Web Vitals als
-                                    uitgangspunt.
+                                    Snelheid is geen luxe, het is het uitgangspunt. We ontwikkelen
+                                    technisch geoptimaliseerde websites met hoge Core Web Vitals-scores
+                                    die bezoekers niet laten wachten.
                                 </p>
                             </motion.article>
+
                             <motion.article className="value-card" variants={fadeUp}>
+                                <div className="value-card__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
                                 <h3>Security by Default</h3>
                                 <p>
-                                    Veiligheid is geen extra optie. Wij bouwen volgens best practices met aandacht voor
-                                    stabiele architectuur, HTTPS, security headers en bescherming tegen veelvoorkomende
-                                    aanvallen.
+                                    Beveiliging zit in de basis, niet als afvinkpunt achteraf. HTTPS,
+                                    security headers en bescherming tegen veelvoorkomende aanvallen zijn
+                                    standaard onderdeel van elk project.
                                 </p>
                             </motion.article>
                             <motion.article className="value-card" variants={fadeUp}>
+                                <div className="value-card__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M18 20V10M12 20V4M6 20v-6"/>
+                                    </svg>
+                                </div>
                                 <h3>Resultaatgericht</h3>
                                 <p>
-                                    Elke keuze, van structuur tot techniek, is gericht op conversie, groei en
-                                    schaalbaarheid. Een mooie website die niet converteert, is geen goede website.
+                                    Elke keuze — van structuur tot techniek — is gericht op conversie
+                                    en groei. Een mooie website die niet converteert lost niets op.
+                                </p>
+                            </motion.article>
+                            <motion.article className="value-card" variants={fadeUp}>
+                                <div className="value-card__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                                    </svg>
+                                </div>
+                                <h3>Langetermijnpartner</h3>
+                                <p>
+                                    We denken verder dan de oplevering. Systemen die meegroeien,
+                                    code die overdraagbaar is, en eerlijk advies ook als dat betekent
+                                    dat we je doorverwijzen.
                                 </p>
                             </motion.article>
                         </section>
@@ -208,48 +250,53 @@ function Homepage() {
                         variants={staggerChildren}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{once: true}}
+                        viewport={{ once: true }}
                     >
-                        <motion.h2 variants={fadeUp}>Investering</motion.h2>
-                        <motion.p variants={fadeUp}>
-                            Wij bouwen maatwerk digitale oplossingen. Daarom werken we niet met standaard templates
-                            of vaste pakketten, maar met een gerichte aanpak afgestemd op jouw doelstellingen.
-                        </motion.p>
-                        <motion.p variants={fadeUp}>
-                            Tijdens een vrijblijvend strategiegesprek brengen we jouw wensen, groeidoelen en
-                            technische behoeften in kaart. Op basis daarvan ontvang je een heldere en transparante
-                            offerte, zonder verrassingen achteraf.
-                        </motion.p>
-                        <motion.div variants={fadeUp}>
-                            <Link to="/contact" className="cta-button cta-button--secondary">
-                                Plan een gratis gesprek
-                            </Link>
-                        </motion.div>
-                    </motion.div>
-                </section>
+                        <div className="pricing-glow" />
 
-                {/* Section 5: CTA */}
-                <section className="cta-section">
-                    <motion.div
-                        className="cta-container"
-                        variants={staggerChildren}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{once: true}}
-                    >
+                        <motion.span className="pricing-tag" variants={fadeUp}>
+                            Investering
+                        </motion.span>
+
                         <motion.h2 variants={fadeUp}>
-                            Klaar om jouw project te starten?
+                            Geen pakketten.<br />
+                            <em>Wel een eerlijke prijs.</em>
                         </motion.h2>
-                        <motion.p variants={fadeUp}>
-                            Of je nu een nieuwe website nodig hebt, je huidige design wilt vernieuwen of online beter
-                            gevonden wilt worden, wij helpen je graag verder.
+
+                        <motion.p className="pricing-intro" variants={fadeUp}>
+                            Wij werken niet met standaardpakketten, omdat geen enkel bedrijf
+                            hetzelfde is. Elk project begint met een goed gesprek — daarna
+                            ontvang je een heldere offerte zonder verborgen kosten.
                         </motion.p>
-                        <motion.div variants={fadeUp}>
-                            <Link to="/contact" className="cta-button">Neem contact op</Link>
+
+                        <motion.div className="pricing-pillars" variants={staggerChildren}>
+                            <motion.div className="pricing-pillar" variants={fadeUp}>
+                                <span className="pricing-pillar__num">01</span>
+                                <h3>Gesprek</h3>
+                                <p>We bespreken jouw doelen, wensen en technische behoeften. Geen verkooppraatje, wel eerlijk advies.</p>
+                            </motion.div>
+                            <div className="pricing-pillar__divider" />
+                            <motion.div className="pricing-pillar" variants={fadeUp}>
+                                <span className="pricing-pillar__num">02</span>
+                                <h3>Offerte</h3>
+                                <p>Je ontvangt een heldere offerte op maat, transparant, zonder kleine lettertjes of verrassingen achteraf.</p>
+                            </motion.div>
+                            <div className="pricing-pillar__divider" />
+                            <motion.div className="pricing-pillar" variants={fadeUp}>
+                                <span className="pricing-pillar__num">03</span>
+                                <h3>Bouwen</h3>
+                                <p>Zodra we akkoord zijn, gaan we aan de slag. Je wordt op de hoogte gehouden en kan altijd bijsturen.</p>
+                            </motion.div>
+                        </motion.div>
+
+                        <motion.div className="pricing-cta" variants={fadeUp}>
+                            <Link to="/offerte-aanvragen" className="btn-primary btn-primary--large">
+                                Plan een gratis gesprek →
+                            </Link>
+                            <p className="pricing-cta__sub">Vrijblijvend · Reactie binnen 24 uur</p>
                         </motion.div>
                     </motion.div>
                 </section>
-
             </main>
 
             <Footer/>

@@ -27,7 +27,7 @@ function Footer() {
         loading: 'Systemen laden…',
         up: 'Alle systemen operationeel',
         down: 'Storing gedetecteerd',
-        unknown: 'Status onbekend',
+        unknown: 'Status niet beschikbaar',
     }[status]
 
     const statusColor = {
@@ -90,22 +90,21 @@ function Footer() {
                         </ul>
                     </article>
                     <article className="footer-column">
+                        <h4>Informatie</h4>
+                        <ul>
+                            <li><Link to="blog/onderhoudsabonnement-of-losse-facturen">Abonnement of Factuur</Link></li>
+                            <li><Link to="/blog/wanneer-loont-maatwerk-software">Loont maatkwerk?</Link></li>
+                            <li><Link to="/blog/wat-is-een-ai-agent">AI Agents, Wat is het?</Link></li>
+                            <li><Link to="/blog/avg-fouten-mkb">AVG Fouten</Link></li>
+                        </ul>
+                    </article>
+                    <article className="footer-column">
                         <h4>Studio</h4>
                         <ul>
                             <li><Link to="/over-ons">Over ons</Link></li>
                             <li><Link to="/portfolio">Portfolio</Link></li>
                             <li><Link to="/contact">Contact</Link></li>
                             <li><Link to="/offerte-aanvragen">Offerte aanvragen</Link></li>
-                        </ul>
-                    </article>
-                    <article className="footer-column">
-                        <h4>Contact</h4>
-                        <ul>
-                            <li><a href="mailto:vincent@oosteromstudio.nl">vincent@oosteromstudio.nl</a></li>
-                            <li><span className="footer-availability">
-                                <span className="status-dot" aria-hidden="true"/>
-                                Beschikbaar voor projecten
-                            </span></li>
                         </ul>
                     </article>
                 </section>

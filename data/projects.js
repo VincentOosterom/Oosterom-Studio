@@ -113,7 +113,7 @@ const projects = [
         result: `Het resultaat is een professionele website waarmee Van der Vis Bouwbedrijf voor het eerst goed vindbaar en bereikbaar is online. Potentiële klanten kunnen eenvoudig, ook vanaf mobiel, een offerte aanvragen of contact opnemen — aanvragen komen direct per e-mail binnen, zodat er niets tussen wal en schip valt.`,
         website: "https://www.vandervisbouw.com",
         sfeer: work_vandervis
-    }
+    },
 ];
 
 export default projects;

@@ -16,7 +16,7 @@
 .footer-main {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns: 1fr 5fr;
     gap: 6rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
