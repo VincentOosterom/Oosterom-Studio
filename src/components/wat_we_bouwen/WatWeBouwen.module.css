@@ -12,7 +12,6 @@
 }
 
 .title {
-    font-size: 1.8rem;
     font-family: var(--font-title), sans-serif;
     color: var(--color-text);
     margin: 0;
@@ -117,6 +116,10 @@
 @media (max-width: 768px) {
     .section {
         padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 1.2rem;
     }
 
     .grid {

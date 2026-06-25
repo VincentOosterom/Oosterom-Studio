@@ -135,8 +135,8 @@ function Homepage() {
                         </motion.h2>
 
                         <motion.p className="values-subtitle" variants={fadeUp}>
-                            Elke keuze die we maken — in design, code en samenwerking —
-                            komt voort uit dezelfde vier uitgangspunten.
+                            Elke keuze die we maken, in design, code en samenwerking.
+                            Komt voort uit dezelfde vier uitgangspunten.
                         </motion.p>
 
                         <section className="values-grid">
@@ -175,7 +175,7 @@ function Homepage() {
                                 </div>
                                 <h3>Resultaatgericht</h3>
                                 <p>
-                                    Elke keuze — van structuur tot techniek — is gericht op conversie
+                                    Elke keuze, van structuur tot techniek, is gericht op conversie
                                     en groei. Een mooie website die niet converteert lost niets op.
                                 </p>
                             </motion.article>
@@ -265,7 +265,7 @@ function Homepage() {
 
                         <motion.p className="pricing-intro" variants={fadeUp}>
                             Wij werken niet met standaardpakketten, omdat geen enkel bedrijf
-                            hetzelfde is. Elk project begint met een goed gesprek — daarna
+                            hetzelfde is. Elk project begint met een goed gesprek, daarna
                             ontvang je een heldere offerte zonder verborgen kosten.
                         </motion.p>
 

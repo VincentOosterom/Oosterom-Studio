@@ -11,12 +11,12 @@ export const blogPosts = [
         datum: "2026-05-12",
         leestijd: "4 min",
         intro:
-            "<p>Veel ondernemers denken bij een nieuwe website vooral aan kleuren, logo's en foto's. Maar de vraag die er echt toe doet is: snapt een bezoeker binnen drie seconden wat hij hier kan doen? Dat is UX-design — en het is waar de meeste websites op verliezen.</p>",
+            "<p>Veel ondernemers denken bij een nieuwe website vooral aan kleuren, logo's en foto's. Maar de vraag die er echt toe doet is: snapt een bezoeker binnen drie seconden wat hij hier kan doen? Dat is UX-design, en het is waar de meeste websites op verliezen.</p>",
         secties: [
             {
                 kop: "Mooi is niet hetzelfde als werkend",
                 html:
-                    "<p>Een website kan visueel sterk zijn en toch slecht presteren. Onduidelijke knoppen, te veel tekst boven de vouw, of een contactformulier dat zich verstopt — het zijn kleine dingen met grote impact op je conversie.</p><p>Bij <a href=\"/diensten/webdesign\">webdesign &amp; UX</a> draait het daarom niet om trends volgen, maar om bezoekers zo snel mogelijk naar hun doel leiden: een offerte aanvragen, contact opnemen, of een dienst beter begrijpen.</p>",
+                    "<p>Een website kan visueel sterk zijn en toch slecht presteren. Onduidelijke knoppen, te veel tekst boven de vouw, of een contactformulier dat zich verstopt, het zijn kleine dingen met grote impact op je conversie.</p><p>Bij <a href=\"/diensten/webdesign\">webdesign &amp; UX</a> draait het daarom niet om trends volgen, maar om bezoekers zo snel mogelijk naar hun doel leiden: een offerte aanvragen, contact opnemen, of een dienst beter begrijpen.</p>",
             },
             {
                 kop: "Drie signalen dat je UX een opfrisbeurt nodig heeft",
@@ -26,7 +26,7 @@ export const blogPosts = [
             {
                 kop: "Design en merk gaan hand in hand",
                 html:
-                    "<p>Goede UX werkt het beste als hij aansluit op een duidelijke merkidentiteit. Daarom combineren we bij <a href=\"/diensten/branding\">branding &amp; digitale strategie</a> vaak design-keuzes met een bredere visie op positionering, zodat je site niet alleen werkt, maar ook herkenbaar is.</p><p>En als je website eenmaal staat, is het slim om ook na te denken over de lange termijn — lees bijvoorbeeld hoe een <a href=\"/blog/onderhoudsabonnement-of-losse-facturen\">onderhoudsabonnement</a> je behoedt voor verrassingen achteraf.</p>",
+                    "<p>Goede UX werkt het beste als hij aansluit op een duidelijke merkidentiteit. Daarom combineren we bij <a href=\"/diensten/branding\">branding &amp; digitale strategie</a> vaak design-keuzes met een bredere visie op positionering, zodat je site niet alleen werkt, maar ook herkenbaar is.</p><p>En als je website eenmaal staat, is het slim om ook na te denken over de lange termijn. Lees bijvoorbeeld hoe een <a href=\"/blog/onderhoudsabonnement-of-losse-facturen\">onderhoudsabonnement</a> je behoedt voor verrassingen achteraf.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/webdesign", "/diensten/branding"],
@@ -41,7 +41,7 @@ export const blogPosts = [
         datum: "2026-05-26",
         leestijd: "5 min",
         intro:
-            "<p>Een gehackte website merk je niet altijd meteen. Vaak draait hij gewoon door — alleen stuurt hij in het geheim spam, of staat hij op een zwarte lijst bij Google. Dit zijn de signalen die je niet moet negeren.</p>",
+            "<p>Een gehackte website merk je niet altijd meteen. Vaak draait hij gewoon door, alleen stuurt hij in het geheim spam, of staat hij op een zwarte lijst bij Google. Dit zijn de signalen die je niet moet negeren.</p>",
         secties: [
             {
                 kop: "1. Je CMS of plugins zijn al maanden niet bijgewerkt",
@@ -64,7 +64,6 @@ export const blogPosts = [
                     "<p>Het beste startpunt is een onafhankelijke <a href=\"/diensten/cybersecurity-scan\">cybersecurity scan &amp; beveiligingsaudit</a>: een check op kwetsbaarheden, verlopen certificaten en verdachte bestanden, met concrete actiepunten op volgorde van risico.</p><p>Voor de lange termijn voorkomt <a href=\"/diensten/website-beveiliging\">website beveiliging &amp; onderhoud</a> dat dit probleem terugkomt — denk aan automatische updates, monitoring en back-ups.</p><p>Werk je met persoonsgegevens van klanten? Check dan ook onze blog over <a href=\"/blog/avg-fouten-mkb\">de meest gemaakte AVG-fouten</a>, want beveiliging en privacy gaan hand in hand.</p>",
             },
         ],
-        gerelateerdeDiensten: ["/diensten/cybersecurity-scan", "/diensten/website-beveiliging"],
         gerelateerdeBlogs: ["avg-fouten-mkb"],
     },
     {
@@ -99,7 +98,6 @@ export const blogPosts = [
                     "<p>Zelfs als alles technisch goed staat, moet je kunnen aantonen wat je hebt gedaan. Bij een <a href=\"/diensten/avg-proof-website\">AVG/GDPR-proof website</a> traject leveren we die documentatie standaard mee.</p><p>Wil je weten of jouw site nog andere kwetsbaarheden heeft naast privacy? Begin met de <a href=\"/blog/5-tekenen-beveiligingslek\">vijf signalen van een beveiligingslek</a> die we eerder beschreven.</p>",
             },
         ],
-        gerelateerdeDiensten: ["/diensten/avg-proof-website", "/diensten/cybersecurity-scan"],
         gerelateerdeBlogs: ["5-tekenen-beveiligingslek"],
     },
     {
@@ -116,17 +114,17 @@ export const blogPosts = [
             {
                 kop: "Een chatbot beantwoordt, een agent handelt",
                 html:
-                    "<p>Een chatbot geeft antwoord op vragen. Een AI-agent gaat een stap verder: hij kan gegevens opzoeken, een afspraak inplannen, een e-mail opstellen of een taak doorzetten naar de juiste collega — op basis van regels die jij vooraf bepaalt.</p>",
+                    "<p>Een chatbot geeft antwoord op vragen. Een AI-agent gaat een stap verder: hij kan gegevens opzoeken, een afspraak inplannen, een e-mail opstellen of een taak doorzetten naar de juiste collega, op basis van regels die jij vooraf bepaalt.</p>",
             },
             {
                 kop: "Waar AI-agents in de praktijk verschil maken",
                 html:
-                    "<p>Denk aan een agent die binnenkomende leads automatisch categoriseert en doorstuurt, of een interne agent die terugkerende rapportages samenstelt. Dit soort taken kost mensen veel herhaling en weinig denkwerk — precies waar automatisering wint.</p><p>Wij bouwen dit als onderdeel van <a href=\"/diensten/ai-agents\">AI-agents &amp; slimme automatisering</a>, altijd met een stap waarin een mens goedkeuring geeft voordat iets definitief de deur uit gaat.</p>",
+                    "<p>Denk aan een agent die binnenkomende leads automatisch categoriseert en doorstuurt, of een interne agent die terugkerende rapportages samenstelt. Dit soort taken kost mensen veel herhaling en weinig denkwerk, precies waar automatisering wint.</p><p>Wij bouwen dit als onderdeel van <a href=\"/diensten/ai-agents\">AI-agents &amp; slimme automatisering</a>, altijd met een stap waarin een mens goedkeuring geeft voordat iets definitief de deur uit gaat.</p>",
             },
             {
                 kop: "Wanneer het (nog) geen agent moet zijn",
                 html:
-                    "<p>Heb je een proces dat maar een paar keer per maand voorkomt, of waarbij elke situatie anders is? Dan is gewone <a href=\"/diensten/ai-automatisering\">workflow-automatisering</a> vaak een beter startpunt dan een volledige agent — simpeler te bouwen, en makkelijker te controleren.</p><p>Twijfel je tussen losse automatisering of maatwerk software eromheen? Lees ook <a href=\"/blog/wanneer-loont-maatwerk-software\">wanneer maatwerk software écht loont</a>.</p>",
+                    "<p>Heb je een proces dat maar een paar keer per maand voorkomt, of waarbij elke situatie anders is? Dan is gewone <a href=\"/diensten/ai-automatisering\">workflow-automatisering</a> vaak een beter startpunt dan een volledige agent, simpeler te bouwen, en makkelijker te controleren.</p><p>Twijfel je tussen losse automatisering of maatwerk software eromheen? Lees ook <a href=\"/blog/wanneer-loont-maatwerk-software\">wanneer maatwerk software écht loont</a>.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/ai-agents", "/diensten/ai-automatisering"],
@@ -141,22 +139,22 @@ export const blogPosts = [
         datum: "2026-06-13",
         leestijd: "5 min",
         intro:
-            "<p>Standaardtools zijn vaak prima — totdat je begint 'workarounds' te bouwen om ze passend te maken voor hoe jij werkt. Dat is meestal het moment om maatwerk te overwegen.</p>",
+            "<p>Standaardtools zijn vaak prima, totdat je begint 'workarounds' te bouwen om ze passend te maken voor hoe jij werkt. Dat is meestal het moment om maatwerk te overwegen.</p>",
         secties: [
             {
                 kop: "Het signaal: je past je proces aan op de software",
                 html:
-                    "<p>Zodra je werkwijze gaat ombuigen om in een tool te passen — in plaats van andersom — verlies je tijd en eigenaarschap over je eigen proces. Dat is precies waar <a href=\"/diensten/software-op-maat\">custom software &amp; maatwerk ontwikkeling</a> verschil maakt.</p>",
+                    "<p>Zodra je werkwijze gaat ombuigen om in een tool te passen, in plaats van andersom, verlies je tijd en eigenaarschap over je eigen proces. Dat is precies waar <a href=\"/diensten/software-op-maat\">custom software &amp; maatwerk ontwikkeling</a> verschil maakt.</p>",
             },
             {
                 kop: "Van losse tools naar samenhangend systeem",
                 html:
-                    "<p>Veel bedrijven beginnen met losse spreadsheets, formulieren en e-mails. Op een gegeven moment is het efficiënter om dat samen te brengen in één omgeving — bijvoorbeeld een <a href=\"/diensten/klantportaal\">klantportaal of CRM op maat</a> waarin klantgegevens, status en communicatie samenkomen.</p>",
+                    "<p>Veel bedrijven beginnen met losse spreadsheets, formulieren en e-mails. Op een gegeven moment is het efficiënter om dat samen te brengen in één omgeving, bijvoorbeeld een <a href=\"/diensten/klantportaal\">klantportaal of CRM op maat</a> waarin klantgegevens, status en communicatie samenkomen.</p>",
             },
             {
                 kop: "En als het groter moet groeien?",
                 html:
-                    "<p>Heb je een idee voor een eigen platform of dienst die je aan meerdere klanten wilt aanbieden? Dan praat je niet meer over een interne tool, maar over <a href=\"/diensten/saas\">SaaS &amp; digitale systemen</a> — met andere eisen aan schaalbaarheid en gebruikersrollen.</p><p>Wil je eerst kleinere stappen zetten met automatisering voordat je investeert in maatwerk? Begin bij <a href=\"/blog/wat-is-een-ai-agent\">wat een AI-agent voor jouw bedrijf kan doen</a>.</p>",
+                    "<p>Heb je een idee voor een eigen platform of dienst die je aan meerdere klanten wilt aanbieden? Dan praat je niet meer over een interne tool, maar over <a href=\"/diensten/saas\">SaaS &amp; digitale systemen</a>, met andere eisen aan schaalbaarheid en gebruikersrollen.</p><p>Wil je eerst kleinere stappen zetten met automatisering voordat je investeert in maatwerk? Begin bij <a href=\"/blog/wat-is-een-ai-agent\">wat een AI-agent voor jouw bedrijf kan doen</a>.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/software-op-maat", "/diensten/klantportaal", "/diensten/saas"],
@@ -186,10 +184,9 @@ export const blogPosts = [
             {
                 kop: "Het complete pakket",
                 html:
-                    "<p>Voor wie design, ontwikkeling én beveiliging in één keer goed wil regelen, is het <a href=\"/diensten/website-en-beveiliging\">website + beveiligingspakket</a> de meest complete optie — van buiten sterk, van binnen beveiligd.</p>",
+                    "<p>Voor wie design, ontwikkeling én beveiliging in één keer goed wil regelen, is het <a href=\"/diensten/website-en-beveiliging\">website + beveiligingspakket</a> de meest complete optie, van buiten sterk, van binnen beveiligd.</p>",
             },
         ],
-        gerelateerdeDiensten: ["/diensten/onderhoud-support", "/diensten/website-en-beveiliging"],
         gerelateerdeBlogs: ["5-tekenen-beveiligingslek"],
     },
 ];
