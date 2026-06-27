@@ -1,6 +1,6 @@
 .section {
     padding: 50px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
 }
 
 .header {
@@ -15,7 +15,7 @@
     font-family: var(--font-title), sans-serif;
     color: var(--color-text);
     margin: 0;
-    white-space: nowrap;
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
 }
 
 .line {

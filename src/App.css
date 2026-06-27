@@ -75,6 +75,9 @@ body::before {
     padding: 10px 30px;
     text-decoration: none;
     font-family: var(--font-title), sans-serif;
+    border-radius: 15px;
+    border: none;
+    color: black;
 }
 
 

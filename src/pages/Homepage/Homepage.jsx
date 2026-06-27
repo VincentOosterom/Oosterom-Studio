@@ -58,7 +58,7 @@ function Homepage() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio – Digitaal sterk van buiten én van binnen</title>
+                <title>Oosterom Studio | Digitaal sterk van buiten én van binnen</title>
 
                 <meta
                     name="description"
@@ -68,7 +68,7 @@ function Homepage() {
                 <meta property="og:title" content="Oosterom Studio – Webdesign, Shopify & Cybersecurity"/>
                 <meta
                     property="og:description"
-                    content="Digitaal sterk van buiten én van binnen. Oosterom Studio combineert scherp webdesign met cybersecurity voor MKB en startups."
+                    content="Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht."
                 />
                 <meta property="og:type" content="website"/>
                 <meta property="og:url" content="https://www.oosteromstudio.nl/"/>
@@ -117,7 +117,6 @@ function Homepage() {
             <MovingBar/>
 
             <main>
-                {/* Section 1: Kernwaarden */}
                 <section className="values-section">
                     <motion.div
                         className="values-container"
@@ -198,52 +197,140 @@ function Homepage() {
                     </motion.div>
                 </section>
 
-                <WatWeBouwen/>
-
-                {/* Section 3: Aanpak */}
-                <section className="approach-section">
+                <section className="waarom-section">
                     <motion.div
-                        className="approach-container"
+                        className="waarom-container"
                         variants={staggerChildren}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{once: true}}
+                        viewport={{ once: true }}
                     >
-                        <motion.h2 variants={fadeUp}>De aanpak</motion.h2>
-                        <div className="approach-grid">
+                        <div className="waarom-header">
+                            <motion.span className="waarom-tag" variants={fadeUp}>
+                                Waarom Oosterom Studio
+                            </motion.span>
+                            <motion.h2 variants={fadeUp}>
+                                Niet het grootste bureau.<br />
+                                <em>Wel de juiste keuze.</em>
+                            </motion.h2>
+                            <motion.p className="waarom-subtitle" variants={fadeUp}>
+                                Grote bureaus bouwen voor tientallen klanten tegelijk.
+                                Bij Oosterom Studio krijg je directe betrokkenheid,
+                                eerlijk advies en software die echt bij jou past.
+                            </motion.p>
+                        </div>
+
+                        <motion.div className="waarom-grid" variants={staggerChildren}>
+
+                            <motion.div className="waarom-card waarom-card--wide" variants={fadeUp}>
+                                <div className="waarom-card__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+                                        <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                                    </svg>
+                                </div>
+                                <h3>Eén aanspreekpunt</h3>
+                                <p>Geen accountmanager die doorverbindt naar een developer die doorverbindt naar een designer. Jij praat rechtstreeks met degene die bouwt.</p>
+                            </motion.div>
+
+                            <motion.div className="waarom-card" variants={fadeUp}>
+                                <div className="waarom-card__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        <path d="M9 12l2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <h3>Beveiliging zit ingebakken</h3>
+                                <p>Niet als extra optie achteraf, maar als uitgangspunt. Elk project wordt opgeleverd met aandacht voor security, ook als je er niet specifiek om vraagt.</p>
+                            </motion.div>
+
+                            <motion.div className="waarom-card" variants={fadeUp}>
+                                <div className="waarom-card__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 8v4l3 3"/>
+                                    </svg>
+                                </div>
+                                <h3>Geen uurtje-factuurtje</h3>
+                                <p>Heldere afspraken vooraf, geen verrassingen achteraf. Je weet wat je krijgt, wanneer je het krijgt en wat het kost.</p>
+                            </motion.div>
+
+                            <motion.div className="waarom-card" variants={fadeUp}>
+                                <div className="waarom-card__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </div>
+                                <h3>Techniek én strategie</h3>
+                                <p>We denken mee over wat je bouwt en waarom, niet alleen hoe. Als een eenvoudigere oplossing beter werkt, zeggen we dat ook.</p>
+                            </motion.div>
+
+                            <motion.div className="waarom-card waarom-card--accent" variants={fadeUp}>
+                                <p className="waarom-card__quote">
+                                    Van idee naar software die echt waarde levert.
+                                </p>
+                                <Link to="/over-ons" className="waarom-card__link">
+                                    Leer ons kennen →
+                                </Link>
+                            </motion.div>
+
+                        </motion.div>
+                    </motion.div>
+                </section>
+
+                <WatWeBouwen/>
+
+
+                <section className="aanpak-section">
+                    <motion.div
+                        className="aanpak-container"
+                        variants={staggerChildren}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <div className="aanpak-header">
+                            <motion.span className="aanpak-tag" variants={fadeUp}>
+                                Werkwijze
+                            </motion.span>
+                            <motion.h2 variants={fadeUp}>
+                                Zo werken we <em>samen</em>
+                            </motion.h2>
+                        </div>
+
+                        <motion.div className="aanpak-stappen" variants={staggerChildren}>
                             {[
                                 {
-
+                                    num: "01",
                                     title: "Analyse & Strategie",
                                     desc: "We analyseren je markt, doelgroep en technische situatie. Geen aannames, wel een helder beeld van waar je staat en waar je naartoe wilt."
                                 },
                                 {
-
+                                    num: "02",
                                     title: "Architectuur & Design",
                                     desc: "We ontwerpen een schaalbare en conversiegerichte structuur. Visueel sterk, technisch doordacht, afgestemd op jouw merk."
                                 },
                                 {
-
+                                    num: "03",
                                     title: "Development & Optimalisatie",
                                     desc: "We bouwen, testen en optimaliseren voor performance en veiligheid. Elke regel code heeft een reden."
                                 },
                                 {
-
+                                    num: "04",
                                     title: "Oplevering & Nazorg",
-                                    desc: "Na de lancering ben je er niet alleen voor. We zorgen voor een soepele overdracht, beantwoorden vragen en staan klaar voor doorontwikkeling."
+                                    desc: "Na de lancering ben je er niet alleen voor. We zorgen voor een soepele overdracht en staan klaar voor doorontwikkeling."
                                 },
-                            ].map(({title, desc}) => (
-                                <motion.div className="approach-card" variants={fadeUp}>
-                                    <span className="approach-step"></span>
-                                    <h3>{title}</h3>
-                                    <p>{desc}</p>
+                            ].map(({ num, title, desc }) => (
+                                <motion.div className="aanpak-stap" key={num} variants={fadeUp}>
+                                    <span className="aanpak-stap__num">{num}</span>
+                                    <h3 className="aanpak-stap__title">{title}</h3>
+                                    <p className="aanpak-stap__desc">{desc}</p>
                                 </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
                     </motion.div>
                 </section>
 
-                {/* Section 6: Investering */}
                 <section className="pricing-section">
                     <motion.div
                         className="pricing-container"

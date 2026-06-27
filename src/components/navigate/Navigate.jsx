@@ -1,11 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {NavLink, useNavigate} from 'react-router-dom';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Navigate.css';
 import AnimatedNavText from "../AnimatedNavText.jsx";
-
-
-
 
 // ── Scroll hook ───────────────────────────────────────────────────────────────
 
@@ -21,41 +18,73 @@ function useScrolled(threshold = 60) {
     return scrolled;
 }
 
-// ── Navigate component ────────────────────────────────────────────────────────
+// ── Links ─────────────────────────────────────────────────────────────────────
+
+const links = [
+    { to: "/diensten",  label: "Diensten"  },
+    { to: "/portfolio", label: "Portfolio" },
+    { to: "/blog",      label: "Blog"      },
+    { to: "/over-ons",  label: "Over ons"  },
+    { to: "/contact",   label: "Contact"   },
+];
+
+// ── Framer variants ───────────────────────────────────────────────────────────
+
+const menuVariants = {
+    hidden:  { opacity: 0, y: 20, scale: 0.97 },
+    visible: { opacity: 1, y: 0,  scale: 1,
+        transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
+    exit:    { opacity: 0, y: 20, scale: 0.97,
+        transition: { duration: 0.25 } },
+};
+
+const itemVariants = {
+    hidden:  { opacity: 0, x: -10 },
+    visible: (i) => ({
+        opacity: 1, x: 0,
+        transition: { delay: i * 0.055, duration: 0.28 },
+    }),
+};
+
+// ── Component ─────────────────────────────────────────────────────────────────
 
 function Navigate() {
     const [isOpen, setIsOpen] = useState(false);
-    const navigate = useNavigate();
-    const scrolled = useScrolled();
+    const navigate  = useNavigate();
+    const scrolled  = useScrolled();
 
-    const toggleMenu = () => setIsOpen(!isOpen);
     const closeMenu = () => setIsOpen(false);
 
-    function BackToHome() {
+    function goHome() {
         navigate("/");
         closeMenu();
     }
 
-    const links = [
-        { to: "/diensten", label: "Diensten" },
-        { to: "/portfolio", label: "Portfolio" },
-        { to: "/oosterom-os", label: "Oosterom CMS" },
-        { to: "/blog", label: "Informatie" },
-        { to: "/over-ons", label: "Over ons" },
-        { to: "/contact", label: "Contact" },
-    ];
+    // Sluit menu als de gebruiker Escape indrukt
+    useEffect(() => {
+        const onKey = (e) => { if (e.key === "Escape") closeMenu(); };
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
+    }, []);
+
+    // Vergrendel body-scroll als menu open is
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "";
+        return () => { document.body.style.overflow = ""; };
+    }, [isOpen]);
 
     return (
         <>
-            <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
+            <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}
+                 role="navigation" aria-label="Hoofdnavigatie">
 
                 {/* Logo */}
-                <div className="navbar-logo" onClick={BackToHome} style={{ cursor: "pointer" }}>
-                    <h1 className="logo">Oosterom Studio</h1>
-                </div>
+                <button className="navbar-logo" onClick={goHome} aria-label="Terug naar home">
+                    <span className="logo">Oosterom Studio</span>
+                </button>
 
                 {/* Desktop links */}
-                <ul className="navbar-links">
+                <ul className="navbar-links" role="list">
                     {links.map(({ to, label }) => (
                         <li key={to}>
                             <NavLink
@@ -77,18 +106,19 @@ function Navigate() {
 
                 {/* Hamburger */}
                 <button
-                    className="hamburger"
-                    onClick={toggleMenu}
+                    className={`hamburger ${isOpen ? "hamburger--open" : ""}`}
+                    onClick={() => setIsOpen((v) => !v)}
                     aria-label={isOpen ? "Menu sluiten" : "Menu openen"}
                     aria-expanded={isOpen}
+                    aria-controls="mobile-menu"
                 >
-                    <div className={`bar ${isOpen ? "open" : ""}`} />
-                    <div className={`bar ${isOpen ? "open" : ""}`} />
-                    <div className={`bar ${isOpen ? "open" : ""}`} />
+                    <span className="bar" />
+                    <span className="bar" />
+                    <span className="bar" />
                 </button>
             </nav>
 
-            {/* Mobile menu — buiten <nav> zodat het over alles heen valt */}
+            {/* Mobile overlay ── buiten <nav> zodat het over alles valt */}
             <AnimatePresence>
                 {isOpen && (
                     <>
@@ -100,40 +130,49 @@ function Navigate() {
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.25 }}
                             onClick={closeMenu}
+                            aria-hidden="true"
                         />
 
                         {/* Menu */}
                         <motion.ul
-                            className="mobile-menu open"
-                            initial={{ opacity: 0, y: 20, scale: 0.97 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 20, scale: 0.97 }}
-                            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                            id="mobile-menu"
+                            className="mobile-menu"
+                            role="list"
+                            variants={menuVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
                         >
                             {links.map(({ to, label }, i) => (
                                 <motion.li
                                     key={to}
-                                    initial={{ opacity: 0, x: -12 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: i * 0.06, duration: 0.3 }}
+                                    custom={i}
+                                    variants={itemVariants}
+                                    initial="hidden"
+                                    animate="visible"
                                 >
                                     <NavLink
                                         to={to}
                                         onClick={closeMenu}
                                         className={({ isActive }) =>
-                                            `nav-link ${isActive ? "active" : ""}`
+                                            `mobile-link ${isActive ? "active" : ""}`
                                         }
                                     >
+                                        <span className="mobile-link__num">
+                                            {String(i + 1).padStart(2, "0")}
+                                        </span>
                                         {label}
                                     </NavLink>
                                 </motion.li>
                             ))}
 
-                            {/* CTA onderaan mobile menu */}
+                            {/* CTA */}
                             <motion.li
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: links.length * 0.06 + 0.1 }}
+                                custom={links.length}
+                                variants={itemVariants}
+                                initial="hidden"
+                                animate="visible"
+                                className="mobile-menu__cta-item"
                             >
                                 <NavLink
                                     to="/offerte-aanvragen"

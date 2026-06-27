@@ -1,6 +1,10 @@
-/* =========================
-   NAVBAR BASE
-========================= */
+/* ==========================================================================
+   Navigate.css — Oosterom Studio
+   Z-index hiërarchie: navbar 1000 · backdrop 999 · mobile-menu 1000
+   ========================================================================== */
+
+
+/* ── Navbar base ─────────────────────────────────────────────────────────── */
 
 .navbar {
     display: flex;
@@ -14,27 +18,24 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1000;
 
-    /* Glassmorphism */
     background: rgba(8, 8, 8, 0.55);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
-    /* Scroll animatie startpunt */
     transition:
             background 0.4s ease,
             box-shadow 0.4s ease,
-            margin 0.4s ease,
+            margin     0.4s ease,
             border-radius 0.4s ease,
-            border-color 0.4s ease;
+            border-color  0.4s ease;
 }
 
-/* Scrolled state — voeg .navbar--scrolled toe via JS */
 .navbar--scrolled {
-    background: rgba(8, 8, 8, 0.88);
+    background: rgba(8, 8, 8, 0.92);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
     margin: 0 12px;
     border-radius: 0 0 16px 16px;
@@ -42,23 +43,26 @@
 }
 
 
+/* ── Logo ────────────────────────────────────────────────────────────────── */
 
-/* =========================
-   LOGO
-========================= */
+.navbar-logo {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
 
-.navbar-logo .logo {
+.navbar-logo .logo,
+.logo {
     color: var(--color-text);
+    font-family: var(--font-title), sans-serif;
     font-weight: 800;
     font-size: clamp(1rem, 2vw, 1.3rem);
     letter-spacing: -0.02em;
-    text-decoration: none;
-    position: relative;
     transition: color 0.2s ease;
 }
 
-/* Mint stip achter logo */
-.navbar-logo .logo::after {
+.logo::after {
     content: '·';
     color: var(--color-accent, #4dffc3);
     margin-left: 2px;
@@ -67,13 +71,12 @@
     vertical-align: middle;
 }
 
-.navbar-logo .logo:hover {
+.navbar-logo:hover .logo {
     color: var(--color-accent, #4dffc3);
 }
 
-/* =========================
-   DESKTOP LINKS
-========================= */
+
+/* ── Desktop links ───────────────────────────────────────────────────────── */
 
 .navbar-links {
     display: flex;
@@ -95,7 +98,6 @@
     transition: color 0.2s ease;
 }
 
-/* Underline animatie */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -118,14 +120,13 @@
     color: var(--color-text);
 }
 
-/* =========================
-   PER-LETTER ANIMATIE
-========================= */
+
+/* ── Letter animatie ─────────────────────────────────────────────────────── */
 
 .nav-letter {
     display: inline-block;
     transition:
-            color 0.2s ease,
+            color     0.2s ease,
             transform 0.2s ease;
     transition-delay: calc(var(--i, 0) * 0.03s);
 }
@@ -139,22 +140,23 @@
     color: var(--color-accent, #4dffc3);
 }
 
-/* =========================
-   CTA KNOP
-========================= */
+
+/* ── CTA knop ────────────────────────────────────────────────────────────── */
 
 .navbar-cta {
+    display: inline-flex;
+    align-items: center;
     font-size: 0.82rem;
-
+    font-weight: 600;
+    font-family: var(--font-title), sans-serif;
     color: #080808;
     background: var(--color-accent, #4dffc3);
     padding: 10px 20px;
     border-radius: 100px;
     text-decoration: none;
     letter-spacing: 0.01em;
-    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     white-space: nowrap;
-    font-family: var(--font-title), sans-serif;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .navbar-cta:hover {
@@ -163,9 +165,8 @@
     box-shadow: 0 6px 20px rgba(77, 255, 195, 0.25);
 }
 
-/* =========================
-   HAMBURGER
-========================= */
+
+/* ── Hamburger ───────────────────────────────────────────────────────────── */
 
 .hamburger {
     display: none;
@@ -180,31 +181,36 @@
 }
 
 .hamburger .bar {
+    display: block;
     height: 2px;
     width: 100%;
     background-color: var(--color-text);
     border-radius: 2px;
-    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity   0.35s ease;
     transform-origin: center;
 }
 
-/* Hamburger → X animatie */
-.hamburger .bar.open:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+/* Open staat via modifier class */
+.hamburger--open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger--open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger--open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+/* ── Backdrop ────────────────────────────────────────────────────────────── */
+
+.mobile-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 999;
 }
 
-.hamburger .bar.open:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
-}
 
-.hamburger .bar.open:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-/* =========================
-   MOBILE MENU
-========================= */
+/* ── Mobile menu ─────────────────────────────────────────────────────────── */
+/* Framer Motion beheert opacity/transform — hier alleen visuele stijl */
 
 .mobile-menu {
     position: fixed;
@@ -212,37 +218,23 @@
     right: 1rem;
     bottom: 1.5rem;
     list-style: none;
-    padding: 2rem 1.75rem;
+    padding: 1.5rem 1.75rem;
+    margin: 0;
 
     display: flex;
     flex-direction: column;
     gap: 0;
 
     border-radius: 20px;
-    z-index: 100;
+    z-index: 1000;
 
-    /* Glassmorphism */
-    background: rgba(14, 14, 14, 0.92);
+    background: rgba(14, 14, 14, 0.96);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(77, 255, 195, 0.12);
     box-shadow:
             0 32px 80px rgba(0, 0, 0, 0.5),
-            0 0 0 1px rgba(255, 255, 255, 0.04) inset;
-
-    /* Animatie */
-    opacity: 0;
-    transform: translateY(16px) scale(0.97);
-    pointer-events: none;
-    transition:
-            opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-            transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.mobile-menu.open {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
+            inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .mobile-menu li {
@@ -252,53 +244,63 @@
 
 .mobile-menu li:last-child {
     border-bottom: none;
+}
+
+/* Genummerde mobile link */
+.mobile-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    font-family: var(--font-title), sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 1rem 0;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.mobile-link::after {
+    display: none;
+}
+
+.mobile-link__num {
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--color-accent, #4dffc3);
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.mobile-link:hover,
+.mobile-link.active {
+    color: var(--color-accent, #4dffc3);
+    padding-left: 4px;
+}
+
+.mobile-link.active .mobile-link__num {
+    opacity: 1;
+}
+
+/* CTA onderaan */
+.mobile-menu__cta-item {
+    border-bottom: none !important;
     padding-top: 1.25rem;
     margin-top: 0.5rem;
 }
 
-.mobile-menu li a,
-.mobile-menu .nav-link {
-    display: block;
-    text-decoration: none;
-    font-family: var(--font-title), sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-text);
-    padding: 1rem 0;
-    transition: color 0.2s ease, padding-left 0.2s ease;
-    letter-spacing: -0.01em;
-}
-
-.mobile-menu li a:hover,
-.mobile-menu .nav-link:hover {
-    color: var(--color-accent, #4dffc3);
-    padding-left: 6px;
-}
-
-.mobile-menu li a::after,
-.mobile-menu .nav-link::after {
-    display: none;
-}
-
-/* CTA in mobile menu */
-.mobile-menu .navbar-cta {
+.mobile-menu__cta-item .navbar-cta {
     display: block;
     text-align: center;
     padding: 14px 20px;
     font-size: 0.95rem;
+    width: 100%;
 }
 
-.mobile-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 99;
-}
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 1023px) {
     .navbar {
@@ -309,11 +311,11 @@
         display: none;
     }
 
-    .hamburger {
-        display: flex;
-    }
-
     .navbar-cta {
         display: none;
+    }
+
+    .hamburger {
+        display: flex;
     }
 }

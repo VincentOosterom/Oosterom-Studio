@@ -14,6 +14,10 @@ function movingBar () {
                         <span className="dot">•</span>
                         <span>SEA</span>
                         <span className="dot">•</span>
+                        <span>Advies</span>
+                        <span className="dot">•</span>
+                        <span>UI/UX</span>
+                        <span className="dot">•</span>
                         <span>Webshops</span>
                         <span className="dot">•</span>
                         <span>Branding</span>
@@ -31,6 +35,10 @@ function movingBar () {
                         <span>SEO</span>
                         <span className="dot">•</span>
                         <span>SEA</span>
+                        <span className="dot">•</span>
+                        <span>Advies</span>
+                        <span className="dot">•</span>
+                        <span>UI/UX</span>
                         <span className="dot">•</span>
                         <span>Webshops</span>
                         <span className="dot">•</span>

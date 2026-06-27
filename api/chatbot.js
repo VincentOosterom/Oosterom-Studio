@@ -107,7 +107,7 @@
     
     ## Oosterom OS
     
-    Oosterom OS is ons eigen beheer platform, voor jou en voor ons zelf. Klanten kunnen indien geweest zelf de website beheren. 
+    Oosterom OS is ons eigen beheer platform, voor jou en voor ons zelf. Klanten kunnen indien geweest zelf de website beheren. Ook zijn we bezig met het integeren van uw eigen IoT. Dit betekent dat u straks mischien als u klant bent  u eigen IoT kan integeren in ons systeem.
     
     ## Levertijden
     - Eenvoudige website: 2–4 weken

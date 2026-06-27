@@ -10,6 +10,7 @@ import CookieBanner from "./components/cookies/CookiesBanner.jsx";
 import ChatWidget from "./components/chatbot/ChatWidget.jsx";
 import BlogPost from "./pages/Blogpost/BlogPost.jsx";
 import BlogOverview from "./pages/Blogoverview/BlogOverview.jsx";
+import FAQPage from "./pages/FAQ/FAQPage.jsx";
 
 // Lazy laden — alleen als bezoeker naar die pagina gaat
 const Homepage           = lazy(() => import("./pages/Homepage/Homepage.jsx"));
@@ -69,6 +70,7 @@ function App() {
                     <Route path="/diensten/webdesign"   element={<WebdesignPage />} />
                     <Route path="/diensten/webdevelopment" element={<WebdevelopmentPage />} />
                     <Route path="/diensten/ai-agents" element={<AiPage />} />
+                    <Route path="/faq" element={<FAQPage />} />
                     <Route path="/diensten/saas"        element={<SaasPage />} />
                     <Route path="/blog" element={<BlogOverview />} />
                     <Route path="/blog/:slug" element={<BlogPost />} />

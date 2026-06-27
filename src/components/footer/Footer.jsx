@@ -92,9 +92,8 @@ function Footer() {
                     <article className="footer-column">
                         <h4>Informatie</h4>
                         <ul>
-                            <li><Link to="blog/onderhoudsabonnement-of-losse-facturen">Abonnement of Factuur</Link></li>
                             <li><Link to="/blog/wanneer-loont-maatwerk-software">Loont maatkwerk?</Link></li>
-                            <li><Link to="/blog/wat-is-een-ai-agent">AI Agents, Wat is het?</Link></li>
+                            <li><Link to="/blog/wat-is-een-ai-agent">AI Agents, wat is het?</Link></li>
                             <li><Link to="/blog/avg-fouten-mkb">AVG Fouten</Link></li>
                         </ul>
                     </article>
@@ -104,7 +103,10 @@ function Footer() {
                             <li><Link to="/over-ons">Over ons</Link></li>
                             <li><Link to="/portfolio">Portfolio</Link></li>
                             <li><Link to="/contact">Contact</Link></li>
+                            <li><Link to="/oosterom-os">Oosterom OS</Link></li>
                             <li><Link to="/offerte-aanvragen">Offerte aanvragen</Link></li>
+                            <li><Link to="/faq">Veelgestelde vragen</Link></li>
+
                         </ul>
                     </article>
                 </section>
