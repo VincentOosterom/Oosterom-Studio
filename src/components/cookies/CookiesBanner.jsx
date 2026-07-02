@@ -1,52 +1,79 @@
 import { useState, useEffect } from "react";
-import './CookiesBanner.css';
+import { Link } from "react-router-dom";
+import '../../components/cookies/CookiesBanner.css';
 
 function CookieBanner() {
     const [visible, setVisible] = useState(false);
 
+    // Controleer bij laden of er al een keuze is gemaakt
     useEffect(() => {
         const consent = localStorage.getItem("cookie-consent");
         if (!consent) {
-            setVisible(true);
+            // Kleine vertraging zodat de pagina eerst laadt
+            const timer = setTimeout(() => setVisible(true), 800);
+            return () => clearTimeout(timer);
+        }
+
+        // Als eerder geaccepteerd: alsnog analytics aanzetten
+        if (consent === "accepted") {
+            updateConsent("granted");
         }
     }, []);
 
-    const acceptCookies = () => {
+    // Stuur de consent-status door naar Google via Consent Mode v2
+    // (het GA-script staat al in index.html, dit update alleen de instelling)
+    function updateConsent(status) {
+        if (typeof window.gtag === "function") {
+            window.gtag("consent", "update", {
+                analytics_storage: status,
+                ad_storage: status,
+            });
+        }
+    }
+
+    function acceptCookies() {
         localStorage.setItem("cookie-consent", "accepted");
+        updateConsent("granted");
         setVisible(false);
-        loadAnalytics();
-    };
+    }
 
-    const declineCookies = () => {
+    function declineCookies() {
         localStorage.setItem("cookie-consent", "declined");
+        // Consent blijft 'denied' — dat is de standaard uit index.html
         setVisible(false);
-    };
-
-    const loadAnalytics = () => {
-        const script = document.createElement("script");
-        script.src = "https://www.googletagmanager.com/gtag/js?id=G-7DMJQ7CW4L";
-        script.async = true;
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){window.dataLayer.push(arguments);}
-        window.gtag = gtag;
-        gtag("js", new Date());
-        gtag("config", "G-7DMJQ7CW4L");
-    };
-
-
+    }
 
     if (!visible) return null;
 
     return (
-        <div className="cookie-banner">
-            <p>
-                Wij gebruiken cookies om onze website te verbeteren en statistieken te
-                analyseren.
-            </p>
-            <button onClick={acceptCookies}>Accepteren</button>
-            <button onClick={declineCookies}>Weigeren</button>
+        <div className="cookie-banner" role="dialog" aria-label="Cookievoorkeur">
+            <div className="cookie-banner__inner">
+                <div className="cookie-banner__content">
+                    <p className="cookie-banner__text">
+                        We gebruiken analytische cookies om te begrijpen hoe bezoekers
+                        onze site gebruiken. Geen advertentiecookies, geen tracking
+                        naar derden.{" "}
+                        <Link to="/contact" className="cookie-banner__link">
+                            Meer info
+                        </Link>
+                    </p>
+                </div>
+
+                <div className="cookie-banner__actions">
+                    <button
+                        className="cookie-banner__btn cookie-banner__btn--decline"
+                        onClick={declineCookies}
+                    >
+                        Weigeren
+                    </button>
+                    <button
+                        className="cookie-banner__btn cookie-banner__btn--accept"
+                        onClick={acceptCookies}
+                    >
+                        Accepteren
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }

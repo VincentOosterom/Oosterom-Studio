@@ -1,55 +1,60 @@
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import './Footer.css';
 import privacy from "../../assets/Privacybeleid Oosterom Studio.pdf";
 
+// ── Uptime status hook ────────────────────────────────────────────────────────
+
 function useSystemStatus() {
-    const [status, setStatus] = useState('loading')
+    const [status, setStatus] = useState('loading');
 
     useEffect(() => {
         fetch('/api/uptime')
             .then(r => r.json())
             .then(data => {
-                if (data.stat !== 'ok') { setStatus('unknown'); return }
-                const down = (data.monitors ?? []).some(m => m.status === 9 || m.status === 8)
-                setStatus(down ? 'down' : 'up')
+                if (data.stat !== 'ok') { setStatus('unknown'); return; }
+                const down = (data.monitors ?? []).some(m => m.status === 9 || m.status === 8);
+                setStatus(down ? 'down' : 'up');
             })
-            .catch(() => setStatus('unknown'))
-    }, [])
+            .catch(() => setStatus('unknown'));
+    }, []);
 
-    return status
+    return status;
 }
 
+// ── Footer ────────────────────────────────────────────────────────────────────
+
 function Footer() {
-    const status = useSystemStatus()
+    const status = useSystemStatus();
 
     const statusLabel = {
         loading: 'Systemen laden…',
-        up: 'Alle systemen operationeel',
-        down: 'Storing gedetecteerd',
+        up:      'Alle systemen operationeel',
+        down:    'Storing gedetecteerd',
         unknown: 'Status niet beschikbaar',
-    }[status]
+    }[status];
 
     const statusColor = {
-        loading: '#888',
-        up: '#22c55e',
-        down: '#ef4444',
+        loading: '#555',
+        up:      '#22c55e',
+        down:    '#ef4444',
         unknown: '#f59e0b',
-    }[status]
+    }[status];
 
     return (
         <footer className="footer">
             <section className="footer-main">
 
+                {/* ── Merk kolom ── */}
                 <article className="footer-brand">
                     <Link to="/" className="footer-logo">
-                        Oosterom <span>Studio</span>
+                        Oosterom <span>Studio·</span>
                     </Link>
                     <p className="footer-tagline">
-                        Digitaal sterk van buiten én van binnen. Wij bouwen websites,
-                        webshops en beveiligde digitale oplossingen voor MKB en startups.
+                        Digitaal sterk van buiten én van binnen. Wij bouwen webapplicaties,
+                        digitale systemen en beveiligde oplossingen voor MKB en startups.
                     </p>
-                    <section className="footer-socials">
+                    <div className="footer-socials">
                         <a
                             href="https://www.linkedin.com/in/vincent-oosterom-05017176/"
                             target="_blank"
@@ -76,48 +81,57 @@ function Footer() {
                                 <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
                             </svg>
                         </a>
-                    </section>
+                    </div>
                 </article>
 
-                <section className="footer-columns">
+                {/* ── Link kolommen ── */}
+                <div className="footer-columns">
+
                     <article className="footer-column">
                         <h4>Diensten</h4>
                         <ul>
                             <li><Link to="/diensten/webdesign">Webdesign & UX</Link></li>
                             <li><Link to="/diensten/webdevelopment">Webdevelopment</Link></li>
-                            <li><Link to="/diensten/webdevelopment">Shopify Webshops</Link></li>
-                            <li><Link to="/diensten/branding">Branding & Strategie</Link></li>
+                            <li><Link to="/diensten/saas">SaaS & Digitale systemen</Link></li>
+                            <li><Link to="/diensten/ai-agents">AI Agents</Link></li>
+                            <li><Link to="/diensten/software-op-maat">Software op maat</Link></li>
+                            <li><Link to="/diensten/saas">Klantportalen & CRM</Link></li>
+                            <li><Link to="/diensten/onderhoud-support">Onderhoud & Support</Link></li>
                         </ul>
                     </article>
+
                     <article className="footer-column">
-                        <h4>Informatie</h4>
+                        <h4>Kennisbank</h4>
                         <ul>
-                            <li><Link to="/blog/wanneer-loont-maatwerk-software">Loont maatkwerk?</Link></li>
-                            <li><Link to="/blog/wat-is-een-ai-agent">AI Agents, wat is het?</Link></li>
-                            <li><Link to="/blog/avg-fouten-mkb">AVG Fouten</Link></li>
+                            <li><Link to="/blog/wanneer-loont-maatwerk-software">Loont maatwerk software?</Link></li>
+                            <li><Link to="/blog/wat-is-een-ai-agent">Wat is een AI-agent?</Link></li>
+                            <li><Link to="/blog/avg-fouten-mkb">AVG-fouten die je wil vermijden</Link></li>
+                            <li><Link to="/blog/5-tekenen-beveiligingslek">Tekenen van een beveiligingslek</Link></li>
+                            <li><Link to="/faq">Veelgestelde vragen</Link></li>
                         </ul>
                     </article>
+
                     <article className="footer-column">
                         <h4>Studio</h4>
                         <ul>
                             <li><Link to="/over-ons">Over ons</Link></li>
                             <li><Link to="/portfolio">Portfolio</Link></li>
                             <li><Link to="/contact">Contact</Link></li>
-                            <li><Link to="/oosterom-os">Oosterom OS</Link></li>
                             <li><Link to="/offerte-aanvragen">Offerte aanvragen</Link></li>
-                            <li><Link to="/faq">Veelgestelde vragen</Link></li>
-
                         </ul>
                     </article>
-                </section>
 
+                </div>
             </section>
 
-
+            {/* ── Footer bottom ── */}
             <section className="footer-bottom">
                 <p className="footer-copyright">
                     © {new Date().getFullYear()} Oosterom Studio
+                    <span className="footer-kvk">KVK: 85118028</span>
                 </p>
+
+                {/* Uptime status */}
                 <a
                     href="https://stats.uptimerobot.com/qBeLzHbru4"
                     target="_blank"
@@ -131,8 +145,18 @@ function Footer() {
                     />
                     {statusLabel}
                 </a>
-                <div className="footer-bottom-links">
-                    <Link to={privacy} target="_blank" rel="noopener noreferrer" className="document-link">Cookiebeleid</Link>
+
+                {/* Juridische links */}
+                <div className="footer-legal">
+                    {/* ✅ PDF openen = <a>, niet <Link> */}
+                    <a
+                        href={privacy}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-legal-link"
+                    >
+                        Privacybeleid
+                    </a>
                 </div>
             </section>
         </footer>

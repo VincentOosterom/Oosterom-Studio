@@ -1,62 +1,75 @@
+/* ==========================================================================
+   movingBar.css — Oosterom Studio
+   ========================================================================== */
+
 .moving-bar {
     overflow: hidden;
-    padding: 0.8rem;
-    display: flex;
-    justify-content: center;
+    background: var(--color-dark, #141414);
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 16px 0;
+    /* Fade aan de randen zodat de loop er vloeiend uitziet */
+    mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%
+    );
 }
 
 .moving-track {
     display: flex;
-    align-items: center;
-    animation: marquee 30s infinite;
+    width: max-content;
+    /* Animatie: één volledige track-breedte naar links scrollen */
+    animation: scroll-left 28s linear infinite;
 }
 
+.moving-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* Eén track = alle items naast elkaar */
 .track {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-shrink: 0;
 }
 
-.track .dot {
-    color: var(--color-accent);
-}
-
-.moving-bar-icon {
-    color: var(--color-accent);
-}
-
-.track span {
-    font-family: var(--font-title), serif;
-    font-size: 1rem;
-    color: white;
-    margin: 0 2rem;
+/* Item = stip + tekst */
+.track__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     white-space: nowrap;
-    opacity: 0.9;
+    font-family: var(--font-body), sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.45);
+    padding: 0 12px;
+    transition: color 0.2s ease;
 }
 
-/* 🔁 ECHTE INFINITE LOOP */
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-30%);
-    }
+.track__item:hover {
+    color: var(--color-accent);
 }
 
-@media (max-width: 480px) {
-    .moving-bar {
-        padding: 0.8rem
-    }
-
-    .track span {
-        font-size: 0.8rem;
-        font-weight: bold;
-        font-family: var(--font-title), serif;
-        margin: 0 1rem;
-    }
-
-
+.track__dot {
+    color: var(--color-accent);
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 1;
 }
 
+/* Geen animatie voor gebruikers die dat liever niet hebben */
+@media (prefers-reduced-motion: reduce) {
+    .moving-track {
+        animation: none;
+    }
+}

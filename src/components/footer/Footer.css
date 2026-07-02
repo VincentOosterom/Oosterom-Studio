@@ -1,105 +1,98 @@
-/* =========================
-   FOOTER BASE
-========================= */
+/* ==========================================================================
+   Footer.css — Oosterom Studio
+   ========================================================================== */
 
 .footer {
-
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    color: var(--color-text, #f0f0f0);
-    padding: 4rem 2rem 2rem;
+    background: var(--color-dark, #141414);
+    border-top: 1px solid #2a2a2a;
+    font-family: var(--font-body), sans-serif;
 }
 
-/* =========================
-   MAIN GRID
-========================= */
+
+/* ── Hoofd sectie ────────────────────────────────────────────────────────── */
 
 .footer-main {
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 72px 4rem 56px;
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    gap: 6rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    grid-template-columns: 280px 1fr;
+    gap: 64px;
+    align-items: start;
 }
 
-/* =========================
-   BRAND
-========================= */
+
+/* ── Merk kolom ──────────────────────────────────────────────────────────── */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 .footer-logo {
-    display: inline-block;
-    font-weight: 800;
-    font-size: 1.1rem;
     font-family: var(--font-title), sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
     letter-spacing: -0.02em;
-    color: var(--color-text, #f0f0f0);
+    color: var(--color-text);
     text-decoration: none;
-    margin-bottom: 1rem;
-    transition: color 0.2s ease;
+    width: fit-content;
 }
 
 .footer-logo span {
-    color: var(--color-accent, #4dffc3);
-}
-
-.footer-logo:hover {
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-accent);
 }
 
 .footer-tagline {
-    font-size: 0.88rem;
-    color: var(--color-muted, #888);
+    font-size: 13px;
     line-height: 1.75;
-    max-width: 300px;
-    margin-bottom: 1.75rem;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    margin: 0;
+    max-width: 260px;
 }
-
-/* =========================
-   SOCIALS
-========================= */
 
 .footer-socials {
     display: flex;
-    gap: 0.75rem;
+    gap: 12px;
 }
 
 .footer-social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: var(--color-muted, #888);
+    border: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-muted, #999);
     text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .footer-social-link:hover {
-    background: rgba(77, 255, 195, 0.08);
-    border-color: rgba(77, 255, 195, 0.2);
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-accent);
+    border-color: rgba(77, 255, 195, 0.3);
 }
 
-/* =========================
-   COLUMNS
-========================= */
+
+/* ── Link kolommen ───────────────────────────────────────────────────────── */
 
 .footer-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 40px;
 }
 
 .footer-column h4 {
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-family: var(--font-title), sans-serif;
+    font-size: 12px;
+    font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-text, #f0f0f0);
-    margin-bottom: 1.25rem;
+    color: var(--color-text);
+    margin: 0 0 20px;
 }
 
 .footer-column ul {
@@ -108,83 +101,65 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 10px;
 }
 
-.footer-column ul li a,
-.footer-column ul li span {
-    font-size: 0.88rem;
-    color: var(--color-muted, #888);
+.footer-column a {
+    font-size: 13px;
+    color: var(--color-muted, #999);
     text-decoration: none;
     transition: color 0.2s ease;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
-.footer-column ul li a:hover {
-    color: var(--color-text, #f0f0f0);
+.footer-column a:hover {
+    color: var(--color-text);
 }
 
-/* =========================
-   AVAILABILITY
-========================= */
 
-.footer-availability {
+/* ── Footer bottom ───────────────────────────────────────────────────────── */
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 4rem;
+    border-top: 1px solid #2a2a2a;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.88rem;
-    color: var(--color-muted, #888);
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
-.status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--color-accent, #4dffc3);
-    flex-shrink: 0;
-    animation: pulseDot 1.6s ease-in-out infinite;
+.footer-copyright {
+    font-size: 12px;
+    color: var(--color-muted, #999);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-
-
-@keyframes pulseDot {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(77, 255, 195, 0.55);
-        opacity: 1;
-    }
-    60% {
-        transform: scale(1.25);
-        box-shadow: 0 0 0 8px rgba(77, 255, 195, 0);
-        opacity: 0.95;
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(77, 255, 195, 0);
-        opacity: 1;
-    }
+.footer-kvk {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: #555;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .status-dot {
-        animation: none;
-    }
-}
-
-/* Status indicator */
+/* Uptime status */
 .footer-status-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-family: var(--font-title), sans-serif;
-    font-size: 0.8rem;
-    color:  #888;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--color-muted, #999);
     text-decoration: none;
-    transition: color 0.15s;
+    transition: color 0.2s ease;
 }
 
 .footer-status-link:hover {
-    color:  #ccc;
+    color: var(--color-text);
 }
 
 .footer-status-dot {
@@ -192,66 +167,42 @@
     height: 7px;
     border-radius: 50%;
     flex-shrink: 0;
-    transition: background 0.3s;
 }
 
-/* =========================
-   BOTTOM BAR
-========================= */
-
-.footer-bottom {
-    margin: 0 auto;
-    padding-top: 1.75rem;
+/* Juridische links */
+.footer-legal {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 16px;
 }
 
-.footer-copyright {
-    font-size: 0.8rem;
-    color: var(--color-muted, #888);
-}
-
-.footer-bottom-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.footer-bottom-links a {
-    font-size: 0.8rem;
-    color: var(--color-muted, #888);
+.footer-legal-link {
+    font-size: 12px;
+    color: var(--color-muted, #999);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.footer-bottom-links a:hover {
-    color: var(--color-text, #f0f0f0);
+.footer-legal-link:hover {
+    color: var(--color-text);
 }
 
-/* =========================
-   RESPONSIVE — Tablet
-========================= */
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 1024px) {
     .footer-main {
-        gap: 4rem;
+        padding: 56px 2rem 40px;
+    }
+
+    .footer-bottom {
+        padding: 20px 2rem;
     }
 }
 
-/* =========================
-   RESPONSIVE — Mobiel
-========================= */
-
-@media (max-width: 768px) {
-    .footer {
-        padding: 3rem 1.25rem 1.5rem;
-    }
-
+@media (max-width: 900px) {
     .footer-main {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 48px;
     }
 
     .footer-tagline {
@@ -259,28 +210,39 @@
     }
 
     .footer-columns {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* =========================
-   RESPONSIVE — Klein mobiel
-========================= */
-
-@media (max-width: 480px) {
-    .footer-columns {
-        grid-template-columns: 1fr;
-        gap: 1.75rem;
+@media (max-width: 768px) {
+    .footer-main {
+        padding: 48px 1.5rem 36px;
     }
 
-    .footer-bottom-links {
-        gap: 1rem;
+    .footer-bottom {
+        padding: 16px 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-main {
+        padding: 40px 1rem 32px;
+    }
+
+    .footer-bottom {
+        padding: 16px 1rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
 }

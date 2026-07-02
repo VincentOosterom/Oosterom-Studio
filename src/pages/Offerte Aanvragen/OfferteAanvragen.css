@@ -1,165 +1,214 @@
-/* =========================
-   SECTION
-========================= */
+/* ==========================================================================
+   OfferteAanvragen.css — Oosterom Studio
+   ========================================================================== */
+
+
+/* ── Achtergrond grid ────────────────────────────────────────────────────── */
+
+.offerte-bg {
+    position: fixed;
+    inset: 0;
+    background-image:
+            linear-gradient(rgba(77, 255, 195, 0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77, 255, 195, 0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* ── Sectie wrapper ──────────────────────────────────────────────────────── */
 
 .offerte-section {
+    position: relative;
+    z-index: 1;
     width: 100%;
     min-height: 100vh;
-    padding: 8rem 2rem 6rem;
-    color: var(--color-text);
+    padding: 140px 4rem 96px;
+    background: var(--color-bg, #080808);
     box-sizing: border-box;
 }
 
 .offerte-container {
     max-width: 1100px;
     margin: 0 auto;
-    width: 100%;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-
-.offerte-layout {
     display: grid;
-    grid-template-columns: 1fr ;
-    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     align-items: start;
-    width: 100%;
 }
 
-/* =========================
-   LEFT INFO
-========================= */
+
+/* ── Info kolom (links) ──────────────────────────────────────────────────── */
 
 .offerte-info {
-    text-align: center;
+    position: sticky;
+    top: 100px;
 }
 
-.offerte-info h2 {
-    font-family: var(--font-title), serif;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    position: relative;
-}
-
-.offerte-info h2::after {
-    content: "";
-    display: block;
-    width: 64px;
-    height: 3px;
-    margin-top: 1.2rem;
-    background: var(--color-accent);
-    border-radius: 2px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.offerte-info p {
-    font-size: 1rem;
-    color: var(--color-muted);
-    line-height: 1.8;
-    max-width: 100%;
-}
-
-/* =========================
-   OFFERTE DETAILS
-========================= */
-
-.offerte-details {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 2.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.offerte-details p {
-    font-size: 0.9rem;
-    color: var(--color-muted);
-    line-height: 1.6;
-}
-
-.offerte-details strong {
-    display: block;
-    margin-bottom: 0.3rem;
-    color: var(--color-text);
-    font-weight: 600;
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
+.offerte-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    color: var(--color-accent);
+    font-family: var(--font-body), sans-serif;
+    margin-bottom: 24px;
+    padding: 8px 14px;
+    border: 1px solid rgba(77, 255, 195, 0.2);
+    border-radius: 100px;
+    background: rgba(77, 255, 195, 0.05);
+    width: fit-content;
 }
 
-/* =========================
-   FORM CARD
-========================= */
+.offerte-info h1 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    color: var(--color-text);
+    margin: 0 0 20px;
+}
 
-.offerte-form {
-    position: relative;
-    background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.06),
-            rgba(255, 255, 255, 0.02)
-    );
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-radius: 20px;
-    padding: 3rem;
-    box-shadow:
-            0 40px 80px rgba(0, 0, 0, 0.65),
-            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+.offerte-info h1 em {
+    color: var(--color-accent);
+    font-style: normal;
+}
+
+.offerte-intro {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    margin: 0 0 48px;
+    max-width: 400px;
+}
+
+
+/* ── Stappen ─────────────────────────────────────────────────────────────── */
+
+.offerte-stappen {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    box-sizing: border-box;
-    margin-top: 0;
+    gap: 28px;
+    margin-bottom: 40px;
 }
 
-.offerte-form::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    pointer-events: none;
+.offerte-stap {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
 }
 
-.offerte-form h2 {
-    font-family: var(--font-title), serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    margin-bottom: 0.25rem;
-}
-
-.warning {
-    font-size: 0.8rem;
+.offerte-stap__num {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
     color: var(--color-accent);
-    margin-top: -0.5rem;
+    padding-top: 3px;
+    flex-shrink: 0;
+}
+
+.offerte-stap strong {
+    display: block;
+    font-family: var(--font-title), sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.offerte-stap p {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+}
+
+.offerte-disclaimer {
+    font-size: 13px;
+    color: var(--color-muted, #999);
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+}
+
+.offerte-disclaimer a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.offerte-disclaimer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ── Formulier (rechts) ──────────────────────────────────────────────────── */
+
+.offerte-form {
+    background: var(--color-dark, #141414);
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
 }
 
 .form-error {
-    font-size: 0.85rem;
+    font-size: 14px;
     color: #ff6b6b;
-    padding: 0.75rem 1rem;
-    background: rgba(255, 107, 107, 0.1);
-    border-radius: 8px;
+    padding: 12px 16px;
+    background: rgba(255, 107, 107, 0.08);
+    border-radius: 10px;
     border: 1px solid rgba(255, 107, 107, 0.2);
+    margin: 0;
 }
 
-/* =========================
-   INPUTS
-========================= */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-body), sans-serif;
+}
+
+.form-field label span {
+    color: var(--color-accent);
+}
+
+
+/* ── Inputs ──────────────────────────────────────────────────────────────── */
 
 .offerte-form input,
 .offerte-form textarea,
 .offerte-form select {
-    background: rgba(0, 0, 0, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
-    padding: 0.9rem 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 12px 14px;
     width: 100%;
-    font-family: var(--font-body), serif;
-    font-size: 1rem;
+    font-family: var(--font-body), sans-serif;
+    font-size: 14px;
     color: var(--color-text);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
@@ -167,18 +216,24 @@
 
 .offerte-form input::placeholder,
 .offerte-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.2);
 }
 
 .offerte-form select {
     appearance: none;
     cursor: pointer;
+    color: var(--color-text);
+}
+
+.offerte-form select option {
+    background: #141414;
+    color: var(--color-text);
 }
 
 .offerte-form input:hover,
 .offerte-form textarea:hover,
 .offerte-form select:hover {
-    border-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.12);
 }
 
 .offerte-form input:focus,
@@ -186,119 +241,181 @@
 .offerte-form select:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.15);
+    box-shadow: 0 0 0 3px rgba(77, 255, 195, 0.1);
 }
 
 .offerte-form textarea {
-    min-height: 140px;
+    min-height: 130px;
     resize: vertical;
     line-height: 1.6;
 }
 
-/* =========================
-   BUTTON
-========================= */
 
-.offerte-form button {
-    margin-top: 0.5rem;
+/* ── Submit knop ─────────────────────────────────────────────────────────── */
+
+.offerte-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     background: var(--color-accent);
-    color: #000;
+    color: #080808;
     border: none;
-    border-radius: 12px;
-    padding: 1rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
+    border-radius: 100px;
+    padding: 16px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
     cursor: pointer;
+    font-family: var(--font-body), sans-serif;
     transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
-    font-family: var(--font-body), serif;
+    margin-top: 4px;
 }
 
-.offerte-form button:hover {
-    opacity: 0.9;
+.offerte-submit:hover:not(:disabled) {
+    opacity: 0.88;
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(100, 255, 218, 0.35);
+    box-shadow: 0 10px 28px rgba(77, 255, 195, 0.25);
 }
 
-/* =========================
-   THANK YOU
-========================= */
+.offerte-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
 
-.thank-you-message {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 3rem;
-    border-radius: 20px;
+.offerte-submit__spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-top-color: #080808;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.form-note {
+    font-size: 12px;
+    color: var(--color-muted, #999);
+    font-family: var(--font-body), sans-serif;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0;
 }
 
-.thank-you-message h2 {
-    font-family: var(--font-title), serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+
+/* ── Thank you state ─────────────────────────────────────────────────────── */
+
+.thank-you {
+    background: var(--color-dark, #141414);
+    border: 1px solid rgba(77, 255, 195, 0.2);
+    border-radius: 20px;
+    padding: 56px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
 }
 
-/* =========================
-   RESPONSIVE — Tablet
-========================= */
+.thank-you__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(77, 255, 195, 0.1);
+    border: 1px solid rgba(77, 255, 195, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--color-accent);
+}
+
+.thank-you h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.thank-you p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-muted, #999);
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+    max-width: 340px;
+}
+
+.thank-you__link {
+    font-size: 13px;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-family: var(--font-body), sans-serif;
+    margin-top: 8px;
+}
+
+.thank-you__link:hover {
+    text-decoration: underline;
+}
+
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 1024px) {
     .offerte-section {
-        padding: 7rem 1.75rem 5rem;
+        padding: 100px 2rem 72px;
     }
 
-    .offerte-layout {
-        gap: 3rem;
+    .offerte-container {
+        gap: 56px;
     }
 }
 
-/* =========================
-   RESPONSIVE — Mobiel
-========================= */
+@media (max-width: 900px) {
+    .offerte-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .offerte-info {
+        position: static;
+    }
+
+    .offerte-intro {
+        max-width: 100%;
+    }
+}
 
 @media (max-width: 768px) {
     .offerte-section {
-        padding: 6rem 1.25rem 4rem;
-    }
-
-    .offerte-layout {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-
-    .offerte-info h2 {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-    }
-
-    .offerte-details {
-        margin-top: 2rem;
-        gap: 1.5rem;
-        flex-direction: column;
-        align-items: center;
+        padding: 100px 1.25rem 56px;
     }
 
     .offerte-form {
-        padding: 2rem 1.25rem;
-        gap: 1rem;
-        border-radius: 16px;
+        padding: 28px 20px;
     }
 
-    .thank-you-message {
-        padding: 2rem 1.25rem;
+    .form-row {
+        grid-template-columns: 1fr;
     }
 }
 
-/* =========================
-   RESPONSIVE — Klein mobiel
-========================= */
-
 @media (max-width: 480px) {
     .offerte-section {
-        padding: 6rem 1rem 3rem;
+        padding: 96px 1rem 48px;
     }
 
     .offerte-form {
-        padding: 1.5rem 1rem;
+        padding: 24px 16px;
+        gap: 16px;
+    }
+
+    .thank-you {
+        padding: 40px 20px;
     }
 }

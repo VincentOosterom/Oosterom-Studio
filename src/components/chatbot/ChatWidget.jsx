@@ -4,7 +4,7 @@ import assistantAvatar from '../../assets/images/oosterom_assistant_avatar.svg'
 
 const WELKOMST_BERICHT = {
     role: 'assistant',
-    content: 'Hi! Ik ben de digitale assistent van Oosterom Studio. Hoe kan ik u helpen?'
+    content: 'Hi! Ik ben de digitale assistent van Oosterom Studio. Hoe kan ik je helpen?'
 }
 
 const SUGGESTIONS = [
@@ -18,33 +18,43 @@ function maakSessieId() {
 }
 
 export default function ChatWidget() {
-    const [open, setOpen] = useState(false)
-    const [berichten, setBerichten] = useState([WELKOMST_BERICHT])
-    const [input, setInput] = useState('')
-    const [laden, setLaden] = useState(false)
+    const [open, setOpen]                       = useState(false)
+    const [berichten, setBerichten]             = useState([WELKOMST_BERICHT])
+    const [input, setInput]                     = useState('')
+    const [laden, setLaden]                     = useState(false)
     const [toonSuggestions, setToonSuggestions] = useState(true)
 
-    const sessieId = useRef(maakSessieId())
+    const sessieId    = useRef(maakSessieId())
     const berichtenRef = useRef(null)
-    const inputRef = useRef(null)
+    const inputRef    = useRef(null)
 
+    // Scroll naar nieuwste bericht
     useEffect(() => {
         if (berichtenRef.current) {
             berichtenRef.current.scrollTop = berichtenRef.current.scrollHeight
         }
     }, [berichten, laden])
 
+    // Focus op input als chat opent
     useEffect(() => {
         if (open && inputRef.current) {
             setTimeout(() => inputRef.current?.focus(), 100)
         }
     }, [open])
 
+    // Sluit chat met Escape-toets
+    useEffect(() => {
+        const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
+        window.addEventListener('keydown', onKey)
+        return () => window.removeEventListener('keydown', onKey)
+    }, [])
+
     async function stuurBericht(tekst) {
         if (!tekst.trim() || laden) return
 
         const gebruikersBericht = { role: 'user', content: tekst }
-        const nieuweBerichten = [...berichten, gebruikersBericht]
+        const nieuweBerichten   = [...berichten, gebruikersBericht]
+
         setBerichten(nieuweBerichten)
         setInput('')
         setLaden(true)
@@ -81,49 +91,55 @@ export default function ChatWidget() {
 
     return (
         <>
+            {/* Toggle knop */}
             <button
                 className={styles.toggleBtn}
                 onClick={() => setOpen(v => !v)}
-                aria-label="Open chat"
+                aria-label={open ? 'Sluit chat' : 'Open chat'}
+                aria-expanded={open}
             >
                 {open ? (
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                         <line x1="18" y1="6" x2="6" y2="18" />
                         <line x1="6" y1="6" x2="18" y2="18" />
                     </svg>
                 ) : (
-                    <img src={assistantAvatar} alt="Assistent" className={styles.toggleAvatar} />
+                    <img src={assistantAvatar} alt="" className={styles.toggleAvatar} aria-hidden="true" />
                 )}
             </button>
 
+            {/* Chat panel */}
             {open && (
-                <div className={styles.panel}>
-
+                <div
+                    className={styles.panel}
+                    role="dialog"
+                    aria-label="Chat met Oosterom Studio"
+                >
                     {/* Header */}
                     <div className={styles.header}>
                         <div className={styles.headerAvatarWrap}>
                             <img src={assistantAvatar} alt="Assistent" className={styles.headerAvatarImg} />
                         </div>
-                        <div style={{ flex: 1 }}>
-                            <div className={styles.headerName}>Oosterom Studio</div>
-                            <div className={styles.headerStatus}>
-                                <span className={styles.statusDot} />
+                        <div className={styles.headerInfo}>
+                            <span className={styles.headerName}>Oosterom Studio</span>
+                            <span className={styles.headerStatus}>
+                                <span className={styles.statusDot} aria-hidden="true" />
                                 Online
-                            </div>
+                            </span>
                         </div>
                         <button
                             className={styles.closeBtn}
                             onClick={() => setOpen(false)}
                             aria-label="Sluit chat"
                         >
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                                 <line x1="18" y1="6" x2="6" y2="18" />
                                 <line x1="6" y1="6" x2="18" y2="18" />
                             </svg>
                         </button>
                     </div>
 
-                    {/* Berichten */}
+                    {/* Berichtenlijst */}
                     <div className={styles.messages} ref={berichtenRef}>
                         {berichten.map((bericht, i) => (
                             <div
@@ -131,8 +147,8 @@ export default function ChatWidget() {
                                 className={`${styles.msgRow} ${bericht.role === 'user' ? styles.msgRowUser : styles.msgRowBot}`}
                             >
                                 {bericht.role === 'assistant' && (
-                                    <div className={styles.msgAvatar}>
-                                        <img src={assistantAvatar} alt="Assistent" className={styles.msgAvatarImg} />
+                                    <div className={styles.msgAvatar} aria-hidden="true">
+                                        <img src={assistantAvatar} alt="" className={styles.msgAvatarImg} />
                                     </div>
                                 )}
                                 <div className={bericht.role === 'user' ? styles.bubbleUser : styles.bubbleBot}>
@@ -141,10 +157,11 @@ export default function ChatWidget() {
                             </div>
                         ))}
 
+                        {/* Laad-animatie */}
                         {laden && (
-                            <div className={styles.msgRow}>
-                                <div className={styles.msgAvatar}>
-                                    <img src={assistantAvatar} alt="Assistent" className={styles.msgAvatarImg} />
+                            <div className={`${styles.msgRow} ${styles.msgRowBot}`} aria-label="Assistent typt…">
+                                <div className={styles.msgAvatar} aria-hidden="true">
+                                    <img src={assistantAvatar} alt="" className={styles.msgAvatarImg} />
                                 </div>
                                 <div className={styles.typingDots}>
                                     <span className={styles.dot} />
@@ -155,11 +172,15 @@ export default function ChatWidget() {
                         )}
                     </div>
 
-                    {/* Suggestions */}
+                    {/* Snelle suggesties */}
                     {toonSuggestions && !laden && (
                         <div className={styles.suggestions}>
                             {SUGGESTIONS.map(s => (
-                                <button key={s} className={styles.suggestionBtn} onClick={() => stuurBericht(s)}>
+                                <button
+                                    key={s}
+                                    className={styles.suggestionBtn}
+                                    onClick={() => stuurBericht(s)}
+                                >
                                     {s}
                                 </button>
                             ))}
@@ -173,22 +194,23 @@ export default function ChatWidget() {
                             type="text"
                             value={input}
                             onChange={e => setInput(e.target.value)}
-                            placeholder="Stel een vraag..."
+                            placeholder="Stel een vraag…"
                             disabled={laden}
                             className={styles.input}
+                            aria-label="Typ je bericht"
                         />
                         <button
                             type="submit"
                             disabled={laden || !input.trim()}
                             className={styles.sendBtn}
+                            aria-label="Verstuur bericht"
                         >
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="22" y1="2" x2="11" y2="13" />
-                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" fill="currentColor" />
                             </svg>
                         </button>
                     </form>
-
                 </div>
             )}
         </>

@@ -1,29 +1,54 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── Primaire SEO ───────────────────────────────────────────────────── -->
     <title>Oosterom Studio | Digitaal sterk van buiten én van binnen</title>
     <meta
             name="description"
-            content="Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht.">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <link rel="shortcut icon" href="/favicon.ico"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-    <link rel="manifest" href="/site.webmanifest"/>
-    <link rel="preload" as="image" href="src/assets/images/fabio-oyXis2kALVg-unsplash-webp.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Google tag (gtag.js) -->
+            content="Oosterom Studio bouwt maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- ── Open Graph (fallback — react-helmet-async overschrijft dit per pagina) -->
+    <meta property="og:title" content="Oosterom Studio | Digitaal sterk van buiten én van binnen" />
+    <meta property="og:description" content="Maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.oosteromstudio.nl/" />
+    <meta property="og:site_name" content="Oosterom Studio" />
+    <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+
+    <!-- ── Favicon ───────────────────────────────────────────────────────── -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#080808" />
+
+    <!-- ── Fonts ─────────────────────────────────────────────────────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DMJQ7CW4L"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        function gtag() { dataLayer.push(arguments); }
 
-        gtag('config', 'G-7DMJQ7CW4L');
+        // Consent mode v2 — alles standaard geweigerd totdat de gebruiker toestemming geeft
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 2000
+        });
+
+        gtag('js', new Date());
+        gtag('config', 'G-7DMJQ7CW4L', { anonymize_ip: true });
     </script>
 </head>
 <body>

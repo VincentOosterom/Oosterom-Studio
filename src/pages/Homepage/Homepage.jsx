@@ -110,8 +110,9 @@ function Homepage() {
 
 
             <Header
-                title="Van idee naar software die echt waarde levert."
-                subtitle="Oosterom Studio bouwt webapps, SaaS-platformen en mobiele software voor het MKB. Doordacht ontworpen, technisch solide en vanaf de basis veilig ontwikkeld."
+                tag="Webdesign & Software studio"
+                title={"Van idee naar software\ndie echt waarde levert."}
+                subtitle="Oosterom Studio bouwt webapps, SaaS-platformen en mobiele software voor het MKB."
                 buttonText="Klaar om te beginnen?"
             />
             <MovingBar/>

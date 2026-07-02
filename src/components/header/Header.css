@@ -1,4 +1,9 @@
-/* ── Header ──────────────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Header.css — Oosterom Studio
+   ========================================================================== */
+
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
 
 .header {
     position: relative;
@@ -6,102 +11,113 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
-/* Overlay — fix: rgba had geen geldige kleur */
+/* Donkere overlay */
 .header::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.58);
     z-index: 1;
     pointer-events: none;
 }
 
-/* Grid achtergrond zoals dienstpagina's */
-.header::after {
-    content: "";
+/* Grid overlay */
+.header__grid {
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(rgba(77, 255, 195, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(77, 255, 195, 0.03) 1px, transparent 1px);
+    background-image:
+            linear-gradient(rgba(77, 255, 195, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77, 255, 195, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 60% at 30% 100%, black 30%, transparent 100%);
     z-index: 1;
     pointer-events: none;
 }
 
-/* Content boven overlay */
+
+/* ── Content ─────────────────────────────────────────────────────────────── */
+
 .header-content {
     position: relative;
     z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 4rem;
-    gap: 2rem;
     flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 4rem;
 }
 
-/* Linker content */
 .content-left {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     gap: 24px;
     align-items: flex-start;
-    padding: 120px 0 80px;
-    min-height: 90vh;
-    max-width: 760px;
+    padding: 120px 0 96px;
+    max-width: 780px;
     width: 100%;
 }
 
+
+/* ── Pill tag ────────────────────────────────────────────────────────────── */
+
+.header__tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-family: var(--font-body), sans-serif;
+    padding: 8px 14px;
+    border: 1px solid rgba(77, 255, 195, 0.25);
+    border-radius: 100px;
+    background: rgba(77, 255, 195, 0.07);
+    width: fit-content;
+}
+
+
+/* ── Headline ────────────────────────────────────────────────────────────── */
+
 .content-left h1 {
-    font-size: clamp(35px, 6vw, 68px);
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(2.4rem, 6.5vw, 6rem);
     font-weight: 800;
-    line-height: 0.99;
-    color: whitesmoke;
-    animation: fadeLeft 0.9s ease 0.2s both;
-    white-space: pre-line;
+    line-height: 0.96;
+    letter-spacing: -0.025em;
+    color: var(--color-text, #f0f0f0);
+    margin: 0;
 }
 
-@keyframes fadeLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.content-left h1 em {
+    color: var(--color-accent);
+    font-style: normal;
 }
 
+
+/* ── Subtitel ────────────────────────────────────────────────────────────── */
 
 .content-left p {
     font-size: 17px;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.6);
     font-weight: 300;
     max-width: 520px;
-    animation: fadeDown 0.9s ease 0.4s both;
-}
-
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
 }
 
 
-.call-to-action-btn button {
+/* ── CTA knop ────────────────────────────────────────────────────────────── */
+
+.header__cta {
+    display: inline-flex;
+    align-items: center;
     font-size: 13px;
     font-weight: 600;
     color: #080808;
@@ -111,99 +127,90 @@
     border: none;
     font-family: var(--font-body), sans-serif;
     cursor: pointer;
-    transition: opacity 0.2s, transform 0.2s;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     letter-spacing: 0.01em;
-
 }
 
-.call-to-action-btn button:hover {
+.header__cta:hover {
     opacity: 0.88;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(77, 255, 195, 0.25);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .header-content {
-        padding: 0 1.5rem;
-    }
-
-    .content-left {
-        padding: 100px 0 60px;
-        gap: 20px;
-    }
+.header__cta:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
 }
 
-.content-left h1 {
-    font-size: clamp(2rem, 5vw, 7rem);
-    font-weight: 800;
-    line-height: 0.95;
+
+/* ── Scroll indicator ────────────────────────────────────────────────────── */
+
+.header__scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.call-to-action-btn button {
-    color: var(--color-bg);
+.header__scroll-line {
+    display: block;
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(77, 255, 195, 0.6), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
 }
 
-/* ========================= */
-/* Responsive */
-/* ========================= */
+@keyframes scrollPulse {
+    0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
+    50%  { opacity: 1; transform: scaleY(1); transform-origin: top; }
+    100% { opacity: 0; transform: scaleY(1); transform-origin: bottom; }
+}
+
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 1024px) {
-    .content-left h1 {
-        font-size: 2.2rem;
-    }
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .content-left {
-        min-height: 70svh;
-        padding: 100px 0 60px;
-    }
-}
-
-/* Mobiel */
-@media (max-width: 768px) {
-    .header {
-        width: 100%;
-        min-height: 90svh;
-    }
-
     .header-content {
-        flex-direction: column;
-        text-align: left;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
         padding: 0 1.25rem;
-        gap: 1.5rem;
     }
 
     .content-left {
-        align-items: flex-start;
-        min-height: 80svh;
-        max-width: 100%;
-        margin: 0;
-        padding: 100px 0 48px;
-        justify-content: flex-end;
-    }
-
-    .content-left h1 {
-        font-size: clamp(2rem, 8vw, 4rem);
+        padding: 100px 0 72px;
+        gap: 20px;
     }
 
     .content-left p {
         font-size: 15px;
         max-width: 100%;
     }
+
+    .header__scroll {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
-    .content-left h1 {
-        font-size: clamp(2rem, 7vw, 3rem);
+    .content-left {
+        padding: 100px 0 56px;
+        gap: 16px;
     }
 
     .content-left p {
-        font-size: 0.95rem;
+        font-size: 14px;
     }
 
-    .track span {
-        margin: 0 1rem;
+    .header__cta {
+        padding: 14px 24px;
+        font-size: 12px;
     }
 }

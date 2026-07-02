@@ -2,33 +2,43 @@ import './App.css'
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-
-// Altijd direct laden — staan op elke pagina
+// ── Altijd direct laden — staan op elke pagina ────────────────────────────────
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 import AnalyticsTracker from "./components/AnalyticsTracker/AnalyticsTracker.jsx";
 import CookieBanner from "./components/cookies/CookiesBanner.jsx";
 import ChatWidget from "./components/chatbot/ChatWidget.jsx";
-import BlogPost from "./pages/Blogpost/BlogPost.jsx";
-import BlogOverview from "./pages/Blogoverview/BlogOverview.jsx";
-import FAQPage from "./pages/FAQ/FAQPage.jsx";
 
-// Lazy laden — alleen als bezoeker naar die pagina gaat
-const Homepage           = lazy(() => import("./pages/Homepage/Homepage.jsx"));
-const Diensten           = lazy(() => import("./pages/Diensten/Diensten.jsx"));
-const Contact            = lazy(() => import("./pages/Contact/Contact.jsx"));
-const OosteromOS = lazy(() => import("./pages/OosteromOS/OosteromOS.jsx"));
-const OfferteAanvragen   = lazy(() => import("./pages/Offerte Aanvragen/OfferteAanvragen.jsx"));
-const NotFound           = lazy(() => import("./pages/NotFound/NotFound.jsx"));
-const Portfolio          = lazy(() => import("./pages/Portfolio/Portfolio.jsx"));
-const AboutUs            = lazy(() => import("./pages/Over Ons/OverOns.jsx"));
-const ProjectPage        = lazy(() => import("./pages/ProjectPage/ProjectPage.jsx"));
-const WebdesignPage      = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.WebdesignPage })));
-const WebdevelopmentPage = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.WebdevelopmentPage })));
-const SaasPage           = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.SaasPage })));
-const BrandingPage       = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.BrandingPage })));
-const AiPage    = lazy(() => import("./pages/DienstPage/DienstPages.jsx").then(m => ({ default: m.AIAgentsPage })));
+// ── Lazy laden — alleen laden als bezoeker naar die pagina gaat ───────────────
+// Algemene pagina's
+const Homepage         = lazy(() => import("./pages/Homepage/Homepage.jsx"));
+const Diensten         = lazy(() => import("./pages/Diensten/Diensten.jsx"));
+const Contact          = lazy(() => import("./pages/Contact/Contact.jsx"));
+const Portfolio        = lazy(() => import("./pages/Portfolio/Portfolio.jsx"));
+const ProjectPage      = lazy(() => import("./pages/ProjectPage/ProjectPage.jsx"));
+const AboutUs          = lazy(() => import("./pages/Over Ons/OverOns.jsx"));
+const OfferteAanvragen = lazy(() => import("./pages/Offerte Aanvragen/OfferteAanvragen.jsx"));
+const OosteromOS       = lazy(() => import("./pages/OosteromOS/OosteromOS.jsx"));
+const FAQPage          = lazy(() => import("./pages/FAQ/FAQPage.jsx"));
+const NotFound         = lazy(() => import("./pages/NotFound/NotFound.jsx"));
 
-// Loading spinner terwijl pagina laadt
+// Blog
+const BlogOverview = lazy(() => import("./pages/Blogoverview/BlogOverview.jsx"));
+const BlogPost     = lazy(() => import("./pages/Blogpost/BlogPost.jsx"));
+
+// Dienstpagina's — allemaal uit hetzelfde bestand, elk als losse export
+const dienstModule = () => import("./pages/DienstPage/DienstPages.jsx");
+
+const WebdesignPage      = lazy(() => dienstModule().then(m => ({ default: m.WebdesignPage })));
+const WebdevelopmentPage = lazy(() => dienstModule().then(m => ({ default: m.WebdevelopmentPage })));
+const SaasPage           = lazy(() => dienstModule().then(m => ({ default: m.SaasPage })));
+const BrandingPage       = lazy(() => dienstModule().then(m => ({ default: m.BrandingPage })));
+const AIAgentsPage       = lazy(() => dienstModule().then(m => ({ default: m.AIAgentsPage })));
+const SoftwareOpMaatPage = lazy(() => dienstModule().then(m => ({ default: m.SoftwareOpMaatPage })));
+const KlantportaalPage   = lazy(() => dienstModule().then(m => ({ default: m.KlantportaalPage })));
+const AVGProofPage       = lazy(() => dienstModule().then(m => ({ default: m.AVGProofPage })));
+const OnderhoudSupportPage = lazy(() => dienstModule().then(m => ({ default: m.OnderhoudSupportPage })));
+
+// ── Laadscherm tijdens lazy load ──────────────────────────────────────────────
 function PageLoader() {
     return (
         <div style={{
@@ -51,32 +61,46 @@ function PageLoader() {
     );
 }
 
+// ── App ───────────────────────────────────────────────────────────────────────
 function App() {
     return (
         <>
             <ScrollToTop />
             <CookieBanner />
             <AnalyticsTracker />
-            <ChatWidget/>
+            <ChatWidget />
+
             <Suspense fallback={<PageLoader />}>
                 <Routes>
-                    <Route path="/"                     element={<Homepage />} />
-                    <Route path="/diensten"             element={<Diensten />} />
-                    <Route path="/contact"              element={<Contact />} />
-                    <Route path="/portfolio"            element={<Portfolio />} />
-                    <Route path="/over-ons"             element={<AboutUs />} />
-                    <Route path="/oosterom-os" element={<OosteromOS />} />
-                    <Route path="/offerte-aanvragen"    element={<OfferteAanvragen />} />
-                    <Route path="/diensten/webdesign"   element={<WebdesignPage />} />
-                    <Route path="/diensten/webdevelopment" element={<WebdevelopmentPage />} />
-                    <Route path="/diensten/ai-agents" element={<AiPage />} />
-                    <Route path="/faq" element={<FAQPage />} />
-                    <Route path="/diensten/saas"        element={<SaasPage />} />
-                    <Route path="/blog" element={<BlogOverview />} />
-                    <Route path="/blog/:slug" element={<BlogPost />} />
-                    <Route path="/diensten/branding"    element={<BrandingPage />} />
-                    <Route path="/portfolio/:slug"      element={<ProjectPage />} />
-                    <Route path="*"                     element={<NotFound />} />
+
+                    {/* Algemeen */}
+                    <Route path="/"                  element={<Homepage />} />
+                    <Route path="/diensten"          element={<Diensten />} />
+                    <Route path="/portfolio"         element={<Portfolio />} />
+                    <Route path="/portfolio/:slug"   element={<ProjectPage />} />
+                    <Route path="/over-ons"          element={<AboutUs />} />
+                    <Route path="/contact"           element={<Contact />} />
+                    <Route path="/offerte-aanvragen" element={<OfferteAanvragen />} />
+                    <Route path="/faq"               element={<FAQPage />} />
+                    <Route path="/oosterom-os"       element={<OosteromOS />} />
+
+                    {/* Blog */}
+                    <Route path="/blog"              element={<BlogOverview />} />
+                    <Route path="/blog/:slug"        element={<BlogPost />} />
+
+                    {/* Dienstpagina's */}
+                    <Route path="/diensten/webdesign"         element={<WebdesignPage />} />
+                    <Route path="/diensten/webdevelopment"    element={<WebdevelopmentPage />} />
+                    <Route path="/diensten/saas"              element={<SaasPage />} />
+                    <Route path="/diensten/branding"          element={<BrandingPage />} />
+                    <Route path="/diensten/ai-agents"         element={<AIAgentsPage />} />
+                    <Route path="/diensten/software-op-maat"  element={<SoftwareOpMaatPage />} />
+                    <Route path="/diensten/klantportaal"      element={<KlantportaalPage />} />
+                    <Route path="/diensten/avg-proof-website" element={<AVGProofPage />} />
+                    <Route path="/diensten/onderhoud-support" element={<OnderhoudSupportPage />} />
+
+                    {/* 404 — altijd als laatste */}
+                    <Route path="*" element={<NotFound />} />
 
                 </Routes>
             </Suspense>
