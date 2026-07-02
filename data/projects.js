@@ -90,7 +90,7 @@ const projects = [
     },
     {
         slug: "eigen-cms-systeem",
-        title: "Oosterom CMS",
+        title: "Oosterom CRM",
         image: Logo,
         card_description: `Een volledig door Oosterom Studio ontwikkeld contentmanagementsysteem waarmee websites eenvoudig beheerd kunnen worden. Snel, veilig en volledig afgestemd op de wensen van de klant.`,
         subtitle: "Ons eigen contentmanagementsysteem",
