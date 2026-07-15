@@ -1,108 +1,225 @@
-/* src/pages/LandingPage/LandingPage.css
-   Pas de kleuren/fonts aan zodat het matcht met je Homepage/DienstPage stijl.
-   #4dffc3 is de accentkleur die ik in je App.jsx loader-animatie zag —
-   vervang zo nodig door je echte design tokens/variabelen.
-*/
+/* ==========================================================================
+   LandingPage.css — Oosterom Studio
+   Gebruikt dezelfde design tokens als Homepage.css / Contact.css
+   ========================================================================== */
 
 .landing-page {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    padding: 140px 4rem 96px;
+    background: var(--color-bg, #000000);
+    box-sizing: border-box;
+}
+
+.landing-container {
     max-width: 860px;
     margin: 0 auto;
-    padding: 80px 24px;
-    color: #f2f2f2;
-    background: #080808;
 }
+
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
 
 .landing-hero {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
+}
+
+.landing-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-family: var(--font-body), sans-serif;
+    margin: 0 auto 24px;
+    padding: 8px 14px;
+    border: 1px solid rgba(136, 232, 244, 0.2);
+    border-radius: 100px;
+    background: rgba(136, 232, 244, 0.05);
+    width: fit-content;
 }
 
 .landing-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    border-radius: 14px;
+    background: rgba(136, 232, 244, 0.08);
+    border: 1px solid rgba(136, 232, 244, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
 }
 
 .landing-h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    line-height: 1.2;
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    color: var(--color-text);
+    margin: 0 0 20px;
 }
 
 .landing-intro {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #c9c9c9;
-    max-width: 640px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-muted, #94A3B8);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    max-width: 560px;
     margin: 0 auto 32px;
 }
 
 .landing-cta {
-    display: inline-block;
-    padding: 14px 32px;
-    background: #4dffc3;
-    color: #080808;
-    font-weight: 600;
-    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #000000;
+    background: var(--color-accent);
+    padding: 14px 28px;
+    border-radius: 100px;
     text-decoration: none;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    font-family: var(--font-body), sans-serif;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .landing-cta:hover {
+    opacity: 0.88;
     transform: translateY(-2px);
-    opacity: 0.9;
+    box-shadow: 0 10px 28px rgba(136, 232, 244, 0.25);
 }
+
+
+/* ── Bullets ─────────────────────────────────────────────────────────────── */
 
 .landing-bullets {
     margin-bottom: 40px;
 }
 
 .landing-bullets h2 {
-    font-size: 1.4rem;
-    margin-bottom: 16px;
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin-bottom: 20px;
 }
 
 .landing-bullets ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: grid;
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
 }
 
 .landing-bullets li {
-    padding: 14px 18px;
-    background: #131313;
-    border: 1px solid #1f1f1f;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 18px 20px;
+    background: var(--color-dark, #141414);
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    font-size: 14px;
+    font-family: var(--font-body), sans-serif;
+    color: var(--color-text);
+    line-height: 1.6;
+    transition: border-color 0.25s;
+}
+
+.landing-bullets li:hover {
+    border-color: rgba(136, 232, 244, 0.3);
 }
 
 .landing-bullets li::before {
     content: "✓ ";
-    color: #4dffc3;
+    color: var(--color-accent);
     font-weight: 700;
 }
 
+
+/* ── Extra tekst ─────────────────────────────────────────────────────────── */
+
 .landing-extra {
-    margin-bottom: 40px;
-    padding: 20px;
-    background: #101010;
-    border-left: 3px solid #4dffc3;
-    border-radius: 4px;
+    margin-bottom: 48px;
+    padding: 24px 28px;
+    background: rgba(136, 232, 244, 0.05);
+    border: 1px solid rgba(136, 232, 244, 0.2);
+    border-radius: 14px;
 }
 
 .landing-extra p {
-    line-height: 1.6;
-    color: #d0d0d0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-muted, #94A3B8);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
 }
+
+
+/* ── Link naar volledige dienst ─────────────────────────────────────────── */
 
 .landing-footer-link {
     text-align: center;
-    padding-top: 24px;
-    border-top: 1px solid #1f1f1f;
+    padding-top: 32px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.landing-footer-link p {
+    font-size: 14px;
+    color: var(--color-muted, #94A3B8);
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
 }
 
 .landing-footer-link a {
-    color: #4dffc3;
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.landing-footer-link a:hover {
     text-decoration: underline;
+}
+
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+    .landing-page {
+        padding: 120px 2rem 72px;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-page {
+        padding: 100px 1.25rem 56px;
+    }
+
+    .landing-bullets ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-page {
+        padding: 96px 1rem 48px;
+    }
+
+    .landing-extra {
+        padding: 18px 20px;
+    }
+
+    .landing-footer-link {
+        padding-top: 24px;
+    }
 }

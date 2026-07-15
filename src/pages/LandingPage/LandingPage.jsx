@@ -1,3 +1,12 @@
+// src/pages/LandingPage/LandingPage.jsx
+//
+// Eén generieke template voor alle SEO landingspagina's.
+// De inhoud komt uit landingPagesData.js — je hoeft dit bestand
+// niet aan te passen om een nieuwe pagina toe te voegen.
+//
+// Vereist: react-helmet-async (staat al in je package.json)
+// main.jsx moet gewrapt zijn in <HelmetProvider> (zie instructies.md)
+
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { getLandingPageBySlug } from "./landingPagesData.js";
@@ -12,7 +21,7 @@ function LandingPage() {
         return <Navigate to="/404" replace />;
     }
 
-    const canonicalUrl = `https://oosteromstudio.nl/l/${data.slug}`;
+    const canonicalUrl = `https://www.oosteromstudio.nl/l/${data.slug}`;
 
     return (
         <>
@@ -29,38 +38,43 @@ function LandingPage() {
             </Helmet>
 
             <section className="landing-page">
-                <div className="landing-hero">
-                    <div className="landing-icon">{data.icon}</div>
-                    <h1 className="landing-h1">{data.h1}</h1>
-                    <p className="landing-intro">{data.intro}</p>
-                    <Link to="/offerte-aanvragen" className="landing-cta">
-                        {data.cta_tekst}
-                    </Link>
-                </div>
+                <div className="landing-container">
 
-                {data.bullets && data.bullets.length > 0 && (
-                    <div className="landing-bullets">
-                        <h2>Wat je kunt verwachten</h2>
-                        <ul>
-                            {data.bullets.map((bullet, index) => (
-                                <li key={index}>{bullet}</li>
-                            ))}
-                        </ul>
+                    <div className="landing-hero">
+                        <span className="landing-tag">{data.dienst} — {data.stad}</span>
+                        <div className="landing-icon">{data.icon}</div>
+                        <h1 className="landing-h1">{data.h1}</h1>
+                        <p className="landing-intro">{data.intro}</p>
+                        <Link to="/offerte-aanvragen" className="landing-cta">
+                            {data.cta_tekst}
+                        </Link>
                     </div>
-                )}
 
-                {data.extra && (
-                    <div className="landing-extra">
-                        <p>{data.extra}</p>
+                    {data.bullets && data.bullets.length > 0 && (
+                        <div className="landing-bullets">
+                            <h2>Wat je kunt verwachten</h2>
+                            <ul>
+                                {data.bullets.map((bullet, index) => (
+                                    <li key={index}>{bullet}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {data.extra && (
+                        <div className="landing-extra">
+                            <p>{data.extra}</p>
+                        </div>
+                    )}
+
+                    <div className="landing-footer-link">
+                        <p>
+                            Benieuwd naar alles wat we doen op het gebied van{" "}
+                            {data.dienst}?{" "}
+                            <Link to={data.dienst_link}>Bekijk de volledige dienst</Link>
+                        </p>
                     </div>
-                )}
 
-                <div className="landing-footer-link">
-                    <p>
-                        Benieuwd naar alles wat we doen op het gebied van{" "}
-                        {data.dienst}?{" "}
-                        <Link to={data.dienst_link}>Bekijk de volledige dienst</Link>
-                    </p>
                 </div>
             </section>
         </>
