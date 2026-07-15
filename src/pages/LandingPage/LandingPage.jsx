@@ -11,6 +11,9 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { getLandingPageBySlug } from "./landingPagesData.js";
 import "./LandingPage.css";
+import Footer from "../../components/footer/Footer.jsx";
+import Nav from "../../components/navigate/Navigate.jsx";
+
 
 function LandingPage() {
     const { slug } = useParams();
@@ -37,12 +40,12 @@ function LandingPage() {
                 <meta property="og:type" content="website" />
             </Helmet>
 
+            <Nav/>
+
             <section className="landing-page">
                 <div className="landing-container">
 
                     <div className="landing-hero">
-                        <span className="landing-tag">{data.dienst} — {data.stad}</span>
-                        <div className="landing-icon">{data.icon}</div>
                         <h1 className="landing-h1">{data.h1}</h1>
                         <p className="landing-intro">{data.intro}</p>
                         <Link to="/offerte-aanvragen" className="landing-cta">
@@ -77,6 +80,7 @@ function LandingPage() {
 
                 </div>
             </section>
+            <Footer/>
         </>
     );
 }
