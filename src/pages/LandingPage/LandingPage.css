@@ -1,0 +1,108 @@
+/* src/pages/LandingPage/LandingPage.css
+   Pas de kleuren/fonts aan zodat het matcht met je Homepage/DienstPage stijl.
+   #4dffc3 is de accentkleur die ik in je App.jsx loader-animatie zag —
+   vervang zo nodig door je echte design tokens/variabelen.
+*/
+
+.landing-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    color: #f2f2f2;
+    background: #080808;
+}
+
+.landing-hero {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.landing-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.landing-h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.landing-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #c9c9c9;
+    max-width: 640px;
+    margin: 0 auto 32px;
+}
+
+.landing-cta {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #4dffc3;
+    color: #080808;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.landing-cta:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.landing-bullets {
+    margin-bottom: 40px;
+}
+
+.landing-bullets h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+
+.landing-bullets ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.landing-bullets li {
+    padding: 14px 18px;
+    background: #131313;
+    border: 1px solid #1f1f1f;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.landing-bullets li::before {
+    content: "✓ ";
+    color: #4dffc3;
+    font-weight: 700;
+}
+
+.landing-extra {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #101010;
+    border-left: 3px solid #4dffc3;
+    border-radius: 4px;
+}
+
+.landing-extra p {
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+
+.landing-footer-link {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid #1f1f1f;
+}
+
+.landing-footer-link a {
+    color: #4dffc3;
+    text-decoration: underline;
+}

@@ -70,7 +70,7 @@ const stappen = [
     {
         nummer: '03',
         titel: 'Alles op één plek',
-        omschrijving: 'Project, facturen, bestanden, berichten — direct inzichtelijk.'
+        omschrijving: 'Project, facturen, bestanden, berichten. Direct inzichtelijk.'
     },
     {nummer: '04', titel: 'Zelf beheren', omschrijving: 'Teksten aanpassen, aanvragen bekijken, chatbot monitoren.'},
 ]
@@ -142,7 +142,7 @@ export default function OosteromOS() {
     return (
         <>
             <Helmet>
-                <title>Oosterom OS — Jouw persoonlijk klantportaal | Oosterom Studio</title>
+                <title>Oosterom OS - Jouw persoonlijk klantportaal | Oosterom Studio</title>
                 <meta name="description"
                       content="Als klant van Oosterom Studio krijg je toegang tot Oosterom OS, jouw persoonlijk dashboard voor projectbeheer, CMS, facturen, chatbot en meer."/>
                 <meta property="og:title" content="Oosterom OS | Oosterom Studio"/>

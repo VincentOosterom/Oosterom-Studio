@@ -8,7 +8,6 @@ import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-
         <HelmetProvider>
             <Router>
                 <App/>

@@ -133,7 +133,7 @@ function OverOns() {
                     </p>
 
                     <p>
-                        Vanuit die visie bouw ik software voor organisaties die verder willen dan standaardoplossingen —
+                        Vanuit die visie bouw ik software voor organisaties die verder willen dan standaardoplossingen,
                         met focus op kwaliteit, schaalbaarheid en veiligheid vanaf de basis.
                     </p>
 
