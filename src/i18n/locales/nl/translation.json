@@ -1,0 +1,124 @@
+{
+  "contact": {
+    "meta_title": "Contact | Oosterom Studio",
+    "meta_description": "Neem contact op met Oosterom Studio. Binnen 24 uur een persoonlijke reactie. Wij bouwen websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups.",
+    "og_description": "Klaar om jouw project te starten? Stuur een bericht en ontvang binnen 24 uur een reactie.",
+    "tag": "Contact",
+    "titel_regel1": "Laten we",
+    "titel_regel2": "kennismaken.",
+    "intro": "Heb je een vraag, idee of uitdaging? We denken graag mee, ook als je nog niet precies weet wat je nodig hebt.",
+    "gegevens": {
+      "email_label": "E-mail",
+      "reactietijd_label": "Reactietijd",
+      "reactietijd_waarde": "Binnen 24 uur",
+      "linkedin_label": "LinkedIn",
+      "linkedin_naam": "Vincent Oosterom →"
+    },
+    "bedrijf": {
+      "naam": "Oosterom Studio",
+      "privacybeleid": "Privacybeleid →"
+    },
+    "disclaimer_tekst": "Liever direct een offerte?",
+    "disclaimer_link": "Vraag het hier aan →",
+    "form": {
+      "naam_label": "Naam",
+      "naam_placeholder": "Jan de Vries",
+      "bedrijfsnaam_label": "Bedrijfsnaam",
+      "bedrijfsnaam_placeholder": "Optioneel",
+      "email_label": "E-mailadres",
+      "email_placeholder": "jouw@email.nl",
+      "bericht_label": "Bericht",
+      "bericht_placeholder": "Waar kunnen we je bij helpen?",
+      "versturen": "Verstuur bericht →",
+      "versturen_bezig": "Versturen…",
+      "form_note": "Vrijblijvend · Geen spam · Reactie binnen 24 uur",
+      "generieke_foutmelding": "Er is een fout opgetreden. Probeer het opnieuw."
+    },
+    "dankjewel": {
+      "titel": "Bericht ontvangen!",
+      "tekst": "We hebben je bericht goed ontvangen en nemen binnen 24 uur persoonlijk contact op.",
+      "terug_link": "Terug naar home →"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "diensten": "Diensten",
+    "portfolio": "Portfolio",
+    "over_ons": "Over ons",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "home": {
+    "meta_title": "Oosterom Studio | Digitaal sterk van buiten én van binnen",
+    "meta_description": "Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht.",
+    "og_title": "Oosterom Studio – Webdesign, Shopify & Cybersecurity",
+    "og_description": "Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht.",
+    "jsonld_description": "Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale oplossingen voor MKB en startups in Nederland.",
+    "jsonld_language": "Dutch",
+    "hero": {
+      "tag": "Webdesign & Software studio",
+      "title": "Van idee naar software\ndie echt waarde levert.",
+      "subtitle": "Oosterom Studio bouwt webapps, SaaS-platformen en mobiele software voor het MKB.",
+      "button": "Klaar om te beginnen?"
+    },
+    "values": {
+      "tag": "Waar we voor staan",
+      "titel_deel1": "Gebouwd op",
+      "titel_em": "principes",
+      "titel_deel2": ",",
+      "titel_deel3": "niet op aannames.",
+      "subtitle": "Elke keuze die we maken, in design, code en samenwerking. Komt voort uit dezelfde vier uitgangspunten.",
+      "card1_titel": "Performance First",
+      "card1_tekst": "Snelheid is geen luxe, het is het uitgangspunt. We ontwikkelen technisch geoptimaliseerde websites met hoge Core Web Vitals-scores die bezoekers niet laten wachten.",
+      "card2_titel": "Security by Default",
+      "card2_tekst": "Beveiliging zit in de basis, niet als afvinkpunt achteraf. HTTPS, security headers en bescherming tegen veelvoorkomende aanvallen zijn standaard onderdeel van elk project.",
+      "card3_titel": "Resultaatgericht",
+      "card3_tekst": "Elke keuze, van structuur tot techniek, is gericht op conversie en groei. Een mooie website die niet converteert lost niets op.",
+      "card4_titel": "Langetermijnpartner",
+      "card4_tekst": "We denken verder dan de oplevering. Systemen die meegroeien, code die overdraagbaar is, en eerlijk advies ook als dat betekent dat we je doorverwijzen."
+    },
+    "waarom": {
+      "tag": "Waarom Oosterom Studio",
+      "titel_deel1": "Niet het grootste bureau.",
+      "titel_em": "Wel de juiste keuze.",
+      "subtitle": "Grote bureaus bouwen voor tientallen klanten tegelijk. Bij Oosterom Studio krijg je directe betrokkenheid, eerlijk advies en software die echt bij jou past.",
+      "card1_titel": "Eén aanspreekpunt",
+      "card1_tekst": "Geen accountmanager die doorverbindt naar een developer die doorverbindt naar een designer. Jij praat rechtstreeks met degene die bouwt.",
+      "card2_titel": "Beveiliging zit ingebakken",
+      "card2_tekst": "Niet als extra optie achteraf, maar als uitgangspunt. Elk project wordt opgeleverd met aandacht voor security, ook als je er niet specifiek om vraagt.",
+      "card3_titel": "Geen uurtje-factuurtje",
+      "card3_tekst": "Heldere afspraken vooraf, geen verrassingen achteraf. Je weet wat je krijgt, wanneer je het krijgt en wat het kost.",
+      "card4_titel": "Techniek én strategie",
+      "card4_tekst": "We denken mee over wat je bouwt en waarom, niet alleen hoe. Als een eenvoudigere oplossing beter werkt, zeggen we dat ook.",
+      "quote": "Van idee naar software die echt waarde levert.",
+      "quote_link": "Leer ons kennen →"
+    },
+    "aanpak": {
+      "tag": "Werkwijze",
+      "titel_deel1": "Zo werken we",
+      "titel_em": "samen",
+      "stap1_titel": "Analyse & Strategie",
+      "stap1_tekst": "We analyseren je markt, doelgroep en technische situatie. Geen aannames, wel een helder beeld van waar je staat en waar je naartoe wilt.",
+      "stap2_titel": "Architectuur & Design",
+      "stap2_tekst": "We ontwerpen een schaalbare en conversiegerichte structuur. Visueel sterk, technisch doordacht, afgestemd op jouw merk.",
+      "stap3_titel": "Development & Optimalisatie",
+      "stap3_tekst": "We bouwen, testen en optimaliseren voor performance en veiligheid. Elke regel code heeft een reden.",
+      "stap4_titel": "Oplevering & Nazorg",
+      "stap4_tekst": "Na de lancering ben je er niet alleen voor. We zorgen voor een soepele overdracht en staan klaar voor doorontwikkeling."
+    },
+    "pricing": {
+      "tag": "Investering",
+      "titel_deel1": "Geen pakketten.",
+      "titel_em": "Wel een eerlijke prijs.",
+      "intro": "Wij werken niet met standaardpakketten, omdat geen enkel bedrijf hetzelfde is. Elk project begint met een goed gesprek, daarna ontvang je een heldere offerte zonder verborgen kosten.",
+      "pillar1_titel": "Gesprek",
+      "pillar1_tekst": "We bespreken jouw doelen, wensen en technische behoeften. Geen verkooppraatje, wel eerlijk advies.",
+      "pillar2_titel": "Offerte",
+      "pillar2_tekst": "Je ontvangt een heldere offerte op maat, transparant, zonder kleine lettertjes of verrassingen achteraf.",
+      "pillar3_titel": "Bouwen",
+      "pillar3_tekst": "Zodra we akkoord zijn, gaan we aan de slag. Je wordt op de hoogte gehouden en kan altijd bijsturen.",
+      "cta_button": "Plan een gratis gesprek →",
+      "cta_sub": "Vrijblijvend · Reactie binnen 24 uur"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "contact": {
+    "meta_title": "Contacto | Oosterom Studio",
+    "meta_description": "Ponte en contacto con Oosterom Studio. Respuesta personal en menos de 24 horas. Creamos sitios web, aplicaciones web y soluciones digitales seguras para pymes y startups.",
+    "og_description": "¿Listo para empezar tu proyecto? Envía un mensaje y recibe respuesta en menos de 24 horas.",
+    "tag": "Contacto",
+    "titel_regel1": "Vamos a",
+    "titel_regel2": "conocernos.",
+    "intro": "¿Tienes una pregunta, una idea o un reto? Nos encanta pensar contigo, incluso si aún no sabes exactamente qué necesitas.",
+    "gegevens": {
+      "email_label": "Correo electrónico",
+      "reactietijd_label": "Tiempo de respuesta",
+      "reactietijd_waarde": "En menos de 24 horas",
+      "linkedin_label": "LinkedIn",
+      "linkedin_naam": "Vincent Oosterom →"
+    },
+    "bedrijf": {
+      "naam": "Oosterom Studio",
+      "privacybeleid": "Política de privacidad →"
+    },
+    "disclaimer_tekst": "¿Prefieres pedir presupuesto directamente?",
+    "disclaimer_link": "Solicítalo aquí →",
+    "form": {
+      "naam_label": "Nombre",
+      "naam_placeholder": "Juan Pérez",
+      "bedrijfsnaam_label": "Nombre de la empresa",
+      "bedrijfsnaam_placeholder": "Opcional",
+      "email_label": "Correo electrónico",
+      "email_placeholder": "tu@email.com",
+      "bericht_label": "Mensaje",
+      "bericht_placeholder": "¿En qué podemos ayudarte?",
+      "versturen": "Enviar mensaje →",
+      "versturen_bezig": "Enviando…",
+      "form_note": "Sin compromiso · Sin spam · Respuesta en menos de 24 horas",
+      "generieke_foutmelding": "Se ha producido un error. Inténtalo de nuevo."
+    },
+    "dankjewel": {
+      "titel": "¡Mensaje recibido!",
+      "tekst": "Hemos recibido tu mensaje correctamente y nos pondremos en contacto contigo personalmente en menos de 24 horas.",
+      "terug_link": "Volver al inicio →"
+    }
+  },
+  "nav": {
+    "home": "Inicio",
+    "diensten": "Servicios",
+    "portfolio": "Portafolio",
+    "over_ons": "Sobre nosotros",
+    "contact": "Contacto",
+    "blog": "Blog"
+  },
+  "home": {
+    "meta_title": "Oosterom Studio | Fuerte digitalmente, por dentro y por fuera",
+    "meta_description": "Oosterom Studio crea sitios web a medida, tiendas Shopify y soluciones digitales seguras para pymes y startups en los Países Bajos. Rápido, seguro y orientado a resultados.",
+    "og_title": "Oosterom Studio – Diseño web, Shopify y ciberseguridad",
+    "og_description": "Oosterom Studio crea sitios web a medida, tiendas Shopify y soluciones digitales seguras para pymes y startups en los Países Bajos. Rápido, seguro y orientado a resultados.",
+    "jsonld_description": "Oosterom Studio crea sitios web a medida, tiendas Shopify y soluciones digitales seguras para pymes y startups en los Países Bajos.",
+    "jsonld_language": "Spanish",
+    "hero": {
+      "tag": "Estudio de diseño web y software",
+      "title": "De la idea al software\nque realmente aporta valor.",
+      "subtitle": "Oosterom Studio crea aplicaciones web, plataformas SaaS y software móvil para pymes.",
+      "button": "¿Listo para empezar?"
+    },
+    "values": {
+      "tag": "En qué creemos",
+      "titel_deel1": "Construido sobre",
+      "titel_em": "principios",
+      "titel_deel2": ",",
+      "titel_deel3": "no sobre suposiciones.",
+      "subtitle": "Cada decisión que tomamos, en diseño, código y colaboración, parte de los mismos cuatro principios.",
+      "card1_titel": "Rendimiento primero",
+      "card1_tekst": "La velocidad no es un lujo, es el punto de partida. Desarrollamos sitios web optimizados técnicamente con puntuaciones altas en Core Web Vitals que no hacen esperar a los visitantes.",
+      "card2_titel": "Seguridad por defecto",
+      "card2_tekst": "La seguridad forma parte de la base, no es una casilla que se marca al final. HTTPS, cabeceras de seguridad y protección contra ataques comunes son estándar en cada proyecto.",
+      "card3_titel": "Orientado a resultados",
+      "card3_tekst": "Cada decisión, desde la estructura hasta la tecnología, está enfocada en la conversión y el crecimiento. Un sitio bonito que no convierte no resuelve nada.",
+      "card4_titel": "Socio a largo plazo",
+      "card4_tekst": "Pensamos más allá de la entrega. Sistemas que crecen contigo, código transferible y consejos honestos, incluso cuando eso significa recomendarte otra opción."
+    },
+    "waarom": {
+      "tag": "Por qué Oosterom Studio",
+      "titel_deel1": "No la agencia más grande.",
+      "titel_em": "Sí la elección correcta.",
+      "subtitle": "Las grandes agencias trabajan para decenas de clientes a la vez. En Oosterom Studio tienes trato directo, consejos honestos y software que realmente encaja contigo.",
+      "card1_titel": "Un único punto de contacto",
+      "card1_tekst": "Nada de un gestor de cuentas que te pasa a un desarrollador que te pasa a un diseñador. Hablas directamente con quien construye tu proyecto.",
+      "card2_titel": "La seguridad va integrada",
+      "card2_tekst": "No como opción adicional al final, sino como punto de partida. Cada proyecto se entrega con atención a la seguridad, aunque no lo pidas explícitamente.",
+      "card3_titel": "Sin facturación por horas sueltas",
+      "card3_tekst": "Acuerdos claros de antemano, sin sorpresas después. Sabes qué recibes, cuándo lo recibes y cuánto cuesta.",
+      "card4_titel": "Tecnología y estrategia",
+      "card4_tekst": "Pensamos contigo en qué construyes y por qué, no solo en cómo. Si una solución más sencilla funciona mejor, también te lo diremos.",
+      "quote": "De la idea al software que realmente aporta valor.",
+      "quote_link": "Conócenos →"
+    },
+    "aanpak": {
+      "tag": "Metodología",
+      "titel_deel1": "Así trabajamos",
+      "titel_em": "juntos",
+      "stap1_titel": "Análisis y estrategia",
+      "stap1_tekst": "Analizamos tu mercado, tu público objetivo y tu situación técnica. Sin suposiciones, con una imagen clara de dónde estás y hacia dónde quieres ir.",
+      "stap2_titel": "Arquitectura y diseño",
+      "stap2_tekst": "Diseñamos una estructura escalable orientada a la conversión. Visualmente sólida, técnicamente bien pensada, adaptada a tu marca.",
+      "stap3_titel": "Desarrollo y optimización",
+      "stap3_tekst": "Construimos, probamos y optimizamos para rendimiento y seguridad. Cada línea de código tiene una razón de ser.",
+      "stap4_titel": "Entrega y seguimiento",
+      "stap4_tekst": "Después del lanzamiento no te dejamos solo. Nos encargamos de una transición fluida y estamos listos para seguir desarrollando."
+    },
+    "pricing": {
+      "tag": "Inversión",
+      "titel_deel1": "Sin paquetes cerrados.",
+      "titel_em": "Sí un precio justo.",
+      "intro": "No trabajamos con paquetes estándar, porque ninguna empresa es igual a otra. Cada proyecto empieza con una buena conversación, después recibes un presupuesto claro sin costes ocultos.",
+      "pillar1_titel": "Conversación",
+      "pillar1_tekst": "Hablamos de tus objetivos, deseos y necesidades técnicas. Sin discurso de ventas, con consejos honestos.",
+      "pillar2_titel": "Presupuesto",
+      "pillar2_tekst": "Recibes un presupuesto claro y a medida, transparente, sin letra pequeña ni sorpresas posteriores.",
+      "pillar3_titel": "Construcción",
+      "pillar3_tekst": "En cuanto estemos de acuerdo, nos ponemos manos a la obra. Te mantenemos informado y siempre puedes ajustar el rumbo.",
+      "cta_button": "Reserva una llamada gratuita →",
+      "cta_sub": "Sin compromiso · Respuesta en menos de 24 horas"
+    }
+  }
+}

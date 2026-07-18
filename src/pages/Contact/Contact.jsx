@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
 import { Helmet } from "react-helmet-async";
@@ -20,6 +21,16 @@ const fadeUp = {
 // ── Component ─────────────────────────────────────────────────────────────────
 
 function Contact() {
+    const { t, i18n } = useTranslation();
+    const isSpanish = i18n.language === 'es';
+
+    // Taalbewuste links — zolang er nog geen algemene helper voor is
+    const homePath = isSpanish ? '/es' : '/';
+    const offertePath = isSpanish ? '/es/solicitar-presupuesto' : '/offerte-aanvragen';
+    const canonicalUrl = isSpanish
+        ? 'https://www.oosteromstudio.nl/es/contacto'
+        : 'https://www.oosteromstudio.nl/contact';
+
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [error, setError]             = useState(null);
     const [bezig, setBezig]             = useState(false);
@@ -48,10 +59,10 @@ function Contact() {
                 setFormData({ name: "", company: "", email: "", message: "" });
                 setIsSubmitted(true);
             } else {
-                setError(data.error || "Er is een fout opgetreden. Probeer het opnieuw.");
+                setError(data.error || t('contact.form.generieke_foutmelding'));
             }
         } catch {
-            setError("Er is een fout opgetreden. Probeer het opnieuw.");
+            setError(t('contact.form.generieke_foutmelding'));
         } finally {
             setBezig(false);
         }
@@ -60,12 +71,16 @@ function Contact() {
     return (
         <>
             <Helmet>
-                <title>Contact | Oosterom Studio</title>
-                <meta name="description" content="Neem contact op met Oosterom Studio. Binnen 24 uur een persoonlijke reactie. Wij bouwen websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups." />
-                <meta property="og:title" content="Contact | Oosterom Studio" />
-                <meta property="og:description" content="Klaar om jouw project te starten? Stuur een bericht en ontvang binnen 24 uur een reactie." />
+                <title>{t('contact.meta_title')}</title>
+                <meta name="description" content={t('contact.meta_description')} />
+                <link rel="canonical" href={canonicalUrl} />
+                <link rel="alternate" hreflang="nl" href="https://www.oosteromstudio.nl/contact" />
+                <link rel="alternate" hreflang="es" href="https://www.oosteromstudio.nl/es/contacto" />
+                <link rel="alternate" hreflang="x-default" href="https://www.oosteromstudio.nl/contact" />
+                <meta property="og:title" content={t('contact.meta_title')} />
+                <meta property="og:description" content={t('contact.og_description')} />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/contact" />
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:site_name" content="Oosterom Studio" />
                 <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
@@ -87,39 +102,38 @@ function Contact() {
                         animate="visible"
                         custom={0}
                     >
-                        <span className="contact-tag">Contact</span>
+                        <span className="contact-tag">{t('contact.tag')}</span>
 
                         <h1>
-                            Laten we<br />
-                            <em>kennismaken.</em>
+                            {t('contact.titel_regel1')}<br />
+                            <em>{t('contact.titel_regel2')}</em>
                         </h1>
 
                         <p className="contact-intro">
-                            Heb je een vraag, idee of uitdaging? We denken graag mee,
-                            ook als je nog niet precies weet wat je nodig hebt.
+                            {t('contact.intro')}
                         </p>
 
                         {/* Contactgegevens */}
                         <div className="contact-gegevens">
                             <motion.div className="contact-gegeven" variants={fadeUp} custom={1} initial="hidden" animate="visible">
-                                <span className="contact-gegeven__label">E-mail</span>
+                                <span className="contact-gegeven__label">{t('contact.gegevens.email_label')}</span>
                                 <a href="mailto:vincent@oosteromstudio.nl" className="contact-gegeven__value">
                                     vincent@oosteromstudio.nl
                                 </a>
                             </motion.div>
                             <motion.div className="contact-gegeven" variants={fadeUp} custom={2} initial="hidden" animate="visible">
-                                <span className="contact-gegeven__label">Reactietijd</span>
-                                <span className="contact-gegeven__value">Binnen 24 uur</span>
+                                <span className="contact-gegeven__label">{t('contact.gegevens.reactietijd_label')}</span>
+                                <span className="contact-gegeven__value">{t('contact.gegevens.reactietijd_waarde')}</span>
                             </motion.div>
                             <motion.div className="contact-gegeven" variants={fadeUp} custom={3} initial="hidden" animate="visible">
-                                <span className="contact-gegeven__label">LinkedIn</span>
+                                <span className="contact-gegeven__label">{t('contact.gegevens.linkedin_label')}</span>
                                 <a
                                     href="https://www.linkedin.com/in/vincent-oosterom-05017176/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="contact-gegeven__value contact-gegeven__value--link"
                                 >
-                                    Vincent Oosterom →
+                                    {t('contact.gegevens.linkedin_naam')}
                                 </a>
                             </motion.div>
                         </div>
@@ -132,7 +146,7 @@ function Contact() {
                             initial="hidden"
                             animate="visible"
                         >
-                            <span className="contact-bedrijf__naam">Oosterom Studio</span>
+                            <span className="contact-bedrijf__naam">{t('contact.bedrijf.naam')}</span>
                             <div className="contact-bedrijf__details">
                                 <span>KVK: 85118028</span>
                                 <span>BTW: NL004057297B50</span>
@@ -143,13 +157,13 @@ function Contact() {
                                 rel="noopener noreferrer"
                                 className="contact-bedrijf__privacy"
                             >
-                                Privacybeleid →
+                                {t('contact.bedrijf.privacybeleid')}
                             </a>
                         </motion.div>
 
                         <p className="contact-disclaimer">
-                            Liever direct een offerte?{" "}
-                            <Link to="/offerte-aanvragen">Vraag het hier aan →</Link>
+                            {t('contact.disclaimer_tekst')}{" "}
+                            <Link to={offertePath}>{t('contact.disclaimer_link')}</Link>
                         </p>
                     </motion.article>
 
@@ -168,12 +182,12 @@ function Contact() {
 
                             <div className="form-row">
                                 <div className="form-field">
-                                    <label htmlFor="name">Naam <span aria-hidden="true">*</span></label>
+                                    <label htmlFor="name">{t('contact.form.naam_label')} <span aria-hidden="true">*</span></label>
                                     <input
                                         id="name"
                                         type="text"
                                         name="name"
-                                        placeholder="Jan de Vries"
+                                        placeholder={t('contact.form.naam_placeholder')}
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
@@ -181,12 +195,12 @@ function Contact() {
                                     />
                                 </div>
                                 <div className="form-field">
-                                    <label htmlFor="company">Bedrijfsnaam</label>
+                                    <label htmlFor="company">{t('contact.form.bedrijfsnaam_label')}</label>
                                     <input
                                         id="company"
                                         type="text"
                                         name="company"
-                                        placeholder="Optioneel"
+                                        placeholder={t('contact.form.bedrijfsnaam_placeholder')}
                                         value={formData.company}
                                         onChange={handleChange}
                                         autoComplete="organization"
@@ -195,12 +209,12 @@ function Contact() {
                             </div>
 
                             <div className="form-field">
-                                <label htmlFor="email">E-mailadres <span aria-hidden="true">*</span></label>
+                                <label htmlFor="email">{t('contact.form.email_label')} <span aria-hidden="true">*</span></label>
                                 <input
                                     id="email"
                                     type="email"
                                     name="email"
-                                    placeholder="jouw@email.nl"
+                                    placeholder={t('contact.form.email_placeholder')}
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
@@ -209,11 +223,11 @@ function Contact() {
                             </div>
 
                             <div className="form-field">
-                                <label htmlFor="message">Bericht <span aria-hidden="true">*</span></label>
+                                <label htmlFor="message">{t('contact.form.bericht_label')} <span aria-hidden="true">*</span></label>
                                 <textarea
                                     id="message"
                                     name="message"
-                                    placeholder="Waar kunnen we je bij helpen?"
+                                    placeholder={t('contact.form.bericht_placeholder')}
                                     value={formData.message}
                                     onChange={handleChange}
                                     rows={6}
@@ -229,15 +243,15 @@ function Contact() {
                                 {bezig ? (
                                     <>
                                         <span className="contact-submit__spinner" />
-                                        Versturen…
+                                        {t('contact.form.versturen_bezig')}
                                     </>
                                 ) : (
-                                    "Verstuur bericht →"
+                                    t('contact.form.versturen')
                                 )}
                             </button>
 
                             <p className="form-note">
-                                Vrijblijvend · Geen spam · Reactie binnen 24 uur
+                                {t('contact.form.form_note')}
                             </p>
                         </motion.form>
                     ) : (
@@ -248,13 +262,12 @@ function Contact() {
                             transition={{ duration: 0.5 }}
                         >
                             <span className="thank-you__icon">✓</span>
-                            <h2>Bericht ontvangen!</h2>
+                            <h2>{t('contact.dankjewel.titel')}</h2>
                             <p>
-                                We hebben je bericht goed ontvangen en
-                                nemen binnen 24 uur persoonlijk contact op.
+                                {t('contact.dankjewel.tekst')}
                             </p>
-                            <Link to="/" className="thank-you__link">
-                                Terug naar home →
+                            <Link to={homePath} className="thank-you__link">
+                                {t('contact.dankjewel.terug_link')}
                             </Link>
                         </motion.div>
                     )}
