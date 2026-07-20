@@ -23,7 +23,7 @@ function useScrolled(threshold = 60) {
 const links = [
     { to: "/diensten",  label: "Diensten"  },
     { to: "/portfolio", label: "Portfolio" },
-    { to: "/blog",      label: "Blog"      },
+    { to: "/blog",      label: "Kennisbank"      },
     { to: "/over-ons",  label: "Over ons"  },
     { to: "/contact",   label: "Contact"   },
 ];

@@ -93,7 +93,6 @@ function Homepage() {
 
 
             <Header
-                tag={t('home.hero.tag')}
                 title={t('home.hero.title')}
                 subtitle={t('home.hero.subtitle')}
                 buttonText={t('home.hero.button')}
