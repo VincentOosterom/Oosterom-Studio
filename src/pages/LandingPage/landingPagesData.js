@@ -4,13 +4,24 @@
 // Nieuwe pagina toevoegen = nieuw object toevoegen. Geen nieuwe route,
 // geen nieuw component nodig — de template pakt dit automatisch op.
 //
-// "slug" wordt de URL: oosteromstudio.nl/l/{slug}
-// "dienst_link" verwijst naar een bestaande dienstpagina uit services.js.
+// VELDEN:
+//   Verplicht: slug, titel, meta_description, h1, intro, stad, dienst,
+//              dienst_link, cta_tekst
+//   Optioneel maar sterk aanbevolen voor SEO-diepgang:
+//     - bullets:       korte USP-lijst (had je al)
+//     - extra:         extra alinea over de dienst (had je al)
+//     - regio_titel:   kop voor het regionale blok (optioneel, anders auto)
+//     - regio_tekst:   waarom deze dienst relevant is voor déze plaats —
+//                       dit is de content die je onderscheidt van generieke
+//                       landingspagina's en die Google echt waardeert
+//     - stappen:       array van { titel, tekst } — jouw werkwijze in 3-4 stappen
+//     - faq:           array van { vraag, antwoord } — verhoogt kans op
+//                       FAQ-rich snippets in Google en pakt long-tail
+//                       zoekopdrachten ("wat kost een website in Gouda")
 //
-// LET OP over duplicate content: geef elke pagina een eigen intro/extra-tekst,
-// ook al gaat het om dezelfde dienst in een andere stad. Simpelweg de stadsnaam
-// vervangen in identieke tekst kan Google als duplicate content zien, wat je
-// SEO-resultaten juist schaadt in plaats van helpt.
+// LET OP over duplicate content: geef elke pagina een eigen tekst, ook al
+// gaat het om dezelfde dienst in een andere stad. Simpelweg de stadsnaam
+// vervangen in identieke tekst schaadt je SEO in plaats van dat het helpt.
 
 export const landingPages = [
     // ── Webdesign & UX ─────────────────────────────────────────────────────
@@ -34,6 +45,29 @@ export const landingPages = [
         ],
         extra:
             "We ontwerpen niet alleen websites, maar interfaces die klaar zijn voor uitbreiding naar dashboards, portals en SaaS-producten.",
+        regio_titel: "Webdesign voor ondernemers in Alphen aan den Rijn",
+        regio_tekst:
+            "Alphen aan den Rijn kent een brede mix van lokale dienstverleners, bouwbedrijven en groeiende MKB-ondernemingen. Veel van deze bedrijven werken nog met een verouderde website die niet goed werkt op mobiel of traag laadt. Oosterom Studio is zelf gevestigd in de regio en kent de lokale markt: van ondernemers die zich willen onderscheiden in een concurrerende sector, tot bedrijven die voor het eerst een professionele website laten bouwen. Een kennismaking is altijd op locatie mogelijk, geen verplicht videobellen met een account­manager die het project niet zelf bouwt.",
+        stappen: [
+            { titel: "Kennismaking", tekst: "We bespreken je doelen, doelgroep en huidige website (indien aanwezig), telefonisch of op locatie in de regio." },
+            { titel: "Ontwerp", tekst: "Je ontvangt een ontwerpvoorstel afgestemd op je merk, met focus op duidelijkheid en conversie." },
+            { titel: "Bouw", tekst: "We bouwen de website met React, inclusief beveiliging en snelheid als vaste onderdelen." },
+            { titel: "Livegang & nazorg", tekst: "Na livegang blijf je bij ons in beeld voor updates, aanpassingen en vragen." },
+        ],
+        faq: [
+            {
+                vraag: "Wat kost een website laten maken in Alphen aan den Rijn?",
+                antwoord: "Dat hangt af van de omvang en functionaliteit. Een eenvoudige website begint doorgaans rond de €1.500, een uitgebreider project met maatwerkfunctionaliteit ligt hoger. Na een kort gesprek ontvang je een concrete, transparante offerte."
+            },
+            {
+                vraag: "Hoe lang duurt het bouwen van een website?",
+                antwoord: "Een gemiddeld websiteproject duurt 3 tot 6 weken, afhankelijk van de hoeveelheid content en het aantal revisierondes. Voor spoed is een kortere doorlooptijd bespreekbaar."
+            },
+            {
+                vraag: "Werk je ook met bedrijven buiten Alphen aan den Rijn?",
+                antwoord: "Zeker. Alphen aan den Rijn is de thuisbasis, maar Oosterom Studio werkt door heel Nederland, volledig op afstand of hybride waar gewenst."
+            },
+        ],
         cta_tekst: "Vraag een gratis kennismaking aan",
     },
     {
@@ -56,6 +90,29 @@ export const landingPages = [
         ],
         extra:
             "Een goed ontwerp is de eerste stap. Daarna zorgen we dat het ook technisch klopt: snel, veilig en makkelijk uit te breiden.",
+        regio_titel: "Waarom een lokale webdesigner in Gouda",
+        regio_tekst:
+            "Gouda combineert een historische binnenstad met een groeiend aantal moderne bedrijven en zzp'ers. Juist in zo'n mix is het lastig om online op te vallen: veel lokale concurrenten hebben een vergelijkbare website via dezelfde bouwer. Oosterom Studio bouwt geen sjabloon-sites, maar ontwerpt vanaf nul, afgestemd op wat jouw bedrijf in Gouda onderscheidt. Doordat de regio bekend terrein is, denkt Oosterom Studio ook mee over lokale zoekwoorden en concurrentie, niet alleen over hoe de site eruitziet.",
+        stappen: [
+            { titel: "Kennismaking", tekst: "We bespreken je huidige situatie, doelen en wensen in een vrijblijvend gesprek." },
+            { titel: "Ontwerp", tekst: "Een op maat gemaakt ontwerp, gericht op jouw doelgroep in en rond Gouda." },
+            { titel: "Bouw", tekst: "Ontwikkeling in React, met aandacht voor snelheid, SEO en beveiliging." },
+            { titel: "Livegang & nazorg", tekst: "Na oplevering sta je er niet alleen voor: aanpassingen en vragen kunnen altijd." },
+        ],
+        faq: [
+            {
+                vraag: "Kan mijn bestaande website worden vernieuwd in plaats van helemaal opnieuw?",
+                antwoord: "Ja, een herontwerp op basis van je bestaande content en structuur behoort tot de mogelijkheden. We bekijken samen wat overeind kan blijven en wat beter opnieuw wordt opgebouwd."
+            },
+            {
+                vraag: "Bied je ook hulp bij het schrijven van teksten voor de website?",
+                antwoord: "We denken mee over structuur en boodschap, en kunnen op verzoek ook teksten aanleveren of meeschrijven, afgestemd op je doelgroep in Gouda en omgeving."
+            },
+            {
+                vraag: "Is de website ook geschikt voor mobiel?",
+                antwoord: "Elke website die Oosterom Studio bouwt is standaard volledig responsive en getest op mobiel, tablet en desktop."
+            },
+        ],
         cta_tekst: "Plan een vrijblijvend gesprek",
     },
     {
@@ -79,6 +136,8 @@ export const landingPages = [
         extra:
             "Of je nu een eerste website nodig hebt of een herontwerp van een verouderde site, we denken mee vanaf het eerste gesprek.",
         cta_tekst: "Vraag vrijblijvend advies aan",
+        // Nog geen regio_tekst/stappen/faq — voeg toe volgens hetzelfde patroon
+        // als de twee pagina's hierboven wanneer je tijd hebt.
     },
 
     // ── Webdevelopment & Applicaties ───────────────────────────────────────

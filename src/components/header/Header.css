@@ -11,7 +11,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100svh;
+    max-height: 100svh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -86,11 +87,11 @@
 
 .content-left h1 {
     font-family: var(--font-title), sans-serif;
-    font-size: clamp(2.4rem, 6.5vw, 6rem);
+    font-size: clamp(2.2rem, 6.5vw, 5rem);
     font-weight: 800;
     line-height: 0.96;
-    letter-spacing: -0.025em;
-    color: var(--color-text, #f0f0f0);
+    letter-spacing: -0.01em;
+    color: white;
     margin: 0;
 }
 
@@ -180,12 +181,16 @@
 }
 
 @media (max-width: 768px) {
+
+    .header {
+        height: 80svh;
+    }
     .header-content {
         padding: 0 1.25rem;
     }
 
     .content-left {
-        padding: 100px 0 72px;
+        padding: 60px 0 72px;
         gap: 20px;
     }
 
@@ -201,7 +206,7 @@
 
 @media (max-width: 480px) {
     .content-left {
-        padding: 100px 0 56px;
+        padding: 60px 0 56px;
         gap: 16px;
     }
 

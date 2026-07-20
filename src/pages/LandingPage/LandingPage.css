@@ -223,3 +223,199 @@
         padding-top: 24px;
     }
 }
+
+
+/* ── Regionale context ───────────────────────────────────────────────────── */
+
+.landing-regio {
+    margin-bottom: 40px;
+}
+
+.landing-regio h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.landing-regio p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--color-muted, #94A3B8);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+}
+
+
+/* ── Stappen ─────────────────────────────────────────────────────────────── */
+
+.landing-stappen {
+    margin-bottom: 48px;
+}
+
+.landing-stappen h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin-bottom: 24px;
+}
+
+.landing-stappen__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.landing-stap {
+    padding: 28px 24px;
+    border-right: 1px solid #2a2a2a;
+    background: var(--color-dark, #141414);
+}
+
+.landing-stap:last-child {
+    border-right: none;
+}
+
+.landing-stap__num {
+    display: block;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+    margin-bottom: 12px;
+}
+
+.landing-stap h3 {
+    font-family: var(--font-title), sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.landing-stap p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-muted, #94A3B8);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+}
+
+
+/* ── FAQ ─────────────────────────────────────────────────────────────────── */
+
+.landing-faq {
+    margin-bottom: 48px;
+}
+
+.landing-faq h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.landing-faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.landing-faq__item {
+    background: var(--color-dark, #141414);
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 18px 20px;
+}
+
+.landing-faq__item summary {
+    font-family: var(--font-body), sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-faq__item summary::-webkit-details-marker {
+    display: none;
+}
+
+.landing-faq__item summary::after {
+    content: "+";
+    color: var(--color-accent);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.landing-faq__item[open] summary::after {
+    content: "−";
+}
+
+.landing-faq__item p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--color-muted, #94A3B8);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    margin: 12px 0 0;
+}
+
+
+/* ── Onderste CTA ────────────────────────────────────────────────────────── */
+
+.landing-bottom-cta {
+    text-align: center;
+    padding: 48px 24px;
+    background: rgba(136, 232, 244, 0.05);
+    border: 1px solid rgba(136, 232, 244, 0.2);
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.landing-bottom-cta h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.landing-bottom-cta p {
+    font-size: 14px;
+    color: var(--color-muted, #94A3B8);
+    font-family: var(--font-body), sans-serif;
+    margin-bottom: 24px;
+}
+
+
+/* ── Responsive aanvulling ──────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .landing-stappen__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-stap {
+        border-right: none;
+        border-bottom: 1px solid #2a2a2a;
+    }
+
+    .landing-stap:last-child {
+        border-bottom: none;
+    }
+}

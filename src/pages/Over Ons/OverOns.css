@@ -1,54 +1,116 @@
-/* =========================
-   HERO
-========================= */
+/* ==========================================================================
+   OverOns.css — Oosterom Studio
+   ========================================================================== */
+
+/* ── Achtergrond ──────────────────────────────────────────────────────────── */
+
+.overons-bg {
+    position: fixed;
+    inset: 0;
+    background-image:
+            linear-gradient(rgba(136, 232, 244, 0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(136, 232, 244, 0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
 
 .overons-hero {
-    padding: 8rem 2rem 6rem;
+    position: relative;
+    z-index: 1;
+    padding: 140px 2rem 80px;
     text-align: center;
+    overflow: hidden;
+}
+
+.overons-hero__glow {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(136, 232, 244, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.overons-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-family: var(--font-body), sans-serif;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    border: 1px solid rgba(136, 232, 244, 0.2);
+    border-radius: 100px;
+    background: rgba(136, 232, 244, 0.05);
 }
 
 .overons-hero h1 {
-    font-family: var(--font-title), serif;
-    font-size: clamp(2.6rem, 5vw, 3.6rem);
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin-bottom: 16px;
     color: var(--color-text);
 }
 
 .overons-hero p {
-    max-width: 720px;
+    max-width: 640px;
     margin: 0 auto;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    color: var(--color-muted, #94A3B8);
 }
 
 
-/* =========================
-   CONTENT
-========================= */
+/* ── Content ──────────────────────────────────────────────────────────────── */
 
 .overons-content {
-    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 6rem 2rem 8rem;
+    padding: 40px 2rem 80px;
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 28px;
 }
 
 
-/* =========================
-   TEXT BLOCKS
-========================= */
+/* ── Blocks ───────────────────────────────────────────────────────────────── */
 
-.overons-text {
-    max-width: 720px;
+.overons-block {
     position: relative;
+    background: var(--color-dark, #141414);
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    padding: 44px 48px;
+    transition: border-color 0.3s ease;
 }
 
-.overons-text.reverse {
-    margin-left: auto;
+.overons-block:hover {
+    border-color: rgba(136, 232, 244, 0.25);
+}
+
+.overons-block__num {
+    display: block;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+    margin-bottom: 16px;
 }
 
 .keyword {
@@ -56,6 +118,7 @@
     font-weight: 600;
     position: relative;
 }
+
 .keyword::after {
     content: "";
     position: absolute;
@@ -68,73 +131,116 @@
 }
 
 
-/* =========================
-   TITLES
-========================= */
+/* ── Titels ───────────────────────────────────────────────────────────────── */
 
-.overons-text h2 {
-    font-family: var(--font-title), serif;
-    font-size: 2.2rem;
-    letter-spacing: -0.015em;
-    margin-bottom: 2rem;
+.overons-block h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
     color: var(--color-text);
-    position: relative;
-}
-
-.overons-text h2::before {
-    content: "";
-    position: absolute;
-    top: -1.2rem;
-    left: 0;
-    width: 56px;
-    height: 3px;
-    background-color: var(--color-accent);
-    border-radius: 2px;
 }
 
 
-/* =========================
-   TEXT
-========================= */
+/* ── Tekst ────────────────────────────────────────────────────────────────── */
 
-.overons-text p {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: var(--color-muted);
-    margin-bottom: 1.4rem;
+.overons-block p {
+    font-size: 15px;
+    line-height: 1.85;
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    color: var(--color-muted, #94A3B8);
+    margin-bottom: 18px;
 }
 
-.overons-text strong {
+.overons-block p:last-child {
+    margin-bottom: 0;
+}
+
+.overons-block strong {
     color: var(--color-text);
     font-weight: 600;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ── CTA onderaan ─────────────────────────────────────────────────────────── */
+
+.overons-cta {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 100px 2rem 120px;
+    background: var(--color-dark, #141414);
+}
+
+.overons-cta h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.overons-cta p {
+    font-size: 15px;
+    color: var(--color-muted, #94A3B8);
+    font-family: var(--font-body), sans-serif;
+    margin-bottom: 28px;
+}
+
+.overons-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000000;
+    background: var(--color-accent);
+    padding: 14px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-family: var(--font-body), sans-serif;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.overons-cta__btn:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+}
+
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
     .overons-hero {
-        padding: 6rem 1.5rem 4rem;
+        padding: 120px 1.5rem 56px;
     }
 
     .overons-content {
-        padding: 4rem 1.5rem 6rem;
-        gap: 4rem;
+        padding: 32px 1.5rem 56px;
+        gap: 20px;
     }
 
-    .overons-text,
-    .overons-text.reverse {
-        max-width: 100%;
-        margin-left: 0;
+    .overons-block {
+        padding: 28px 24px;
+        border-radius: 16px;
     }
 
-    .overons-text h2 {
-        font-size: 1.7rem;
+    .overons-block h2 {
+        font-size: 1.4rem;
     }
 
-    .overons-text p {
-        font-size: 1rem;
+    .overons-cta {
+        padding: 72px 1.5rem 88px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overons-hero {
+        padding: 100px 1rem 48px;
+    }
+
+    .overons-block {
+        padding: 24px 20px;
     }
 }

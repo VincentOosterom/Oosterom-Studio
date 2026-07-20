@@ -50,18 +50,12 @@
     background: rgba(77, 255, 195, 0.05);
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
 .pf-hero__title {
-    font-size: clamp(52px, 8vw, 100px);
-    font-weight: 800;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
     font-family: var(--font-title), monospace;
     line-height: 0.92;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.01em;
     color: var(--color-text, #f0f0f0);
     margin-bottom: 28px;
 }
@@ -116,164 +110,171 @@
     transform-origin: left;
 }
 
-/* ── PROJECTS ────────────────────────────────────────────────── */
+/* ── GRID ────────────────────────────────────────────────────── */
 
-.pf-projects {
-    padding: 0 4rem;
-}
-
-.pf-project {
+.pf-grid {
+    padding: 80px 4rem 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-    padding: 100px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
-/* Groot nummer */
-.pf-project__number {
-    position: absolute;
-    font-size: clamp(100px, 14vw, 180px);
-    font-weight: 800;
-    letter-spacing: -0.06em;
-    color: rgba(255, 255, 255, 0.03);
-    line-height: 1;
-    top: 20px;
-    left: -20px;
-    pointer-events: none;
-    user-select: none;
+/* ── Card ────────────────────────────────────────────────────── */
+
+.pf-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-dark, #141414);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Even projecten: afbeelding links */
-.pf-project--left .pf-project__image-wrap { order: 1; }
-.pf-project--left .pf-project__content    { order: 2; }
-.pf-project--left .pf-project__number     { left: -20px; }
+.pf-card:hover {
+    border-color: rgba(77, 255, 195, 0.25);
+    transform: translateY(-4px);
+}
 
-/* Oneven projecten: afbeelding rechts */
-.pf-project--right .pf-project__image-wrap { order: 2; }
-.pf-project--right .pf-project__content    { order: 1; }
-.pf-project--right .pf-project__number     { right: -20px; left: auto; }
-
-/* ── Image ───────────────────────────────────────────────────── */
-
-.pf-project__image-wrap {
+.pf-card__image-wrap {
     display: block;
     text-decoration: none;
 }
 
-.pf-project__image {
+.pf-card__image {
     position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    background: var(--color-dark, #141414);
-    border: 1px solid rgba(255, 255, 255, 0.06);
     aspect-ratio: 4/3;
+    background: #0c0c0c;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.pf-project__image img {
-    width: 70%;
-    height: 70%;
+.pf-card__image img {
+    width: 82%;
+    height: 82%;
     object-fit: contain;
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.pf-project__image-overlay {
+.pf-card:hover .pf-card__image img {
+    transform: scale(1.04);
+}
+
+.pf-card__image-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(8, 8, 8, 0.85);
+    background: rgba(8, 8, 8, 0.82);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 16px;
 }
 
-.pf-project__image-wrap:hover .pf-project__image img {
-    transform: scale(1.05);
-}
-
-.pf-project__image-wrap:hover .pf-project__image-overlay {
+.pf-card:hover .pf-card__image-overlay {
     opacity: 1;
 }
 
-.pf-project__cta {
+.pf-card__cta {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 13px;
+    gap: 6px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--color-accent, #4dffc3);
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
-/* ── Content ─────────────────────────────────────────────────── */
+/* ── Card content ────────────────────────────────────────────── */
 
-.pf-project__content {
+.pf-card__content {
+    padding: 24px 26px 28px;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    flex: 1;
+    position: relative;
 }
 
-.pf-project__tag {
+.pf-card__number {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.05em;
+}
+
+.pf-card__tag {
     font-family: 'Courier New', monospace;
     font-size: 9px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-accent, #4dffc3);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
-.pf-project__title {
-    font-size: clamp(28px, 3.5vw, 48px);
+.pf-card__title {
+    font-size: 22px;
     font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1.0;
-    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 12px;
 }
 
-.pf-project__title a {
+.pf-card__title a {
     color: var(--color-text, #f0f0f0);
     text-decoration: none;
     transition: color 0.2s;
 }
 
-.pf-project__title a:hover {
+.pf-card__title a:hover {
     color: var(--color-accent, #4dffc3);
 }
 
-.pf-project__desc {
-    font-size: 15px;
-    line-height: 1.75;
+.pf-card__desc {
+    font-size: 13.5px;
+    line-height: 1.65;
     color: var(--color-muted, #888);
     font-weight: 300;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
+    flex: 1;
 }
 
-.pf-project__link {
+.pf-card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.pf-card__link {
     display: inline-flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 600;
     color: var(--color-text, #f0f0f0);
     text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: color 0.2s, gap 0.2s;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
     width: fit-content;
-    padding-bottom: 4px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.pf-project__link:hover {
+.pf-card__link:hover {
     color: var(--color-accent, #4dffc3);
-    border-bottom-color: var(--color-accent, #4dffc3);
-    font-family: var(--font-title), monospace;
+}
+
+.pf-card__link--muted {
+    color: var(--color-muted, #888);
+    font-weight: 500;
+}
+
+.pf-card__link--muted:hover {
+    color: var(--color-text, #f0f0f0);
 }
 
 /* ── CTA ─────────────────────────────────────────────────────── */
@@ -329,22 +330,21 @@
 .pf-cta__btn:hover {
     opacity: 0.88;
     transform: translateY(-2px);
-
-
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 
+@media (max-width: 1200px) {
+    .pf-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
     .pf-hero { padding: 120px 2.5rem 60px; }
-    .pf-projects { padding: 0 2.5rem; }
+    .pf-grid { padding: 64px 2.5rem 32px; gap: 28px; }
     .pf-divider { padding: 0 2.5rem; }
     .pf-cta { padding: 80px 2.5rem; }
-
-    .pf-project {
-        gap: 4rem;
-        padding: 72px 0;
-    }
 }
 
 @media (max-width: 768px) {
@@ -357,31 +357,12 @@
         display: none;
     }
 
-    .pf-projects { padding: 0 1.5rem; }
+    .pf-grid {
+        grid-template-columns: 1fr;
+        padding: 56px 1.5rem 24px;
+        gap: 24px;
+    }
+
     .pf-divider  { padding: 0 1.5rem; }
     .pf-cta      { padding: 80px 1.5rem; }
-
-    .pf-project {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 60px 0;
-    }
-
-    /* Op mobiel altijd afbeelding bovenaan */
-    .pf-project--left .pf-project__image-wrap,
-    .pf-project--right .pf-project__image-wrap {
-        order: 1;
-    }
-
-    .pf-project--left .pf-project__content,
-    .pf-project--right .pf-project__content {
-        order: 2;
-    }
-
-    .pf-project__number {
-        font-size: 80px;
-        top: -10px;
-        left: -10px;
-        right: auto;
-    }
 }

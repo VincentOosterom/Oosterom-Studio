@@ -5,37 +5,25 @@ import {Link} from "react-router-dom";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
 import projects from "../../../data/projects.js";
-import {useRef} from "react";
 
 
 // ── Project card ──────────────────────────────────────────────
 function ProjectCard({project, index}) {
-    const ref = useRef(null);
-    const isEven = index % 2 === 0;
-
     return (
-        <motion.div
-            ref={ref}
-            className={`pf-project ${isEven ? 'pf-project--left' : 'pf-project--right'}`}
-            initial={{opacity: 0, y: 60}}
+        <motion.article
+            className="pf-card"
+            initial={{opacity: 0, y: 32}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: true, amount: 0.2}}
-            transition={{duration: 0.8, ease: [0.22, 1, 0.36, 1]}}
+            transition={{duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (index % 3) * 0.08}}
         >
-            {/* Groot nummer */}
-            <div className="pf-project__number">
-                {String(index + 1).padStart(2, '0')}
-            </div>
-
-            {/* Image */}
-            <Link to={`/portfolio/${project.slug}`} className="pf-project__image-wrap">
-                <div className="pf-project__image">
-                    <img src={project.image} alt={project.title}/>
-                    <div className="pf-project__image-overlay">
-                        <span className="pf-project__cta">
+            <Link to={`/portfolio/${project.slug}`} className="pf-card__image-wrap">
+                <div className="pf-card__image">
+                    <img src={project.image} alt={project.title} loading="lazy"/>
+                    <div className="pf-card__image-overlay">
+                        <span className="pf-card__cta">
                             Bekijk project
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                 strokeWidth="2">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M7 17L17 7M17 7H7M17 7v10"/>
                             </svg>
                         </span>
@@ -43,29 +31,31 @@ function ProjectCard({project, index}) {
                 </div>
             </Link>
 
-            {/* Content */}
-            <article className="pf-project__content">
-                <span className="pf-project__tag">Case study</span>
-                <h2 className="pf-project__title">
+            <div className="pf-card__content">
+                <span className="pf-card__number">{String(index + 1).padStart(2, '0')}</span>
+                <span className="pf-card__tag">Case study</span>
+
+                <h2 className="pf-card__title">
                     <Link to={`/portfolio/${project.slug}`}>{project.title}</Link>
                 </h2>
 
-                <p className="pf-project__desc">{project.card_description}</p>
-                <div className="links">
-                    <Link to={`/portfolio/${project.slug}`} className="pf-project__link">
+                <p className="pf-card__desc">{project.card_description}</p>
+
+                <div className="pf-card__links">
+                    <Link to={`/portfolio/${project.slug}`} className="pf-card__link">
                         Lees case study →
                     </Link>
                     <a
                         href={project.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="pf-project__link"
+                        className="pf-card__link pf-card__link--muted"
                     >
-                        Bekijk website
+                        Website ↗
                     </a>
                 </div>
-            </article>
-        </motion.div>
+            </div>
+        </motion.article>
     );
 }
 
@@ -120,14 +110,12 @@ function Portfolio() {
                     </p>
                 </motion.div>
 
-                {/* Scrollende teller */}
                 <div className="pf-hero__count">
                     <span>{projects.length}</span>
                     <small>projecten</small>
                 </div>
             </section>
 
-            {/* Divider lijn */}
             <div className="pf-divider">
                 <motion.div
                     className="pf-divider__line"
@@ -138,14 +126,13 @@ function Portfolio() {
                 />
             </div>
 
-            {/* Projects */}
-            <section className="pf-projects">
+            {/* Projects — grid in plaats van gestapelde rijen */}
+            <section className="pf-grid">
                 {projects.map((project, index) => (
                     <ProjectCard key={project.slug} project={project} index={index}/>
                 ))}
             </section>
 
-            {/* CTA onderaan */}
             <motion.section
                 className="pf-cta"
                 initial={{opacity: 0, y: 40}}

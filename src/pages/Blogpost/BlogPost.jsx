@@ -23,11 +23,7 @@ export default function BlogPost() {
     const navigate = useNavigate();
     const post = blogPosts.find((p) => p.slug === slug);
 
-    // De blogtekst zelf bestaat uit HTML-strings met gewone <a href> tags
-    // (handig om te schrijven in blogPosts.js). Deze handler onderschept
-    // klikken op interne links (beginnend met "/") en stuurt ze via
-    // React Router, zodat er geen volledige paginaherlading gebeurt.
-    // Externe links (https://, mailto:) worden gewoon normaal afgehandeld.
+
     function onInterneLinkKlik(event) {
         const link = event.target.closest("a");
         if (!link) return;

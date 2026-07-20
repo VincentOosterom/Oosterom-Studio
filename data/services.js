@@ -1,7 +1,3 @@
-// services.js
-// Alle diensten komen overeen met de links in Footer.jsx
-// Volgorde = volgorde in de footer
-
 export const services = [
     {
         title: "Webdesign & UX",

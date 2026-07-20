@@ -96,6 +96,7 @@ function Homepage() {
                 title={t('home.hero.title')}
                 subtitle={t('home.hero.subtitle')}
                 buttonText={t('home.hero.button')}
+                tag="Welkom bij Oosterom Studio"
             />
             <MovingBar/>
 

@@ -11,6 +11,9 @@ import Logo from "../src/assets/images/Logo | Wit.png"
 import work_crm from "../src/assets/images/crm-image.png"
 import logo_vandervis from "../src/assets/images/logo-vandervis.webp"
 import work_vandervis from "../src/assets/images/work_vandervis.png"
+import work_vpuffelen from "../src/assets/images/work_vpuffelen.png"
+import logo_vpuffelen from "../src/assets/images/logo_vanpuffelen.png"
+
 
 
 
@@ -112,6 +115,19 @@ const projects = [
         result: `Het resultaat is een professionele website waarmee Van der Vis Bouwbedrijf voor het eerst goed vindbaar en bereikbaar is online. Potentiële klanten kunnen eenvoudig, ook vanaf mobiel, een offerte aanvragen of contact opnemen — aanvragen komen direct per e-mail binnen, zodat er niets tussen wal en schip valt.`,
         website: "https://www.vandervisbouw.nl",
         sfeer: work_vandervis
+    },
+    {
+        slug: "van-puffelen-gww",
+        title: "V Puffelen GWW",
+        image: logo_vpuffelen,
+        card_description: `Een volledig custom React website voor V Puffelen GWW, mobielvriendelijk en SEO-geoptimaliseerd, met een eigen CMS waarmee de klant zelf vacatures en projecten beheert, wijzigingen zijn direct zichtbaar op de website.`,
+        subtitle: "Diensten van Oosterom Studio",
+        intro: `V Puffelen GWW had behoefte aan een professionele online aanwezigheid gericht op gemeentes, waterschappen en hoofdaannemers in het Groene Hart. Wij hebben een maatwerk React website gebouwd met een volledig eigen beheersysteem.`,
+        challenge: `V Puffelen GWW werkt voor grote opdrachtgevers zoals gemeentes en hoofdaannemers. De website moest die professionaliteit uitstralen én de klant in staat stellen om zelfstandig vacatures en projecten te beheren, zonder technische kennis. Daarnaast moesten contactaanvragen en sollicitaties gestructureerd binnenkomen.`,
+        solution: `We hebben een volledig custom React website ontwikkeld met een eigen CMS dashboard op een apart subdomein. Via dit dashboard kan de klant vacatures en projecten toevoegen, aanpassen en verwijderen. Wijzigingen zijn direct zichtbaar op de website. Contactaanvragen komen binnen via een beveiligd formulier en worden opgeslagen in het CRM van Oosterom Studio. Sollicitanten kunnen direct solliciteren via een uitgebreid formulier met CV-upload, waarna zij automatisch een persoonlijke bevestigingsmail ontvangen.`,
+        result: `Het resultaat is een professionele website die aansluit bij de uitstraling van grote GWW-bedrijven, gecombineerd met een gebruiksvriendelijk beheersysteem. De klant is volledig zelfstandig in het beheren van vacatures en projecten — zonder tussenkomst van een developer. Alle aanvragen en sollicitaties komen gestructureerd binnen en zijn direct opvolgbaar.`,
+        website: "https://www.vpuffelen-gww.nl",
+        sfeer: work_vpuffelen
     },
 ];
 

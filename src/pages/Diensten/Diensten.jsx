@@ -1,5 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+import {Link} from 'react-router-dom';
 import './Diensten.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
@@ -35,6 +36,9 @@ function Diensten() {
             {/* Navbar */}
             <Navigate/>
 
+            {/* Achtergrond grid-patroon, zoals op Contact/Portfolio */}
+            <div className="diensten-bg" aria-hidden="true" />
+
             {/* Hero / Pagina titel */}
             <motion.section
                 className="diensten-hero"
@@ -42,6 +46,8 @@ function Diensten() {
                 animate={{opacity: 1}}
                 transition={{duration: 0.8}}
             >
+                <div className="diensten-hero__glow" aria-hidden="true" />
+                <span className="diensten-hero__tag">Wat we doen</span>
                 <h1>Digitale diensten</h1>
                 <p>
                     Van design tot development en architectuur. We bouwen digitale producten die schaalbaar, snel en veilig zijn.
@@ -52,18 +58,19 @@ function Diensten() {
             <section className="diensten-overview">
                 <article className="diensten-container">
                     {services.map((service, index) => {
-                        const isReversed = index % 2 !== 0;
-
                         return (
                             <motion.div
-                                key={index}
-                                className={`dienst-row ${isReversed ? "reverse" : ""}`}
+                                key={service.title}
+                                className="dienst-row"
                                 initial={{opacity: 0, y: 40}}
                                 whileInView={{opacity: 1, y: 0}}
                                 viewport={{once: true, amount: 0.3}}
                                 transition={{duration: 0.6}}
                             >
                                 <article className="dienst-content">
+                                    <span className="dienst-number">
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
                                     <h2>{service.title}</h2>
                                     <p>{service.description}</p>
 
@@ -73,16 +80,40 @@ function Diensten() {
                                         ))}
                                     </ul>
                                     {service.extra && <p className="dienst-extra">{service.extra}</p>}
+
+                                    <Link to={service.link} className="card-link">
+                                        Bekijk dienst →
+                                    </Link>
                                 </article>
-                                <a href={service.link} className="card-link">Bekijk dienst</a>
+
+                                {service.image && (
+                                    <div className="dienst-image">
+                                        <img src={service.image} alt={service.title} loading="lazy" />
+                                    </div>
+                                )}
                             </motion.div>
                         );
                     })}
                 </article>
             </section>
+
+            {/* CTA onderaan */}
+            <motion.section
+                className="diensten-cta"
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
+                transition={{duration: 0.7}}
+            >
+                <h2>Niet zeker welke dienst past?</h2>
+                <p>Plan een vrijblijvend gesprek en we denken gewoon mee, geen verplichtingen.</p>
+                <Link to="/contact" className="diensten-cta__btn">
+                    Plan een gesprek →
+                </Link>
+            </motion.section>
+
             <Footer/>
         </div>
-
     );
 }
 
