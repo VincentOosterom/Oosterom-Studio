@@ -180,6 +180,7 @@ function Contact() {
                                 <p className="form-error" role="alert">{error}</p>
                             )}
 
+                            <h3>Contactformulier</h3>
                             <div className="form-row">
                                 <div className="form-field">
                                     <label htmlFor="name">{t('contact.form.naam_label')} <span aria-hidden="true">*</span></label>

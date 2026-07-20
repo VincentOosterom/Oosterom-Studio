@@ -108,7 +108,6 @@ function OfferteAanvragen() {
                         animate="visible"
                         custom={0}
                     >
-                        <span className="offerte-tag">Offerte aanvragen</span>
 
                         <h1>
                             Vertel ons over<br />
@@ -159,6 +158,8 @@ function OfferteAanvragen() {
                             {error && (
                                 <p className="form-error" role="alert">{error}</p>
                             )}
+
+                            <h3>Offerte aanvragen</h3>
 
                             <div className="form-row">
                                 <div className="form-field">
