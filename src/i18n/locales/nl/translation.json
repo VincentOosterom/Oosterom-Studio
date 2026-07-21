@@ -120,5 +120,120 @@
       "cta_button": "Plan een gratis gesprek →",
       "cta_sub": "Vrijblijvend · Reactie binnen 24 uur"
     }
+  },
+  "diensten": {
+    "meta_title": "Diensten | Oosterom Studio – Webdesign, Webshops & Cybersecurity",
+    "meta_description": "Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale platformen voor MKB en startups. Inclusief technische SEO, performance optimalisatie en cybersecurity.",
+    "og_title": "Diensten | Oosterom Studio",
+    "og_description": "Webdesign, Shopify webshops en cybersecurity onder één dak. Bekijk wat Oosterom Studio voor jouw bedrijf kan betekenen.",
+    "hero": {
+      "tag": "Wat we doen",
+      "titel": "Digitale diensten",
+      "intro": "Van design tot development en architectuur. We bouwen digitale producten die schaalbaar, snel en veilig zijn."
+    },
+    "bekijk_dienst": "Bekijk dienst →",
+    "cta": {
+      "titel": "Niet zeker welke dienst past?",
+      "tekst": "Plan een vrijblijvend gesprek en we denken gewoon mee, geen verplichtingen.",
+      "button": "Plan een gesprek →"
+    },
+    "services": {
+      "webdesign": {
+        "title": "Webdesign & UX",
+        "description": "Strategisch webdesign dat gebruikers richting conversie en groei stuurt.",
+        "bullets": [
+          "UX research & wireframes",
+          "High-end UI design",
+          "Interactieve prototypes",
+          "Conversiegericht ontwerp",
+          "Schaalbare design systems"
+        ],
+        "extra": "We ontwerpen niet alleen websites, maar interfaces die klaar zijn voor uitbreiding naar dashboards, portals en SaaS-producten."
+      },
+      "webdevelopment": {
+        "title": "Webdevelopment & Applicaties",
+        "description": "Snelle, veilige en schaalbare websites en webapplicaties gebouwd met moderne technologie.",
+        "bullets": [
+          "React & moderne frontend",
+          "Performance-first development",
+          "SEO & toegankelijkheid",
+          "Onderhoudbare code",
+          "API-ready architectuur"
+        ],
+        "extra": "Onze applicaties zijn gebouwd als fundament voor groei, van websites tot complete systemen zoals portals en SaaS-platformen."
+      },
+      "saas": {
+        "title": "SaaS & Digitale Systemen",
+        "description": "Van idee naar schaalbaar digitaal product met een sterke technische basis.",
+        "bullets": [
+          "Productstructuur & MVP design",
+          "Dashboard & gebruikersrollen",
+          "Schaalbare architectuur",
+          "Database design",
+          "Groei-ready systemen"
+        ],
+        "extra": "We helpen bij het vertalen van ideeën naar werkende producten die klaar zijn om te groeien en door te ontwikkelen."
+      },
+      "ai-agents": {
+        "title": "AI Agents",
+        "description": "AI-systemen die taken automatiseren, informatie verwerken en workflows ondersteunen.",
+        "bullets": [
+          "AI chatbots met kennisbasis",
+          "Workflow automatisering",
+          "CRM & API integraties",
+          "Slack / e-mail notificaties",
+          "Controle & human-in-the-loop"
+        ],
+        "extra": "Onze AI-agents zijn ontworpen met controle en betrouwbaarheid in gedachten, automatisering zonder dat je de regie verliest."
+      },
+      "software-op-maat": {
+        "title": "Software op Maat",
+        "description": "Maatwerk software die aansluit op jouw processen, gebouwd voor de lange termijn.",
+        "bullets": [
+          "Procesanalyse & technisch advies",
+          "Full stack development",
+          "Koppeling met bestaande systemen",
+          "Modulaire & uitbreidbare opbouw",
+          "Documentatie & overdracht"
+        ],
+        "extra": "Standaardsoftware past zelden perfect. Wij bouwen maatwerk dat aansluit op hoe jouw bedrijf daadwerkelijk werkt en eigendom van jou blijft."
+      },
+      "klantportaal": {
+        "title": "Klantportalen & CRM",
+        "description": "Eigen klantomgevingen en CRM-systemen gebouwd rondom hoe jij werkt.",
+        "bullets": [
+          "Inlog & rechtenbeheer",
+          "Dashboards per klant",
+          "Realtime data & notificaties",
+          "Koppeling met facturatie & mail",
+          "Uitbreidbaar per fase"
+        ],
+        "extra": "Een eigen portaal geeft klanten inzicht en jou minder e-mailverkeer. We bouwen modulair zodat het meegroeit met je bedrijf."
+      },
+      "avg-proof-website": {
+        "title": "AVG-proof Website",
+        "description": "Een website die technisch voldoet aan de AVG — niet alleen op papier, maar ook in de praktijk.",
+        "bullets": [
+          "Privacy-audit & risicoanalyse",
+          "Correct werkende cookieconsent",
+          "Beveiligde formulieren & opslag",
+          "Verwerkersovereenkomsten check",
+          "Documentatie voor toezicht"
+        ],
+        "extra": "Veel websites zijn technisch onveilig ingericht qua privacy zonder dat de eigenaar het weet. Wij maken je site aantoonbaar AVG-proof."
+      },
+      "onderhoud-support": {
+        "title": "Onderhoud & Support",
+        "description": "Betrouwbaar onderhoud en een vast aanspreekpunt voor stabiele, veilige systemen.",
+        "bullets": [
+          "Updates & beveiligingspatches",
+          "Uptime monitoring & back-ups",
+          "Maandelijks urentegoed",
+          "Prioriteit bij storingen",
+          "Geen losse facturen per aanpassing"
+        ],
+        "extra": "Met een onderhoudsabonnement weet je wat je krijgt en wat het kost. Geen gedoe, geen verrassingen. Gewoon een website die blijft werken."
+      }
+    }
   }
 }

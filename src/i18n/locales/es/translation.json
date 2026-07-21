@@ -120,5 +120,120 @@
       "cta_button": "Reserva una llamada gratuita →",
       "cta_sub": "Sin compromiso · Respuesta en menos de 24 horas"
     }
+  },
+  "diensten": {
+    "meta_title": "Servicios | Oosterom Studio – Diseño web, tiendas online y ciberseguridad",
+    "meta_description": "Oosterom Studio crea sitios web a medida, tiendas Shopify y plataformas digitales seguras para pymes y startups. Incluye SEO técnico, optimización de rendimiento y ciberseguridad.",
+    "og_title": "Servicios | Oosterom Studio",
+    "og_description": "Diseño web, tiendas Shopify y ciberseguridad bajo un mismo techo. Descubre qué puede hacer Oosterom Studio por tu empresa.",
+    "hero": {
+      "tag": "Qué hacemos",
+      "titel": "Servicios digitales",
+      "intro": "Del diseño al desarrollo y la arquitectura. Creamos productos digitales escalables, rápidos y seguros."
+    },
+    "bekijk_dienst": "Ver servicio →",
+    "cta": {
+      "titel": "¿No sabes qué servicio encaja mejor?",
+      "tekst": "Reserva una conversación sin compromiso y pensamos contigo, sin obligaciones.",
+      "button": "Reservar una llamada →"
+    },
+    "services": {
+      "webdesign": {
+        "title": "Diseño web y UX",
+        "description": "Diseño web estratégico que guía a los usuarios hacia la conversión y el crecimiento.",
+        "bullets": [
+          "Investigación UX y wireframes",
+          "Diseño UI de alta gama",
+          "Prototipos interactivos",
+          "Diseño orientado a la conversión",
+          "Sistemas de diseño escalables"
+        ],
+        "extra": "No solo diseñamos sitios web, sino interfaces preparadas para ampliarse a dashboards, portales y productos SaaS."
+      },
+      "webdevelopment": {
+        "title": "Desarrollo web y aplicaciones",
+        "description": "Sitios web y aplicaciones web rápidas, seguras y escalables, creadas con tecnología moderna.",
+        "bullets": [
+          "React y frontend moderno",
+          "Desarrollo orientado al rendimiento",
+          "SEO y accesibilidad",
+          "Código mantenible",
+          "Arquitectura preparada para API"
+        ],
+        "extra": "Nuestras aplicaciones se construyen como base para el crecimiento, desde sitios web hasta sistemas completos como portales y plataformas SaaS."
+      },
+      "saas": {
+        "title": "SaaS y sistemas digitales",
+        "description": "De la idea a un producto digital escalable con una base técnica sólida.",
+        "bullets": [
+          "Estructura de producto y diseño de MVP",
+          "Panel de control y roles de usuario",
+          "Arquitectura escalable",
+          "Diseño de base de datos",
+          "Sistemas preparados para crecer"
+        ],
+        "extra": "Ayudamos a traducir ideas en productos funcionales, listos para crecer y seguir desarrollándose."
+      },
+      "ai-agents": {
+        "title": "Agentes de IA",
+        "description": "Sistemas de IA que automatizan tareas, procesan información y dan soporte a flujos de trabajo.",
+        "bullets": [
+          "Chatbots de IA con base de conocimiento",
+          "Automatización de flujos de trabajo",
+          "Integraciones con CRM y API",
+          "Notificaciones por Slack / correo",
+          "Control y supervisión humana"
+        ],
+        "extra": "Nuestros agentes de IA están diseñados pensando en el control y la fiabilidad: automatización sin perder las riendas."
+      },
+      "software-op-maat": {
+        "title": "Software a medida",
+        "description": "Software a medida que se adapta a tus procesos, construido para el largo plazo.",
+        "bullets": [
+          "Análisis de procesos y asesoría técnica",
+          "Desarrollo full stack",
+          "Conexión con sistemas existentes",
+          "Estructura modular y ampliable",
+          "Documentación y traspaso"
+        ],
+        "extra": "El software estándar rara vez encaja a la perfección. Creamos soluciones a medida que se adaptan a cómo trabaja realmente tu empresa y que siguen siendo tuyas."
+      },
+      "klantportaal": {
+        "title": "Portales de cliente y CRM",
+        "description": "Entornos de cliente y sistemas CRM propios, construidos en torno a tu forma de trabajar.",
+        "bullets": [
+          "Inicio de sesión y gestión de permisos",
+          "Paneles por cliente",
+          "Datos y notificaciones en tiempo real",
+          "Conexión con facturación y correo",
+          "Ampliable por fases"
+        ],
+        "extra": "Un portal propio da a tus clientes más claridad y a ti menos correos. Construimos de forma modular para que crezca junto con tu empresa."
+      },
+      "avg-proof-website": {
+        "title": "Sitio web conforme al RGPD",
+        "description": "Un sitio web que cumple técnicamente con el RGPD, no solo sobre el papel, sino también en la práctica.",
+        "bullets": [
+          "Auditoría de privacidad y análisis de riesgos",
+          "Consentimiento de cookies correctamente implementado",
+          "Formularios y almacenamiento seguros",
+          "Revisión de acuerdos de encargado de tratamiento",
+          "Documentación para posibles inspecciones"
+        ],
+        "extra": "Muchos sitios web parecen estar en regla en cuanto a privacidad, pero técnicamente no lo están. Hacemos que tu sitio cumpla el RGPD de forma demostrable."
+      },
+      "onderhoud-support": {
+        "title": "Mantenimiento y soporte",
+        "description": "Mantenimiento fiable y un único punto de contacto para sistemas estables y seguros.",
+        "bullets": [
+          "Actualizaciones y parches de seguridad",
+          "Monitorización de uptime y copias de seguridad",
+          "Horas mensuales incluidas",
+          "Prioridad ante incidencias",
+          "Sin facturas sueltas por cada ajuste"
+        ],
+        "extra": "Con un plan de mantenimiento sabes exactamente qué recibes y qué cuesta. Sin complicaciones, sin sorpresas. Solo un sitio web que sigue funcionando."
+      }
+    }
   }
 }

@@ -160,33 +160,33 @@ export const blogPosts = [
         gerelateerdeDiensten: ["/diensten/software-op-maat", "/diensten/klantportaal", "/diensten/saas"],
         gerelateerdeBlogs: ["wat-is-een-ai-agent"],
     },
-    {
-        slug: "onderhoudsabonnement-of-losse-facturen",
-        title: "Onderhoudsabonnement of losse facturen: wat kost een website nou écht?",
-        excerpt:
-            "Een website is nooit 'klaar'. Waarom een vast onderhoudsabonnement vaak goedkoper uitpakt dan losse facturen.",
-        categorie: "Dienst",
-        datum: "2026-06-16",
-        leestijd: "4 min",
-        intro:
-            "<p>'Mijn website is toch af?' is een van de meest gehoorde, en meest misleidende, gedachtes bij ondernemers. Een website is een levend systeem, niet een eenmalig project.</p>",
-        secties: [
-            {
-                kop: "De verborgen kosten van 'even snel iets aanpassen'",
-                html:
-                    "<p>Een los telefoontje voor 'kun je even dit aanpassen' kost vaak meer tijd dan verwacht — uitzoeken wat er gevraagd wordt, inplannen, factureren. Bij een <a href=\"/diensten/onderhoud-support\">onderhoud- &amp; supportabonnement</a> valt dat weg: je hebt een vast aanspreekpunt en voorspelbare kosten.</p>",
-            },
-            {
-                kop: "Onderhoud is ook beveiliging",
-                html:
-                    "<p>Updates en patches zijn niet alleen functioneel, ze zijn de eerste verdedigingslinie tegen kwetsbaarheden. Veel van de problemen uit onze blog over <a href=\"/blog/5-tekenen-beveiligingslek\">beveiligingslekken</a> waren voorkomen met regelmatig onderhoud.</p>",
-            },
-            {
-                kop: "Het complete pakket",
-                html:
-                    "<p>Voor wie design, ontwikkeling én beveiliging in één keer goed wil regelen, is het <a href=\"/diensten/website-en-beveiliging\">website + beveiligingspakket</a> de meest complete optie, van buiten sterk, van binnen beveiligd.</p>",
-            },
-        ],
-        gerelateerdeBlogs: ["5-tekenen-beveiligingslek"],
-    },
+    // {
+    //     slug: "onderhoudsabonnement-of-losse-facturen",
+    //     title: "Onderhoudsabonnement of losse facturen: wat kost een website nou écht?",
+    //     excerpt:
+    //         "Een website is nooit 'klaar'. Waarom een vast onderhoudsabonnement vaak goedkoper uitpakt dan losse facturen.",
+    //     categorie: "Dienst",
+    //     datum: "2026-06-16",
+    //     leestijd: "4 min",
+    //     intro:
+    //         "<p>'Mijn website is toch af?' is een van de meest gehoorde, en meest misleidende, gedachtes bij ondernemers. Een website is een levend systeem, niet een eenmalig project.</p>",
+    //     secties: [
+    //         {
+    //             kop: "De verborgen kosten van 'even snel iets aanpassen'",
+    //             html:
+    //                 "<p>Een los telefoontje voor 'kun je even dit aanpassen' kost vaak meer tijd dan verwacht — uitzoeken wat er gevraagd wordt, inplannen, factureren. Bij een <a href=\"/diensten/onderhoud-support\">onderhoud- &amp; supportabonnement</a> valt dat weg: je hebt een vast aanspreekpunt en voorspelbare kosten.</p>",
+    //         },
+    //         {
+    //             kop: "Onderhoud is ook beveiliging",
+    //             html:
+    //                 "<p>Updates en patches zijn niet alleen functioneel, ze zijn de eerste verdedigingslinie tegen kwetsbaarheden. Veel van de problemen uit onze blog over <a href=\"/blog/5-tekenen-beveiligingslek\">beveiligingslekken</a> waren voorkomen met regelmatig onderhoud.</p>",
+    //         },
+    //         {
+    //             kop: "Het complete pakket",
+    //             html:
+    //                 "<p>Voor wie design, ontwikkeling én beveiliging in één keer goed wil regelen, is het <a href=\"/diensten/website-en-beveiliging\">website + beveiligingspakket</a> de meest complete optie, van buiten sterk, van binnen beveiligd.</p>",
+    //         },
+    //     ],
+    //     gerelateerdeBlogs: ["5-tekenen-beveiligingslek"],
+    // },
 ];

@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navigate.css';
 import AnimatedNavText from "../AnimatedNavText.jsx";
+import LanguageSwitcher from "../Languageswitcher/Languageswitcher.jsx";
 
 // ── Scroll hook ───────────────────────────────────────────────────────────────
 
@@ -77,6 +78,7 @@ function Navigate() {
         <>
             <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}
                  role="navigation" aria-label="Hoofdnavigatie">
+                {/*<LanguageSwitcher/>*/}
 
                 {/* Logo */}
                 <button className="navbar-logo" onClick={goHome} aria-label="Terug naar home">

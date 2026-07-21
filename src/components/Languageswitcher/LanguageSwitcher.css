@@ -1,0 +1,41 @@
+/* src/components/LanguageSwitcher/LanguageSwitcher.css */
+
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-body), sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.lang-switcher__btn {
+    background: none;
+    border: none;
+    padding: 6px 8px;
+    color: var(--color-muted, #94A3B8);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.lang-switcher__btn:hover:not(:disabled) {
+    color: var(--color-text, #F9FAFB);
+    background: rgba(136, 232, 244, 0.08);
+}
+
+.lang-switcher__btn--active {
+    color: var(--color-accent);
+}
+
+.lang-switcher__btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.lang-switcher__divider {
+    color: var(--color-muted, #94A3B8);
+    opacity: 0.4;
+    font-size: 11px;
+}
