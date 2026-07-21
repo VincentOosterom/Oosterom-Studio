@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navigate.css';
 import AnimatedNavText from "../AnimatedNavText.jsx";
-import LanguageSwitcher from "../Languageswitcher/Languageswitcher.jsx";
+import LanguageSwitcher from "../language-switcher/Languageswitcher.jsx";
 
 // ── Scroll hook ───────────────────────────────────────────────────────────────
 

@@ -106,7 +106,7 @@ function Footer() {
                             <li><Link to="/blog/wanneer-loont-maatwerk-software">Loont maatwerk software?</Link></li>
                             <li><Link to="/blog/wat-is-een-ai-agent">Wat is een AI-agent?</Link></li>
                             <li><Link to="/blog/avg-fouten-mkb">AVG-fouten die je wil vermijden</Link></li>
-                            <li><Link to="/blog/5-tekenen-beveiligingslek">Tekenen van een beveiligingslek</Link></li>
+                            <li><Link to="blog/5-tekenen-beveiligingslek">Tekenen van een beveiligingslek</Link></li>
                             <li><Link to="/faq">Veelgestelde vragen</Link></li>
                         </ul>
                     </article>

@@ -39,7 +39,6 @@ function CookieBanner() {
 
     function declineCookies() {
         localStorage.setItem("cookie-consent", "declined");
-        // Consent blijft 'denied' — dat is de standaard uit index.html
         setVisible(false);
     }
 
@@ -53,9 +52,14 @@ function CookieBanner() {
                         We gebruiken analytische cookies om te begrijpen hoe bezoekers
                         onze site gebruiken. Geen advertentiecookies, geen tracking
                         naar derden.{" "}
-                        <Link to="/contact" className="cookie-banner__link">
+                        <a
+                            href="/Privacybeleid Oosterom Studio.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="cookie-banner__link"
+                        >
                             Meer info
-                        </Link>
+                        </a>
                     </p>
                 </div>
 

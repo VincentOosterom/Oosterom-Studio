@@ -76,10 +76,11 @@ export default function BlogPost() {
     }
 
     const gerelateerdeDienstObjecten = alleDiensten.filter((d) =>
-        post.gerelateerdeDiensten.includes(d.link)
+        (post.gerelateerdeDiensten ?? []).includes(d.link)
     );
+
     const gerelateerdeBlogObjecten = blogPosts.filter((p) =>
-        post.gerelateerdeBlogs.includes(p.slug)
+        (post.gerelateerdeBlogs ?? []).includes(p.slug)
     );
 
     return (

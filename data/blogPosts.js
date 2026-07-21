@@ -1,6 +1,3 @@
-// Blog-content voor Oosterom Studio
-// Elke post linkt naar 2-3 relevante diensten + minstens 1 andere blogpost (interlinking voor SEO)
-
 export const blogPosts = [
     {
         slug: "ux-design-conversie",

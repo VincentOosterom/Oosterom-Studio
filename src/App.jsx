@@ -8,7 +8,7 @@ import LanguageSync from "./components/LanguageSync/LanguageSync.jsx";
 
 // ── Altijd direct laden — staan op elke pagina ────────────────────────────────
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
-import AnalyticsTracker from "./components/AnalyticsTracker/AnalyticsTracker.jsx";
+import AnalyticsTracker from "./components/analytics-tracker/AnalyticsTracker.jsx";
 import CookieBanner from "./components/cookies/CookiesBanner.jsx";
 import ChatWidget from "./components/chatbot/ChatWidget.jsx";
 
