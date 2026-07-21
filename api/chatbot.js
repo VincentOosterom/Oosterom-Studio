@@ -140,7 +140,7 @@
     - Altijd één vervolgvraag bij interesse
     - Warm afsluiten met doorverwijzing naar offerteformulier`
 
-    const KLANT_ID = '36452da0-d925-4105-83a8-c41b2c92ba0f'
+    const KLANT_ID = process.env.KLANT_ID
 
     export default async function handler(req, res) {
         if (req.method !== 'POST') {
