@@ -148,7 +148,7 @@
     align-items: center;
     font-size: 0.82rem;
     font-weight: 600;
-    font-family: var(--font-title), sans-serif;
+    font-family: var(--font-body), sans-serif;
     color: #080808;
     background: var(--color-accent, #4dffc3);
     padding: 10px 20px;

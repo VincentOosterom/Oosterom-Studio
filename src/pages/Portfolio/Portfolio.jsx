@@ -51,7 +51,7 @@ function ProjectCard({project, index}) {
                         rel="noopener noreferrer"
                         className="pf-card__link pf-card__link--muted"
                     >
-                        Website ↗
+                        Bekijk website
                     </a>
                 </div>
             </div>

@@ -255,7 +255,8 @@
 .pf-card__link {
     display: inline-flex;
     align-items: center;
-    font-size: 12.5px;
+    font-size: 12px;
+    font-family: var(--font-body), monospace;
     font-weight: 600;
     color: var(--color-text, #f0f0f0);
     text-decoration: none;
@@ -315,6 +316,7 @@
 .pf-cta__btn {
     display: inline-flex;
     align-items: center;
+    font-family: var(--font-body), monospace;
     gap: 8px;
     font-size: 14px;
     font-weight: 600;
