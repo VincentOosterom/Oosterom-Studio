@@ -117,7 +117,7 @@ function App() {
 
                     {/* ══════════════════════════════════════════════════════
                         Español (/es/ prefix)
-                        Zelfde pagina's, dezelfde componenten — de component
+                        Zelfde pagina's, dezelfde componenten  de component
                         zelf toont Spaanse tekst via i18next (useTranslation),
                         gestuurd door LanguageSync op basis van de URL.
                     ══════════════════════════════════════════════════════ */}
