@@ -1,31 +1,13 @@
-/* ==========================================================================
-   Header.css — Oosterom Studio
-   ========================================================================== */
-
-
 /* ── Base ────────────────────────────────────────────────────────────────── */
 
 .header {
     position: relative;
-    background-image: url("../../assets/images/fabio-oyXis2kALVg-unsplash-webp.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: var(--color-bg, #000000);
     max-height: 100svh;
-    min-height: 100vh;
+    min-height: 92vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-
-/* Donkere overlay */
-.header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.58);
-    z-index: 1;
-    pointer-events: none;
 }
 
 /* Grid overlay */
@@ -33,10 +15,23 @@
     position: absolute;
     inset: 0;
     background-image:
-            linear-gradient(rgba(77, 255, 195, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(77, 255, 195, 0.03) 1px, transparent 1px);
+            linear-gradient(rgba(136, 232, 244, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(136, 232, 244, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse 80% 60% at 30% 100%, black 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, black 20%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Zachte gloed achter de titel */
+.header__glow {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(136, 232, 244, 0.10) 0%, transparent 70%);
     z-index: 1;
     pointer-events: none;
 }
@@ -49,18 +44,20 @@
     z-index: 2;
     flex: 1;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     padding: 0 4rem;
 }
 
-.content-left {
+.content-center {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
-    align-items: flex-start;
-    padding: 120px 0 96px;
     max-width: 780px;
     width: 100%;
+    padding: 140px 0 100px;
+    text-align: center;
 }
 
 
@@ -75,27 +72,24 @@
     text-transform: uppercase;
     color: var(--color-accent);
     font-family: var(--font-body), sans-serif;
-    padding: 8px 14px;
-    border: 1px solid rgba(77, 255, 195, 0.25);
     border-radius: 100px;
-    background: rgba(77, 255, 195, 0.07);
     width: fit-content;
 }
 
 
 /* ── Headline ────────────────────────────────────────────────────────────── */
 
-.content-left h1 {
+.content-center h1 {
     font-family: var(--font-title), sans-serif;
-    font-size: clamp(2.2rem, 6.5vw, 5rem);
+    font-size: clamp(2.4rem, 6vw, 4.6rem);
     font-weight: 800;
-    line-height: 0.96;
-    letter-spacing: -0.01em;
-    color: white;
+    line-height: 1.0;
+    letter-spacing: -0.015em;
+    color: var(--color-text, white);
     margin: 0;
 }
 
-.content-left h1 em {
+.content-center h1 em {
     color: var(--color-accent);
     font-style: normal;
 }
@@ -103,27 +97,35 @@
 
 /* ── Subtitel ────────────────────────────────────────────────────────────── */
 
-.content-left p {
-    font-size: 17px;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.6);
+.header__subtitle {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-muted, rgba(255, 255, 255, 0.62));
     font-weight: 300;
-    max-width: 520px;
+    max-width: 560px;
     font-family: var(--font-body), sans-serif;
-    margin: 0;
+    margin: 4px 0 0;
 }
 
 
-/* ── CTA knop ────────────────────────────────────────────────────────────── */
+/* ── CTA + trust-indicators ──────────────────────────────────────────────── */
+
+.header__cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 12px;
+}
 
 .header__cta {
     display: inline-flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: #080808;
     background: var(--color-accent);
-    padding: 16px 32px;
+    padding: 17px 34px;
     border-radius: 100px;
     border: none;
     font-family: var(--font-body), sans-serif;
@@ -135,12 +137,32 @@
 .header__cta:hover {
     opacity: 0.88;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(77, 255, 195, 0.25);
+    box-shadow: 0 10px 28px rgba(136, 232, 244, 0.28);
 }
 
 .header__cta:focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
+}
+
+.header__trust {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 12.5px;
+    color: var(--color-muted, rgba(255, 255, 255, 0.45));
+    font-family: var(--font-body), sans-serif;
+    font-weight: 400;
+}
+
+.header__trust-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--color-muted, rgba(255, 255, 255, 0.35));
+    flex-shrink: 0;
 }
 
 
@@ -161,7 +183,7 @@
     display: block;
     width: 1px;
     height: 48px;
-    background: linear-gradient(to bottom, rgba(77, 255, 195, 0.6), transparent);
+    background: linear-gradient(to bottom, rgba(136, 232, 244, 0.6), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -183,20 +205,24 @@
 @media (max-width: 768px) {
 
     .header {
-        height: 80svh;
+        height: 90svh;
     }
     .header-content {
         padding: 0 1.25rem;
     }
 
-    .content-left {
+    .content-center {
         padding: 60px 0 72px;
         gap: 20px;
     }
 
-    .content-left p {
+    .header__subtitle {
         font-size: 15px;
-        max-width: 100%;
+    }
+
+    .header__trust {
+        font-size: 11.5px;
+        gap: 8px;
     }
 
     .header__scroll {
@@ -205,17 +231,26 @@
 }
 
 @media (max-width: 480px) {
-    .content-left {
+    .content-center {
         padding: 60px 0 56px;
         gap: 16px;
     }
 
-    .content-left p {
+    .header__subtitle {
         font-size: 14px;
     }
 
     .header__cta {
-        padding: 14px 24px;
-        font-size: 12px;
+        padding: 15px 26px;
+        font-size: 13px;
+    }
+
+    .header__trust {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .header__trust-dot {
+        display: none;
     }
 }

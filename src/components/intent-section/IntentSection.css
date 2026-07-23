@@ -63,6 +63,8 @@
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
+    font-family: var(--font-body), sans-serif;
+
 }
 
 .btn-secondary {

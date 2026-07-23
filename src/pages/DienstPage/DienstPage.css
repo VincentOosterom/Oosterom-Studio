@@ -97,6 +97,7 @@
     align-items: center;
     font-size: 13px;
     font-weight: 600;
+    font-family: var(--font-body), sans-serif;
     color: #080808;
     background: var(--color-accent);
     padding: 14px 28px;

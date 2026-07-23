@@ -3,11 +3,12 @@
    ========================================================================== */
 
 .moving-bar {
+    position: relative;
     overflow: hidden;
     background: var(--color-dark, #141414);
     border-top: 1px solid #2a2a2a;
     border-bottom: 1px solid #2a2a2a;
-    padding: 16px 0;
+    padding: 22px 0;
     /* Fade aan de randen zodat de loop er vloeiend uitziet */
     mask-image: linear-gradient(
             to right,
@@ -18,11 +19,24 @@
     );
 }
 
+/* Subtiel grid-patroon, consistent met de rest van de site */
+.moving-bar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+            linear-gradient(rgba(136, 232, 244, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(136, 232, 244, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
 .moving-track {
+    position: relative;
     display: flex;
     width: max-content;
     /* Animatie: één volledige track-breedte naar links scrollen */
-    animation: scroll-left 28s linear infinite;
+    animation: scroll-left 32s linear infinite;
 }
 
 .moving-track:hover {
@@ -31,7 +45,7 @@
 
 @keyframes scroll-left {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to   { transform: translateX(-20%); }
 }
 
 /* Eén track = alle items naast elkaar */
@@ -41,35 +55,54 @@
     flex-shrink: 0;
 }
 
-/* Item = stip + tekst */
+/* Item = tekst + scheidingsteken */
 .track__item {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
     white-space: nowrap;
-    font-family: var(--font-body), sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: rgba(255, 255, 255, 0.45);
-    padding: 0 12px;
-    transition: color 0.2s ease;
+    font-family: var(--font-title), sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.35);
+    padding: 0 18px;
+    transition: color 0.25s ease;
 }
 
 .track__item:hover {
-    color: var(--color-accent);
+    color: var(--color-text, #F9FAFB);
 }
 
+/* Scheidingsteken: klein blokje i.p.v. bullet-punt, sluit aan bij de
+   vierkante accent-elementen die je elders op de site gebruikt */
 .track__dot {
-    color: var(--color-accent);
-    opacity: 0.5;
-    font-size: 16px;
-    line-height: 1;
+    width: 5px;
+    height: 5px;
+    background: var(--color-accent);
+    border-radius: 2px;
+    opacity: 0.6;
+    flex-shrink: 0;
 }
 
 /* Geen animatie voor gebruikers die dat liever niet hebben */
 @media (prefers-reduced-motion: reduce) {
     .moving-track {
         animation: none;
+    }
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .moving-bar {
+        padding: 16px 0;
+    }
+
+    .track__item {
+        font-size: 12.5px;
+        gap: 14px;
+        padding: 0 14px;
     }
 }

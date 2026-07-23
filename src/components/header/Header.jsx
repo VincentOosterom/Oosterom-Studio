@@ -30,9 +30,10 @@ function Header({ title, subtitle, buttonText, tag }) {
             <Navigate />
 
             <div className="header__grid" aria-hidden="true" />
+            <div className="header__glow" aria-hidden="true" />
 
             <section className="header-content">
-                <article className="content-left">
+                <article className="content-center">
 
                     {/* Optionele pill-tag */}
                     {tag && (
@@ -64,6 +65,7 @@ function Header({ title, subtitle, buttonText, tag }) {
 
                     {/* Subtitel */}
                     <motion.p
+                        className="header__subtitle"
                         variants={fadeUp}
                         custom={2}
                         initial="hidden"
@@ -72,9 +74,10 @@ function Header({ title, subtitle, buttonText, tag }) {
                         {subtitle}
                     </motion.p>
 
-                    {/* CTA knop */}
+                    {/* CTA knop + trust-indicators */}
                     {buttonText && (
                         <motion.div
+                            className="header__cta-group"
                             variants={fadeUp}
                             custom={3}
                             initial="hidden"
@@ -86,6 +89,14 @@ function Header({ title, subtitle, buttonText, tag }) {
                             >
                                 {buttonText} →
                             </button>
+
+                            <div className="header__trust">
+                                <span>Reactie binnen 24 uur</span>
+                                <span className="header__trust-dot" aria-hidden="true" />
+                                <span>Vrijblijvend gesprek</span>
+                                <span className="header__trust-dot" aria-hidden="true" />
+                                <span>Eén vast aanspreekpunt</span>
+                            </div>
                         </motion.div>
                     )}
                 </article>

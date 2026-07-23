@@ -28,7 +28,7 @@ function MovingBar() {
                     <div className="track" key={key}>
                         {items.map((item, i) => (
                             <span key={i} className="track__item">
-                                <span className="track__dot" aria-hidden="true">·</span>
+                                <span className="track__dot" />
                                 {item}
                             </span>
                         ))}
