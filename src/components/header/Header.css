@@ -17,7 +17,7 @@
     background-image:
             linear-gradient(rgba(136, 232, 244, 0.04) 1px, transparent 1px),
             linear-gradient(90deg, rgba(136, 232, 244, 0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-size: 50px 50px;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, black 20%, transparent 100%);
     z-index: 1;
     pointer-events: none;
@@ -29,9 +29,9 @@
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    width: 900px;
-    height: 500px;
-    background: radial-gradient(ellipse, rgba(136, 232, 244, 0.10) 0%, transparent 70%);
+    width: 1000px;
+    height: 700px;
+    background: radial-gradient(ellipse, rgba(136, 232, 244, 0.10) 2%, transparent 60%);
     z-index: 1;
     pointer-events: none;
 }

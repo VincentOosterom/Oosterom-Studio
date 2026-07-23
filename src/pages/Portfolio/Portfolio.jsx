@@ -143,10 +143,10 @@ function Portfolio() {
                 <div className="pf-cta__glow"/>
                 <span className="pf-hero__tag">Volgende stap</span>
                 <h2 className="pf-cta__title">
-                    Jouw project<br/><em>staat hier straks ook.</em>
+                    Jouw project<br/><em>staat hier straks ook?</em>
                 </h2>
                 <Link to="/offerte-aanvragen" className="pf-cta__btn">
-                    Start jouw project →
+                    Laten we beginnen →
                 </Link>
             </motion.section>
 

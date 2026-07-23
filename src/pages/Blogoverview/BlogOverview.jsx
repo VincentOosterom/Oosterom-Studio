@@ -31,7 +31,7 @@ export default function BlogOverview() {
                     MKB-bedrijven. Geschreven vanuit de praktijk, niet vanuit theorie.
                 </p>
 
-                <div className={styles.grid}>
+                <section className={styles.grid}>
                     {gesorteerdeBlogs.map((post, index) => (
                         <Link
                             key={post.slug}
@@ -52,7 +52,7 @@ export default function BlogOverview() {
                             </div>
                         </Link>
                     ))}
-                </div>
+                </section>
             </main>
             <Footer />
         </div>

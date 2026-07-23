@@ -15,13 +15,6 @@ const fadeUp = {
 };
 
 // ── Component ─────────────────────────────────────────────────────────────────
-
-/**
- * @param {string}  title       — Grote headline, ondersteunt \n voor regelbreuken
- * @param {string}  subtitle    — Subtekst onder de headline
- * @param {string}  buttonText  — Tekst op de CTA-knop (optioneel)
- * @param {string}  tag         — Klein label boven de headline (optioneel)
- */
 function Header({ title, subtitle, buttonText, tag }) {
     const navigate = useNavigate();
 

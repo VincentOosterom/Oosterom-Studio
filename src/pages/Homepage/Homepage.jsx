@@ -6,7 +6,6 @@ import {Helmet} from "react-helmet-async";
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import MovingBar from "../../components/movingbar/movingBar.jsx";
-import IntentSection from "../../components/intent-section/IntentSection.jsx";
 import WatWeBouwen from "../../components/wat_we_bouwen/WatWeBouwen.jsx";
 
 // ── Animation variants ────────────────────────────────────────────────────────

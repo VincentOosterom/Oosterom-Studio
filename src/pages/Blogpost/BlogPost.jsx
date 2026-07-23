@@ -92,13 +92,13 @@ export default function BlogPost() {
             <main className={styles.inhoud}>
                 <span className={styles.categorie}>{post.categorie}</span>
                 <h1 className={styles.titel}>{post.title}</h1>
-                <div className={styles.meta}>
+                <section className={styles.meta}>
                     <span>{formatteerDatum(post.datum)}</span>
                     <span>·</span>
                     <span>{post.leestijd} leestijd</span>
-                </div>
+                </section>
 
-                <div className={styles.artikelInhoud} onClick={onInterneLinkKlik}>
+                <section className={styles.artikelInhoud} onClick={onInterneLinkKlik}>
                     <div
                         className={styles.tekst}
                         dangerouslySetInnerHTML={{ __html: post.intro }}
@@ -113,7 +113,7 @@ export default function BlogPost() {
                             />
                         </section>
                     ))}
-                </div>
+                </section>
 
                 {gerelateerdeDienstObjecten.length > 0 && (
                     <aside className={styles.stempel}>

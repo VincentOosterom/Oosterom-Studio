@@ -13,9 +13,8 @@
 .pf-hero__bg-grid {
     position: absolute;
     inset: 0;
-    background-image:
-            linear-gradient(rgba(77, 255, 195, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(77, 255, 195, 0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(77, 255, 195, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 255, 195, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 60% at 20% 100%, black 30%, transparent 100%);
     pointer-events: none;
@@ -42,12 +41,9 @@
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-text);
     margin-bottom: 24px;
-    padding: 6px 12px;
-    border: 1px solid rgba(77, 255, 195, 0.2);
     border-radius: 100px;
-    background: rgba(77, 255, 195, 0.05);
 }
 
 .pf-hero__title {
@@ -86,7 +82,7 @@
     font-size: clamp(80px, 12vw, 140px);
     font-weight: 800;
     letter-spacing: -0.06em;
-    color: rgba(255, 255, 255, 0.04);
+    color: var(--color-text);
     line-height: 1;
 }
 
@@ -343,10 +339,22 @@
 }
 
 @media (max-width: 1024px) {
-    .pf-hero { padding: 120px 2.5rem 60px; }
-    .pf-grid { padding: 64px 2.5rem 32px; gap: 28px; }
-    .pf-divider { padding: 0 2.5rem; }
-    .pf-cta { padding: 80px 2.5rem; }
+    .pf-hero {
+        padding: 120px 2.5rem 60px;
+    }
+
+    .pf-grid {
+        padding: 64px 2.5rem 32px;
+        gap: 28px;
+    }
+
+    .pf-divider {
+        padding: 0 2.5rem;
+    }
+
+    .pf-cta {
+        padding: 80px 2.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -365,6 +373,11 @@
         gap: 24px;
     }
 
-    .pf-divider  { padding: 0 1.5rem; }
-    .pf-cta      { padding: 80px 1.5rem; }
+    .pf-divider {
+        padding: 0 1.5rem;
+    }
+
+    .pf-cta {
+        padding: 80px 1.5rem;
+    }
 }

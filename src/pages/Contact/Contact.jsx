@@ -74,9 +74,9 @@ function Contact() {
                 <title>{t('contact.meta_title')}</title>
                 <meta name="description" content={t('contact.meta_description')} />
                 <link rel="canonical" href={canonicalUrl} />
-                <link rel="alternate" hreflang="nl" href="https://www.oosteromstudio.nl/contact" />
-                <link rel="alternate" hreflang="es" href="https://www.oosteromstudio.nl/es/contacto" />
-                <link rel="alternate" hreflang="x-default" href="https://www.oosteromstudio.nl/contact" />
+                <link rel="alternate" hrefLang="nl" href="https://www.oosteromstudio.nl/contact" />
+                <link rel="alternate" hrefLang="es" href="https://www.oosteromstudio.nl/es/contacto" />
+                <link rel="alternate" hrefLang="x-default" href="https://www.oosteromstudio.nl/contact" />
                 <meta property="og:title" content={t('contact.meta_title')} />
                 <meta property="og:description" content={t('contact.og_description')} />
                 <meta property="og:type" content="website" />
@@ -114,7 +114,7 @@ function Contact() {
                         </p>
 
                         {/* Contactgegevens */}
-                        <div className="contact-gegevens">
+                        <section className="contact-gegevens">
                             <motion.div className="contact-gegeven" variants={fadeUp} custom={1} initial="hidden" animate="visible">
                                 <span className="contact-gegeven__label">{t('contact.gegevens.email_label')}</span>
                                 <a href="mailto:vincent@oosteromstudio.nl" className="contact-gegeven__value">
@@ -136,7 +136,7 @@ function Contact() {
                                     {t('contact.gegevens.linkedin_naam')}
                                 </a>
                             </motion.div>
-                        </div>
+                        </section>
 
                         {/* Bedrijfsgegevens */}
                         <motion.div
