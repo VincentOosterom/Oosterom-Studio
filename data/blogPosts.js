@@ -58,7 +58,7 @@ export const blogPosts = [
             {
                 kop: "Wat je nu kunt doen",
                 html:
-                    "<p>Het beste startpunt is een onafhankelijke <a href=\"/diensten/cybersecurity-scan\">cybersecurity scan &amp; beveiligingsaudit</a>: een check op kwetsbaarheden, verlopen certificaten en verdachte bestanden, met concrete actiepunten op volgorde van risico.</p><p>Voor de lange termijn voorkomt <a href=\"/diensten/website-beveiliging\">website beveiliging &amp; onderhoud</a> dat dit probleem terugkomt — denk aan automatische updates, monitoring en back-ups.</p><p>Werk je met persoonsgegevens van klanten? Check dan ook onze blog over <a href=\"/blog/avg-fouten-mkb\">de meest gemaakte AVG-fouten</a>, want beveiliging en privacy gaan hand in hand.</p>",
+                    "<p>Het beste startpunt is een onafhankelijke <a href=\"/diensten/cybersecurity-scan\">cybersecurity scan &amp; beveiligingsaudit</a>: een check op kwetsbaarheden, verlopen certificaten en verdachte bestanden, met concrete actiepunten op volgorde van risico.</p><p>Voor de lange termijn voorkomt <a href=\"/diensten/website-beveiliging\">website beveiliging &amp; onderhoud</a> dat dit probleem terugkomt, denk aan automatische updates, monitoring en back-ups.</p><p>Werk je met persoonsgegevens van klanten? Check dan ook onze blog over <a href=\"/blog/avg-fouten-mkb\">de meest gemaakte AVG-fouten</a>, want beveiliging en privacy gaan hand in hand.</p>",
             },
         ],
         gerelateerdeBlogs: ["avg-fouten-mkb"],
@@ -171,7 +171,7 @@ export const blogPosts = [
             {
                 kop: "De verborgen kosten van 'even snel iets aanpassen'",
                 html:
-                    "<p>Een los telefoontje voor 'kun je even dit aanpassen' kost vaak meer tijd dan verwacht — uitzoeken wat er gevraagd wordt, inplannen, factureren. Bij een <a href=\"/diensten/onderhoud-support\">onderhoud- &amp; supportabonnement</a> valt dat weg: je hebt een vast aanspreekpunt en voorspelbare kosten.</p>",
+                    "<p>Een los telefoontje voor 'kun je even dit aanpassen' kost vaak meer tijd dan verwacht, uitzoeken wat er gevraagd wordt, inplannen, factureren. Bij een <a href=\"/diensten/onderhoud-support\">onderhoud- &amp; supportabonnement</a> valt dat weg: je hebt een vast aanspreekpunt en voorspelbare kosten.</p>",
             },
             {
                 kop: "Onderhoud is ook beveiliging",
@@ -205,7 +205,7 @@ export const blogPosts = [
             {
                 kop: "De drie grootste prijsbepalers",
                 html:
-                    "<ul><li><strong>Maatwerk vs. sjabloon</strong> — een uniek ontwerp kost meer dan een aangepast thema, maar onderscheidt je wel van concurrenten die hetzelfde sjabloon gebruiken</li><li><strong>Functionaliteit</strong> — een contactformulier is iets anders dan een boekingssysteem of klantportaal</li><li><strong>Onderhoud achteraf</strong> — een lage bouwprijs met dure onderhoudskosten is op termijn vaak duurder dan andersom</li></ul>",
+                    "<ul><li><strong>Maatwerk vs. sjabloon</strong>, een uniek ontwerp kost meer dan een aangepast thema, maar onderscheidt je wel van concurrenten die hetzelfde sjabloon gebruiken</li><li><strong>Functionaliteit</strong>: een contactformulier is iets anders dan een boekingssysteem of klantportaal</li><li><strong>Onderhoud achteraf</strong>, een lage bouwprijs met dure onderhoudskosten is op termijn vaak duurder dan andersom</li></ul>",
             },
             {
                 kop: "Waarom de goedkoopste offerte vaak duurder uitpakt",
