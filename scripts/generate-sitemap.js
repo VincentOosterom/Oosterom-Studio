@@ -1,16 +1,3 @@
-// scripts/generate-sitemap.js
-//
-// Genereert public/sitemap.xml automatisch.
-// - Vaste pagina's staan hieronder in STATIC_PAGES (voeg handmatig toe als je een
-//   nieuwe vaste pagina maakt, zoals een nieuwe dienst of blogpost)
-// - Landingspagina's komen automatisch uit src/pages/LandingPage/landingPagesData.js
-//   → nooit meer handmatig bijwerken als je een nieuwe SEO landingspagina toevoegt
-//
-// Gebruik:
-//   node scripts/generate-sitemap.js
-//
-// Of automatisch bij elke build, zie package.json instructie onderaan dit bestand.
-
 import { writeFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
