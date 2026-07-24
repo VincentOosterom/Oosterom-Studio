@@ -1,11 +1,11 @@
 /* ── HERO ─────────────────────────────────────────────────────── */
 
 .pf-hero {
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 120px 4rem 80px;
+    justify-content: center;
+    padding: 140px 4rem 80px;
     position: relative;
     overflow: hidden;
 }
@@ -13,10 +13,10 @@
 .pf-hero__bg-grid {
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(rgba(77, 255, 195, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(77, 255, 195, 0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(136, 232, 244, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(136, 232, 244, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse 80% 60% at 20% 100%, black 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 20% 40%, black 30%, transparent 100%);
     pointer-events: none;
 }
 
@@ -24,9 +24,9 @@
     position: absolute;
     top: -10%;
     left: -5%;
-    width: 600px;
+    width: 700px;
     height: 500px;
-    background: radial-gradient(ellipse, rgba(77, 255, 195, 0.05) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(136, 232, 244, 0.09) 0%, transparent 90%);
     pointer-events: none;
 }
 
@@ -36,62 +36,83 @@
 }
 
 .pf-hero__tag {
-    display: inline-block;
-    font-family: var(--font-title), monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--color-text);
+    color: var(--color-accent);
+    font-family: var(--font-body), sans-serif;
     margin-bottom: 24px;
     border-radius: 100px;
+    width: fit-content;
 }
 
 .pf-hero__title {
     font-size: clamp(40px, 8vw, 80px);
-    font-weight: 600;
-    font-family: var(--font-title), monospace;
-    line-height: 0.92;
-    letter-spacing: -0.01em;
+    font-weight: 800;
+    font-family: var(--font-title), sans-serif;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
     color: var(--color-text, #f0f0f0);
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
 .pf-hero__title em {
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-accent, #88e8f4);
     font-style: normal;
 }
 
 .pf-hero__sub {
     font-size: 16px;
     line-height: 1.75;
-    font-family: var(--font-body), monospace;
+    font-family: var(--font-body), sans-serif;
     color: var(--color-muted, #888);
     font-weight: 300;
     max-width: 480px;
+    margin-bottom: 40px;
 }
 
-.pf-hero__count {
-    position: absolute;
-    bottom: 80px;
-    right: 4rem;
-    text-align: right;
+/* ── Stats-rij ────────────────────────────────────────────────── */
+
+.pf-hero__stats {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-top: 32px;
+    border-top: 1px solid #2a2a2a;
+    width: fit-content;
 }
 
-.pf-hero__count span {
-    display: block;
-    font-size: clamp(80px, 12vw, 140px);
+.pf-hero__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pf-hero__stat-num {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
     font-weight: 800;
-    letter-spacing: -0.06em;
-    color: var(--color-text);
+    letter-spacing: -0.02em;
+    color: var(--color-text, #f0f0f0);
     line-height: 1;
 }
 
-.pf-hero__count small {
-    font-size: 10px;
-    letter-spacing: 0.2em;
+.pf-hero__stat-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-muted, #555);
-    font-family: 'Courier New', monospace;
+    color: var(--color-muted, #888);
+    font-family: var(--font-body), sans-serif;
+}
+
+.pf-hero__stat-divider {
+    width: 1px;
+    height: 32px;
+    background: #2a2a2a;
+    flex-shrink: 0;
 }
 
 /* ── DIVIDER ─────────────────────────────────────────────────── */
@@ -102,7 +123,7 @@
 
 .pf-divider__line {
     height: 1px;
-    background: linear-gradient(90deg, var(--color-accent, #4dffc3), transparent);
+    background: linear-gradient(90deg, var(--color-accent, #88e8f4), transparent);
     transform-origin: left;
 }
 
@@ -128,7 +149,7 @@
 }
 
 .pf-card:hover {
-    border-color: rgba(77, 255, 195, 0.25);
+    border-color: rgba(136, 232, 244, 0.25);
     transform: translateY(-4px);
 }
 
@@ -180,7 +201,7 @@
     gap: 6px;
     font-size: 12px;
     font-weight: 600;
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-accent, #88e8f4);
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -210,7 +231,7 @@
     font-size: 9px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-accent, #88e8f4);
     margin-bottom: 12px;
 }
 
@@ -229,7 +250,7 @@
 }
 
 .pf-card__title a:hover {
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-accent, #88e8f4);
 }
 
 .pf-card__desc {
@@ -252,7 +273,7 @@
     display: inline-flex;
     align-items: center;
     font-size: 12px;
-    font-family: var(--font-body), monospace;
+    font-family: var(--font-body), sans-serif;
     font-weight: 600;
     color: var(--color-text, #f0f0f0);
     text-decoration: none;
@@ -262,7 +283,7 @@
 }
 
 .pf-card__link:hover {
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-accent, #88e8f4);
 }
 
 .pf-card__link--muted {
@@ -290,7 +311,7 @@
     transform: translate(-50%, -50%);
     width: 600px;
     height: 300px;
-    background: radial-gradient(ellipse, rgba(77, 255, 195, 0.07) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(136, 232, 244, 0.09) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -305,19 +326,19 @@
 }
 
 .pf-cta__title em {
-    color: var(--color-accent, #4dffc3);
+    color: var(--color-accent, #88e8f4);
     font-style: normal;
 }
 
 .pf-cta__btn {
     display: inline-flex;
     align-items: center;
-    font-family: var(--font-body), monospace;
+    font-family: var(--font-body), sans-serif;
     gap: 8px;
     font-size: 14px;
     font-weight: 600;
     color: #000;
-    background: var(--color-accent, #4dffc3);
+    background: var(--color-accent, #88e8f4);
     padding: 18px 40px;
     border-radius: 100px;
     text-decoration: none;
@@ -359,12 +380,17 @@
 
 @media (max-width: 768px) {
     .pf-hero {
-        padding: 100px 1.5rem 60px;
-        min-height: 70vh;
+        padding: 110px 1.5rem 56px;
+        min-height: auto;
     }
 
-    .pf-hero__count {
-        display: none;
+    .pf-hero__stats {
+        gap: 20px;
+        padding-top: 24px;
+    }
+
+    .pf-hero__stat-divider {
+        height: 26px;
     }
 
     .pf-grid {
@@ -379,5 +405,20 @@
 
     .pf-cta {
         padding: 80px 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pf-hero__stats {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .pf-hero__stat-num {
+        font-size: 1.4rem;
+    }
+
+    .pf-hero__stat-label {
+        font-size: 10px;
     }
 }

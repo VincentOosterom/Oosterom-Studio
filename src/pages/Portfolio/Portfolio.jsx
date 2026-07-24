@@ -108,12 +108,24 @@ function Portfolio() {
                         Van maatwerk websites tot complete digitale platformen.
                         Elk project is een samenwerking met een ambitieuze ondernemer.
                     </p>
-                </motion.div>
 
-                <div className="pf-hero__count">
-                    <span>{projects.length}</span>
-                    <small>projecten</small>
-                </div>
+                    <div className="pf-hero__stats">
+                        <div className="pf-hero__stat">
+                            <span className="pf-hero__stat-num">{projects.length}</span>
+                            <span className="pf-hero__stat-label">Projecten</span>
+                        </div>
+                        <div className="pf-hero__stat-divider"/>
+                        <div className="pf-hero__stat">
+                            <span className="pf-hero__stat-num">100%</span>
+                            <span className="pf-hero__stat-label">Maatwerk</span>
+                        </div>
+                        <div className="pf-hero__stat-divider"/>
+                        <div className="pf-hero__stat">
+                            <span className="pf-hero__stat-num">1</span>
+                            <span className="pf-hero__stat-label">Vast aanspreekpunt</span>
+                        </div>
+                    </div>
+                </motion.div>
             </section>
 
             <div className="pf-divider">
