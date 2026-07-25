@@ -36,6 +36,13 @@ const stappen = [
     },
 ];
 
+
+function trackOfferteConversie() {
+    if (typeof window.gtag !== "function") return;
+
+    window.gtag('event', 'offerte_aanvraag_verzonden');
+}
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 function OfferteAanvragen() {
@@ -67,6 +74,9 @@ function OfferteAanvragen() {
             if (response.ok) {
                 setFormData({ name: "", company: "", email: "", service: "", budget: "", message: "" });
                 setIsSubmitted(true);
+
+                // Conversie melden aan Google Ads — alleen bij succesvolle verzending
+                trackOfferteConversie();
             } else {
                 setError(data.error || "Er is iets misgegaan, probeer het later opnieuw.");
             }
