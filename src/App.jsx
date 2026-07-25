@@ -24,6 +24,7 @@ const OfferteAanvragen = lazy(() => import("./pages/Offerte Aanvragen/OfferteAan
 const OosteromOS = lazy(() => import("./pages/OosteromOS/OosteromOS.jsx"));
 const FAQPage = lazy(() => import("./pages/FAQ/FAQPage.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound.jsx"));
+const QRCard = lazy(() => import("./pages/QRCard/QRCard.jsx"));
 
 // Blog
 const BlogOverview = lazy(() => import("./pages/Blogoverview/BlogOverview.jsx"));
@@ -95,6 +96,7 @@ function App() {
                     <Route path="/offerte-aanvragen" element={<OfferteAanvragen/>}/>
                     <Route path="/faq" element={<FAQPage/>}/>
                     <Route path="/oosterom-os" element={<OosteromOS/>}/>
+                    <Route path="/vc-vincent-2026" element={<QRCard/>}/>
 
                     {/* Blog */}
                     <Route path="/blog" element={<BlogOverview/>}/>

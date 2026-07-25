@@ -1,0 +1,119 @@
+/* src/components/wowIntro/WowIntro.css */
+
+.wow-intro {
+    position: fixed;
+    inset: 0;
+    background: #000000;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ── Logo + particles ── */
+
+.wow-intro__logo-wrap {
+    position: relative;
+    width: min(90vw, 520px);
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wow-intro__particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    margin: -2px 0 0 -2px;
+    border-radius: 50%;
+    background: var(--color-accent, #88e8f4);
+    box-shadow: 0 0 8px 1px rgba(136, 232, 244, 0.7);
+    pointer-events: none;
+}
+
+.wow-intro__letter {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(28px, 6vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    color: var(--color-text, #ffffff);
+    text-shadow: 0 0 40px rgba(136, 232, 244, 0.35);
+    line-height: 1;
+}
+
+.wow-intro__dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-left: 4px;
+    background: var(--color-accent, #88e8f4);
+    box-shadow: 0 0 10px 2px rgba(136, 232, 244, 0.6);
+    flex-shrink: 0;
+}
+
+/* ── Lijn-sweep ── */
+
+.wow-intro__line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+            90deg,
+            transparent 0%,
+            var(--color-accent, #88e8f4) 50%,
+            transparent 100%
+    );
+    transform-origin: center;
+    box-shadow: 0 0 20px 1px rgba(136, 232, 244, 0.5);
+}
+
+/* ── Tagline ── */
+
+.wow-intro__tagline {
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    font-family: var(--font-body), sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-muted, rgba(255, 255, 255, 0.65));
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .wow-intro__logo-wrap {
+        height: 120px;
+    }
+
+    .wow-intro__letter {
+        font-size: clamp(22px, 7vw, 30px);
+    }
+
+    .wow-intro__tagline {
+        font-size: 14px;
+        bottom: 20%;
+    }
+}
+
+/* Minder bewegen voor wie dat wil — toon meteen de eindtoestand */
+@media (prefers-reduced-motion: reduce) {
+    .wow-intro__particle {
+        display: none;
+    }
+}

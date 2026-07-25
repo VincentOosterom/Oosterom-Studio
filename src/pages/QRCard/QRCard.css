@@ -1,0 +1,147 @@
+/* src/pages/QRCard/QRCard.css */
+
+.qrcard-bg {
+    position: fixed;
+    inset: 0;
+    background: var(--color-bg, #000000);
+    background-image:
+            linear-gradient(rgba(136, 232, 244, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(136, 232, 244, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+
+.qrcard-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+}
+
+.qrcard-card {
+    width: 100%;
+    max-width: 380px;
+    background: var(--color-dark, #141414);
+    border: 1px solid #2a2a2a;
+    border-radius: 24px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.qrcard-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(136, 232, 244, 0.1);
+    border: 2px solid rgba(136, 232, 244, 0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.qrcard-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.qrcard-naam {
+    font-family: var(--font-title), sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin: 0 0 6px;
+}
+
+.qrcard-functie {
+    font-size: 14px;
+    color: var(--color-accent);
+    font-family: var(--font-body), sans-serif;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.qrcard-tagline {
+    font-size: 13px;
+    color: var(--color-muted, #94A3B8);
+    font-family: var(--font-body), sans-serif;
+    font-weight: 300;
+    margin: 0 0 28px;
+    line-height: 1.6;
+}
+
+.qrcard-save-btn {
+    width: 100%;
+    background: var(--color-accent);
+    color: #000000;
+    border: none;
+    border-radius: 100px;
+    padding: 15px 24px;
+    font-family: var(--font-body), sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 28px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.qrcard-save-btn:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+}
+
+.qrcard-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.qrcard-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.qrcard-link:hover {
+    border-color: rgba(136, 232, 244, 0.3);
+    background: rgba(136, 232, 244, 0.04);
+}
+
+.qrcard-link__label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted, #94A3B8);
+    font-family: var(--font-body), sans-serif;
+}
+
+.qrcard-link__value {
+    font-size: 13px;
+    color: var(--color-text);
+    font-family: var(--font-body), sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width: 420px) {
+    .qrcard-card {
+        padding: 32px 24px;
+    }
+}
