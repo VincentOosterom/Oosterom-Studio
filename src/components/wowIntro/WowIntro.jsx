@@ -1,21 +1,7 @@
-// src/components/wowIntro/WowIntro.jsx
-//
-// Geanimeerde intro-sequentie: zwart scherm -> particles die samenkomen
-// tot het logo -> een lijn die over het scherm veegt -> tagline.
-// Speelt eenmalig af, roept daarna onComplete() aan zodat de ouder-component
-// de eigenlijke inhoud kan tonen.
-//
-// Gebruik:
-//   const [introDone, setIntroDone] = useState(false);
-//   {!introDone && <WowIntro onComplete={() => setIntroDone(true)} />}
-//   {introDone && <JouwEchteContent />}
-
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./WowIntro.css";
 
-// Willekeurige startposities voor de particles rondom het midden,
-// zodat ze van alle kanten naar binnen "vliegen".
 const PARTICLES = Array.from({ length: 28 }, (_, i) => {
     const angle = (i / 28) * Math.PI * 2;
     const radius = 180 + Math.random() * 100;
