@@ -5,6 +5,8 @@ import {Helmet} from "react-helmet-async";
 import Navigate from "../../components/navigate/Navigate.jsx";
 import projects from "/data/projects.js";
 import Footer from "../../components/footer/Footer.jsx";
+import PakketCta from "../../components/pakketCta/PakketCta.jsx";
+import image_cta from "../../assets/images/cta2.jpg";
 
 function ProjectPage() {
     const {slug} = useParams();
@@ -161,18 +163,6 @@ function ProjectPage() {
                     </motion.section>
                 )}
             </main>
-
-            <section className="project-cta">
-                <h2>Ook werken aan een schaalbare digitale oplossing?</h2>
-                <p>
-                    Plan een vrijblijvend strategiegesprek en ontdek hoe wij jouw digitale
-                    platform kunnen optimaliseren.
-                </p>
-                <Link to="/contact" className="cta-button">
-                    Plan een gesprek
-                </Link>
-            </section>
-
             <Footer/>
         </>
     );

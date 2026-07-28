@@ -2,10 +2,6 @@ import './App.css'
 import {Routes, Route} from "react-router-dom";
 import {lazy, Suspense} from "react";
 
-// ── i18n ────────────────────────────────────────────────────────────────────
-import "./i18n/i18n.js";
-import LanguageSync from "./components/LanguageSync/LanguageSync.jsx";
-
 // ── Altijd direct laden — staan op elke pagina ────────────────────────────────
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 import AnalyticsTracker from "./components/analytics-tracker/AnalyticsTracker.jsx";
@@ -43,7 +39,7 @@ const KlantportaalPage = lazy(() => dienstModule().then(m => ({default: m.Klantp
 const AVGProofPage = lazy(() => dienstModule().then(m => ({default: m.AVGProofPage})));
 const OnderhoudSupportPage = lazy(() => dienstModule().then(m => ({default: m.OnderhoudSupportPage})));
 
-// SEO Landingspagina's — niet in navbar, blijven voorlopig alleen NL
+// SEO Landingspagina's — niet in navbar
 const LandingPage = lazy(() => import("./pages/LandingPage/LandingPage.jsx"));
 
 // ── Laadscherm tijdens lazy load ──────────────────────────────────────────────
@@ -60,7 +56,7 @@ function PageLoader() {
                 width: '32px',
                 height: '32px',
                 border: '2px solid #1a1a1a',
-                borderTop: '2px solid #4dffc3',
+                borderTop: '2px solid #88e8f4',
                 borderRadius: '50%',
                 animation: 'spin 0.7s linear infinite',
             }}/>
@@ -73,7 +69,6 @@ function PageLoader() {
 function App() {
     return (
         <>
-            <LanguageSync/>
             <ScrollToTop/>
             <CookieBanner/>
             <AnalyticsTracker/>
@@ -81,10 +76,6 @@ function App() {
 
             <Suspense fallback={<PageLoader/>}>
                 <Routes>
-
-                    {/* ══════════════════════════════════════════════════════
-                        Nederlands (standaard, geen prefix)
-                    ══════════════════════════════════════════════════════ */}
 
                     {/* Algemeen */}
                     <Route path="/" element={<Homepage/>}/>
@@ -99,8 +90,8 @@ function App() {
                     <Route path="/vc-vincent-2026" element={<QRCard/>}/>
 
                     {/* Blog */}
-                    <Route path="/blog" element={<BlogOverview/>}/>
-                    <Route path="/blog/:slug" element={<BlogPost/>}/>
+                    <Route path="/kennisbank" element={<BlogOverview/>}/>
+                    <Route path="/kennisbank/:slug" element={<BlogPost/>}/>
 
                     {/* Dienstpagina's */}
                     <Route path="/diensten/webdesign" element={<WebdesignPage/>}/>
@@ -113,40 +104,8 @@ function App() {
                     <Route path="/diensten/avg-proof-website" element={<AVGProofPage/>}/>
                     <Route path="/diensten/onderhoud-support" element={<OnderhoudSupportPage/>}/>
 
-                    {/* SEO Landingspagina's — niet in navbar, voorlopig alleen NL */}
+                    {/* SEO Landingspagina's — niet in navbar */}
                     <Route path="/l/:slug" element={<LandingPage/>}/>
-
-
-                    {/* ══════════════════════════════════════════════════════
-                        Español (/es/ prefix)
-                        Zelfde pagina's, dezelfde componenten  de component
-                        zelf toont Spaanse tekst via i18next (useTranslation),
-                        gestuurd door LanguageSync op basis van de URL.
-                    ══════════════════════════════════════════════════════ */}
-
-                    <Route path="/es" element={<Homepage/>}/>
-                    <Route path="/es/diensten" element={<Diensten/>}/>
-                    <Route path="/es/portfolio" element={<Portfolio/>}/>
-                    <Route path="/es/portfolio/:slug" element={<ProjectPage/>}/>
-                    <Route path="/es/sobre-nosotros" element={<AboutUs/>}/>
-                    <Route path="/es/contacto" element={<Contact/>}/>
-                    <Route path="/es/solicitar-presupuesto" element={<OfferteAanvragen/>}/>
-                    <Route path="/es/faq" element={<FAQPage/>}/>
-                    <Route path="/es/oosterom-os" element={<OosteromOS/>}/>
-
-                    <Route path="/es/blog" element={<BlogOverview/>}/>
-                    <Route path="/es/blog/:slug" element={<BlogPost/>}/>
-
-                    <Route path="/es/servicios/diseno-web" element={<WebdesignPage/>}/>
-                    <Route path="/es/servicios/desarrollo-web" element={<WebdevelopmentPage/>}/>
-                    <Route path="/es/servicios/saas" element={<SaasPage/>}/>
-                    <Route path="/es/servicios/branding" element={<BrandingPage/>}/>
-                    <Route path="/es/servicios/agentes-ia" element={<AIAgentsPage/>}/>
-                    <Route path="/es/servicios/software-a-medida" element={<SoftwareOpMaatPage/>}/>
-                    <Route path="/es/servicios/portal-cliente" element={<KlantportaalPage/>}/>
-                    <Route path="/es/servicios/sitio-web-rgpd" element={<AVGProofPage/>}/>
-                    <Route path="/es/servicios/mantenimiento-soporte" element={<OnderhoudSupportPage/>}/>
-
 
                     {/* 404 — altijd als laatste */}
                     <Route path="*" element={<NotFound/>}/>

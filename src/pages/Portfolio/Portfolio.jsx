@@ -5,6 +5,8 @@ import {Link} from "react-router-dom";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
 import projects from "../../../data/projects.js";
+import image_cta from "../../assets/images/cta2.jpg";
+import PakketCta from "../../components/pakketCta/PakketCta.jsx";
 
 
 // ── Project card ──────────────────────────────────────────────
@@ -145,22 +147,15 @@ function Portfolio() {
                 ))}
             </section>
 
-            <motion.section
-                className="pf-cta"
-                initial={{opacity: 0, y: 40}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true}}
-                transition={{duration: 0.7}}
-            >
-                <div className="pf-cta__glow"/>
-                <span className="pf-hero__tag">Volgende stap</span>
-                <h2 className="pf-cta__title">
-                    Jouw project<br/><em>staat hier straks ook?</em>
-                </h2>
-                <Link to="/offerte-aanvragen" className="pf-cta__btn">
-                    Laten we beginnen →
-                </Link>
-            </motion.section>
+            <PakketCta
+                achtergrond={image_cta}
+                scriptTekst="Staat jouw project hier ook?"
+                titelWit="Wij helpen jou met het"
+                titelAccent="hele pakket!"
+                tekst="Wij bieden een totaaloplossing, waarbij je voor alles op één plek terecht kunt..."
+
+
+            />
 
             <Footer/>
         </>

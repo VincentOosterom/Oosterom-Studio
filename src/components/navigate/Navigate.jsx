@@ -3,7 +3,6 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navigate.css';
 import AnimatedNavText from "../AnimatedNavText.jsx";
-import LanguageSwitcher from "../language-switcher/Languageswitcher.jsx";
 
 // ── Scroll hook ───────────────────────────────────────────────────────────────
 
@@ -24,7 +23,7 @@ function useScrolled(threshold = 60) {
 const links = [
     { to: "/diensten",  label: "Diensten"  },
     { to: "/portfolio", label: "Portfolio" },
-    { to: "/blog",      label: "Kennisbank"      },
+    { to: "/kennisbank",      label: "Kennisbank"      },
     { to: "/over-ons",  label: "Over ons"  },
     { to: "/contact",   label: "Contact"   },
 ];
@@ -78,7 +77,6 @@ function Navigate() {
         <>
             <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}
                  role="navigation" aria-label="Hoofdnavigatie">
-                {/*<LanguageSwitcher/>*/}
 
                 {/* Logo */}
                 <button className="navbar-logo" onClick={goHome} aria-label="Terug naar home">
@@ -103,7 +101,7 @@ function Navigate() {
 
                 {/* Desktop CTA */}
                 <NavLink to="/offerte-aanvragen" className="navbar-cta">
-                    Offerte aanvragen
+                    Kom in contact
                 </NavLink>
 
                 {/* Hamburger */}
@@ -120,7 +118,7 @@ function Navigate() {
                 </button>
             </nav>
 
-            {/* Mobile overlay ── buiten <nav> zodat het over alles valt */}
+            {/* Mobile overlay — buiten <nav> zodat het over alles valt */}
             <AnimatePresence>
                 {isOpen && (
                     <>

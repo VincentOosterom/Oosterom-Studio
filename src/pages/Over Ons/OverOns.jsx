@@ -35,7 +35,7 @@ function OverOns() {
 
                 <meta
                     name="description"
-                    content="Vincent Oosterom is oprichter van Oosterom Studio — een webdeveloper en cybersecurity specialist die maatwerk digitale oplossingen bouwt voor MKB en startups in Nederland."
+                    content="Vincent Oosterom is oprichter van Oosterom Studio, een webdeveloper en cybersecurity specialist die maatwerk digitale oplossingen bouwt voor MKB en startups in Nederland."
                 />
 
                 <meta property="og:title" content="Over Vincent Oosterom | Oosterom Studio"/>
@@ -80,7 +80,7 @@ function OverOns() {
                 <div className="overons-hero__glow" aria-hidden="true"/>
                 <span className="overons-tag">Over ons</span>
                 <h1>Over Oosterom Studio</h1>
-                <p>Webdevelopment, SaaS en cybersecurity vanuit één duidelijke visie.</p>
+                <p>Webdevelopment, SaaS en Cyber Security vanuit één duidelijke visie.</p>
             </section>
 
             <motion.section

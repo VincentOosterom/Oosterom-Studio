@@ -24,9 +24,9 @@ export default function ChatWidget() {
     const [laden, setLaden]                     = useState(false)
     const [toonSuggestions, setToonSuggestions] = useState(true)
 
-    const sessieId    = useRef(maakSessieId())
+    const sessieId     = useRef(maakSessieId())
     const berichtenRef = useRef(null)
-    const inputRef    = useRef(null)
+    const inputRef      = useRef(null)
 
     // Scroll naar nieuwste bericht
     useEffect(() => {
@@ -127,20 +127,16 @@ export default function ChatWidget() {
                                 Online
                             </span>
                         </div>
-                        <button
-                            className={styles.closeBtn}
-                            onClick={() => setOpen(false)}
-                            aria-label="Sluit chat"
-                        >
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                                <line x1="18" y1="6" x2="6" y2="18" />
-                                <line x1="6" y1="6" x2="18" y2="18" />
-                            </svg>
-                        </button>
                     </div>
 
-                    {/* Berichtenlijst */}
-                    <div className={styles.messages} ref={berichtenRef}>
+                    {/* Berichtenlijst — aria-live zodat screenreaders nieuwe */}
+                    {/* berichten automatisch voorlezen zonder focus te stelen */}
+                    <div
+                        className={styles.messages}
+                        ref={berichtenRef}
+                        aria-live="polite"
+                        aria-atomic="false"
+                    >
                         {berichten.map((bericht, i) => (
                             <div
                                 key={i}

@@ -72,7 +72,7 @@ export default function BlogPost() {
     }, [post]);
 
     if (!post) {
-        return <Navigate to="/blog" replace />;
+        return <Navigate to="/kennisbank" replace />;
     }
 
     const gerelateerdeDienstObjecten = alleDiensten.filter((d) =>
@@ -136,7 +136,7 @@ export default function BlogPost() {
                         <ul className={styles.relatedLijst}>
                             {gerelateerdeBlogObjecten.map((p) => (
                                 <li key={p.slug}>
-                                    <Link to={`/blog/${p.slug}`} className={styles.relatedLink}>
+                                    <Link to={`/kennisbank/${p.slug}`} className={styles.relatedLink}>
                                         {p.title}
                                     </Link>
                                 </li>

@@ -42,14 +42,26 @@ const cards = [
 export default function WatWeBouwen() {
     return (
         <section className={styles.section}>
+            <div className={styles.bgGrid} aria-hidden="true" />
+
             <article className={styles.header}>
-                <h2 className={styles.title}>Digitale producten & systemen</h2>
-                <div className={styles.line} />
+                <span className={styles.tag}>Onze expertise</span>
+                <h2 className={styles.title}>
+                    Digitale <em>producten</em>
+                </h2>
+                <p className={styles.subtitle}>
+                    Van webapplicatie tot mobiele app, dit is de technische breedte
+                    die we in huis hebben.
+                </p>
             </article>
 
             <div className={styles.grid}>
-                {cards.map((card) => (
+                {cards.map((card, index) => (
                     <article key={card.title} className={styles.card}>
+                        <span className={styles.cardNum}>
+                            {String(index + 1).padStart(2, '0')}
+                        </span>
+
                         <h3 className={styles.cardTitle}>{card.title}</h3>
 
                         <p className={styles.cardDesc}>

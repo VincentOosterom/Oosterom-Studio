@@ -1,11 +1,16 @@
 /* ==========================================================================
    Footer.css — Oosterom Studio
+   Zwevende kaart met afgeronde hoeken, consistent met de navbar-stijl
    ========================================================================== */
 
 .footer {
-    background: white;
-    border-top: 1px solid #2a2a2a;
+    background: var(--color-dark, #141414);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    margin: 0 20px 20px;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.25);
     font-family: var(--font-body), sans-serif;
+    overflow: hidden;
 }
 
 
@@ -14,7 +19,7 @@
 .footer-main {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 72px 4rem 56px;
+    padding: 64px 4rem 48px;
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 64px;
@@ -35,9 +40,14 @@
     font-weight: 800;
     font-size: 1.15rem;
     letter-spacing: -0.02em;
-    color: black;
+    color: var(--color-text, #f9fafb);
     text-decoration: none;
     width: fit-content;
+    transition: color 0.2s ease;
+}
+
+.footer-logo:hover {
+    color: var(--color-accent);
 }
 
 .footer-logo span {
@@ -47,7 +57,7 @@
 .footer-tagline {
     font-size: 13px;
     line-height: 1.75;
-    color: black;
+    color: var(--color-muted, #9ca3af);
     font-weight: 300;
     margin: 0;
     max-width: 260px;
@@ -66,14 +76,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: var(--color-muted, #9ca3af);
     text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .footer-social-link:hover {
     color: var(--color-accent);
-    border-color: rgba(77, 255, 195, 0.3);
+    border-color: rgba(136, 232, 244, 0.3);
+    background: rgba(136, 232, 244, 0.05);
 }
 
 
@@ -106,7 +117,7 @@
 
 .footer-column a {
     font-size: 13px;
-    color: black;
+    color: var(--color-muted, #b0b3b8);
     text-decoration: none;
     transition: color 0.2s ease;
     line-height: 1.4;
@@ -123,7 +134,7 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px 4rem;
-    border-top: 1px solid #2a2a2a;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -133,7 +144,7 @@
 
 .footer-copyright {
     font-size: 12px;
-    color: black;
+    color: var(--color-muted, #9ca3af);
     margin: 0;
     display: flex;
     align-items: center;
@@ -144,7 +155,7 @@
     font-family: monospace;
     font-size: 11px;
     letter-spacing: 0.04em;
-    color: black;
+    color: var(--color-muted, #7a7d80);
 }
 
 /* Uptime status */
@@ -153,13 +164,13 @@
     align-items: center;
     gap: 8px;
     font-size: 12px;
-    color: black;
+    color: var(--color-muted, #9ca3af);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .footer-status-link:hover {
-    color: black;
+    color: var(--color-text, #f9fafb);
 }
 
 .footer-status-dot {
@@ -167,6 +178,7 @@
     height: 7px;
     border-radius: 50%;
     flex-shrink: 0;
+    box-shadow: 0 0 6px 1px currentColor;
 }
 
 /* Juridische links */
@@ -177,13 +189,13 @@
 
 .footer-legal-link {
     font-size: 12px;
-    color: black;
+    color: var(--color-muted, #9ca3af);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .footer-legal-link:hover {
-    color: black;
+    color: var(--color-accent);
 }
 
 
@@ -200,6 +212,11 @@
 }
 
 @media (max-width: 900px) {
+    .footer {
+        margin: 0 12px 12px;
+        border-radius: 20px;
+    }
+
     .footer-main {
         grid-template-columns: 1fr;
         gap: 48px;
@@ -233,6 +250,11 @@
 }
 
 @media (max-width: 480px) {
+    .footer {
+        margin: 0 8px 8px;
+        border-radius: 16px;
+    }
+
     .footer-main {
         padding: 40px 1rem 32px;
     }

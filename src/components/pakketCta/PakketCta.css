@@ -1,0 +1,172 @@
+/* src/components/pakketCta/PakketCta.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+
+.pakket-cta {
+    padding: 60px 4rem;
+    background: var(--color-bg, #080808);
+}
+
+.pakket-cta__bg {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0a0a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Donkere overlay, links donkerder voor leesbaarheid van de tekst,
+   rechts lichter zodat de foto zichtbaar blijft */
+.pakket-cta__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 8, 12, 0.72);
+}
+
+.pakket-cta__content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    padding: 56px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ── Handgeschreven accent-tekst ── */
+.pakket-cta__script {
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 700;
+    color: var(--color-accent, #88e8f4);
+    transform: rotate(-3deg);
+    margin-bottom: -8px;
+}
+
+/* ── Titel ── */
+.pakket-cta__title {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0 0 20px;
+}
+
+.pakket-cta__title-accent {
+    color: var(--color-accent, #88e8f4);
+}
+
+/* ── Tekst ── */
+.pakket-cta__text {
+    font-family: var(--font-body), sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 540px;
+    margin: 0 0 36px;
+    text-align: center;
+}
+
+/* ── Knoppen ── */
+.pakket-cta__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.pakket-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body), sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+.pakket-cta__btn--solid {
+    background: var(--color-accent, #88e8f4);
+    color: #0a0a0a;
+}
+
+.pakket-cta__btn--solid:hover {
+    opacity: 0.9;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(136, 232, 244, 0.3);
+}
+
+.pakket-cta__btn--outline {
+    background: rgba(27, 24, 24, 0.95);
+    color: var(--color-accent, #0e7490);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pakket-cta__btn--outline:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 28px rgba(136, 232, 244, 0.3);
+}
+
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .pakket-cta {
+        padding: 48px 2.5rem;
+    }
+
+    .pakket-cta__content {
+        padding: 44px 40px 52px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pakket-cta {
+        padding: 40px 1.5rem;
+    }
+
+    .pakket-cta__bg {
+        min-height: 480px;
+        border-radius: 20px;
+    }
+
+    .pakket-cta__content {
+        max-width: 100%;
+        padding: 36px 28px 44px;
+    }
+
+    .pakket-cta__overlay {
+        background: rgba(5, 8, 12, 0.78);
+    }
+}
+
+@media (max-width: 480px) {
+    .pakket-cta__content {
+        padding: 28px 20px 36px;
+    }
+
+    .pakket-cta__buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pakket-cta__btn {
+        width: 100%;
+    }
+}

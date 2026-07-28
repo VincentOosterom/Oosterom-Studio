@@ -1,6 +1,6 @@
 /* ==========================================================================
    Homepage.css — Oosterom Studio
-   Volgorde: Values → Aanpak → Waarom → Pricing → CTA → Responsive
+   Volgorde: Values → Waarom → Projecten → Aanpak → Pricing → Responsive
    ========================================================================== */
 
 
@@ -8,7 +8,7 @@
 
 .values-section {
     padding: 100px 4rem;
-    background: #f8f8f8;
+    background: var(--color-bg, #080808);
 }
 
 .values-container {
@@ -23,13 +23,13 @@
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: black;
+    color: var(--color-accent);
     font-family: var(--font-body), sans-serif;
     margin-bottom: 20px;
     padding: 8px 14px;
-    border: 1px solid rgb(136, 232, 244);
+    border: 1px solid rgba(136, 232, 244, 0.2);
     border-radius: 100px;
-    background: rgba(77, 255, 195, 0.05);
+    background: rgba(136, 232, 244, 0.05);
     width: fit-content;
 }
 
@@ -39,7 +39,7 @@
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.05;
-    color: black;
+    color: var(--color-text);
     margin-bottom: 16px;
 }
 
@@ -51,7 +51,7 @@
 .values-subtitle {
     font-size: 16px;
     line-height: 1.75;
-    color: black;
+    color: var(--color-muted, #999);
     font-weight: 300;
     max-width: 480px;
     margin-bottom: 56px;
@@ -65,7 +65,7 @@
 }
 
 .value-card {
-    background: var(--color-bg, #080808);
+    background: var(--color-dark, #141414);
     border: 1px solid #2a2a2a;
     border-radius: 16px;
     padding: 32px 28px;
@@ -76,15 +76,15 @@
 }
 
 .value-card:hover {
-    border-color: rgba(77, 255, 195, 0.3);
+    border-color: rgba(136, 232, 244, 0.3);
 }
 
 .value-card__icon {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background: rgba(77, 255, 195, 0.08);
-    border: 1px solid rgba(77, 255, 195, 0.15);
+    background: rgba(136, 232, 244, 0.08);
+    border: 1px solid rgba(136, 232, 244, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,103 +111,7 @@
 }
 
 
-/* ── 2. Aanpak Section ───────────────────────────────────────────────────── */
-
-.aanpak-section {
-    padding: 100px 4rem;
-    background: var(--color-bg, #080808);
-}
-
-.aanpak-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.aanpak-header {
-    margin-bottom: 64px;
-}
-
-.aanpak-tag {
-    display: inline-flex;
-    align-items: center;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    font-family: var(--font-body), sans-serif;
-    margin-bottom: 20px;
-    padding: 8px 14px;
-    border: 1px solid rgba(77, 255, 195, 0.2);
-    border-radius: 100px;
-    background: rgba(77, 255, 195, 0.05);
-    width: fit-content;
-}
-
-.aanpak-container h2 {
-    font-family: var(--font-title), sans-serif;
-    font-size: clamp(28px, 4vw, 48px);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.05;
-    color: var(--color-text);
-    margin: 0;
-}
-
-.aanpak-container h2 em {
-    color: var(--color-accent);
-    font-style: normal;
-}
-
-.aanpak-stappen {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border: 1px solid #2a2a2a;
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.aanpak-stap {
-    padding: 40px 32px;
-    border-right: 1px solid #2a2a2a;
-    background: var(--color-dark, #141414);
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.aanpak-stap:last-child {
-    border-right: none;
-}
-
-.aanpak-stap__num {
-    display: block;
-    font-family: monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--color-accent);
-}
-
-.aanpak-stap__title {
-    font-family: var(--font-title), sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    color: var(--color-text);
-    margin: 0;
-}
-
-.aanpak-stap__desc {
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--color-muted, #999);
-    font-weight: 300;
-    font-family: var(--font-body), sans-serif;
-    margin: 0;
-}
-
-
-/* ── 3. Waarom Section ───────────────────────────────────────────────────── */
+/* ── 2. Waarom Section ────────────────────────────────────────────────────── */
 
 .waarom-section {
     padding: 100px 4rem;
@@ -235,9 +139,9 @@
     font-family: var(--font-body), sans-serif;
     margin-bottom: 20px;
     padding: 8px 14px;
-    border: 1px solid rgba(77, 255, 195, 0.2);
+    border: 1px solid rgba(136, 232, 244, 0.2);
     border-radius: 100px;
-    background: rgba(77, 255, 195, 0.05);
+    background: rgba(136, 232, 244, 0.05);
     width: fit-content;
 }
 
@@ -287,15 +191,15 @@
 }
 
 .waarom-card:hover {
-    border-color: rgba(77, 255, 195, 0.3);
+    border-color: rgba(136, 232, 244, 0.3);
 }
 
 .waarom-card__icon {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background: rgba(77, 255, 195, 0.08);
-    border: 1px solid rgba(77, 255, 195, 0.15);
+    background: rgba(136, 232, 244, 0.08);
+    border: 1px solid rgba(136, 232, 244, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -322,8 +226,8 @@
 }
 
 .waarom-card--accent {
-    background: rgba(77, 255, 195, 0.05);
-    border-color: rgba(77, 255, 195, 0.2);
+    background: rgba(136, 232, 244, 0.05);
+    border-color: rgba(136, 232, 244, 0.2);
     justify-content: space-between;
 }
 
@@ -349,7 +253,281 @@
 }
 
 
-/* ── 4. Pricing Section ──────────────────────────────────────────────────── */
+/* ── 3. Uitgelichte projecten Section ─────────────────────────────────────── */
+
+.projects-section {
+    padding: 100px 4rem;
+    background: var(--color-bg, #080808);
+}
+
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.projects-header {
+    max-width: 620px;
+    margin-bottom: 56px;
+}
+
+.projects-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-family: var(--font-body), sans-serif;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    border: 1px solid rgba(136, 232, 244, 0.2);
+    border-radius: 100px;
+    background: rgba(136, 232, 244, 0.05);
+    width: fit-content;
+}
+
+.projects-container h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.projects-container h2 em {
+    color: var(--color-accent);
+    font-style: normal;
+}
+
+.projects-subtitle {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    max-width: 480px;
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 48px 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-dark, #141414);
+    border: 1px solid #2a2a2a;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(136, 232, 244, 0.25);
+    transform: translateY(-4px);
+}
+
+.project-card__image-wrap {
+    display: block;
+    text-decoration: none;
+}
+
+.project-card__image {
+    aspect-ratio: 4/3;
+    background: #0c0c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.project-card__image img {
+    width: 82%;
+    height: 82%;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-card__image img {
+    transform: scale(1.04);
+}
+
+.project-card__content {
+    padding: 22px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-card__content h3 {
+    font-family: var(--font-title), sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+}
+
+.project-card__content h3 a {
+    color: var(--color-text, #f0f0f0);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.project-card__content h3 a:hover {
+    color: var(--color-accent);
+}
+
+.project-card__content p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.project-card__link {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-family: var(--font-body), sans-serif;
+    width: fit-content;
+}
+
+.project-card__link:hover {
+    text-decoration: underline;
+}
+
+.projects-cta {
+    text-align: center;
+}
+
+.projects-cta__link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text);
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 4px;
+    text-decoration: none;
+    font-family: var(--font-body), sans-serif;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.projects-cta__link:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+
+/* ── 4. Aanpak Section ───────────────────────────────────────────────────── */
+
+.aanpak-section {
+    padding: 100px 4rem;
+    background: var(--color-dark, #141414);
+}
+
+.aanpak-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.aanpak-header {
+    margin-bottom: 64px;
+}
+
+.aanpak-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-family: var(--font-body), sans-serif;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    border: 1px solid rgba(136, 232, 244, 0.2);
+    border-radius: 100px;
+    background: rgba(136, 232, 244, 0.05);
+    width: fit-content;
+}
+
+.aanpak-container h2 {
+    font-family: var(--font-title), sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.aanpak-container h2 em {
+    color: var(--color-accent);
+    font-style: normal;
+}
+
+.aanpak-stappen {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.aanpak-stap {
+    padding: 40px 32px;
+    border-right: 1px solid #2a2a2a;
+    background: var(--color-bg, #080808);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.aanpak-stap:last-child {
+    border-right: none;
+}
+
+.aanpak-stap__num {
+    display: block;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+}
+
+.aanpak-stap__title {
+    font-family: var(--font-title), sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.aanpak-stap__desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--color-muted, #999);
+    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+}
+
+
+/* ── 5. Pricing Section ───────────────────────────────────────────────────── */
 
 .pricing-section {
     padding: 120px 4rem;
@@ -372,7 +550,7 @@
     transform: translate(-50%, -60%);
     width: 1000px;
     height: 700px;
-    background: radial-gradient(ellipse, rgba(77, 255, 195, 0.06) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(136, 232, 244, 0.06) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -387,9 +565,9 @@
     font-family: var(--font-body), sans-serif;
     margin-bottom: 24px;
     padding: 8px 14px;
-    border: 1px solid rgba(77, 255, 195, 0.2);
+    border: 1px solid rgba(136, 232, 244, 0.2);
     border-radius: 100px;
-    background: rgba(77, 255, 195, 0.05);
+    background: rgba(136, 232, 244, 0.05);
 }
 
 .pricing-container h2 {
@@ -480,7 +658,7 @@
 }
 
 
-/* ── 5. CTA Section ──────────────────────────────────────────────────────── */
+/* ── 6. CTA Section ───────────────────────────────────────────────────────── */
 
 .cta-section {
     padding: 120px 4rem;
@@ -535,7 +713,7 @@
 }
 
 
-/* ── 6. Responsive ───────────────────────────────────────────────────────── */
+/* ── 7. Responsive ────────────────────────────────────────────────────────── */
 
 @media (max-width: 900px) {
     .waarom-grid {
@@ -544,6 +722,10 @@
 
     .waarom-card--wide {
         grid-column: span 2;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .aanpak-stappen {
@@ -562,8 +744,9 @@
 
 @media (max-width: 768px) {
     .values-section,
-    .aanpak-section,
     .waarom-section,
+    .projects-section,
+    .aanpak-section,
     .pricing-section,
     .cta-section {
         padding: 72px 1.5rem;
@@ -587,6 +770,12 @@
         grid-column: span 1;
     }
 
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 36px 0;
+    }
+
     .pricing-pillars {
         grid-template-columns: 1fr;
     }
@@ -600,8 +789,9 @@
 
 @media (max-width: 480px) {
     .values-section,
-    .aanpak-section,
     .waarom-section,
+    .projects-section,
+    .aanpak-section,
     .pricing-section,
     .cta-section {
         padding: 56px 1rem;
@@ -631,6 +821,10 @@
 
     .waarom-card__quote {
         font-size: 17px;
+    }
+
+    .project-card__content {
+        padding: 18px 20px 22px;
     }
 
     .aanpak-stappen {

@@ -47,6 +47,58 @@ const projects = [
         website: "https://www.casinoontour.nl"
     },
     {
+        slug: "van-puffelen-gww",
+        title: "V Puffelen GWW",
+        image: logo_vpuffelen,
+        card_description: `Een volledig custom React website voor V Puffelen GWW, mobielvriendelijk en SEO-geoptimaliseerd, met een eigen CMS waarmee de klant zelf vacatures en projecten beheert, wijzigingen zijn direct zichtbaar op de website.`,
+        subtitle: "Diensten van Oosterom Studio",
+        intro: `V Puffelen GWW had behoefte aan een professionele online aanwezigheid gericht op gemeentes, waterschappen en hoofdaannemers in het Groene Hart. Wij hebben een maatwerk React website gebouwd met een volledig eigen beheersysteem.`,
+        challenge: `V Puffelen GWW werkt voor grote opdrachtgevers zoals gemeentes en hoofdaannemers. De website moest die professionaliteit uitstralen én de klant in staat stellen om zelfstandig vacatures en projecten te beheren, zonder technische kennis. Daarnaast moesten contactaanvragen en sollicitaties gestructureerd binnenkomen.`,
+        solution: `We hebben een volledig custom React website ontwikkeld met een eigen CMS dashboard op een apart subdomein. Via dit dashboard kan de klant vacatures en projecten toevoegen, aanpassen en verwijderen. Wijzigingen zijn direct zichtbaar op de website. Contactaanvragen komen binnen via een beveiligd formulier en worden opgeslagen in het CRM van Oosterom Studio. Sollicitanten kunnen direct solliciteren via een uitgebreid formulier met CV-upload, waarna zij automatisch een persoonlijke bevestigingsmail ontvangen.`,
+        result: `Het resultaat is een professionele website die aansluit bij de uitstraling van grote GWW-bedrijven, gecombineerd met een gebruiksvriendelijk beheersysteem. De klant is volledig zelfstandig in het beheren van vacatures en projecten — zonder tussenkomst van een developer. Alle aanvragen en sollicitaties komen gestructureerd binnen en zijn direct opvolgbaar.`,
+        website: "https://www.vpuffelen-gww.nl",
+        sfeer: work_vpuffelen
+    },
+    {
+        slug: "smart-telecom-store",
+        title: "Smart Telecom Store",
+        image: logo_smart,
+        card_description: `Voor Smart Telecom Store hebben we een volledig custom WordPress thema gebouwd met meer dan 15 pagina's voor optimale SEO. Inclusief blog, WooCommerce webshop koppeling en doorlopend onderhoud van de website en zoekwoorden.`,
+        subtitle: "Diensten van Oosterom Studio",
+        intro: `Smart Telecom Store had een professionele online aanwezigheid nodig die niet alleen goed oogt, maar ook gevonden wordt. Wij hebben een custom WordPress thema gebouwd, de SEO volledig opgezet en zorgen voor doorlopend onderhoud.`,
+        challenge: `De klant had behoefte aan een website die écht scoort in Google, niet alleen mooi van buiten, maar technisch sterk van binnen. Daarnaast moest er een webshop komen voor online verkoop, en was er behoefte aan een betrouwbare partner voor langdurig onderhoud en groei.`,
+        solution: `We hebben een volledig custom WordPress thema ontwikkeld in de huisstijl van Smart Telecom Store. Om de beste SEO-resultaten te behalen zijn er meer dan 15 pagina's aangemaakt met gerichte zoekwoorden. Via Google Site Kit houden we de prestaties bij. Een blog is toegevoegd voor continue vindbaarheid. WooCommerce is gekoppeld voor online verkoop en we beheren doorlopend de website, content en zoekwoordstrategie.`,
+        result: `Het resultaat is een professionele, goed vindbare website met een groeiende online aanwezigheid. Door de combinatie van een sterk technisch fundament, gerichte SEO en doorlopend onderhoud groeit het organisch verkeer maandelijks. De WooCommerce integratie zorgt daarnaast voor een extra verkoopkanaal dat dag en nacht open is.`,
+        sfeer: work_smart,
+        website: "https://www.smarttelecomstore.nl"
+    },
+    {
+        slug: "oosterom-os",
+        title: "Oosterom OS",
+        image: Logo,
+        card_description: `Een volledig door Oosterom Studio ontwikkeld platform waarmee klantprojecten, portalen en websites eenvoudig beheerd kunnen worden. Snel, veilig en volledig afgestemd op de wensen van de klant.`,
+        subtitle: "Ons eigen beheerplatform",
+        intro: `Niet iedere organisatie heeft baat bij standaardsoftware. Daarom hebben wij Oosterom OS ontwikkeld: een gebruiksvriendelijk en flexibel platform waarmee klantprojecten, content en communicatie eenvoudig kunnen worden beheerd zonder onnodige complexiteit.`,
+        challenge: `Veel bestaande systemen bevatten functies die niet worden gebruikt of zijn juist beperkt in maatwerkmogelijkheden. Daarnaast kunnen externe plugins en updates zorgen voor beveiligingsrisico's en prestatieproblemen.`,
+        solution: `Met Oosterom OS hebben we een volledig eigen platform gebouwd waarin snelheid, veiligheid en gebruiksgemak centraal staan. Klanten kunnen zelf pagina's, afbeeldingen en projectstatus beheren via een overzichtelijk dashboard, terwijl wij volledige controle houden over de techniek en doorontwikkeling. Hierdoor is het systeem eenvoudig uit te breiden met nieuwe functionaliteiten en perfect afgestemd op iedere maatwerkoplossing.`,
+        result: `Het resultaat is een stabiel, snel en toekomstbestendig platform zonder overbodige functionaliteiten. Websites en klantportalen laden sneller, zijn eenvoudiger te beheren en kunnen probleemloos meegroeien met de ambities van de klant.`,
+        sfeer: work_crm,
+        website: "https://www.oosteromstudio.nl/oosterom-os"
+    },
+    {
+        slug: "van-der-vis-bouw",
+        title: "Van der Vis Bouw",
+        image: logo_vandervis,
+        card_description: `Een volledig custom WordPress website voor Van der Vis Bouwbedrijf, mobielvriendelijk, voorzien van Yoast SEO en verschillende plugins, met een offerte- en contactformulier dat rechtstreeks per e-mail binnenkomt.`,
+        subtitle: "Diensten van Oosterom Studio",
+        intro: `Van der Vis Bouwbedrijf had nog geen eigen website. Wij hebben een volledig custom WordPress website gebouwd waarmee het bedrijf voor het eerst online vindbaar en bereikbaar is.`,
+        challenge: `Voor Van der Vis Bouwbedrijf was er nog geen website aanwezig, waardoor potentiële klanten geen manier hadden om het bedrijf online te vinden of een offerte aan te vragen. Er was behoefte aan een professionele, mobielvriendelijke website met een werkend contact- en offerteformulier.`,
+        solution: `We hebben een volledig custom WordPress website ontwikkeld, mobielvriendelijk opgezet en uitgerust met verschillende plugins, waaronder Yoast SEO voor de zoekmachineoptimalisatie. Bezoekers kunnen via de website eenvoudig een offerte aanvragen of contact opnemen; deze aanvragen komen rechtstreeks per e-mail binnen bij Van der Vis Bouwbedrijf.`,
+        result: `Het resultaat is een professionele website waarmee Van der Vis Bouwbedrijf voor het eerst goed vindbaar en bereikbaar is online. Potentiële klanten kunnen eenvoudig, ook vanaf mobiel, een offerte aanvragen of contact opnemen — aanvragen komen direct per e-mail binnen, zodat er niets tussen wal en schip valt.`,
+        website: "https://www.vandervisbouw.nl",
+        sfeer: work_vandervis
+    },
+    {
         slug: "oliebollenalphen",
         title: "OliebollenAlphen",
         image: logo_oliebollen,
@@ -77,58 +129,6 @@ const projects = [
     bijdraagt aan een soepel en succesvol verkoopseizoen.`,
         sfeer: work_oliebollenalphen,
         website: "https://www.oliebollenalphen.nl"
-    },
-    {
-        slug: "smart-telecom-store",
-        title: "Smart Telecom Store",
-        image: logo_smart,
-        card_description: `Voor Smart Telecom Store hebben we een volledig custom WordPress thema gebouwd met meer dan 15 pagina's voor optimale SEO. Inclusief blog, WooCommerce webshop koppeling en doorlopend onderhoud van de website en zoekwoorden.`,
-        subtitle: "Diensten van Oosterom Studio",
-        intro: `Smart Telecom Store had een professionele online aanwezigheid nodig die niet alleen goed oogt, maar ook gevonden wordt. Wij hebben een custom WordPress thema gebouwd, de SEO volledig opgezet en zorgen voor doorlopend onderhoud.`,
-        challenge: `De klant had behoefte aan een website die écht scoort in Google, niet alleen mooi van buiten, maar technisch sterk van binnen. Daarnaast moest er een webshop komen voor online verkoop, en was er behoefte aan een betrouwbare partner voor langdurig onderhoud en groei.`,
-        solution: `We hebben een volledig custom WordPress thema ontwikkeld in de huisstijl van Smart Telecom Store. Om de beste SEO-resultaten te behalen zijn er meer dan 15 pagina's aangemaakt met gerichte zoekwoorden. Via Google Site Kit houden we de prestaties bij. Een blog is toegevoegd voor continue vindbaarheid. WooCommerce is gekoppeld voor online verkoop en we beheren doorlopend de website, content en zoekwoordstrategie.`,
-        result: `Het resultaat is een professionele, goed vindbare website met een groeiende online aanwezigheid. Door de combinatie van een sterk technisch fundament, gerichte SEO en doorlopend onderhoud groeit het organisch verkeer maandelijks. De WooCommerce integratie zorgt daarnaast voor een extra verkoopkanaal dat dag en nacht open is.`,
-        sfeer: work_smart,
-        website: "https://www.smarttelecomstore.nl"
-    },
-    {
-        slug: "oosterom-os",
-        title: "Oosterom CRM",
-        image: Logo,
-        card_description: `Een volledig door Oosterom Studio ontwikkeld contentmanagementsysteem waarmee websites eenvoudig beheerd kunnen worden. Snel, veilig en volledig afgestemd op de wensen van de klant.`,
-        subtitle: "Ons eigen contentmanagementsysteem",
-        intro: `Niet iedere organisatie heeft baat bij een standaard CMS. Daarom hebben wij Oosterom CMS ontwikkeld: een gebruiksvriendelijk en flexibel beheersysteem waarmee content eenvoudig kan worden aangepast zonder onnodige complexiteit.`,
-        challenge: `Veel bestaande CMS-platformen bevatten functies die niet worden gebruikt of zijn juist beperkt in maatwerkmogelijkheden. Daarnaast kunnen externe plugins en updates zorgen voor beveiligingsrisico's en prestatieproblemen.`,
-        solution: `Met Oosterom CMS hebben we een volledig eigen contentmanagementsysteem gebouwd waarin snelheid, veiligheid en gebruiksgemak centraal staan. Klanten kunnen zelf pagina's, afbeeldingen en content beheren via een overzichtelijk dashboard, terwijl wij volledige controle houden over de techniek en doorontwikkeling. Hierdoor is het systeem eenvoudig uit te breiden met nieuwe functionaliteiten en perfect afgestemd op iedere maatwerkwebsite.`,
-        result: `Het resultaat is een stabiel, snel en toekomstbestendig CMS zonder overbodige functionaliteiten. Websites laden sneller, zijn eenvoudiger te beheren en kunnen probleemloos meegroeien met de ambities van de klant.`,
-        sfeer: work_crm,
-        website: "https://www.oosteromstudio.nl/oosterom-os"
-    },
-    {
-        slug: "van-der-vis-bouw",
-        title: "Van der Vis Bouw",
-        image: logo_vandervis,
-        card_description: `Een volledig custom WordPress website voor Van der Vis Bouwbedrijf, mobielvriendelijk, voorzien van Yoast SEO en verschillende plugins, met een offerte- en contactformulier dat rechtstreeks per e-mail binnenkomt.`,
-        subtitle: "Diensten van Oosterom Studio",
-        intro: `Van der Vis Bouwbedrijf had nog geen eigen website. Wij hebben een volledig custom WordPress website gebouwd waarmee het bedrijf voor het eerst online vindbaar en bereikbaar is.`,
-        challenge: `Voor Van der Vis Bouwbedrijf was er nog geen website aanwezig, waardoor potentiële klanten geen manier hadden om het bedrijf online te vinden of een offerte aan te vragen. Er was behoefte aan een professionele, mobielvriendelijke website met een werkend contact- en offerteformulier.`,
-        solution: `We hebben een volledig custom WordPress website ontwikkeld, mobielvriendelijk opgezet en uitgerust met verschillende plugins, waaronder Yoast SEO voor de zoekmachineoptimalisatie. Bezoekers kunnen via de website eenvoudig een offerte aanvragen of contact opnemen; deze aanvragen komen rechtstreeks per e-mail binnen bij Van der Vis Bouwbedrijf.`,
-        result: `Het resultaat is een professionele website waarmee Van der Vis Bouwbedrijf voor het eerst goed vindbaar en bereikbaar is online. Potentiële klanten kunnen eenvoudig, ook vanaf mobiel, een offerte aanvragen of contact opnemen — aanvragen komen direct per e-mail binnen, zodat er niets tussen wal en schip valt.`,
-        website: "https://www.vandervisbouw.nl",
-        sfeer: work_vandervis
-    },
-    {
-        slug: "van-puffelen-gww",
-        title: "V Puffelen GWW",
-        image: logo_vpuffelen,
-        card_description: `Een volledig custom React website voor V Puffelen GWW, mobielvriendelijk en SEO-geoptimaliseerd, met een eigen CMS waarmee de klant zelf vacatures en projecten beheert, wijzigingen zijn direct zichtbaar op de website.`,
-        subtitle: "Diensten van Oosterom Studio",
-        intro: `V Puffelen GWW had behoefte aan een professionele online aanwezigheid gericht op gemeentes, waterschappen en hoofdaannemers in het Groene Hart. Wij hebben een maatwerk React website gebouwd met een volledig eigen beheersysteem.`,
-        challenge: `V Puffelen GWW werkt voor grote opdrachtgevers zoals gemeentes en hoofdaannemers. De website moest die professionaliteit uitstralen én de klant in staat stellen om zelfstandig vacatures en projecten te beheren, zonder technische kennis. Daarnaast moesten contactaanvragen en sollicitaties gestructureerd binnenkomen.`,
-        solution: `We hebben een volledig custom React website ontwikkeld met een eigen CMS dashboard op een apart subdomein. Via dit dashboard kan de klant vacatures en projecten toevoegen, aanpassen en verwijderen. Wijzigingen zijn direct zichtbaar op de website. Contactaanvragen komen binnen via een beveiligd formulier en worden opgeslagen in het CRM van Oosterom Studio. Sollicitanten kunnen direct solliciteren via een uitgebreid formulier met CV-upload, waarna zij automatisch een persoonlijke bevestigingsmail ontvangen.`,
-        result: `Het resultaat is een professionele website die aansluit bij de uitstraling van grote GWW-bedrijven, gecombineerd met een gebruiksvriendelijk beheersysteem. De klant is volledig zelfstandig in het beheren van vacatures en projecten — zonder tussenkomst van een developer. Alle aanvragen en sollicitaties komen gestructureerd binnen en zijn direct opvolgbaar.`,
-        website: "https://www.vpuffelen-gww.nl",
-        sfeer: work_vpuffelen
     },
 ];
 

@@ -6,8 +6,7 @@
     position: relative;
     overflow: hidden;
     background: var(--color-dark, #141414);
-    border-top: 1px solid #2a2a2a;
-    border-bottom: 1px solid #2a2a2a;
+    border-top: 1px solid var(--color-accent);
     padding: 22px 0;
     /* Fade aan de randen zodat de loop er vloeiend uitziet */
     mask-image: linear-gradient(
@@ -19,7 +18,6 @@
     );
 }
 
-/* Subtiel grid-patroon, consistent met de rest van de site */
 .moving-bar::before {
     content: "";
     position: absolute;
