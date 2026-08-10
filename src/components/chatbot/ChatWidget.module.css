@@ -1,13 +1,12 @@
-/* ── Toggle knop ─────────────────────────────────────────────────────────── */
-
 .toggleBtn {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--color-accent);
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: var(--color-dark, #141414);
+    border: 1px solid rgba(136, 232, 244, 0.2);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -17,20 +16,7 @@
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     overflow: hidden;
     padding: 0;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* ── Klikbare links in bot-berichten ─────────────────────────────────────── */
-
-.msgLink {
-    color: var(--color-accent, #88e8f4);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    word-break: break-all;
-}
-
-.msgLink:hover {
-    opacity: 0.85;
+    color: #ffffff;
 }
 
 .toggleBtn:hover {
@@ -58,8 +44,9 @@
     position: fixed;
     bottom: 96px;
     right: 24px;
-    width: 368px;
+    width: 390px;
     max-height: 600px;
+    min-height: 400px;
     background: var(--color-dark, #141414);
     border: 1px solid #2a2a2a;
     border-radius: 20px;
@@ -148,14 +135,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-muted, #6b7280);
+    color: #ffffff;
     flex-shrink: 0;
     transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .closeBtn:hover {
     background: #1e1e1e;
-    color: var(--color-text, #f9fafb);
+    color: var(--color-accent, #88e8f4);
     border-color: rgba(136, 232, 244, 0.25);
 }
 
@@ -237,7 +224,7 @@
     max-width: 78%;
     padding: 10px 14px;
     border-radius: 16px 16px 16px 3px;
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.6;
     background: #1a1a1a;
     color: #d4d4d4;
@@ -346,7 +333,7 @@
     background: var(--color-accent, #88e8f4);
     border: none;
     cursor: pointer;
-    color: #0a0a0a;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -367,6 +354,20 @@
 .sendBtn:focus-visible {
     outline: 2px solid var(--color-accent, #88e8f4);
     outline-offset: 2px;
+}
+
+
+/* ── Klikbare links in bot-berichten ─────────────────────────────────────── */
+
+.msgLink {
+    color: var(--color-accent, #88e8f4);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-all;
+}
+
+.msgLink:hover {
+    opacity: 0.85;
 }
 
 

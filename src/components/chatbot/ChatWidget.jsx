@@ -4,7 +4,7 @@ import assistantAvatar from '../../assets/images/oosterom_assistant_avatar.svg'
 
 const WELKOMST_BERICHT = {
     role: 'assistant',
-    content: 'Hi! Ik ben de digitale assistent van Oosterom Studio. Hoe kan ik je helpen?'
+    content: 'Hi! Leuk dat je er bent. Ik ben de digitale AI hulp van Oosterom Studio. Kan ik je ergens mee helpen? Je kunt ook een keuze maken uit één van de onderstaande buttons'
 }
 
 const SUGGESTIONS = [
@@ -57,7 +57,6 @@ export default function ChatWidget() {
     const [input, setInput]                     = useState('')
     const [laden, setLaden]                     = useState(false)
     const [toonSuggestions, setToonSuggestions] = useState(true)
-
     const sessieId     = useRef(maakSessieId())
     const berichtenRef = useRef(null)
     const inputRef      = useRef(null)
@@ -69,14 +68,13 @@ export default function ChatWidget() {
         }
     }, [berichten, laden])
 
-    // Focus op input als chat opent
     useEffect(() => {
         if (open && inputRef.current) {
             setTimeout(() => inputRef.current?.focus(), 100)
         }
     }, [open])
 
-    // Sluit chat met Escape-toets
+
     useEffect(() => {
         const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
         window.addEventListener('keydown', onKey)
@@ -158,7 +156,7 @@ export default function ChatWidget() {
                             <span className={styles.headerName}>Oosterom Studio</span>
                             <span className={styles.headerStatus}>
                                 <span className={styles.statusDot} aria-hidden="true" />
-                                Online
+                                Ik ben er voor je!
                             </span>
                         </div>
                         <button
@@ -166,15 +164,11 @@ export default function ChatWidget() {
                             onClick={() => setOpen(false)}
                             aria-label="Sluit chat"
                         >
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                                <line x1="18" y1="6" x2="6" y2="18" />
-                                <line x1="6" y1="6" x2="18" y2="18" />
-                            </svg>
+                            Sluiten
                         </button>
                     </div>
 
-                    {/* Berichtenlijst — aria-live zodat screenreaders nieuwe */}
-                    {/* berichten automatisch voorlezen zonder focus te stelen */}
+
                     <div
                         className={styles.messages}
                         ref={berichtenRef}
@@ -247,10 +241,7 @@ export default function ChatWidget() {
                             className={styles.sendBtn}
                             aria-label="Verstuur bericht"
                         >
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <line x1="22" y1="2" x2="11" y2="13" />
-                                <polygon points="22 2 15 22 11 13 2 9 22 2" fill="currentColor" />
-                            </svg>
+                          Verstuur
                         </button>
                     </form>
                 </div>
