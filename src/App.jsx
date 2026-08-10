@@ -21,6 +21,10 @@ const OosteromOS = lazy(() => import("./pages/OosteromOS/OosteromOS.jsx"));
 const FAQPage = lazy(() => import("./pages/FAQ/FAQPage.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound.jsx"));
 const QRCard = lazy(() => import("./pages/QRCard/QRCard.jsx"));
+const MobileAppsPage = lazy(() => dienstModule().then(m => ({default: m.MobileAppsPage})));
+const SeoPerformancePage = lazy(() => dienstModule().then(m => ({default: m.SeoPerformancePage})));
+const WebshopsPage = lazy(() => dienstModule().then(m => ({default: m.WebshopsPage})));
+const HostingInfrastructuurPage = lazy(() => dienstModule().then(m => ({default: m.HostingInfrastructuurPage})));
 
 // Blog
 const BlogOverview = lazy(() => import("./pages/Blogoverview/BlogOverview.jsx"));
@@ -103,6 +107,10 @@ function App() {
                     <Route path="/diensten/klantportaal" element={<KlantportaalPage/>}/>
                     <Route path="/diensten/avg-proof-website" element={<AVGProofPage/>}/>
                     <Route path="/diensten/onderhoud-support" element={<OnderhoudSupportPage/>}/>
+                    <Route path="/diensten/mobile-apps" element={<MobileAppsPage/>}/>
+                    <Route path="/diensten/seo-performance" element={<SeoPerformancePage/>}/>
+                    <Route path="/diensten/webshops" element={<WebshopsPage/>}/>
+                    <Route path="/diensten/hosting-infrastructuur" element={<HostingInfrastructuurPage/>}/>
 
                     {/* SEO Landingspagina's — niet in navbar */}
                     <Route path="/l/:slug" element={<LandingPage/>}/>

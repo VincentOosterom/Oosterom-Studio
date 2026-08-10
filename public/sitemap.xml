@@ -26,6 +26,12 @@
     </url>
 
     <url>
+        <loc>https://www.oosteromstudio.nl/diensten/mobile-apps</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.oosteromstudio.nl/diensten/saas</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -56,13 +62,31 @@
     </url>
 
     <url>
+        <loc>https://www.oosteromstudio.nl/diensten/webshops</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.oosteromstudio.nl/diensten/avg-proof-website</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
+        <loc>https://www.oosteromstudio.nl/diensten/seo-performance</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.oosteromstudio.nl/diensten/onderhoud-support</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.oosteromstudio.nl/diensten/hosting-infrastructuur</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -92,25 +116,49 @@
     </url>
 
     <url>
-        <loc>https://www.oosteromstudio.nl/blog/onderhoudsabonnement-of-losse-facturen</loc>
+        <loc>https://www.oosteromstudio.nl/kennisbank/onderhoudsabonnement-of-losse-facturen</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://www.oosteromstudio.nl/blog/wanneer-loont-maatwerk-software</loc>
+        <loc>https://www.oosteromstudio.nl/kennisbank/wanneer-loont-maatwerk-software</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://www.oosteromstudio.nl/blog/wat-is-een-ai-agent</loc>
+        <loc>https://www.oosteromstudio.nl/kennisbank/wat-is-een-ai-agent</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://www.oosteromstudio.nl/blog/ux-design-conversie</loc>
+        <loc>https://www.oosteromstudio.nl/kennisbank/ux-design-conversie</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.oosteromstudio.nl/kennisbank/wat-kost-een-website-2026</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.oosteromstudio.nl/kennisbank/core-web-vitals-uitgelegd</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.oosteromstudio.nl/kennisbank/klantportaal-vs-crm</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.oosteromstudio.nl/kennisbank/mvp-bouwen-stappen</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
