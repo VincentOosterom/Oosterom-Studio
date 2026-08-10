@@ -20,6 +20,19 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* ── Klikbare links in bot-berichten ─────────────────────────────────────── */
+
+.msgLink {
+    color: var(--color-accent, #88e8f4);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-all;
+}
+
+.msgLink:hover {
+    opacity: 0.85;
+}
+
 .toggleBtn:hover {
     transform: scale(1.06);
     border-color: rgba(136, 232, 244, 0.5);

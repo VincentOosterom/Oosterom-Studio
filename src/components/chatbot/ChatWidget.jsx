@@ -17,6 +17,40 @@ function maakSessieId() {
     return Math.random().toString(36).substring(2) + Date.now().toString(36)
 }
 
+// ── Linkify: zet kale URLs in tekst om naar klikbare links ──────────────────
+// Herkent https://... en www... en maakt er een <a target="_blank"> van.
+// De rest van de tekst blijft platte tekst, zoals de bot 'm aanlevert.
+const URL_REGEX = /(https?:\/\/[^\s]+|www\.[^\s]+)/g
+
+function linkifyContent(tekst) {
+    const delen = tekst.split(URL_REGEX)
+
+    return delen.map((deel, i) => {
+        if (!deel) return null
+
+        if (URL_REGEX.test(deel)) {
+            // reset lastIndex omdat de regex 'g' flag heeft en test() state bijhoudt
+            URL_REGEX.lastIndex = 0
+            const href = deel.startsWith('www.') ? `https://${deel}` : deel
+
+            return (
+                <a
+                    key={i}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.msgLink}
+                >
+                    {deel}
+                </a>
+            )
+        }
+
+        URL_REGEX.lastIndex = 0
+        return <span key={i}>{deel}</span>
+    })
+}
+
 export default function ChatWidget() {
     const [open, setOpen]                       = useState(false)
     const [berichten, setBerichten]             = useState([WELKOMST_BERICHT])
@@ -127,6 +161,16 @@ export default function ChatWidget() {
                                 Online
                             </span>
                         </div>
+                        <button
+                            className={styles.closeBtn}
+                            onClick={() => setOpen(false)}
+                            aria-label="Sluit chat"
+                        >
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </button>
                     </div>
 
                     {/* Berichtenlijst — aria-live zodat screenreaders nieuwe */}
@@ -148,7 +192,9 @@ export default function ChatWidget() {
                                     </div>
                                 )}
                                 <div className={bericht.role === 'user' ? styles.bubbleUser : styles.bubbleBot}>
-                                    {bericht.content}
+                                    {bericht.role === 'assistant'
+                                        ? linkifyContent(bericht.content)
+                                        : bericht.content}
                                 </div>
                             </div>
                         ))}
