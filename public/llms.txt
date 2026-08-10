@@ -1,0 +1,40 @@
+# Oosterom Studio
+
+> Oosterom Studio is een webdesign- en softwarestudio uit Alphen aan den Rijn, opgericht door Vincent Oosterom. De studio bouwt maatwerk websites, webapplicaties, SaaS-producten en beveiligde digitale oplossingen voor MKB-bedrijven en startups in Nederland, met een sterke focus op zowel design als cybersecurity.
+
+Oosterom Studio combineert webdevelopment met een cybersecurity-achtergrond (de oprichter is actief op TryHackMe en heeft de HBO-opleiding Full Stack Development afgerond). De positionering is "Digitaal sterk. Van buiten én van binnen." — mooie, werkende websites die ook technisch en qua beveiliging kloppen.
+
+## Diensten
+
+- [Webdesign & UX](https://www.oosteromstudio.nl/diensten/webdesign): Strategisch webdesign, UX research, wireframes en conversiegericht ontwerp.
+- [Webdevelopment & Applicaties](https://www.oosteromstudio.nl/diensten/webdevelopment): Maatwerk websites en webapplicaties gebouwd met React en moderne technologie.
+- [Mobile Apps](https://www.oosteromstudio.nl/diensten/mobile-apps): Native iOS- en Android-apps met React Native.
+- [SaaS & Digitale Systemen](https://www.oosteromstudio.nl/diensten/saas): Van MVP tot schaalbaar SaaS-platform, inclusief dashboards en gebruikersrollen.
+- [Branding & Digitale Strategie](https://www.oosteromstudio.nl/diensten/branding): Visuele identiteit, merkstrategie en digitale roadmap.
+- [AI Agents](https://www.oosteromstudio.nl/diensten/ai-agents): AI-chatbots en workflow-automatisering met menselijke controle.
+- [Software op Maat](https://www.oosteromstudio.nl/diensten/software-op-maat): Maatwerk software afgestemd op bestaande bedrijfsprocessen.
+- [Klantportalen & CRM](https://www.oosteromstudio.nl/diensten/klantportaal): Beveiligde klantomgevingen en CRM-systemen op maat.
+- [Webshops](https://www.oosteromstudio.nl/diensten/webshops): Shopify en maatwerk e-commerce oplossingen.
+- [AVG-proof Website](https://www.oosteromstudio.nl/diensten/avg-proof-website): Technische privacy-audits en AVG/GDPR-compliance.
+- [SEO & Performance Optimalisatie](https://www.oosteromstudio.nl/diensten/seo-performance): Technische SEO en Core Web Vitals-optimalisatie.
+- [Onderhoud & Support](https://www.oosteromstudio.nl/diensten/onderhoud-support): Vaste onderhoudsabonnementen met prioriteit bij storingen.
+- [Hosting & Infrastructuurbeheer](https://www.oosteromstudio.nl/diensten/hosting-infrastructuur): Uptime monitoring, back-ups en serverbeheer.
+
+## Bedrijfsinformatie
+
+- [Over ons](https://www.oosteromstudio.nl/over-ons): Achtergrond van oprichter Vincent Oosterom en de visie achter Oosterom Studio.
+- [Contact](https://www.oosteromstudio.nl/contact): Contactformulier, e-mail en bedrijfsgegevens (KvK 85118028).
+- [Offerte aanvragen](https://www.oosteromstudio.nl/offerte-aanvragen): Vrijblijvend een project of samenwerking aanvragen.
+- [Portfolio](https://www.oosteromstudio.nl/portfolio): Overzicht van gerealiseerde projecten en case studies.
+- [Oosterom OS](https://www.oosteromstudio.nl/oosterom-os): Het eigen beheerplatform van Oosterom Studio voor klantprojecten en portalen.
+- [FAQ](https://www.oosteromstudio.nl/faq): Veelgestelde vragen over samenwerking, prijzen en werkwijze.
+
+## Kennisbank
+
+- [Blog-overzicht](https://www.oosteromstudio.nl/blog): Artikelen over webdesign, cybersecurity, SEO en software voor MKB-bedrijven.
+
+## Optional
+
+- Diensten zijn gericht op MKB-bedrijven en startups in Nederland, met name in de regio Zuid-Holland.
+- Prijsindicaties: Webdesign vanaf €500, Webdevelopment vanaf €1.000, met budgetranges Starter (€500–€1.500), Gemiddeld (€1.500–€3.000) en Uitgebreid (€3.000+).
+- Levertijden: eenvoudige website 2–4 weken, complexe applicatie of maatwerk 4–8 weken of meer.
