@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import {useState, useRef, useEffect} from 'react'
 import styles from './ChatWidget.module.css'
 import assistantAvatar from '../../assets/images/oosterom_assistant_avatar.svg'
 
@@ -10,16 +10,16 @@ const WELKOMST_BERICHT = {
 const SUGGESTIONS = [
     'Wat doet Oosterom Studio?',
     'Wat zijn de tarieven?',
-    'Hoe neem ik contact op?',
+    'Welke diensten leveren jullie?'
+
+
 ]
 
 function maakSessieId() {
     return Math.random().toString(36).substring(2) + Date.now().toString(36)
 }
 
-// ── Linkify: zet kale URLs in tekst om naar klikbare links ──────────────────
-// Herkent https://... en www... en maakt er een <a target="_blank"> van.
-// De rest van de tekst blijft platte tekst, zoals de bot 'm aanlevert.
+
 const URL_REGEX = /(https?:\/\/[^\s]+|www\.[^\s]+)/g
 
 function linkifyContent(tekst) {
@@ -52,14 +52,14 @@ function linkifyContent(tekst) {
 }
 
 export default function ChatWidget() {
-    const [open, setOpen]                       = useState(false)
-    const [berichten, setBerichten]             = useState([WELKOMST_BERICHT])
-    const [input, setInput]                     = useState('')
-    const [laden, setLaden]                     = useState(false)
+    const [open, setOpen] = useState(false)
+    const [berichten, setBerichten] = useState([WELKOMST_BERICHT])
+    const [input, setInput] = useState('')
+    const [laden, setLaden] = useState(false)
     const [toonSuggestions, setToonSuggestions] = useState(true)
-    const sessieId     = useRef(maakSessieId())
+    const sessieId = useRef(maakSessieId())
     const berichtenRef = useRef(null)
-    const inputRef      = useRef(null)
+    const inputRef = useRef(null)
 
     // Scroll naar nieuwste bericht
     useEffect(() => {
@@ -76,7 +76,9 @@ export default function ChatWidget() {
 
 
     useEffect(() => {
-        const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
+        const onKey = (e) => {
+            if (e.key === 'Escape') setOpen(false)
+        }
         window.addEventListener('keydown', onKey)
         return () => window.removeEventListener('keydown', onKey)
     }, [])
@@ -84,8 +86,8 @@ export default function ChatWidget() {
     async function stuurBericht(tekst) {
         if (!tekst.trim() || laden) return
 
-        const gebruikersBericht = { role: 'user', content: tekst }
-        const nieuweBerichten   = [...berichten, gebruikersBericht]
+        const gebruikersBericht = {role: 'user', content: tekst}
+        const nieuweBerichten = [...berichten, gebruikersBericht]
 
         setBerichten(nieuweBerichten)
         setInput('')
@@ -95,7 +97,7 @@ export default function ChatWidget() {
         try {
             const response = await fetch('/api/chatbot', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
                     berichten: nieuweBerichten.filter(b => b.role !== 'system'),
                     sessieId: sessieId.current
@@ -105,7 +107,7 @@ export default function ChatWidget() {
             const data = await response.json()
             const antwoord = data.antwoord || 'Er is iets misgegaan. Probeer het opnieuw.'
 
-            setBerichten(prev => [...prev, { role: 'assistant', content: antwoord }])
+            setBerichten(prev => [...prev, {role: 'assistant', content: antwoord}])
         } catch {
             setBerichten(prev => [...prev, {
                 role: 'assistant',
@@ -131,12 +133,13 @@ export default function ChatWidget() {
                 aria-expanded={open}
             >
                 {open ? (
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                        <line x1="18" y1="6" x2="6" y2="18" />
-                        <line x1="6" y1="6" x2="18" y2="18" />
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                         strokeLinecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
                     </svg>
                 ) : (
-                    <img src={assistantAvatar} alt="" className={styles.toggleAvatar} aria-hidden="true" />
+                    <img src={assistantAvatar} alt="" className={styles.toggleAvatar} aria-hidden="true"/>
                 )}
             </button>
 
@@ -150,12 +153,12 @@ export default function ChatWidget() {
                     {/* Header */}
                     <div className={styles.header}>
                         <div className={styles.headerAvatarWrap}>
-                            <img src={assistantAvatar} alt="Assistent" className={styles.headerAvatarImg} />
+                            <img src={assistantAvatar} alt="Assistent" className={styles.headerAvatarImg}/>
                         </div>
                         <div className={styles.headerInfo}>
                             <span className={styles.headerName}>Oosterom Studio</span>
                             <span className={styles.headerStatus}>
-                                <span className={styles.statusDot} aria-hidden="true" />
+                                <span className={styles.statusDot} aria-hidden="true"/>
                                 Ik ben er voor je!
                             </span>
                         </div>
@@ -182,7 +185,7 @@ export default function ChatWidget() {
                             >
                                 {bericht.role === 'assistant' && (
                                     <div className={styles.msgAvatar} aria-hidden="true">
-                                        <img src={assistantAvatar} alt="" className={styles.msgAvatarImg} />
+                                        <img src={assistantAvatar} alt="" className={styles.msgAvatarImg}/>
                                     </div>
                                 )}
                                 <div className={bericht.role === 'user' ? styles.bubbleUser : styles.bubbleBot}>
@@ -197,12 +200,12 @@ export default function ChatWidget() {
                         {laden && (
                             <div className={`${styles.msgRow} ${styles.msgRowBot}`} aria-label="Assistent typt…">
                                 <div className={styles.msgAvatar} aria-hidden="true">
-                                    <img src={assistantAvatar} alt="" className={styles.msgAvatarImg} />
+                                    <img src={assistantAvatar} alt="" className={styles.msgAvatarImg}/>
                                 </div>
                                 <div className={styles.typingDots}>
-                                    <span className={styles.dot} />
-                                    <span className={styles.dot} />
-                                    <span className={styles.dot} />
+                                    <span className={styles.dot}/>
+                                    <span className={styles.dot}/>
+                                    <span className={styles.dot}/>
                                 </div>
                             </div>
                         )}
@@ -241,7 +244,7 @@ export default function ChatWidget() {
                             className={styles.sendBtn}
                             aria-label="Verstuur bericht"
                         >
-                          Verstuur
+                            Verstuur
                         </button>
                     </form>
                 </div>
