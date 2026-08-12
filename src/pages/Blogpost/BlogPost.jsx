@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useParams, useNavigate, Link,  } from "react-router-dom";
+import { useParams, useNavigate, Link, Navigate } from "react-router-dom";
 import { blogPosts } from "../../../data/blogPosts";
 import { services } from "../../../data/services";
 import { seoDiensten } from "../../../data/seoDiensten";
 import styles from "./BlogPost.module.css";
-import Navigate from "../../components/navigate/Navigate.jsx";
+import Nav from "../../components/navigate/Navigate.jsx";
 import Footer from "../../components/footer/Footer.jsx";
 
 
@@ -86,7 +86,7 @@ export default function BlogPost() {
     return (
         <div className={styles.pagina}>
             <header className={styles.topbar}>
-               <Navigate/>
+               <Nav/>
             </header>
 
             <main className={styles.inhoud}>
@@ -145,7 +145,7 @@ export default function BlogPost() {
                     </section>
                 )}
 
-                <Link to="/blog" className={styles.terugLink}>
+                <Link to="/kennisbank" className={styles.terugLink}>
                     ← Alle blogs bekijken
                 </Link>
             </main>

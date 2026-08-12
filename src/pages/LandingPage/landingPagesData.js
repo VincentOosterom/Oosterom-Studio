@@ -135,9 +135,30 @@ export const landingPages = [
         ],
         extra:
             "Of je nu een eerste website nodig hebt of een herontwerp van een verouderde site, we denken mee vanaf het eerste gesprek.",
+        regio_titel: "Webdesign tussen kennisstad en ondernemersstad",
+        regio_tekst:
+            "Leiden heeft een bijzondere mix: een sterke universitaire en kennissector naast een groeiend aantal startups en gevestigd MKB. Bedrijven hier concurreren vaak niet alleen lokaal, maar ook landelijk of zelfs internationaal om talent en klanten. Dat vraagt om een website die serieus overkomt op een breder publiek, niet alleen op de buurman. Oosterom Studio bouwt daarom vanaf de eerste versie met schaalbaarheid in gedachten: een site die klein kan starten, maar niet hoeft te worden weggegooid zodra je bedrijf groeit.",
+        stappen: [
+            { titel: "Intake", tekst: "We brengen in kaart wie je doelgroep is en of je site vooral moet overtuigen, informeren of converteren." },
+            { titel: "Designsysteem", tekst: "In plaats van losse pagina's bouwen we een herbruikbaar designsysteem, handig als je later meer pagina's toevoegt." },
+            { titel: "Ontwikkeling", tekst: "De website wordt gebouwd in React, met aandacht voor laadsnelheid en vindbaarheid vanaf dag één." },
+            { titel: "Lancering", tekst: "Na livegang evalueren we samen de eerste resultaten en bepalen we eventuele vervolgstappen." },
+        ],
+        faq: [
+            {
+                vraag: "Is Oosterom Studio geschikt voor een startup zonder groot budget?",
+                antwoord: "Ja, we bouwen regelmatig een eerste, gerichte versie van een website voor startups, die later stap voor stap wordt uitgebreid zodra er meer budget of duidelijkheid is."
+            },
+            {
+                vraag: "Kan de website later meegroeien naar een webapplicatie?",
+                antwoord: "Zeker, dat is precies waarom we vanaf het begin met een schaalbaar designsysteem werken. Veel van onze klanten in Leiden starten met een website en breiden later uit naar functionaliteit zoals een klantportaal of dashboard."
+            },
+            {
+                vraag: "Werk je samen met bestaande marketing- of brandingbureaus?",
+                antwoord: "Regelmatig. Als je al een huisstijl of merkidentiteit hebt, bouwen we de website daarop voort in plaats van een nieuwe richting te forceren."
+            },
+        ],
         cta_tekst: "Vraag vrijblijvend advies aan",
-        // Nog geen regio_tekst/stappen/faq — voeg toe volgens hetzelfde patroon
-        // als de twee pagina's hierboven wanneer je tijd hebt.
     },
 
     // ── Webdevelopment & Applicaties ───────────────────────────────────────
@@ -161,6 +182,29 @@ export const landingPages = [
         ],
         extra:
             "Onze applicaties zijn gebouwd als fundament voor groei, van websites tot complete systemen zoals portals en SaaS-platformen.",
+        regio_titel: "Webdevelopment voor familiebedrijven en groeiende MKB in Boskoop",
+        regio_tekst:
+            "Boskoop is een regio met veel gevestigde, vaak familiegerunde bedrijven die al jaren bestaan maar digitaal soms zijn blijven hangen in de tijd. Een website die alleen een digitale visitekaartje is, volstaat niet meer als concurrenten wél online bestellingen, aanvragen of afspraken laten verlopen. Oosterom Studio helpt deze bedrijven de stap te zetten van een statische website naar een webapplicatie die daadwerkelijk werk uit handen neemt, zonder de persoonlijke aanpak te verliezen die deze bedrijven kenmerkt.",
+        stappen: [
+            { titel: "Procesgesprek", tekst: "We inventariseren welk deel van je bedrijfsvoering nu nog handmatig gaat en digitaal versneld kan worden." },
+            { titel: "Technisch ontwerp", tekst: "We bepalen de opzet van de applicatie: van database tot gebruikersinterface." },
+            { titel: "Bouw & testen", tekst: "Ontwikkeling in React met doorlopend testen, zodat er geen verrassingen zijn bij livegang." },
+            { titel: "Overdracht", tekst: "Je krijgt uitleg en documentatie, zodat je niet afhankelijk bent van uitleg achteraf." },
+        ],
+        faq: [
+            {
+                vraag: "Kan een bestaande website worden uitgebreid met een applicatie, of moet alles opnieuw?",
+                antwoord: "In veel gevallen kan een bestaande website behouden blijven en wordt de nieuwe functionaliteit ernaast of erin gebouwd. We bekijken dit per project."
+            },
+            {
+                vraag: "Is React ook geschikt voor een kleiner bedrijf, of is dat overkill?",
+                antwoord: "React is schaalbaar in beide richtingen: het werkt prima voor een compacte website, én is direct klaar voor uitbreiding zodra dat nodig is. Je betaalt dus niet voor complexiteit die je nu nog niet gebruikt."
+            },
+            {
+                vraag: "Hoe zit het met onderhoud na oplevering?",
+                antwoord: "Dat regelen we via een los onderhoudsabonnement, zodat updates, back-ups en kleine aanpassingen niet blijven liggen."
+            },
+        ],
         cta_tekst: "Plan een vrijblijvend gesprek",
     },
     {
@@ -183,6 +227,29 @@ export const landingPages = [
         ],
         extra:
             "Geen tussenlagen of los van elkaar werkende teams: je hebt gedurende het hele traject met dezelfde persoon te maken.",
+        regio_titel: "Webdevelopment voor een groeistad als Zoetermeer",
+        regio_tekst:
+            "Zoetermeer is een van de snelst gegroeide steden van Nederland, met veel bedrijven die relatief jong zijn en snel schaalden. Die groei brengt vaak een lappendeken van tools met zich mee: een los CRM hier, een spreadsheet daar, een verouderd systeem dat niemand meer durft aan te passen. Oosterom Studio bouwt webapplicaties die deze losse onderdelen samenbrengen in één systeem, afgestemd op hoe een groeiend bedrijf in de praktijk werkt, niet op hoe een generieke tool denkt dat je zou moeten werken.",
+        stappen: [
+            { titel: "Systeemanalyse", tekst: "We brengen in kaart welke tools en processen je nu gebruikt, en waar de knelpunten zitten." },
+            { titel: "Architectuur", tekst: "We ontwerpen een technische structuur die bestaande systemen waar nodig integreert in plaats van vervangt." },
+            { titel: "Bouw in fases", tekst: "Ontwikkeling gebeurt in behapbare fases, zodat je snel resultaat ziet in plaats van te wachten op één grote oplevering." },
+            { titel: "Doorontwikkeling", tekst: "Na livegang blijven we beschikbaar voor uitbreidingen naarmate je bedrijf verder groeit." },
+        ],
+        faq: [
+            {
+                vraag: "Kunnen jullie koppelen met software die we al gebruiken?",
+                antwoord: "In veel gevallen wel, via een API-koppeling. We bespreken vooraf welke systemen je gebruikt en wat technisch haalbaar is."
+            },
+            {
+                vraag: "Werken jullie ook met een vast team of alleen met één ontwikkelaar?",
+                antwoord: "Je hebt gedurende het traject een vast aanspreekpunt, zodat er geen ruis ontstaat tussen verschillende schakels."
+            },
+            {
+                vraag: "Wat als onze eisen tijdens het project veranderen?",
+                antwoord: "Dat gebeurt vaker dan je denkt, vooral bij groeiende bedrijven. Door in fases te bouwen kunnen we tussentijds bijsturen zonder het hele project opnieuw te hoeven starten."
+            },
+        ],
         cta_tekst: "Bespreek je project",
     },
     {
@@ -205,6 +272,29 @@ export const landingPages = [
         ],
         extra:
             "We bouwen niet los van je bedrijfsvoering, maar erin: de applicatie sluit aan op hoe je nu al werkt.",
+        regio_titel: "Maatwerk webdevelopment dicht bij huis in Waddinxveen",
+        regio_tekst:
+            "Waddinxveen ligt centraal tussen een aantal grotere steden, en veel lokale ondernemers werken juist daardoor met klanten uit een bredere regio. Dat maakt een generieke website vaak ontoereikend: er is behoefte aan iets dat specifieker meedenkt, zoals een offerteformulier op maat, een planningsysteem, of een koppeling met facturatie. Oosterom Studio bouwt dat soort maatwerk zonder de overhead van een groot bureau, met korte lijnen en duidelijke uitleg in gewone taal in plaats van technisch jargon.",
+        stappen: [
+            { titel: "Verkennend gesprek", tekst: "We bespreken zonder verplichtingen wat je voor ogen hebt en of maatwerk de juiste keuze is." },
+            { titel: "Plan van aanpak", tekst: "Je ontvangt een helder overzicht van wat er gebouwd wordt, in welke volgorde en tegen welke kosten." },
+            { titel: "Bouwfase", tekst: "We houden je tussentijds op de hoogte met werkende versies, niet pas bij de eindoplevering." },
+            { titel: "Nazorg", tekst: "Na livegang blijf je niet alleen achter met een handleiding: vragen kunnen altijd gesteld worden." },
+        ],
+        faq: [
+            {
+                vraag: "Is maatwerk niet veel duurder dan een kant-en-klare oplossing?",
+                antwoord: "Op korte termijn soms wel, maar kant-en-klare tools brengen vaak verborgen kosten met zich mee zoals licenties per gebruiker of functionaliteit die je niet nodig hebt. We bespreken open wat in jouw situatie het beste uitpakt."
+            },
+            {
+                vraag: "Hoe verloopt de communicatie tijdens het project?",
+                antwoord: "Via korte, regelmatige updates, telefonisch of op locatie waar gewenst. Geen wekenlange stiltes tussen mijlpalen."
+            },
+            {
+                vraag: "Kan de applicatie ook door een niet-technisch persoon beheerd worden?",
+                antwoord: "Waar mogelijk bouwen we een beheeromgeving die zonder technische kennis te gebruiken is, met uitleg die aansluit op hoe jij werkt."
+            },
+        ],
         cta_tekst: "Vraag een offerte aan",
     },
 
@@ -229,6 +319,29 @@ export const landingPages = [
         ],
         extra:
             "We helpen niet alleen met de techniek, maar denken ook mee over productkeuzes: wat bouw je eerst, en wat kan later.",
+        regio_titel: "Van lokaal dienstverlener naar SaaS-ondernemer in Alphen aan den Rijn",
+        regio_tekst:
+            "Steeds meer ondernemers in Alphen aan den Rijn die een dienst leveren, zien kansen om een deel daarvan te vertalen naar een digitaal product dat ze aan meerdere klanten kunnen aanbieden. De stap van 'dienst leveren' naar 'software verkopen' is technisch en strategisch een grote sprong. Oosterom Studio begeleidt die overgang, van het scherp krijgen van het eerste product tot een technische basis die klaar is voor de eerste betalende gebruikers, zonder meteen te bouwen voor een schaal die je nog niet hebt.",
+        stappen: [
+            { titel: "Productscherpte", tekst: "We bepalen samen wat het kernprobleem is dat je product oplost, en wat bewust nog niet wordt gebouwd." },
+            { titel: "Architectuur", tekst: "We richten de database en gebruikersstructuur zo in dat latere groei geen volledige herbouw vereist." },
+            { titel: "Eerste versie (MVP)", tekst: "We bouwen de kleinste werkende versie waarmee je echte gebruikers kunt testen." },
+            { titel: "Lancering & doorontwikkeling", tekst: "Na de eerste gebruikers bepalen we op basis van feedback wat de volgende stap wordt." },
+        ],
+        faq: [
+            {
+                vraag: "Ik heb alleen een idee, nog geen technisch plan. Kan ik daarmee terecht?",
+                antwoord: "Ja, dat is juist het startpunt van de meeste SaaS-trajecten. We helpen het idee te vertalen naar een concreet, bouwbaar plan."
+            },
+            {
+                vraag: "Wat kost het ontwikkelen van een eerste SaaS-versie?",
+                antwoord: "Dat verschilt sterk per idee. Na een intakegesprek geven we een realistische inschatting, gebaseerd op wat écht nodig is voor een eerste, werkende versie."
+            },
+            {
+                vraag: "Blijft Oosterom Studio betrokken na de lancering?",
+                antwoord: "Dat kan, via doorontwikkeling of een onderhoudsabonnement, afhankelijk van hoeveel technische kennis je zelf in huis hebt of opbouwt."
+            },
+        ],
         cta_tekst: "Bespreek je SaaS-idee",
     },
     {
@@ -251,6 +364,29 @@ export const landingPages = [
         ],
         extra:
             "Een SaaS-product dat achteraf herbouwd moet worden kost meer tijd en geld dan een product dat vanaf het begin goed is opgezet.",
+        regio_titel: "SaaS-ontwikkeling met oog voor de lange termijn in Gouda",
+        regio_tekst:
+            "Gouda heeft een groeiend aantal zzp'ers en kleine bedrijven die vanuit huis of een klein kantoor werken aan een eigen product-idee, vaak naast een bestaande dienstverlening. Voor deze groep is het risico van een te grote, te dure eerste bouw reëel: geld en tijd steken in functionaliteit voordat duidelijk is of er vraag naar is. Oosterom Studio adviseert daarom bewust over wat wél en niet in de eerste versie hoort, zodat je met een realistisch budget een werkend product op de markt kunt zetten.",
+        stappen: [
+            { titel: "Ideeën aanscherpen", tekst: "We stellen kritische vragen om te bepalen of het idee als los product levensvatbaar is." },
+            { titel: "Technisch fundament", tekst: "We bouwen een architectuur die geschikt is voor meerdere klanten (multi-tenant) zodra dat nodig is." },
+            { titel: "Bouwen en testen", tekst: "Ontwikkeling in overzichtelijke stappen, met tussentijdse controlemomenten." },
+            { titel: "Live met eerste gebruikers", tekst: "We begeleiden de eerste lancering en verzamelen gericht feedback voor de volgende versie." },
+        ],
+        faq: [
+            {
+                vraag: "Wat is het verschil tussen een SaaS-product en een gewone webapplicatie?",
+                antwoord: "Een SaaS-product is bedoeld om aan meerdere klanten tegelijk aan te bieden, meestal via een abonnement, met eigen accounts en afgeschermde data per klant. Een webapplicatie is vaak voor intern gebruik binnen één bedrijf."
+            },
+            {
+                vraag: "Moet ik meteen investeren in een volledig uitgewerkt platform?",
+                antwoord: "Nee, en dat raden we ook af. Een kleinere, gerichte eerste versie levert sneller bruikbare feedback op dan een groot platform dat pas na maanden live gaat."
+            },
+            {
+                vraag: "Kunnen jullie ook meedenken over de prijsstrategie van het product?",
+                antwoord: "We geven geen formeel bedrijfsadvies, maar denken vanuit technisch perspectief graag mee over hoe abonnementen, gebruikerslimieten en functionaliteit zich tot elkaar verhouden."
+            },
+        ],
         cta_tekst: "Plan een kennismaking",
     },
 
@@ -275,6 +411,29 @@ export const landingPages = [
         ],
         extra:
             "We bouwen automatisering die je kunt vertrouwen: met notificaties en goedkeuringsstappen waar dat nodig is.",
+        regio_titel: "AI-agents voor kennisintensieve bedrijven in Leiden",
+        regio_tekst:
+            "Leiden telt relatief veel bedrijven en instellingen waar kennis en informatie de kern van het werk vormen: onderzoek, advies, onderwijsgerelateerde dienstverlening. Bij dat soort werk komt vaak veel tijd terug in het opzoeken, samenvatten en doorzetten van informatie, taken die zich uitstekend lenen voor automatisering, mits zorgvuldig ingericht. Oosterom Studio bouwt AI-agents die dit soort herhalend denkwerk overnemen, met ingebouwde controlemomenten zodat een mens het laatste woord houdt bij belangrijke beslissingen.",
+        stappen: [
+            { titel: "Taakanalyse", tekst: "We brengen in kaart welke terugkerende taken zich lenen voor automatisering en welke risico's daarbij horen." },
+            { titel: "Ontwerp van de agent", tekst: "We bepalen welke bronnen de agent mag raadplegen en waar een menselijke goedkeuring verplicht blijft." },
+            { titel: "Bouw & training", tekst: "De agent wordt gekoppeld aan jouw eigen data en systemen, niet aan generieke, ongerichte kennis." },
+            { titel: "Livegang met toezicht", tekst: "We monitoren de eerste periode nauwlettend en stellen bij op basis van echte gebruikssituaties." },
+        ],
+        faq: [
+            {
+                vraag: "Vervangt een AI-agent medewerkers?",
+                antwoord: "Het doel is repetitieve taken uit handen te nemen, niet besluitvorming te vervangen. Bij de meeste van onze projecten blijft een mens de eindverantwoordelijke stap."
+            },
+            {
+                vraag: "Is onze bedrijfsdata veilig bij het trainen van een agent?",
+                antwoord: "We werken met afgeschermde omgevingen en bespreken vooraf welke data wel en niet gebruikt mag worden, passend bij AVG-vereisten."
+            },
+            {
+                vraag: "Kan een AI-agent gekoppeld worden aan onze bestaande software?",
+                antwoord: "In veel gevallen wel, via een koppeling met je CRM, e-mail of interne systemen. We beoordelen dit per situatie."
+            },
+        ],
         cta_tekst: "Ontdek de mogelijkheden",
     },
     {
@@ -297,6 +456,29 @@ export const landingPages = [
         ],
         extra:
             "De chatbot die we op onze eigen website gebruiken, is gebouwd volgens hetzelfde principe dat we voor klanten toepassen.",
+        regio_titel: "Een chatbot die écht antwoord geeft, voor bedrijven in Bodegraven",
+        regio_tekst:
+            "Kleinere bedrijven in Bodegraven en omgeving hebben vaak niet de capaciteit om buiten kantooruren vragen van website-bezoekers te beantwoorden, terwijl juist dan veel oriënterende bezoekers actief zijn. Een generieke chatbot die alleen standaardzinnen herhaalt, voelt voor bezoekers al snel als een doodlopend gesprek. Oosterom Studio bouwt chatbots die specifiek getraind zijn op de content, diensten en veelgestelde vragen van jouw eigen bedrijf, zodat een bezoeker in Bodegraven daadwerkelijk verder geholpen wordt, ook om 21 uur 's avonds.",
+        stappen: [
+            { titel: "Kennisinventarisatie", tekst: "We verzamelen de informatie waarop de chatbot getraind moet worden: diensten, veelgestelde vragen, tarieven waar relevant." },
+            { titel: "Configuratie", tekst: "De chatbot wordt afgestemd op je merk qua toon en wordt begrensd tot onderwerpen die voor jouw bedrijf relevant zijn." },
+            { titel: "Integratie", tekst: "We plaatsen de chatbot op je bestaande website, zonder dat dit de laadsnelheid van de site aantast." },
+            { titel: "Evaluatie", tekst: "Na de eerste weken bekijken we samen welke vragen vaak gesteld worden en waar de chatbot kan verbeteren." },
+        ],
+        faq: [
+            {
+                vraag: "Kan de chatbot ook leads doorsturen naar mijn e-mail of CRM?",
+                antwoord: "Ja, dat is een veelgevraagde uitbreiding: de chatbot kan contactgegevens en vraagdetails automatisch doorzetten naar de juiste plek."
+            },
+            {
+                vraag: "Wat als de chatbot een vraag niet kan beantwoorden?",
+                antwoord: "De chatbot is ingesteld om eerlijk aan te geven wanneer iets buiten zijn kennis valt, en kan dan doorverwijzen naar een contactformulier of telefoonnummer in plaats van te gokken."
+            },
+            {
+                vraag: "Hoeveel tijd kost het om de chatbot op te zetten?",
+                antwoord: "Voor een eerste werkende versie reken je doorgaans op één tot twee weken, afhankelijk van hoeveel content er al beschikbaar is om de chatbot mee te trainen."
+            },
+        ],
         cta_tekst: "Vraag een demo aan",
     },
 
@@ -321,6 +503,29 @@ export const landingPages = [
         ],
         extra:
             "We bouwen modulair, zodat je kan starten met de belangrijkste functionaliteit en later kan uitbreiden.",
+        regio_titel: "Maatwerksoftware voor de praktische ondernemer in Nieuwkoop",
+        regio_tekst:
+            "In een regio als Nieuwkoop, met veel agrarische, logistieke en ambachtelijke bedrijvigheid, lopen processen vaak al jaren op een manier die goed werkt, maar niet altijd goed is vastgelegd in software. Standaardpakketten sluiten daar zelden op aan, waardoor bedrijven blijven werken met spreadsheets, papieren formulieren of losse WhatsApp-afspraken. Oosterom Studio begint bij hoe het proces nu daadwerkelijk verloopt, en bouwt daar software omheen, in plaats van een pakket te verkopen waar het proces zich naar moet voegen.",
+        stappen: [
+            { titel: "Meelopen in het proces", tekst: "Waar mogelijk kijken we letterlijk mee hoe een taak nu wordt uitgevoerd, voordat we iets ontwerpen." },
+            { titel: "Ontwerp op maat", tekst: "We vertalen het proces naar een logische, begrijpelijke schermopbouw, geen overbodige functies." },
+            { titel: "Bouw in behapbare delen", tekst: "We leveren eerst het belangrijkste onderdeel op, zodat je snel resultaat ziet." },
+            { titel: "Overdracht en documentatie", tekst: "Je krijgt heldere documentatie, zodat je nooit vastzit aan alleen onze uitleg." },
+        ],
+        faq: [
+            {
+                vraag: "We werken nu met Excel, is dat een goed startpunt voor maatwerk?",
+                antwoord: "Prima startpunt zelfs. Excel-bestanden laten vaak precies zien welke gegevens en berekeningen belangrijk zijn, en dat gebruiken we als basis voor het ontwerp van de software."
+            },
+            {
+                vraag: "Hoeveel controle behoud ik over hoe het systeem werkt?",
+                antwoord: "Volledige controle: het is jouw software, met documentatie erbij, zodat je niet afhankelijk blijft van één externe partij."
+            },
+            {
+                vraag: "Kan de software meegroeien als ons bedrijf verandert?",
+                antwoord: "Dat is precies waarom we modulair bouwen: nieuwe onderdelen kunnen later worden toegevoegd zonder het bestaande systeem te moeten herbouwen."
+            },
+        ],
         cta_tekst: "Bespreek je proces",
     },
     {
@@ -343,6 +548,29 @@ export const landingPages = [
         ],
         extra:
             "We bouwen software die van jou blijft, geen vendor lock-in of afhankelijkheid van een externe partij die later duur uitpakt.",
+        regio_titel: "Van verouderd systeem naar maatwerk in Woerden",
+        regio_tekst:
+            "Woerden kent een gezonde mix van gevestigde MKB-bedrijven die in de loop der jaren zijn gegroeid, vaak sneller dan hun interne systemen konden bijbenen. Het gevolg is herkenbaar: een oud systeem dat niemand meer durft aan te passen, gekoppeld aan een lappendeken van work-arounds eromheen. Oosterom Studio is gespecialiseerd in precies dit scenario, het vervangen van een verouderd of overgroeid systeem door maatwerksoftware die aansluit op hoe het bedrijf inmiddels daadwerkelijk werkt.",
+        stappen: [
+            { titel: "Situatie in kaart brengen", tekst: "We analyseren het bestaande systeem en de work-arounds eromheen, zodat niets over het hoofd wordt gezien." },
+            { titel: "Migratieplan", tekst: "We bepalen hoe bestaande data veilig wordt overgezet naar het nieuwe systeem." },
+            { titel: "Bouw en parallelle testfase", tekst: "Het nieuwe systeem wordt getest naast het oude, zodat de overstap zonder onderbreking van de bedrijfsvoering verloopt." },
+            { titel: "Volledige overdracht", tekst: "Na livegang lever je het oude systeem definitief in, met volledige documentatie van het nieuwe." },
+        ],
+        faq: [
+            {
+                vraag: "Onze data staat in een verouderd systeem, kan dat worden overgezet?",
+                antwoord: "In de meeste gevallen wel. We bekijken vooraf in welk formaat de data beschikbaar is en stellen een migratieplan op om dataverlies te voorkomen."
+            },
+            {
+                vraag: "Hoe voorkomen we downtime tijdens de overstap?",
+                antwoord: "Door het nieuwe systeem eerst parallel te laten draaien naast het oude, kunnen we testen zonder dat de dagelijkse bedrijfsvoering stilvalt."
+            },
+            {
+                vraag: "Zijn we na oplevering afhankelijk van Oosterom Studio?",
+                antwoord: "Nee. Je krijgt volledige documentatie en eigenaarschap van de software, zodat je ook met een andere partij verder zou kunnen als je dat ooit wilt."
+            },
+        ],
         cta_tekst: "Vraag een intakegesprek aan",
     },
 
@@ -367,6 +595,29 @@ export const landingPages = [
         ],
         extra:
             "We beginnen met de belangrijkste functionaliteit en breiden daarna uit, zodat je niet in één keer een groot bedrag hoeft te investeren.",
+        regio_titel: "Klantportalen voor dienstverleners in en rond Reeuwijk",
+        regio_tekst:
+            "Reeuwijk en omgeving kennen veel dienstverlenende bedrijven waarbij klanten regelmatig vragen naar de status van een aanvraag, project of levering. Elk van die vragen kost telefoontijd en e-mailverkeer die met een klantportaal grotendeels wegvalt. Oosterom Studio bouwt portalen waarin klanten zelf, met een beveiligde inlog, hun eigen status, documenten of afspraken kunnen inzien, zodat jouw team zich kan richten op het werk zelf in plaats van op statusupdates.",
+        stappen: [
+            { titel: "Behoefte bepalen", tekst: "We inventariseren welke informatie klanten het vaakst opvragen en dus het meeste tijd bespaart als het portaal dat zelf toont." },
+            { titel: "Ontwerp van rollen", tekst: "We bepalen welke gebruikers wat mogen zien: klant, medewerker, beheerder." },
+            { titel: "Bouw en koppeling", tekst: "Het portaal wordt gekoppeld aan bestaande systemen zoals facturatie of e-mail, waar relevant." },
+            { titel: "Uitrol", tekst: "We begeleiden de eerste klanten bij het gebruik van het portaal, zodat de overstap soepel verloopt." },
+        ],
+        faq: [
+            {
+                vraag: "Is een klantportaal alleen interessant voor grotere bedrijven?",
+                antwoord: "Nee, juist kleinere teams met veel klantcontact merken vaak het snelst het verschil, omdat elk bespaard telefoontje relatief meer tijd oplevert."
+            },
+            {
+                vraag: "Kunnen klanten zelf documenten uploaden via het portaal?",
+                antwoord: "Ja, dat is een veelgevraagde functie, bijvoorbeeld voor het aanleveren van stukken of het goedkeuren van een offerte."
+            },
+            {
+                vraag: "Hoe zit het met de beveiliging van klantgegevens in het portaal?",
+                antwoord: "Elk portaal wordt gebouwd met beveiligde authenticatie en afgeschermde toegang per gebruiker, passend bij de AVG-vereisten voor het bewaren van persoonsgegevens."
+            },
+        ],
         cta_tekst: "Ontdek de mogelijkheden",
     },
 
@@ -391,6 +642,29 @@ export const landingPages = [
         ],
         extra:
             "Dit is precies waar de combinatie van webdesign en cybersecurity bij Oosterom Studio samenkomt: mooi én aantoonbaar veilig.",
+        regio_titel: "AVG-controle voor MKB-websites in Alphen aan den Rijn",
+        regio_tekst:
+            "Veel lokale ondernemers in Alphen aan den Rijn hebben ooit een cookiebanner laten plaatsen en gaan ervan uit dat daarmee de privacy-kant geregeld is. In de praktijk draaien bij een groot deel van deze websites trackingscripts al voordat een bezoeker toestemming geeft, of ontbreekt een verwerkersovereenkomst met een extern formulier- of hostingplatform. Oosterom Studio voert een concrete, technische controle uit op dit soort risico's, niet alleen een juridische checklist, en lost gevonden problemen direct op in de code van je website.",
+        stappen: [
+            { titel: "Technische scan", tekst: "We controleren welke scripts en cookies daadwerkelijk laden, en op welk moment, onafhankelijk van wat de cookiebanner beweert." },
+            { titel: "Risicorapport", tekst: "Je ontvangt een overzicht van gevonden risico's, gerangschikt op ernst en impact." },
+            { titel: "Technische correctie", tekst: "We passen de website aan zodat trackingscripts pas laden na daadwerkelijke toestemming, en formulieren veilig worden verwerkt." },
+            { titel: "Documentatie", tekst: "Je krijgt overzichtelijke documentatie van wat is gecontroleerd en aangepast, bruikbaar als toezicht ernaar vraagt." },
+        ],
+        faq: [
+            {
+                vraag: "We hebben al een cookiebanner, is dat niet genoeg?",
+                antwoord: "Een cookiebanner alleen is vaak niet genoeg. Het gaat erom of scripts pas laden ná toestemming, wat bij veel websites technisch niet correct is ingericht, ondanks een keurig ogende banner."
+            },
+            {
+                vraag: "Wat gebeurt er als we niet AVG-proof zijn?",
+                antwoord: "De risico's variëren van een waarschuwing tot een boete bij controle, maar het grootste praktische risico is vaak een datalek via een onveilig formulier. Een audit brengt dat risico expliciet in kaart."
+            },
+            {
+                vraag: "Hoe lang duurt een privacy-audit?",
+                antwoord: "Een technische scan en rapportage is doorgaans binnen een week klaar. De duur van de correcties hangt af van het aantal gevonden risico's."
+            },
+        ],
         cta_tekst: "Vraag een privacy-scan aan",
     },
 
@@ -415,6 +689,29 @@ export const landingPages = [
         ],
         extra:
             "Geen losse facturen per kleine aanpassing: met een vast abonnement weet je precies wat je krijgt en wat het kost.",
+        regio_titel: "Onderhoud voor de vele webshops en bedrijfssites in Boskoop",
+        regio_tekst:
+            "Boskoop kent van oudsher veel ondernemende, vaak kleinere bedrijven, waarvan er steeds meer online verkopen of aanvragen verwerken via hun website. Juist bij die bedrijven blijft onderhoud vaak liggen: er is geen interne IT-afdeling, en 'de website loopt toch gewoon' totdat een plugin verouderd raakt of een storing onopgemerkt blijft. Oosterom Studio neemt dat structureel uit handen met een vast onderhoudsabonnement, zodat updates, back-ups en beveiliging routinematig gebeuren in plaats van pas bij een probleem.",
+        stappen: [
+            { titel: "Nulmeting", tekst: "We brengen de huidige staat van je website in kaart: software-versies, beveiligingsniveau en eventuele achterstallige updates." },
+            { titel: "Abonnement op maat", tekst: "We bepalen samen welk urentegoed en welke monitoring bij jouw website past." },
+            { titel: "Doorlopend onderhoud", tekst: "Updates, back-ups en controles gebeuren op vaste basis, zonder dat je er zelf aan hoeft te denken." },
+            { titel: "Snelle opvolging bij storingen", tekst: "Bij een storing heb je prioriteit, met korte reactietijden in plaats van een wachtrij." },
+        ],
+        faq: [
+            {
+                vraag: "Wat gebeurt er als mijn website nu al achterloopt met updates?",
+                antwoord: "We starten met een nulmeting en brengen de website eerst bij, inclusief eventuele beveiligingsrisico's, voordat we overgaan op regulier onderhoud."
+            },
+            {
+                vraag: "Is een onderhoudsabonnement duurder dan losse facturen?",
+                antwoord: "Op de lange termijn meestal niet: losse facturen tellen bij regelmatig contact vaak sneller op dan een vast maandbedrag, en je voorkomt bovendien de kosten van een verwaarloosde, kwetsbare website."
+            },
+            {
+                vraag: "Kan ik het abonnement op elk moment aanpassen?",
+                antwoord: "Ja, het urentegoed en de omvang van het onderhoud kunnen worden aangepast als jouw situatie verandert."
+            },
+        ],
         cta_tekst: "Bekijk de abonnementen",
     },
 

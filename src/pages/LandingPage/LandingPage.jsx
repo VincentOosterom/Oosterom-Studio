@@ -1,12 +1,3 @@
-// src/pages/LandingPage/LandingPage.jsx
-//
-// Eén generieke template voor alle SEO landingspagina's.
-// De inhoud komt uit landingPagesData.js — je hoeft dit bestand
-// niet aan te passen om een nieuwe pagina toe te voegen.
-//
-// Vereist: react-helmet-async (staat al in je package.json)
-// main.jsx moet gewrapt zijn in <HelmetProvider> (zie instructies.md)
-
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { getLandingPageBySlug } from "./landingPagesData.js";

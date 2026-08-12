@@ -64,6 +64,22 @@ export const services = [
         link: "/diensten/saas"
     },
     {
+        title: "Branding",
+        description:
+            "Merkidentiteit en visuele richting die je onderscheidt, van logo tot volledige huisstijl.",
+        bullets: [
+            "Merkstrategie & positionering",
+            "Logo & huisstijlontwikkeling",
+            "Merkrichtlijnen (brand guidelines)",
+            "Visuele consistentie website & drukwerk",
+            "Herkenbaarheid over alle kanalen"
+        ],
+        extra:
+            "Een sterk merk maakt elk volgend design- of ontwikkelproject makkelijker, omdat de visuele en inhoudelijke richting al vaststaat.",
+        icon: "🏷️",
+        link: "/diensten/branding"
+    },
+    {
         title: "AI Agents",
         description:
             "AI-systemen die taken automatiseren, informatie verwerken en workflows ondersteunen.",
@@ -191,4 +207,5 @@ export const services = [
         icon: "🖥️",
         link: "/diensten/hosting-infrastructuur"
     },
+
 ];

@@ -2,7 +2,7 @@ import { writeFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
 import { landingPages } from "../src/pages/LandingPage/landingPagesData.js";
-
+import { blogPosts } from "../data/blogPosts.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DOMAIN = "https://www.oosteromstudio.nl";
 
@@ -28,15 +28,16 @@ const STATIC_PAGES = [
     { loc: "/over-ons", changefreq: "monthly", priority: "0.7" },
     { loc: "/contact", changefreq: "monthly", priority: "0.7" },
     { loc: "/oosterom-os", changefreq: "monthly", priority: "0.7" },
-    { loc: "/kennisbank/onderhoudsabonnement-of-losse-facturen", changefreq: "monthly", priority: "0.7" },
-    { loc: "/kennisbank/wanneer-loont-maatwerk-software", changefreq: "monthly", priority: "0.7" },
-    { loc: "/kennisbank/wat-is-een-ai-agent", changefreq: "monthly", priority: "0.7" },
-    { loc: "/kennisbank/ux-design-conversie", changefreq: "monthly", priority: "0.7" },
-    { loc: "/kennisbank/wat-kost-een-website-2026", changefreq: "monthly", priority: "0.7" },
-    { loc: "/kennisbank/core-web-vitals-uitgelegd", changefreq: "monthly", priority: "0.7" },
-    { loc: "/kennisbank/klantportaal-vs-crm", changefreq: "monthly", priority: "0.7" },
-    { loc: "/kennisbank/mvp-bouwen-stappen", changefreq: "monthly", priority: "0.7" },
+    { loc: "/faq", changefreq: "monthly", priority: "0.6" },
+    { loc: "/kennisbank", changefreq: "weekly", priority: "0.8" },
 ];
+
+// ── Kennisbank-artikelen — automatisch uit blogPosts.js ─────────────────────
+const BLOG_PAGES = blogPosts.map((post) => ({
+    loc: `/kennisbank/${post.slug}`,
+    changefreq: "monthly",
+    priority: "0.7",
+}));
 
 // ── Landingspagina's — automatisch uit landingPagesData.js ─────────────────
 const LANDING_PAGES = landingPages.map((page) => ({
@@ -46,7 +47,7 @@ const LANDING_PAGES = landingPages.map((page) => ({
 }));
 
 // ── XML bouwen ───────────────────────────────────────────────────────────
-const allPages = [...STATIC_PAGES, ...LANDING_PAGES];
+const allPages = [...STATIC_PAGES, ...BLOG_PAGES, ...LANDING_PAGES];
 
 const urlEntries = allPages
     .map(
@@ -69,4 +70,4 @@ ${urlEntries}
 const outputPath = resolve(__dirname, "../public/sitemap.xml");
 writeFileSync(outputPath, xml, "utf-8");
 
-console.log(`✅ Sitemap gegenereerd met ${allPages.length} pagina's (${LANDING_PAGES.length} landingspagina's) → public/sitemap.xml`);
+console.log(`✅ Sitemap gegenereerd met ${allPages.length} pagina's (${BLOG_PAGES.length} kennisbank-artikelen, ${LANDING_PAGES.length} landingspagina's) → public/sitemap.xml`);

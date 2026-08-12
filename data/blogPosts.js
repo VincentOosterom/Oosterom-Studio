@@ -23,7 +23,7 @@ export const blogPosts = [
             {
                 kop: "Design en merk gaan hand in hand",
                 html:
-                    "<p>Goede UX werkt het beste als hij aansluit op een duidelijke merkidentiteit. Daarom combineren we bij <a href=\"/diensten/branding\">branding &amp; digitale strategie</a> vaak design-keuzes met een bredere visie op positionering, zodat je site niet alleen werkt, maar ook herkenbaar is.</p><p>En als je website eenmaal staat, is het slim om ook na te denken over de lange termijn. Lees bijvoorbeeld hoe een <a href=\"/blog/onderhoudsabonnement-of-losse-facturen\">onderhoudsabonnement</a> je behoedt voor verrassingen achteraf.</p>",
+                    "<p>Goede UX werkt het beste als hij aansluit op een duidelijke merkidentiteit. Daarom combineren we bij <a href=\"/diensten/branding\">branding &amp; digitale strategie</a> vaak design-keuzes met een bredere visie op positionering, zodat je site niet alleen werkt, maar ook herkenbaar is.</p><p>En als je website eenmaal staat, is het slim om ook na te denken over de lange termijn. Lees bijvoorbeeld hoe een <a href=\"/kennisbank/onderhoudsabonnement-of-losse-facturen\">onderhoudsabonnement</a> je behoedt voor verrassingen achteraf.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/webdesign", "/diensten/branding"],
@@ -58,7 +58,7 @@ export const blogPosts = [
             {
                 kop: "Wat je nu kunt doen",
                 html:
-                    "<p>Het beste startpunt is een onafhankelijke <a href=\"/diensten/cybersecurity-scan\">cybersecurity scan &amp; beveiligingsaudit</a>: een check op kwetsbaarheden, verlopen certificaten en verdachte bestanden, met concrete actiepunten op volgorde van risico.</p><p>Voor de lange termijn voorkomt <a href=\"/diensten/website-beveiliging\">website beveiliging &amp; onderhoud</a> dat dit probleem terugkomt, denk aan automatische updates, monitoring en back-ups.</p><p>Werk je met persoonsgegevens van klanten? Check dan ook onze blog over <a href=\"/blog/avg-fouten-mkb\">de meest gemaakte AVG-fouten</a>, want beveiliging en privacy gaan hand in hand.</p>",
+                    "<p>Het beste startpunt is een onafhankelijke <a href=\"/diensten/cybersecurity-scan\">cybersecurity scan &amp; beveiligingsaudit</a>: een check op kwetsbaarheden, verlopen certificaten en verdachte bestanden, met concrete actiepunten op volgorde van risico.</p><p>Voor de lange termijn voorkomt <a href=\"/diensten/website-beveiliging\">website beveiliging &amp; onderhoud</a> dat dit probleem terugkomt, denk aan automatische updates, monitoring en back-ups.</p><p>Werk je met persoonsgegevens van klanten? Check dan ook onze blog over <a href=\"/kennisbank/avg-fouten-mkb\">de meest gemaakte AVG-fouten</a>, want beveiliging en privacy gaan hand in hand.</p>",
             },
         ],
         gerelateerdeBlogs: ["avg-fouten-mkb"],
@@ -92,7 +92,7 @@ export const blogPosts = [
             {
                 kop: "4. Geen documentatie als toezicht erom vraagt",
                 html:
-                    "<p>Zelfs als alles technisch goed staat, moet je kunnen aantonen wat je hebt gedaan. Bij een <a href=\"/diensten/avg-proof-website\">AVG/GDPR-proof website</a> traject leveren we die documentatie standaard mee.</p><p>Wil je weten of jouw site nog andere kwetsbaarheden heeft naast privacy? Begin met de <a href=\"/blog/5-tekenen-beveiligingslek\">vijf signalen van een beveiligingslek</a> die we eerder beschreven.</p>",
+                    "<p>Zelfs als alles technisch goed staat, moet je kunnen aantonen wat je hebt gedaan. Bij een <a href=\"/diensten/avg-proof-website\">AVG/GDPR-proof website</a> traject leveren we die documentatie standaard mee.</p><p>Wil je weten of jouw site nog andere kwetsbaarheden heeft naast privacy? Begin met de <a href=\"/kennisbank/5-tekenen-beveiligingslek\">vijf signalen van een beveiligingslek</a> die we eerder beschreven.</p>",
             },
         ],
         gerelateerdeBlogs: ["5-tekenen-beveiligingslek"],
@@ -121,7 +121,7 @@ export const blogPosts = [
             {
                 kop: "Wanneer het (nog) geen agent moet zijn",
                 html:
-                    "<p>Heb je een proces dat maar een paar keer per maand voorkomt, of waarbij elke situatie anders is? Dan is gewone <a href=\"/diensten/ai-automatisering\">workflow-automatisering</a> vaak een beter startpunt dan een volledige agent, simpeler te bouwen, en makkelijker te controleren.</p><p>Twijfel je tussen losse automatisering of maatwerk software eromheen? Lees ook <a href=\"/blog/wanneer-loont-maatwerk-software\">wanneer maatwerk software écht loont</a>.</p>",
+                    "<p>Heb je een proces dat maar een paar keer per maand voorkomt, of waarbij elke situatie anders is? Dan is gewone <a href=\"/diensten/ai-automatisering\">workflow-automatisering</a> vaak een beter startpunt dan een volledige agent, simpeler te bouwen, en makkelijker te controleren.</p><p>Twijfel je tussen losse automatisering of maatwerk software eromheen? Lees ook <a href=\"/kennisbank/wanneer-loont-maatwerk-software\">wanneer maatwerk software écht loont</a>.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/ai-agents", "/diensten/ai-automatisering"],
@@ -151,7 +151,7 @@ export const blogPosts = [
             {
                 kop: "En als het groter moet groeien?",
                 html:
-                    "<p>Heb je een idee voor een eigen platform of dienst die je aan meerdere klanten wilt aanbieden? Dan praat je niet meer over een interne tool, maar over <a href=\"/diensten/saas\">SaaS &amp; digitale systemen</a>, met andere eisen aan schaalbaarheid en gebruikersrollen.</p><p>Wil je eerst kleinere stappen zetten met automatisering voordat je investeert in maatwerk? Begin bij <a href=\"/blog/wat-is-een-ai-agent\">wat een AI-agent voor jouw bedrijf kan doen</a>.</p>",
+                    "<p>Heb je een idee voor een eigen platform of dienst die je aan meerdere klanten wilt aanbieden? Dan praat je niet meer over een interne tool, maar over <a href=\"/diensten/saas\">SaaS &amp; digitale systemen</a>, met andere eisen aan schaalbaarheid en gebruikersrollen.</p><p>Wil je eerst kleinere stappen zetten met automatisering voordat je investeert in maatwerk? Begin bij <a href=\"/kennisbank/wat-is-een-ai-agent\">wat een AI-agent voor jouw bedrijf kan doen</a>.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/software-op-maat", "/diensten/klantportaal", "/diensten/saas"],
@@ -176,12 +176,12 @@ export const blogPosts = [
             {
                 kop: "Onderhoud is ook beveiliging",
                 html:
-                    "<p>Updates en patches zijn niet alleen functioneel, ze zijn de eerste verdedigingslinie tegen kwetsbaarheden. Veel van de problemen uit onze blog over <a href=\"/blog/5-tekenen-beveiligingslek\">beveiligingslekken</a> waren voorkomen met regelmatig onderhoud.</p>",
+                    "<p>Updates en patches zijn niet alleen functioneel, ze zijn de eerste verdedigingslinie tegen kwetsbaarheden. Veel van de problemen uit onze blog over <a href=\"/kennisbank/5-tekenen-beveiligingslek\">beveiligingslekken</a> waren voorkomen met regelmatig onderhoud.</p>",
             },
             {
                 kop: "Het complete pakket",
                 html:
-                    "<p>Voor wie design, ontwikkeling én beveiliging in één keer goed wil regelen, is het <a href=\"/diensten/website-en-beveiliging\">website + beveiligingspakket</a> de meest complete optie, van buiten sterk, van binnen beveiligd.</p>",
+                    "<p>Voor wie design, ontwikkeling én beveiliging in één keer goed wil regelen, is het <a href=\"/diensten/avg-proof-website\">website + beveiligingspakket</a> de meest complete optie, van buiten sterk, van binnen beveiligd.</p>",
             },
         ],
         gerelateerdeBlogs: ["5-tekenen-beveiligingslek"],
@@ -210,7 +210,7 @@ export const blogPosts = [
             {
                 kop: "Waarom de goedkoopste offerte vaak duurder uitpakt",
                 html:
-                    "<p>Een lage prijs vooraf zegt niets over wat er ná oplevering gebeurt. Ontbrekende beveiliging, geen documentatie, of een site die niet uit te breiden is, leiden regelmatig tot een volledige herbouw binnen twee jaar. Een <a href=\"/diensten/avg-proof-website\">technisch correct opgeleverde website</a> voorkomt die verborgen vervolgkosten.</p><p>Twijfel je of onderhoud per uur of via een abonnement voordeliger is? Dat hebben we uitgewerkt in <a href=\"/blog/onderhoudsabonnement-of-losse-facturen\">onderhoudsabonnement of losse facturen</a>.</p>",
+                    "<p>Een lage prijs vooraf zegt niets over wat er ná oplevering gebeurt. Ontbrekende beveiliging, geen documentatie, of een site die niet uit te breiden is, leiden regelmatig tot een volledige herbouw binnen twee jaar. Een <a href=\"/diensten/avg-proof-website\">technisch correct opgeleverde website</a> voorkomt die verborgen vervolgkosten.</p><p>Twijfel je of onderhoud per uur of via een abonnement voordeliger is? Dat hebben we uitgewerkt in <a href=\"/kennisbank/onderhoudsabonnement-of-losse-facturen\">onderhoudsabonnement of losse facturen</a>.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/webdesign", "/diensten/avg-proof-website"],
@@ -240,7 +240,7 @@ export const blogPosts = [
             {
                 kop: "Snelheid is een technisch, geen creatief probleem",
                 html:
-                    "<p>Een prachtig ontworpen website die traag laadt, verliest het alsnog van een eenvoudigere site die binnen een seconde zichtbaar is. Daarom is performance bij ons geen nazorg-taak, maar een uitgangspunt vanaf de eerste regel code.</p><p>Benieuwd hoe dit samenkomt met gebruiksvriendelijkheid? Lees ook <a href=\"/blog/ux-design-conversie\">waarom UX-design net zo belangrijk is als hoe je site eruitziet</a>.</p>",
+                    "<p>Een prachtig ontworpen website die traag laadt, verliest het alsnog van een eenvoudigere site die binnen een seconde zichtbaar is. Daarom is performance bij ons geen nazorg-taak, maar een uitgangspunt vanaf de eerste regel code.</p><p>Benieuwd hoe dit samenkomt met gebruiksvriendelijkheid? Lees ook <a href=\"/kennisbank/ux-design-conversie\">waarom UX-design net zo belangrijk is als hoe je site eruitziet</a>.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/webdevelopment", "/diensten/webdesign"],
@@ -270,7 +270,7 @@ export const blogPosts = [
             {
                 kop: "Welke moet je als eerste bouwen?",
                 html:
-                    "<p>Heb je vooral behoefte aan intern overzicht? Begin met een CRM. Krijg je vooral veel vragen van klanten over status en voortgang? Dan levert een klantportaal sneller merkbaar resultaat op. Twijfel je tussen dit en een groter platform? Lees <a href=\"/blog/wanneer-loont-maatwerk-software\">wanneer maatwerk software écht loont</a> voor de bredere afweging.</p>",
+                    "<p>Heb je vooral behoefte aan intern overzicht? Begin met een CRM. Krijg je vooral veel vragen van klanten over status en voortgang? Dan levert een klantportaal sneller merkbaar resultaat op. Twijfel je tussen dit en een groter platform? Lees <a href=\"/kennisbank/wanneer-loont-maatwerk-software\">wanneer maatwerk software écht loont</a> voor de bredere afweging.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/klantportaal", "/diensten/software-op-maat"],
@@ -305,7 +305,7 @@ export const blogPosts = [
             {
                 kop: "Stap 4: bouw de feedback-loop meteen mee",
                 html:
-                    "<p>Een MVP zonder manier om te meten wat gebruikers doen, is een gok in het donker. Simpele analytics en een laagdrempelige manier om feedback te geven, horen vanaf dag één in het product, niet als latere toevoeging.</p><p>Weet je nog niet zeker of je een volledig platform nodig hebt, of dat automatisering al genoeg is? Lees dan eerst <a href=\"/blog/wat-is-een-ai-agent\">wat een AI-agent voor jouw bedrijf kan doen</a>.</p>",
+                    "<p>Een MVP zonder manier om te meten wat gebruikers doen, is een gok in het donker. Simpele analytics en een laagdrempelige manier om feedback te geven, horen vanaf dag één in het product, niet als latere toevoeging.</p><p>Weet je nog niet zeker of je een volledig platform nodig hebt, of dat automatisering al genoeg is? Lees dan eerst <a href=\"/kennisbank/wat-is-een-ai-agent\">wat een AI-agent voor jouw bedrijf kan doen</a>.</p>",
             },
         ],
         gerelateerdeDiensten: ["/diensten/saas", "/diensten/software-op-maat"],
