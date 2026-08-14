@@ -29,7 +29,6 @@ export default function BlogOverview() {
             <section className={styles.hero}>
                 <div className={styles.heroGlow} aria-hidden="true" />
 
-                <span className={styles.tag}>Kennisbank</span>
                 <h1 className={styles.titel}>Inzichten & praktijkkennis</h1>
                 <p className={styles.intro}>
                     Praktische artikelen over webdesign, beveiliging en software voor

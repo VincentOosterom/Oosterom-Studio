@@ -2,7 +2,8 @@
     position: relative;
     background: var(--color-bg, #080808);
     color: var(--color-text);
-    min-height: 100vh;
+    min-height: 70vh;
+    padding: 100px 4rem 80px;
     font-family: var(--font-body), sans-serif;
     overflow: hidden;
 }
@@ -221,6 +222,10 @@
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
+    .pagina{
+        padding: 110px 1.5rem 56px;
+        min-height: auto;
+    }
     .topbar {
         padding: 24px 1.5rem;
     }
