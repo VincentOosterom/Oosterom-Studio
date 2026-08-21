@@ -17,7 +17,6 @@
 
 .merk {
     font-family: var(--font-title), sans-serif;
-    font-weight: 800;
     letter-spacing: -0.01em;
     color: var(--color-text);
     text-decoration: none;
@@ -87,7 +86,6 @@
 
 .titel {
     font-family: var(--font-title), sans-serif;
-    font-weight: 800;
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     letter-spacing: -0.02em;
     line-height: 1;
@@ -122,7 +120,6 @@
 .statNum {
     font-family: var(--font-title), sans-serif;
     font-size: 1.8rem;
-    font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1;
     color: var(--color-text);

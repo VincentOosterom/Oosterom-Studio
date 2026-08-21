@@ -55,7 +55,6 @@
 .pakket-cta__title {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(1.8rem, 4vw, 3rem);
-    font-weight: 800;
     letter-spacing: -0.015em;
     line-height: 1.1;
     color: #ffffff;

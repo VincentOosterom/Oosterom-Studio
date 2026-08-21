@@ -35,7 +35,6 @@
 .values-container h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(28px, 4vw, 48px);
-    font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.05;
     color: var(--color-text);
@@ -147,7 +146,6 @@
 .waarom-container h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(28px, 4vw, 48px);
-    font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.05;
     color: var(--color-text);
@@ -289,7 +287,6 @@
 .projects-container h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(28px, 4vw, 48px);
-    font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.05;
     color: var(--color-text);
@@ -466,7 +463,6 @@
 .aanpak-container h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(28px, 4vw, 48px);
-    font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.05;
     color: var(--color-text);
@@ -572,7 +568,6 @@
 .pricing-container h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(32px, 5vw, 56px);
-    font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.05;
     color: var(--color-text);
@@ -676,7 +671,6 @@
 .cta-section h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(32px, 5vw, 56px);
-    font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.0;
     color: var(--color-text);

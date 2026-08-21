@@ -60,7 +60,6 @@
 .landing-h1 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(1.8rem, 4vw, 3rem);
-    font-weight: 800;
     letter-spacing: -0.025em;
     line-height: 1.05;
     color: var(--color-text);
@@ -109,7 +108,6 @@
 .landing-bullets h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-    font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--color-text);
     margin-bottom: 20px;
@@ -234,7 +232,6 @@
 .landing-regio h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-    font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--color-text);
     margin-bottom: 16px;
@@ -259,7 +256,6 @@
 .landing-stappen h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-    font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--color-text);
     margin-bottom: 24px;
@@ -319,7 +315,6 @@
 .landing-faq h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-    font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--color-text);
     margin-bottom: 20px;
@@ -390,7 +385,6 @@
 .landing-bottom-cta h2 {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(1.3rem, 3vw, 1.8rem);
-    font-weight: 800;
     color: var(--color-text);
     margin-bottom: 12px;
 }

@@ -262,7 +262,6 @@
 
 .os-section-titel {
     font-size: clamp(28px, 4vw, 42px);
-    font-weight: 800;
     margin-bottom: 12px;
     letter-spacing: -1px;
 }
@@ -369,7 +368,6 @@
 
 .os-stap-nummer {
     font-size: 11px;
-    font-weight: 800;
     color: var(--color-accent);
     font-family: monospace;
     width: 36px;
@@ -560,7 +558,6 @@
     color: whitesmoke;
     font-family: var(--font-body), sans-serif;
     font-size: 42px;
-    font-weight: 800;
     line-height: 1;
 }
 
@@ -646,7 +643,6 @@
 
 .os-cta-titel {
     font-size: clamp(28px, 4vw, 42px);
-    font-weight: 800;
     margin-bottom: 16px;
     letter-spacing: -1px;
 }

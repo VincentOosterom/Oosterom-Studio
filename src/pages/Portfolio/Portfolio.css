@@ -51,7 +51,6 @@
 
 .pf-hero__title {
     font-size: clamp(40px, 8vw, 80px);
-    font-weight: 800;
     font-family: var(--font-title), sans-serif;
     line-height: 0.95;
     letter-spacing: -0.02em;
@@ -94,7 +93,6 @@
 .pf-hero__stat-num {
     font-family: var(--font-title), sans-serif;
     font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--color-text, #f0f0f0);
     line-height: 1;
@@ -237,7 +235,6 @@
 
 .pf-card__title {
     font-size: 22px;
-    font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.15;
     margin-bottom: 12px;
@@ -311,13 +308,12 @@
     transform: translate(-50%, -50%);
     width: 600px;
     height: 300px;
-    background: radial-gradient(ellipse, rgba(136, 232, 244, 0.09) 0%, transparent 70%);
+
     pointer-events: none;
 }
 
 .pf-cta__title {
     font-size: clamp(36px, 6vw, 72px);
-    font-weight: 800;
     letter-spacing: -0.01em;
     line-height: 0.95;
     color: var(--color-text, #f0f0f0);
