@@ -13,6 +13,9 @@ import logo_vandervis from "../src/assets/images/logo-vandervis.webp"
 import work_vandervis from "../src/assets/images/work_vandervis.png"
 import work_vpuffelen from "../src/assets/images/work_vpuffelen.png"
 import logo_vpuffelen from "../src/assets/images/logo_vanpuffelen.png"
+import app_volhoudr from "../src/assets/images/app_volhoudr.png"
+
+
 
 
 
@@ -97,6 +100,19 @@ const projects = [
         result: `Het resultaat is een professionele website waarmee Van der Vis Bouwbedrijf voor het eerst goed vindbaar en bereikbaar is online. Potentiële klanten kunnen eenvoudig, ook vanaf mobiel, een offerte aanvragen of contact opnemen — aanvragen komen direct per e-mail binnen, zodat er niets tussen wal en schip valt.`,
         website: "https://www.vandervisbouw.nl",
         sfeer: work_vandervis
+    },
+    {
+        slug: "volhoudr",
+        title: "Volhoudr",
+        image: app_volhoudr,
+        card_description: `Een React Native challenge-app voor iOS en Android, gebouwd met Expo en Supabase, met vrienden en groepen, in-app abonnementen via RevenueCat, en AI-ondersteuning van Anthropic.`,
+        subtitle: "Eigen product van Oosterom Studio",
+        intro: `Volhoudr is een challenge-app in de geest van 75 Hard, maar vergevender. Wij hebben het concept, de app en het volledige platform eromheen zelf ontwikkeld en uitgebracht in de App Store.`,
+        challenge: `Bestaande 75 Hard-apps werken met een alles-of-niets-principe: één gemiste dag zet je terug naar dag 1. Dat zorgt ervoor dat veel mensen na een paar weken afhaken. Er was behoefte aan een app die dezelfde discipline stimuleert, maar mensen niet meteen laat opgeven na één misstap — en die het samen doen met vrienden mogelijk maakt.`,
+        solution: `We hebben een native iOS- en Android-app gebouwd met Expo en React Native, met Supabase als backend voor database, authenticatie en opslag. Gebruikers kiezen een challenge, vinken dagelijks hun regels af en kunnen jokers inzetten om een gemiste dag op te vangen zonder hun reeks te verliezen. Daarnaast is er een sociale laag met vrienden, groepen en een ranglijst. Abonnementen lopen via RevenueCat met server-side validatie, en abonnees krijgen toegang tot AI-ondersteuning van Anthropic bij het kiezen van een challenge. Ook de volledige juridische en marketingkant — privacyverklaring, voorwaarden en de website — is door ons opgezet.`,
+        result: `Volhoudr is goedgekeurd door Apple en staat live in de App Store. Het platform is volledig zelf gebouwd: van de app zelf tot de backend, de betaalintegratie en de marketingsite op volhoudr.nl.`,
+        appStoreUrl: "https://apps.apple.com/nl/app/volhoudr/id0000000000", // <-- vervang met echte App Store-link
+        sfeer: app_volhoudr
     },
     {
         slug: "oliebollenalphen",
