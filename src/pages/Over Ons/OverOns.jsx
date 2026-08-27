@@ -78,7 +78,6 @@ function OverOns() {
 
             <section className="overons-hero">
                 <div className="overons-hero__glow" aria-hidden="true"/>
-                <span className="overons-tag">Over ons</span>
                 <h1>Over Oosterom Studio</h1>
                 <p>Webdevelopment, SaaS en Cyber Security vanuit één duidelijke visie.</p>
             </section>

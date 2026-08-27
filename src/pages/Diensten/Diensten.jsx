@@ -44,7 +44,7 @@ function Diensten() {
     return (
         <div>
             <Helmet>
-                <title>Diensten | Oosterom Studio – Webdesign, Webshops & Cybersecurity</title>
+                <title>Diensten | Oosterom Studio </title>
                 <meta
                     name="description"
                     content="Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale platformen voor MKB en startups. Inclusief technische SEO, performance optimalisatie en cybersecurity."
@@ -76,7 +76,6 @@ function Diensten() {
                 transition={{duration: 0.8}}
             >
                 <div className="diensten-hero__glow" aria-hidden="true" />
-                <span className="diensten-hero__tag">Wat we doen</span>
                 <h1>Digitale diensten</h1>
                 <p>Van design tot development en architectuur. We bouwen digitale producten die schaalbaar, snel en veilig zijn.</p>
             </motion.section>

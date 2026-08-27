@@ -80,7 +80,7 @@ export const services = [
         link: "/diensten/branding"
     },
     {
-        title: "AI Agents",
+        title: "AI Agents & Automation",
         description:
             "AI-systemen die taken automatiseren, informatie verwerken en workflows ondersteunen.",
         bullets: [
@@ -91,7 +91,7 @@ export const services = [
             "Controle & human-in-the-loop"
         ],
         extra:
-            "Onze AI-agents zijn ontworpen met controle en betrouwbaarheid in gedachten, automatisering zonder dat je de regie verliest.",
+            "Onze AI-agents zijn ontworpen met controle en betrouwbaarheid in gedachten, automatisering zonder dat je de regie verliest. Of kies voor jouw eigen agents.",
         icon: "🤖",
         link: "/diensten/ai-agents"
     },
@@ -142,22 +142,6 @@ export const services = [
             "We bouwen webshops die niet alleen goed ogen, maar ook technisch soepel lopen bij piekmomenten zoals sales of feestdagen.",
         icon: "🛒",
         link: "/diensten/webshops"
-    },
-    {
-        title: "AVG-proof Website",
-        description:
-            "Een website die technisch voldoet aan de AVG — niet alleen op papier, maar ook in de praktijk.",
-        bullets: [
-            "Privacy-audit & risicoanalyse",
-            "Correct werkende cookieconsent",
-            "Beveiligde formulieren & opslag",
-            "Verwerkersovereenkomsten check",
-            "Documentatie voor toezicht"
-        ],
-        extra:
-            "Veel websites zijn technisch onveilig ingericht qua privacy zonder dat de eigenaar het weet. Wij maken je site aantoonbaar AVG-proof.",
-        icon: "📋",
-        link: "/diensten/avg-proof-website"
     },
     {
         title: "SEO & Performance Optimalisatie",

@@ -77,7 +77,7 @@ export const blogPosts = [
             {
                 kop: "1. Cookies laden vóórdat iemand toestemming geeft",
                 html:
-                    "<p>Veel cookiebanners zien er goed uit, maar de trackingscripts draaien al op de achtergrond zodra de pagina laadt — toestemming of niet. Dat is in strijd met de AVG, ook als de banner zelf compliant lijkt.</p>",
+                    "<p>Veel cookiebanners zien er goed uit, maar de trackingscripts draaien al op de achtergrond zodra de pagina laadt, toestemming of niet. Dat is in strijd met de AVG, ook als de banner zelf compliant lijkt.</p>",
             },
             {
                 kop: "2. Contactformulieren zonder beveiligde verbinding of opslag",
