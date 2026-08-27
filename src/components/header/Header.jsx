@@ -82,6 +82,7 @@ function Header({ title, subtitle, buttonText, tag }) {
                             >
                                 {buttonText} →
                             </button>
+                            
 
                             <div className="header__trust">
                                 <span>Reactie binnen 24 uur</span>

@@ -54,7 +54,7 @@ function Footer() {
                         Oosterom <span>Studio·</span>
                     </Link>
                     <p className="footer-tagline">
-                        Digitaal sterk van buiten én van binnen. Wij bouwen webapplicaties,
+                        Digitaal sterk van buiten én van binnen. Ik bouw webapplicaties,
                         digitale systemen en beveiligde oplossingen voor MKB en startups.
                     </p>
                     <div className="footer-socials">

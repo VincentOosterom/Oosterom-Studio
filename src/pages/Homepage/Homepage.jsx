@@ -31,7 +31,7 @@ function Homepage() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio | Digitaal sterk van buiten én van binnen</title>
+                <title>Oosterom Studio - Digitaal sterk van buiten én van binnen</title>
 
                 <meta
                     name="description"
@@ -86,9 +86,9 @@ function Homepage() {
 
             <Header
                 title={"Van idee naar software\ndie echt waarde levert."}
-                subtitle="Oosterom Studio bouwt webapps, SaaS-platformen en mobiele software voor het MKB."
-                buttonText="Klaar om te beginnen?"
-                tag="Welkom bij Oosterom Studio"
+                subtitle="Ik bouw websites, webapplicaties en SaaS-platformen voor het MKB, van eerste schets tot oplevering."
+                buttonText="Offerte aanvragen"
+                tag="Digitale oplossingen voor MKB en startups in Nederland"
             />
             <MovingBar/>
 
@@ -106,22 +106,22 @@ function Homepage() {
                         </motion.h2>
 
                         <motion.p className="values-subtitle" variants={fadeUp}>
-                            Elke keuze die we maken, in design, code en samenwerking.
-                            Komt voort uit dezelfde vier uitgangspunten.
+                            Elke keuze die ik maak, in design, code en samenwerking,
+                            komt voort uit dezelfde vier uitgangspunten.
                         </motion.p>
 
                         <section className="values-grid">
                             <motion.article className="value-card" variants={fadeUp}>
-                                <h3>Performance First</h3>
+                                <h3>Performance eerst</h3>
                                 <p>
-                                    Snelheid is geen luxe, het is het uitgangspunt. We ontwikkelen
+                                    Snelheid is geen luxe, het is het uitgangspunt. Ik ontwikkel
                                     technisch geoptimaliseerde websites met hoge Core Web Vitals-scores
                                     die bezoekers niet laten wachten.
                                 </p>
                             </motion.article>
 
                             <motion.article className="value-card" variants={fadeUp}>
-                                <h3>Security by Default</h3>
+                                <h3>Beveiliging standaard</h3>
                                 <p>
                                     Beveiliging zit in de basis, niet als afvinkpunt achteraf. HTTPS,
                                     security headers en bescherming tegen veelvoorkomende aanvallen zijn
@@ -132,15 +132,15 @@ function Homepage() {
                                 <h3>Resultaatgericht</h3>
                                 <p>
                                     Elke keuze, van structuur tot techniek, is gericht op conversie
-                                    en groei. Een mooie website die niet converteert lost niets op.
+                                    en groei. Een mooie website die niet converteert levert niets op.
                                 </p>
                             </motion.article>
                             <motion.article className="value-card" variants={fadeUp}>
                                 <h3>Langetermijnpartner</h3>
                                 <p>
-                                    We denken verder dan de oplevering. Systemen die meegroeien,
-                                    code die overdraagbaar is, en eerlijk advies ook als dat betekent
-                                    dat we je doorverwijzen.
+                                    Ik denk verder dan de oplevering. Systemen die meegroeien,
+                                    code die overdraagbaar is, en eerlijk advies ook als dat
+                                    betekent dat ik je doorverwijs.
                                 </p>
                             </motion.article>
                         </section>
@@ -163,7 +163,7 @@ function Homepage() {
                             <motion.p className="waarom-subtitle" variants={fadeUp}>
                                 Grote bureaus bouwen voor tientallen klanten tegelijk.
                                 Bij Oosterom Studio krijg je directe betrokkenheid,
-                                eerlijk advies en software die echt bij jou past.
+                                eerlijk advies en software die echt bij jouw bedrijf past.
                             </motion.p>
                         </div>
 
@@ -209,15 +209,15 @@ function Homepage() {
                                     </svg>
                                 </div>
                                 <h3>Techniek én strategie</h3>
-                                <p>We denken mee over wat je bouwt en waarom, niet alleen hoe. Als een eenvoudigere oplossing beter werkt, zeggen we dat ook.</p>
+                                <p>Ik denk mee over wat je bouwt en waarom, niet alleen hoe. Als een eenvoudigere oplossing beter werkt, zeg ik dat ook.</p>
                             </motion.div>
 
                             <motion.div className="waarom-card waarom-card--accent" variants={fadeUp}>
                                 <p className="waarom-card__quote">
-                                    Van idee naar software die echt waarde levert.
+                                    Digitaal sterk. Van buiten én van binnen.
                                 </p>
                                 <Link to="/over-ons" className="waarom-card__link">
-                                    Leer ons kennen →
+                                    Over Oosterom Studio →
                                 </Link>
                             </motion.div>
 
@@ -244,7 +244,7 @@ function Homepage() {
                                 Recente <em>projecten</em>
                             </motion.h2>
                             <motion.p className="projects-subtitle" variants={fadeUp}>
-                                Een greep uit wat we de afgelopen tijd hebben gebouwd voor onze klanten.
+                                Een greep uit wat ik de afgelopen tijd voor klanten heb gebouwd.
                             </motion.p>
                         </div>
 
@@ -300,22 +300,22 @@ function Homepage() {
                                 {
                                     num: "01",
                                     title: "Analyse & Strategie",
-                                    desc: "We analyseren je markt, doelgroep en technische situatie. Geen aannames, wel een helder beeld van waar je staat en waar je naartoe wilt."
+                                    desc: "Ik analyseer je markt, doelgroep en technische situatie. Geen aannames, wel een helder beeld van waar je staat en waar je naartoe wilt."
                                 },
                                 {
                                     num: "02",
                                     title: "Architectuur & Design",
-                                    desc: "We ontwerpen een schaalbare en conversiegerichte structuur. Visueel sterk, technisch doordacht, afgestemd op jouw merk."
+                                    desc: "Ik ontwerp een schaalbare en conversiegerichte structuur. Visueel sterk, technisch doordacht, afgestemd op jouw merk."
                                 },
                                 {
                                     num: "03",
                                     title: "Development & Optimalisatie",
-                                    desc: "We bouwen, testen en optimaliseren voor performance en veiligheid. Elke regel code heeft een reden."
+                                    desc: "Ik bouw, test en optimaliseer voor performance en veiligheid. Elke regel code heeft een reden."
                                 },
                                 {
                                     num: "04",
                                     title: "Oplevering & Nazorg",
-                                    desc: "Na de lancering ben je er niet alleen voor. We zorgen voor een soepele overdracht en staan klaar voor doorontwikkeling."
+                                    desc: "Na de lancering sta je er niet alleen voor. Ik zorg voor een soepele overdracht en blijf beschikbaar voor doorontwikkeling."
                                 },
                             ].map(({num, title, desc}) => (
                                 <motion.div className="aanpak-stap" key={num} variants={fadeUp}>
@@ -331,9 +331,11 @@ function Homepage() {
                 <PakketCta
                     achtergrond={image_cta}
                     scriptTekst="Van A tot Z"
-                    titelWit="Wij helpen jou met het"
-                    titelAccent="hele pakket!"
-                    tekst="Wij bieden een totaaloplossing, waarbij je voor alles op één plek terecht kunt..."
+                    titelWit="Eén aanspreekpunt voor"
+                    titelAccent="je hele project"
+                    tekst="Van strategie en design tot development, hosting en onderhoud. Je hoeft niet te schakelen tussen partijen die naar elkaar wijzen."
+                    primaireKnopTekst="Plan een gesprek"
+                    secundaireKnopTekst="Over Oosterom Studio"
                 />
 
                 <section className="pricing-section">
@@ -353,7 +355,7 @@ function Homepage() {
                         </motion.h2>
 
                         <motion.p className="pricing-intro" variants={fadeUp}>
-                            Wij werken niet met standaardpakketten, omdat geen enkel bedrijf
+                            Ik werk niet met standaardpakketten, omdat geen enkel bedrijf
                             hetzelfde is. Elk project begint met een goed gesprek, daarna
                             ontvang je een heldere offerte zonder verborgen kosten.
                         </motion.p>
@@ -374,7 +376,7 @@ function Homepage() {
                             <motion.div className="pricing-pillar" variants={fadeUp}>
                                 <span className="pricing-pillar__num">03</span>
                                 <h3>Bouwen</h3>
-                                <p>Zodra we akkoord zijn, gaan we aan de slag. Je wordt op de hoogte gehouden en kan altijd bijsturen.</p>
+                                <p>Zodra we akkoord zijn, ga ik aan de slag. Je wordt op de hoogte gehouden en kunt altijd bijsturen.</p>
                             </motion.div>
                         </motion.div>
                     </motion.div>

@@ -45,13 +45,13 @@ export default function WatWeBouwen() {
             <div className={styles.bgGrid} aria-hidden="true" />
 
             <article className={styles.header}>
-                <span className={styles.tag}>Onze expertise</span>
+                <span className={styles.tag}>Expertise</span>
                 <h2 className={styles.title}>
                     Digitale <em>producten</em>
                 </h2>
                 <p className={styles.subtitle}>
                     Van webapplicatie tot mobiele app, dit is de technische breedte
-                    die we in huis hebben.
+                    die ik in huis heb.
                 </p>
             </article>
 
