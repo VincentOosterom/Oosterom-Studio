@@ -194,6 +194,35 @@ export default function FAQPage() {
                     name="description"
                     content="Antwoorden op veelgestelde vragen over webdevelopment, SEO, API-koppelingen, maatwerk software en online adverteren van Oosterom Studio."
                 />
+                <link rel="canonical" href="https://www.oosteromstudio.nl/faq" />
+                <meta property="og:title" content="Veelgestelde vragen | Oosterom Studio" />
+                <meta
+                    property="og:description"
+                    content="Antwoorden op veelgestelde vragen over webdevelopment, SEO, API-koppelingen, maatwerk software en online adverteren van Oosterom Studio."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.oosteromstudio.nl/faq" />
+                <meta property="og:site_name" content="Oosterom Studio" />
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": categories.flatMap((cat) =>
+                            cat.vragen.map((item) => ({
+                                "@type": "Question",
+                                "name": item.vraag,
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": item.antwoord
+                                }
+                            }))
+                        )
+                    })}
+                </script>
             </Helmet>
 
             <Navigate />

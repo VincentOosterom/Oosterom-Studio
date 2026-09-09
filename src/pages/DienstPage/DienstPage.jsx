@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import './DienstPage.css'
 import Navigate from "../../components/navigate/Navigate.jsx";
@@ -56,6 +56,7 @@ function FaqItem({ vraag, antwoord }) {
  * @param {Object} props
  * @param {string} props.title           - Paginatitel voor <title>
  * @param {string} props.metaDescription - SEO description
+ * @param {string} props.slug            - Route pad, bv. "/diensten/webdesign" (voor canonical/og:url/schema)
  * @param {string} props.heroTag         - Klein label boven hero headline
  * @param {string} props.heroTitle       - Grote headline (kan \n bevatten)
  * @param {string} props.heroSubtitle    - Subtitel onder headline
@@ -69,6 +70,7 @@ function FaqItem({ vraag, antwoord }) {
 function DienstPage({
                         title,
                         metaDescription,
+                        slug,
                         heroTag,
                         heroTitle,
                         heroSubtitle,
@@ -79,18 +81,58 @@ function DienstPage({
                         ctaTitle = "Klaar om te starten?",
                         ctaSubtitle = "Plan een vrijblijvend gesprek en ontvang binnen 24 uur een reactie.",
                     }) {
+    const canonicalUrl = `https://www.oosteromstudio.nl${slug ?? ""}`;
+
     return (
         <>
             <Helmet>
                 <title>{title} | Oosterom Studio</title>
                 <meta name="description" content={metaDescription} />
+                <link rel="canonical" href={canonicalUrl} />
                 <meta property="og:title" content={`${title} | Oosterom Studio`} />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:type" content="website" />
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:site_name" content="Oosterom Studio" />
                 <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": title,
+                        "description": metaDescription,
+                        "url": canonicalUrl,
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Oosterom Studio",
+                            "url": "https://www.oosteromstudio.nl"
+                        },
+                        "areaServed": {
+                            "@type": "Country",
+                            "name": "Netherlands"
+                        }
+                    })}
+                </script>
+
+                {faq.length > 0 && (
+                    <script type="application/ld+json">
+                        {JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            "mainEntity": faq.map((item) => ({
+                                "@type": "Question",
+                                "name": item.vraag,
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": item.antwoord
+                                }
+                            }))
+                        })}
+                    </script>
+                )}
             </Helmet>
             <Navigate/>
 

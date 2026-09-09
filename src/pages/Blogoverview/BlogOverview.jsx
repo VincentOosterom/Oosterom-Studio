@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { blogPosts } from "../../../data/blogPosts";
 import styles from "./Blogoverview.module.css";
 import Navigate from "../../components/navigate/Navigate.jsx";
 import Footer from "../../components/footer/Footer.jsx";
+
+const PAGE_TITLE = "Kennisbank | Oosterom Studio";
+const PAGE_DESCRIPTION =
+    "Praktische artikelen over webdesign, cybersecurity, SEO en software voor MKB-bedrijven, geschreven vanuit de praktijk door Oosterom Studio.";
 
 const gesorteerdeBlogs = [...blogPosts].sort(
     (a, b) => new Date(b.datum) - new Date(a.datum)
@@ -19,6 +24,20 @@ function formatteerDatum(isoDatum) {
 export default function BlogOverview() {
     return (
         <div className={styles.pagina}>
+            <Helmet>
+                <title>{PAGE_TITLE}</title>
+                <meta name="description" content={PAGE_DESCRIPTION} />
+                <link rel="canonical" href="https://www.oosteromstudio.nl/kennisbank" />
+                <meta property="og:title" content={PAGE_TITLE} />
+                <meta property="og:description" content={PAGE_DESCRIPTION} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.oosteromstudio.nl/kennisbank" />
+                <meta property="og:site_name" content="Oosterom Studio" />
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+            </Helmet>
+
             <header className={styles.topbar}>
                 <Navigate/>
             </header>

@@ -72,6 +72,7 @@ function Portfolio() {
                 <meta property="og:title" content="Portfolio & Cases | Oosterom Studio"/>
                 <meta property="og:description"
                       content="Van webdesign tot cybersecurity — bekijk wat Oosterom Studio heeft gebouwd voor MKB en startups."/>
+                <link rel="canonical" href="https://www.oosteromstudio.nl/portfolio"/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:url" content="https://www.oosteromstudio.nl/portfolio"/>
                 <meta property="og:site_name" content="Oosterom Studio"/>

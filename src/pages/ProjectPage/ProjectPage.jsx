@@ -34,6 +34,11 @@ function ProjectPage() {
                     content={`${project.title} – ${project.intro}`}
                 />
 
+                <link
+                    rel="canonical"
+                    href={`https://www.oosteromstudio.nl/portfolio/${project.slug}`}
+                />
+
                 {/* Open Graph */}
                 <meta
                     property="og:title"
@@ -118,6 +123,7 @@ function ProjectPage() {
                         <img
                             src={project.image}
                             alt={`${project.subtitle} project preview`}
+                            loading="lazy"
                         />
                     </motion.div>
                 </div>

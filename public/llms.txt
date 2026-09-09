@@ -31,7 +31,7 @@ Oosterom Studio combineert webdevelopment met een cybersecurity-achtergrond (de 
 
 ## Kennisbank
 
-- [Blog-overzicht](https://www.oosteromstudio.nl/blog): Artikelen over webdesign, cybersecurity, SEO en software voor MKB-bedrijven.
+- [Blog-overzicht](https://www.oosteromstudio.nl/kennisbank): Artikelen over webdesign, cybersecurity, SEO en software voor MKB-bedrijven.
 
 ## Optional
 

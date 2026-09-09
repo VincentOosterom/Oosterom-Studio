@@ -11,6 +11,7 @@ export function WebdesignPage() {
     return (
         <DienstPage
             title="Webdesign & UX"
+            slug="/diensten/webdesign"
             metaDescription="Oosterom Studio ontwerpt maatwerk websites en landingspagina's voor MKB en startups in Nederland. Scherp design, sterke UX en gebouwd voor conversie."
             heroTag="Webdesign & UX"
             heroIcon={webdesignIcon}
@@ -85,6 +86,7 @@ export function WebdevelopmentPage() {
     return (
         <DienstPage
             title="Webdevelopment & Applicaties"
+            slug="/diensten/webdevelopment"
             metaDescription="Oosterom Studio bouwt maatwerk websites, webapplicaties en Shopify webshops voor MKB en startups. Snel, schaalbaar en veilig gebouwd in React, Next.js en moderne technologie."
             heroTag="Webdevelopment & Applicaties"
             heroIcon={devIcon}
@@ -164,6 +166,7 @@ export function SaasPage() {
     return (
         <DienstPage
             title="SaaS & Digitale Systemen"
+            slug="/diensten/saas"
             metaDescription="Oosterom Studio bouwt SaaS-producten, klantportalen en digitale systemen voor ambitieuze startups en scale-ups. Van MVP tot schaalbaar platform."
             heroTag="SaaS & Digitale Systemen"
             heroIcon={saasIcon}
@@ -243,6 +246,7 @@ export function BrandingPage() {
     return (
         <DienstPage
             title="Branding & Digitale Strategie"
+            slug="/diensten/branding"
             metaDescription="Oosterom Studio helpt MKB en startups een sterk digitaal merk te bouwen. Van visuele identiteit en merkstrategie tot een heldere digitale koers."
             heroTag="Branding & Digitale Strategie"
             heroIcon={brandIcon}
@@ -321,6 +325,7 @@ export function AIAgentsPage() {
     return (
         <DienstPage
             title="AI Agents"
+            slug="/diensten/ai-agents"
             metaDescription="Oosterom Studio bouwt AI-agents en workflow-automatisering voor MKB en startups. Chatbots, procesautomatisering en koppelingen met je bestaande tools, met de mens altijd in controle."
             heroTag="AI Agents"
             heroIcon={aiIcon}
@@ -399,6 +404,7 @@ export function SoftwareOpMaatPage() {
     return (
         <DienstPage
             title="Software op Maat"
+            slug="/diensten/software-op-maat"
             metaDescription="Oosterom Studio ontwikkelt maatwerk software voor MKB en startups: van procesanalyse tot schaalbare, op maat gebouwde applicaties die eigendom van jou blijven."
             heroTag="Software op Maat"
             heroIcon={maatwerkIcon}
@@ -479,6 +485,7 @@ export function KlantportaalPage() {
     return (
         <DienstPage
             title="Klantportalen & CRM"
+            slug="/diensten/klantportaal"
             metaDescription="Oosterom Studio bouwt klantportalen en CRM-systemen op maat voor MKB en startups. Eén overzicht van klanten, projecten en communicatie, veilig en op maat gebouwd."
             heroTag="Klantportalen & CRM"
             heroIcon={klantportaalIcon}
@@ -557,6 +564,7 @@ export function AVGProofPage() {
     return (
         <DienstPage
             title="AVG-proof Website"
+            slug="/diensten/avg-proof-website"
             metaDescription="Oosterom Studio maakt websites AVG/GDPR-proof voor MKB: correcte cookieconsent, beveiligde formulieren en de juiste documentatie voor toezicht."
             heroTag="AVG-proof Website"
             heroIcon={avgIcon}
@@ -635,6 +643,7 @@ export function OnderhoudSupportPage() {
     return (
         <DienstPage
             title="Onderhoud & Support"
+            slug="/diensten/onderhoud-support"
             metaDescription="Vast onderhoud- en supportabonnement van Oosterom Studio voor MKB: updates, kleine aanpassingen en prioriteit bij storingen, zonder losse facturen."
             heroTag="Onderhoud & Support"
             heroIcon={onderhoudIcon}
@@ -713,6 +722,7 @@ export function MobileAppsPage() {
     return (
         <DienstPage
             title="Mobile Apps"
+            slug="/diensten/mobile-apps"
             metaDescription="Oosterom Studio bouwt native mobiele apps met React Native voor MKB en startups. Eén codebase voor iOS en Android, snel, veilig en offline-first."
             heroTag="Mobile Apps"
             heroIcon={mobileIcon}
@@ -790,6 +800,7 @@ export function SeoPerformancePage() {
     return (
         <DienstPage
             title="SEO & Performance Optimalisatie"
+            slug="/diensten/seo-performance"
             metaDescription="Oosterom Studio optimaliseert technische SEO en laadsnelheid voor MKB-websites. Core Web Vitals, structured data en snelheidsoptimalisatie die je vindbaarheid écht verbetert."
             heroTag="SEO & Performance Optimalisatie"
             heroIcon={seoIcon}
@@ -869,6 +880,7 @@ export function WebshopsPage() {
     return (
         <DienstPage
             title="Webshops"
+            slug="/diensten/webshops"
             metaDescription="Oosterom Studio bouwt Shopify en maatwerk webshops voor MKB. Conversiegerichte checkout, betaal- en verzendkoppelingen, schaalbaar bij groei."
             heroTag="Webshops"
             heroIcon={webshopIcon}
@@ -948,6 +960,7 @@ export function HostingInfrastructuurPage() {
     return (
         <DienstPage
             title="Hosting & Infrastructuurbeheer"
+            slug="/diensten/hosting-infrastructuur"
             metaDescription="Oosterom Studio verzorgt betrouwbare hosting en serverbeheer voor MKB-websites: uptime monitoring, back-ups, SSL en snelle respons bij storingen."
             heroTag="Hosting & Infrastructuurbeheer"
             heroIcon={hostingIcon}

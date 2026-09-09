@@ -145,6 +145,7 @@ export default function OosteromOS() {
                 <title>Oosterom OS - Jouw persoonlijk klantportaal | Oosterom Studio</title>
                 <meta name="description"
                       content="Als klant van Oosterom Studio krijg je toegang tot Oosterom OS, jouw persoonlijk dashboard voor projectbeheer, CMS, facturen, chatbot en meer."/>
+                <link rel="canonical" href="https://www.oosteromstudio.nl/oosterom-os"/>
                 <meta property="og:title" content="Oosterom OS | Oosterom Studio"/>
                 <meta property="og:description" content="Jouw project. Altijd inzichtelijk."/>
                 <meta property="og:type" content="website"/>

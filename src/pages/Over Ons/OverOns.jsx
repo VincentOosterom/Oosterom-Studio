@@ -43,6 +43,7 @@ function OverOns() {
                     property="og:description"
                     content="Webdeveloper, Shopify specialist en cybersecurity expert. Ontdek de visie en aanpak achter Oosterom Studio."
                 />
+                <link rel="canonical" href="https://www.oosteromstudio.nl/over-ons"/>
                 <meta property="og:type" content="profile"/>
                 <meta property="og:url" content="https://www.oosteromstudio.nl/over-ons"/>
                 <meta property="og:site_name" content="Oosterom Studio"/>

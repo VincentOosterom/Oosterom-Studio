@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { useParams, useNavigate, Link, Navigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { blogPosts } from "../../../data/blogPosts";
 import { services } from "../../../data/services";
 import { seoDiensten } from "../../../data/seoDiensten";
@@ -33,47 +33,11 @@ export default function BlogPost() {
         navigate(href);
     }
 
-    useEffect(() => {
-        if (!post) return;
-
-        document.title = `${post.title} | Oosterom Studio Blog`;
-
-        let metaTag = document.querySelector('meta[name="description"]');
-        if (!metaTag) {
-            metaTag = document.createElement("meta");
-            metaTag.setAttribute("name", "description");
-            document.head.appendChild(metaTag);
-        }
-        metaTag.setAttribute("content", post.excerpt);
-
-        const schema = {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.title,
-            description: post.excerpt,
-            datePublished: post.datum,
-            author: {
-                "@type": "Organization",
-                name: "Oosterom Studio",
-            },
-        };
-        let schemaTag = document.getElementById("blog-schema");
-        if (!schemaTag) {
-            schemaTag = document.createElement("script");
-            schemaTag.type = "application/ld+json";
-            schemaTag.id = "blog-schema";
-            document.head.appendChild(schemaTag);
-        }
-        schemaTag.textContent = JSON.stringify(schema);
-
-        return () => {
-            schemaTag?.remove();
-        };
-    }, [post]);
-
     if (!post) {
         return <Navigate to="/kennisbank" replace />;
     }
+
+    const canonicalUrl = `https://www.oosteromstudio.nl/kennisbank/${post.slug}`;
 
     const gerelateerdeDienstObjecten = alleDiensten.filter((d) =>
         (post.gerelateerdeDiensten ?? []).includes(d.link)
@@ -85,6 +49,35 @@ export default function BlogPost() {
 
     return (
         <div className={styles.pagina}>
+            <Helmet>
+                <title>{`${post.title} | Oosterom Studio Blog`}</title>
+                <meta name="description" content={post.excerpt} />
+                <link rel="canonical" href={canonicalUrl} />
+                <meta property="og:title" content={post.title} />
+                <meta property="og:description" content={post.excerpt} />
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content={canonicalUrl} />
+                <meta property="og:site_name" content="Oosterom Studio" />
+                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
+
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        headline: post.title,
+                        description: post.excerpt,
+                        datePublished: post.datum,
+                        url: canonicalUrl,
+                        author: {
+                            "@type": "Organization",
+                            name: "Oosterom Studio",
+                        },
+                    })}
+                </script>
+            </Helmet>
+
             <header className={styles.topbar}>
                <Nav/>
             </header>
