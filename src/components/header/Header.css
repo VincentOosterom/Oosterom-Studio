@@ -14,9 +14,8 @@
 .header__grid {
     position: absolute;
     inset: 0;
-    background-image:
-            linear-gradient(rgba(136, 232, 244, 0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(136, 232, 244, 0.04) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(136, 232, 244, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(136, 232, 244, 0.04) 1px, transparent 1px);
     background-size: 50px 50px;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, black 10%, transparent 100%);
     z-index: 1;
@@ -139,7 +138,7 @@
     font-weight: 600;
     color: #080808;
     background: #ffffff;
-    padding: 17px 34px;
+    padding: 10px 20px;
     border-radius: 100px;
     border: none;
     font-family: var(--font-body), sans-serif;
@@ -208,9 +207,21 @@
 }
 
 @keyframes scrollPulse {
-    0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
-    50%  { opacity: 1; transform: scaleY(1); transform-origin: top; }
-    100% { opacity: 0; transform: scaleY(1); transform-origin: bottom; }
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    100% {
+        opacity: 0;
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
 }
 
 
@@ -227,6 +238,7 @@
     .header {
         height: 90svh;
     }
+
     .header-content {
         padding: 0 1.25rem;
     }
@@ -254,6 +266,10 @@
     .content-center {
         padding: 60px 0 56px;
         gap: 16px;
+    }
+
+    .header__cta-group {
+        flex-direction: column;
     }
 
     .header__subtitle {
