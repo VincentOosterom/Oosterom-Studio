@@ -110,7 +110,7 @@
 
 .header__cta-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
     margin-top: 12px;
@@ -132,7 +132,29 @@
     letter-spacing: 0.01em;
 }
 
+.header__cta_secondary {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #080808;
+    background: #ffffff;
+    padding: 17px 34px;
+    border-radius: 100px;
+    border: none;
+    font-family: var(--font-body), sans-serif;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.01em;
+}
+
 .header__cta:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(136, 232, 244, 0.28);
+}
+
+.header__cta_secondary:hover {
     opacity: 0.88;
     transform: translateY(-2px);
     box-shadow: 0 10px 28px rgba(136, 232, 244, 0.28);

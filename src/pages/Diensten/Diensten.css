@@ -331,6 +331,33 @@
     margin: 0;
 }
 
+.dienst-card__price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding-top: 16px;
+    margin-top: auto;
+    margin-bottom: 16px;
+    border-top: 1px solid var(--color-border);
+}
+
+.dienst-card__price-label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+}
+
+.dienst-card__price-amount {
+    font-family: var(--font-title), sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.dienst-card__price-unit {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+}
+
 
 /* ══════════════════════════════════════════════════════════════════════════
    SECTIE 4 — CTA

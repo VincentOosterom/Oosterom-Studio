@@ -15,7 +15,7 @@ const fadeUp = {
 };
 
 // ── Component ─────────────────────────────────────────────────────────────────
-function Header({ title, subtitle, buttonText, tag }) {
+function Header({ title, subtitle, buttonText, tag, buttonTextSecon }) {
     const navigate = useNavigate();
 
     return (
@@ -82,19 +82,24 @@ function Header({ title, subtitle, buttonText, tag }) {
                             >
                                 {buttonText} →
                             </button>
-                            
-
-                            <div className="header__trust">
-                                <span>Reactie binnen 24 uur</span>
-                                <span className="header__trust-dot" aria-hidden="true" />
-                                <span>Vrijblijvend gesprek</span>
-                                <span className="header__trust-dot" aria-hidden="true" />
-                                <span>Eén vast aanspreekpunt</span>
-                            </div>
+                            <button
+                                className="header__cta_secondary"
+                                onClick={() => navigate("/portfolio")}
+                            >
+                                {buttonTextSecon} →
+                            </button>
                         </motion.div>
                     )}
+                    <div className="header__trust">
+                        <span>Reactie binnen 24 uur</span>
+                        <span className="header__trust-dot" aria-hidden="true" />
+                        <span>Vrijblijvend gesprek</span>
+                        <span className="header__trust-dot" aria-hidden="true" />
+                        <span>Eén vast aanspreekpunt</span>
+                    </div>
                 </article>
             </section>
+
 
             {/* Scroll indicator */}
             <motion.div

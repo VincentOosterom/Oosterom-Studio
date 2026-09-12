@@ -40,6 +40,10 @@ const werkwijze = [
     },
 ];
 
+// NL-notatie: €1.500 i.p.v. €1500 of $1,500
+const formatPrice = (amount) =>
+    new Intl.NumberFormat('nl-NL', {style: 'currency', currency: 'EUR', maximumFractionDigits: 0}).format(amount);
+
 function Diensten() {
     return (
         <div>
@@ -93,7 +97,7 @@ function Diensten() {
                 >
                     <motion.div className="diensten-grid-header" variants={fadeUp}>
                         <span className="diensten-grid__tag">Overzicht</span>
-                        <h2>Acht diensten, <em>één studio</em></h2>
+                        <h2>{services.length} diensten, <em>één studio</em></h2>
                         <p>Kies een dienst voor meer details, of neem contact op als je niet zeker weet waar je moet beginnen.</p>
                     </motion.div>
 
@@ -122,6 +126,16 @@ function Diensten() {
                                         <li key={i}>{item}</li>
                                     ))}
                                 </ul>
+
+                                {service.priceFrom && (
+                                    <div className="dienst-card__price">
+                                        <span className="dienst-card__price-label">Vanaf</span>
+                                        <span className="dienst-card__price-amount">
+                                            {formatPrice(service.priceFrom)}
+                                        </span>
+                                        <span className="dienst-card__price-unit">{service.priceUnit}</span>
+                                    </div>
+                                )}
 
                                 <Link to={service.link} className="dienst-card__link">
                                     Bekijk dienst →

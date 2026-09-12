@@ -5,13 +5,13 @@ const cards = [
         title: 'Webapps & SaaS',
         description:
             'Productiesystemen, klantportalen en interne tools. Gebouwd met schaalbaarheid, performance en betrouwbaarheid als uitgangspunt.',
-        pills: ['PostgreSQL', 'React', 'JavaScript'],
+        pills: ['Wordpress', 'Elementor', 'React'],
     },
     {
         title: 'Custom software',
         description:
             'Maatwerk software wanneer standaardoplossingen tekortschieten. Van procesanalyse tot integraties en automatisering.',
-        pills: ['PostgreSQL', 'React', 'JavaScript'],
+        pills: ['PostgreSQL', 'React', 'JavaScript', 'Spring Boot'],
     },
     {
         title: 'Mobile apps',
@@ -23,19 +23,19 @@ const cards = [
         title: 'UX & UI Design',
         description:
             'Heldere interfaces die gebruiksgemak en conversie combineren. Gebouwd op gedrag, niet op aannames.',
-        pills: ['Figma', 'Design Systems', 'UX Research'],
+        pills: ['Figma', 'Design Systems', 'UX Research', 'Canva'],
     },
     {
         title: 'AI Agents & Automatisering',
         description:
             'Intelligente workflows en agents die repetitief werk automatiseren en processen slimmer laten draaien.',
-        pills: ['OpenAI', 'Automation', 'APIs'],
+        pills: ['OpenAI', 'Automation', 'APIs', 'Claude Agents', 'Hermes'],
     },
     {
         title: 'API & Integraties',
         description:
             'Koppelingen tussen systemen, databases en externe services. Robuuste API-architectuur als basis voor schaalbare software.',
-        pills: ['REST', 'GraphQL', 'Node.js'],
+        pills: ['REST', 'Node.js', 'Keycloak'],
     },
 ];
 
@@ -45,7 +45,7 @@ export default function WatWeBouwen() {
             <div className={styles.bgGrid} aria-hidden="true" />
 
             <article className={styles.header}>
-                <span className={styles.tag}>Expertise</span>
+                <span className={styles.tag}>Mijn Expertise</span>
                 <h2 className={styles.title}>
                     Digitale <em>producten</em>
                 </h2>

@@ -14,7 +14,6 @@ function CookieBanner() {
             return () => clearTimeout(timer);
         }
 
-        // Als eerder geaccepteerd: alsnog analytics aanzetten
         if (consent === "accepted") {
             updateConsent("granted");
         }
@@ -49,9 +48,7 @@ function CookieBanner() {
             <div className="cookie-banner__inner">
                 <div className="cookie-banner__content">
                     <p className="cookie-banner__text">
-                        We gebruiken analytische cookies om te begrijpen hoe bezoekers
-                        onze site gebruiken. Geen advertentiecookies, geen tracking
-                        naar derden.{" "}
+                        We houden van cookies, maar alleen de functionele soort. Analytics om te leren, geen advertenties, geen data die de deur uitgaat.{" "}
                         <a
                             href="/Privacybeleid Oosterom Studio.pdf"
                             target="_blank"

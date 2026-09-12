@@ -13,7 +13,9 @@ export const services = [
         extra:
             "We ontwerpen niet alleen websites, maar interfaces die klaar zijn voor uitbreiding naar dashboards, portals en SaaS-producten.",
         icon: "🎨",
-        link: "/diensten/webdesign"
+        link: "/diensten/webdesign",
+        priceFrom: 1295,
+        priceUnit: "eenmalig"
     },
     {
         title: "Webdevelopment & Applicaties",
@@ -29,7 +31,9 @@ export const services = [
         extra:
             "Onze applicaties zijn gebouwd als fundament voor groei, van websites tot complete systemen zoals portals en SaaS-platformen.",
         icon: "💻",
-        link: "/diensten/webdevelopment"
+        link: "/diensten/webdevelopment",
+        priceFrom: 2500,
+        priceUnit: "eenmalig"
     },
     {
         title: "Mobile Apps",
@@ -45,7 +49,9 @@ export const services = [
         extra:
             "Eén codebase voor zowel iOS als Android bespaart tijd en kosten, zonder in te leveren op prestaties of gebruikerservaring.",
         icon: "📱",
-        link: "/diensten/mobile-apps"
+        link: "/diensten/mobile-apps",
+        priceFrom: 8000,
+        priceUnit: "eenmalig"
     },
     {
         title: "SaaS & Digitale Systemen",
@@ -61,7 +67,9 @@ export const services = [
         extra:
             "We helpen bij het vertalen van ideeën naar werkende producten die klaar zijn om te groeien en door te ontwikkelen.",
         icon: "🧩",
-        link: "/diensten/saas"
+        link: "/diensten/saas",
+        priceFrom: 12500,
+        priceUnit: "eenmalig"
     },
     {
         title: "Branding",
@@ -77,7 +85,9 @@ export const services = [
         extra:
             "Een sterk merk maakt elk volgend design- of ontwikkelproject makkelijker, omdat de visuele en inhoudelijke richting al vaststaat.",
         icon: "🏷️",
-        link: "/diensten/branding"
+        link: "/diensten/branding",
+        priceFrom: 950,
+        priceUnit: "eenmalig"
     },
     {
         title: "AI Agents & Automation",
@@ -93,7 +103,9 @@ export const services = [
         extra:
             "Onze AI-agents zijn ontworpen met controle en betrouwbaarheid in gedachten, automatisering zonder dat je de regie verliest. Of kies voor jouw eigen agents.",
         icon: "🤖",
-        link: "/diensten/ai-agents"
+        link: "/diensten/ai-agents",
+        priceFrom: 1500,
+        priceUnit: "eenmalig"
     },
     {
         title: "Software op Maat",
@@ -109,7 +121,9 @@ export const services = [
         extra:
             "Standaardsoftware past zelden perfect. Wij bouwen maatwerk dat aansluit op hoe jouw bedrijf daadwerkelijk werkt en eigendom van jou blijft.",
         icon: "⚙️",
-        link: "/diensten/software-op-maat"
+        link: "/diensten/software-op-maat",
+        priceFrom: 5000,
+        priceUnit: "eenmalig"
     },
     {
         title: "Klantportalen & CRM",
@@ -125,7 +139,9 @@ export const services = [
         extra:
             "Een eigen portaal geeft klanten inzicht en jou minder e-mailverkeer. We bouwen modulair zodat het meegroeit met je bedrijf.",
         icon: "🗂️",
-        link: "/diensten/klantportaal"
+        link: "/diensten/klantportaal",
+        priceFrom: 6500,
+        priceUnit: "eenmalig"
     },
     {
         title: "Webshops",
@@ -141,7 +157,9 @@ export const services = [
         extra:
             "We bouwen webshops die niet alleen goed ogen, maar ook technisch soepel lopen bij piekmomenten zoals sales of feestdagen.",
         icon: "🛒",
-        link: "/diensten/webshops"
+        link: "/diensten/webshops",
+        priceFrom: 3000,
+        priceUnit: "eenmalig"
     },
     {
         title: "SEO & Performance Optimalisatie",
@@ -157,7 +175,9 @@ export const services = [
         extra:
             "Een mooie website die traag laadt, verliest het alsnog van een snellere concurrent. Wij pakken snelheid en vindbaarheid samen aan, niet los van elkaar.",
         icon: "⚡",
-        link: "/diensten/seo-performance"
+        link: "/diensten/seo-performance",
+        priceFrom: 750,
+        priceUnit: "eenmalig"
     },
     {
         title: "Onderhoud & Support",
@@ -173,7 +193,9 @@ export const services = [
         extra:
             "Met een onderhoudsabonnement weet je wat je krijgt en wat het kost. Geen gedoe, geen verrassingen. Gewoon een website die blijft werken.",
         icon: "🛠️",
-        link: "/diensten/onderhoud-support"
+        link: "/diensten/onderhoud-support",
+        priceFrom: 200,
+        priceUnit: "per maand"
     },
     {
         title: "Hosting & Infrastructuurbeheer",
@@ -189,7 +211,8 @@ export const services = [
         extra:
             "Hosting is meer dan een server aanzetten. Wij monitoren actief, patchen tijdig en grijpen in vóórdat een probleem bezoekers raakt.",
         icon: "🖥️",
-        link: "/diensten/hosting-infrastructuur"
+        link: "/diensten/hosting-infrastructuur",
+        priceFrom: 75,
+        priceUnit: "per maand"
     },
-
 ];

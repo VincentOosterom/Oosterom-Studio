@@ -57,8 +57,8 @@ function PageLoader() {
             background: '#080808',
         }}>
             <div style={{
-                width: '32px',
-                height: '32px',
+                width: '40px',
+                height: '40px',
                 border: '2px solid #1a1a1a',
                 borderTop: '2px solid #88e8f4',
                 borderRadius: '50%',

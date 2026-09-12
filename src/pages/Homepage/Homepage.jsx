@@ -31,16 +31,17 @@ function Homepage() {
     return (
         <>
             <Helmet>
-                <title>Oosterom Studio - Digitaal sterk van buiten én van binnen</title>
+                <title>Oosterom Studio - Wij bouwen software die jouw bedrijf vooruit helpen</title>
 
                 <meta
                     name="description"
                     content="Oosterom Studio bouwt maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht."
                 />
 
-                <link rel="canonical" href="https://www.oosteromstudio.nl/" />
+                <link rel="canonical" href="https://www.oosteromstudio.nl/"/>
 
-                <meta property="og:title" content="Oosterom Studio – Webdesign, Shopify & Cybersecurity"/>
+                <meta property="og:title"
+                      content="Oosterom Studio – Wij bouwen software die jouw bedrijf vooruit helpen"/>
                 <meta
                     property="og:description"
                     content="Oosterom Studio bouwt maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht."
@@ -48,10 +49,8 @@ function Homepage() {
                 <meta property="og:type" content="website"/>
                 <meta property="og:url" content="https://www.oosteromstudio.nl/"/>
                 <meta property="og:site_name" content="Oosterom Studio"/>
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
 
                 <meta name="twitter:card" content="summary_large_image"/>
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
 
                 <script type="application/ld+json">
                     {JSON.stringify({
@@ -88,6 +87,7 @@ function Homepage() {
                 title={"Van idee naar software\ndie echt waarde levert."}
                 subtitle="Ik bouw websites, webapplicaties en SaaS-platformen voor het MKB, van eerste schets tot oplevering."
                 buttonText="Offerte aanvragen"
+                buttonTextSecon="Deel van ons werk"
                 tag="Digitale oplossingen voor MKB en startups in Nederland"
             />
             <MovingBar/>
@@ -102,17 +102,17 @@ function Homepage() {
                         viewport={{once: true}}
                     >
                         <motion.h2 variants={fadeUp}>
-                            Gebouwd op <em>principes</em>,<br/>niet op aannames.
+                            Het werkt,<br/>of het is <em>niet af</em>.
                         </motion.h2>
 
                         <motion.p className="values-subtitle" variants={fadeUp}>
                             Elke keuze die ik maak, in design, code en samenwerking,
-                            komt voort uit dezelfde vier uitgangspunten.
+                            wordt langs diezelfde lat gelegd.
                         </motion.p>
 
                         <section className="values-grid">
                             <motion.article className="value-card" variants={fadeUp}>
-                                <h3>Performance eerst</h3>
+                                <h3>Performance First</h3>
                                 <p>
                                     Snelheid is geen luxe, het is het uitgangspunt. Ik ontwikkel
                                     technisch geoptimaliseerde websites met hoge Core Web Vitals-scores
@@ -129,10 +129,11 @@ function Homepage() {
                                 </p>
                             </motion.article>
                             <motion.article className="value-card" variants={fadeUp}>
-                                <h3>Resultaatgericht</h3>
+                                <h3>WCAG Richtlijnen </h3>
                                 <p>
-                                    Elke keuze, van structuur tot techniek, is gericht op conversie
-                                    en groei. Een mooie website die niet converteert levert niets op.
+                                    De Web Content Accessibility Guidelines zijn de standaarden om websites en apps
+                                    toegankelijk te maken voor iedereen, inclusief mensen met een visuele, auditieve,
+                                    motorische of cognitive beperking.
                                 </p>
                             </motion.article>
                             <motion.article className="value-card" variants={fadeUp}>
@@ -171,45 +172,53 @@ function Homepage() {
 
                             <motion.div className="waarom-card waarom-card--wide" variants={fadeUp}>
                                 <div className="waarom-card__icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         strokeWidth="1.5">
                                         <path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
                                         <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
                                     </svg>
                                 </div>
                                 <h3>Eén aanspreekpunt</h3>
-                                <p>Geen accountmanager die doorverbindt naar een developer die doorverbindt naar een designer. Jij praat rechtstreeks met degene die bouwt.</p>
+                                <p>Geen accountmanager die doorverbindt naar een developer die doorverbindt naar een
+                                    designer. Jij praat rechtstreeks met degene die bouwt.</p>
                             </motion.div>
 
                             <motion.div className="waarom-card" variants={fadeUp}>
                                 <div className="waarom-card__icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         strokeWidth="1.5">
                                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                         <path d="M9 12l2 2 4-4"/>
                                     </svg>
                                 </div>
                                 <h3>Beveiliging zit ingebakken</h3>
-                                <p>Niet als extra optie achteraf, maar als uitgangspunt. Elk project wordt opgeleverd met aandacht voor security, ook als je er niet specifiek om vraagt.</p>
+                                <p>Niet als extra optie achteraf, maar als uitgangspunt. Elk project wordt opgeleverd
+                                    met aandacht voor security, ook als je er niet specifiek om vraagt.</p>
                             </motion.div>
 
                             <motion.div className="waarom-card" variants={fadeUp}>
                                 <div className="waarom-card__icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         strokeWidth="1.5">
                                         <circle cx="12" cy="12" r="10"/>
                                         <path d="M12 8v4l3 3"/>
                                     </svg>
                                 </div>
                                 <h3>Geen uurtje-factuurtje</h3>
-                                <p>Heldere afspraken vooraf, geen verrassingen achteraf. Je weet wat je krijgt, wanneer je het krijgt en wat het kost.</p>
+                                <p>Heldere afspraken vooraf, geen verrassingen achteraf. Je weet wat je krijgt, wanneer
+                                    je het krijgt en wat het kost.</p>
                             </motion.div>
 
                             <motion.div className="waarom-card" variants={fadeUp}>
                                 <div className="waarom-card__icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         strokeWidth="1.5">
                                         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                                     </svg>
                                 </div>
                                 <h3>Techniek én strategie</h3>
-                                <p>Ik denk mee over wat je bouwt en waarom, niet alleen hoe. Als een eenvoudigere oplossing beter werkt, zeg ik dat ook.</p>
+                                <p>Ik denk mee over wat je bouwt en waarom, niet alleen hoe. Als een eenvoudigere
+                                    oplossing beter werkt, zeg ik dat ook.</p>
                             </motion.div>
 
                             <motion.div className="waarom-card waarom-card--accent" variants={fadeUp}>
@@ -226,6 +235,16 @@ function Homepage() {
                 </section>
 
                 <WatWeBouwen/>
+
+                <PakketCta
+                    achtergrond={image_cta}
+                    scriptTekst="Van A tot Z"
+                    titelWit="Eén aanspreekpunt voor"
+                    titelAccent="je hele project"
+                    tekst="Van strategie en design tot development, hosting en onderhoud. Je hoeft niet te schakelen tussen partijen die naar elkaar wijzen."
+                    primaireKnopTekst="Plan een gesprek"
+                    secundaireKnopTekst="Over Oosterom Studio"
+                />
 
                 {/* ── Uitgelichte projecten ── */}
                 <section className="projects-section">
@@ -257,7 +276,7 @@ function Homepage() {
                                 >
                                     <Link to={`/portfolio/${project.slug}`} className="project-card__image-wrap">
                                         <div className="project-card__image">
-                                            <img src={project.image} alt={project.title} loading="lazy" />
+                                            <img src={project.image} alt={project.title} loading="lazy"/>
                                         </div>
                                     </Link>
                                     <div className="project-card__content">
@@ -328,16 +347,6 @@ function Homepage() {
                     </motion.div>
                 </section>
 
-                <PakketCta
-                    achtergrond={image_cta}
-                    scriptTekst="Van A tot Z"
-                    titelWit="Eén aanspreekpunt voor"
-                    titelAccent="je hele project"
-                    tekst="Van strategie en design tot development, hosting en onderhoud. Je hoeft niet te schakelen tussen partijen die naar elkaar wijzen."
-                    primaireKnopTekst="Plan een gesprek"
-                    secundaireKnopTekst="Over Oosterom Studio"
-                />
-
                 <section className="pricing-section">
                     <motion.div
                         className="pricing-container"
@@ -364,19 +373,22 @@ function Homepage() {
                             <motion.div className="pricing-pillar" variants={fadeUp}>
                                 <span className="pricing-pillar__num">01</span>
                                 <h3>Gesprek</h3>
-                                <p>We bespreken jouw doelen, wensen en technische behoeften. Geen verkooppraatje, wel eerlijk advies.</p>
+                                <p>We bespreken jouw doelen, wensen en technische behoeften. Geen verkooppraatje, wel
+                                    eerlijk advies.</p>
                             </motion.div>
                             <div className="pricing-pillar__divider"/>
                             <motion.div className="pricing-pillar" variants={fadeUp}>
                                 <span className="pricing-pillar__num">02</span>
                                 <h3>Offerte</h3>
-                                <p>Je ontvangt een heldere offerte op maat, transparant, zonder kleine lettertjes of verrassingen achteraf.</p>
+                                <p>Je ontvangt een heldere offerte op maat, transparant, zonder kleine lettertjes of
+                                    verrassingen achteraf.</p>
                             </motion.div>
                             <div className="pricing-pillar__divider"/>
                             <motion.div className="pricing-pillar" variants={fadeUp}>
                                 <span className="pricing-pillar__num">03</span>
                                 <h3>Bouwen</h3>
-                                <p>Zodra we akkoord zijn, ga ik aan de slag. Je wordt op de hoogte gehouden en kunt altijd bijsturen.</p>
+                                <p>Zodra we akkoord zijn, ga ik aan de slag. Je wordt op de hoogte gehouden en kunt
+                                    altijd bijsturen.</p>
                             </motion.div>
                         </motion.div>
                     </motion.div>
