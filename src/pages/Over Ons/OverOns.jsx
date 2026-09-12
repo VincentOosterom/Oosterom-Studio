@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
+import SEO from "../../components/seo/SEO.jsx";
 
 function OverOns() {
     const AnimatedWord = ({children}) => (
@@ -30,47 +31,30 @@ function OverOns() {
 
     return (
         <>
-            <Helmet>
-                <title>Over Oosterom Studio – Webdeveloper & Cybersecurity Specialist</title>
-
-                <meta
-                    name="description"
-                    content="Vincent Oosterom is oprichter van Oosterom Studio, een webdeveloper en cybersecurity specialist die maatwerk digitale oplossingen bouwt voor MKB en startups in Nederland."
-                />
-
-                <meta property="og:title" content="Over Vincent Oosterom | Oosterom Studio"/>
-                <meta
-                    property="og:description"
-                    content="Webdeveloper, Shopify specialist en cybersecurity expert. Ontdek de visie en aanpak achter Oosterom Studio."
-                />
-                <link rel="canonical" href="https://www.oosteromstudio.nl/over-ons"/>
-                <meta property="og:type" content="profile"/>
-                <meta property="og:url" content="https://www.oosteromstudio.nl/over-ons"/>
-                <meta property="og:site_name" content="Oosterom Studio"/>
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
-
-                <meta name="twitter:card" content="summary_large_image"/>
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Person",
-                        "name": "Vincent Oosterom",
-                        "jobTitle": "Webdeveloper & Cybersecurity Specialist",
-                        "url": "https://www.oosteromstudio.nl/over-ons",
-                        "worksFor": {
-                            "@type": "Organization",
-                            "name": "Oosterom Studio",
-                            "url": "https://www.oosteromstudio.nl"
-                        },
-                        "sameAs": [
-                            "https://www.linkedin.com/in/vincent-oosterom-05017176/",
-                            "https://www.instagram.com/oosteromstudio"
-                        ]
-                    })}
-                </script>
-            </Helmet>
+            <SEO
+                rawTitle
+                title="Over Oosterom Studio | Webdeveloper & Cybersecurity Specialist"
+                description="Vincent Oosterom is oprichter van Oosterom Studio, een webdeveloper en cybersecurity specialist die maatwerk digitale oplossingen bouwt voor MKB en startups in Nederland."
+                ogDescription="Webdeveloper, Shopify specialist en cybersecurity expert. Ontdek de visie en aanpak achter Oosterom Studio."
+                path="/over-ons"
+                ogType="profile"
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "Person",
+                    "name": "Vincent Oosterom",
+                    "jobTitle": "Webdeveloper & Cybersecurity Specialist",
+                    "url": "https://www.oosteromstudio.nl/over-ons",
+                    "worksFor": {
+                        "@type": "Organization",
+                        "name": "Oosterom Studio",
+                        "url": "https://www.oosteromstudio.nl"
+                    },
+                    "sameAs": [
+                        "https://www.linkedin.com/in/vincent-oosterom-05017176/",
+                        "https://www.instagram.com/oosteromstudio"
+                    ]
+                }}
+            />
 
             <Navigate/>
 

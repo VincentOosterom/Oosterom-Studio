@@ -2,13 +2,13 @@ import './Homepage.css';
 import Header from "../../components/header/Header.jsx";
 import {motion} from "framer-motion";
 import Footer from "../../components/footer/Footer.jsx";
-import {Helmet} from "react-helmet-async";
 import {Link} from "react-router-dom";
 import MovingBar from "../../components/movingbar/movingBar.jsx";
 import WatWeBouwen from "../../components/wat_we_bouwen/WatWeBouwen.jsx";
 import projects from "../../../data/projects.js";
 import PakketCta from "../../components/pakketCta/PakketCta.jsx";
 import image_cta from "../../assets/images/cta2.jpg";
+import SEO from "../../components/seo/SEO.jsx";
 
 // ── Animation variants ────────────────────────────────────────────────────────
 
@@ -30,57 +30,38 @@ function Homepage() {
 
     return (
         <>
-            <Helmet>
-                <title>Oosterom Studio - Wij bouwen software die jouw bedrijf vooruit helpen</title>
-
-                <meta
-                    name="description"
-                    content="Oosterom Studio bouwt maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht."
-                />
-
-                <link rel="canonical" href="https://www.oosteromstudio.nl/"/>
-
-                <meta property="og:title"
-                      content="Oosterom Studio – Wij bouwen software die jouw bedrijf vooruit helpen"/>
-                <meta
-                    property="og:description"
-                    content="Oosterom Studio bouwt maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht."
-                />
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://www.oosteromstudio.nl/"/>
-                <meta property="og:site_name" content="Oosterom Studio"/>
-
-                <meta name="twitter:card" content="summary_large_image"/>
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        "name": "Oosterom Studio",
-                        "url": "https://www.oosteromstudio.nl",
-                        "logo": "https://www.oosteromstudio.nl/og-image.jpg",
-                        "founder": {
-                            "@type": "Person",
-                            "name": "Vincent Oosterom"
-                        },
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "email": "vincent@oosteromstudio.nl",
-                            "contactType": "customer service",
-                            "availableLanguage": "Dutch"
-                        },
-                        "areaServed": {
-                            "@type": "Country",
-                            "name": "Netherlands"
-                        },
-                        "sameAs": [
-                            "https://www.linkedin.com/in/vincent-oosterom-05017176/",
-                            "https://www.instagram.com/oosteromstudio"
-                        ],
-                        "description": "Oosterom Studio bouwt maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland."
-                    })}
-                </script>
-            </Helmet>
+            <SEO
+                rawTitle
+                title="Oosterom Studio | Wij bouwen software die jouw bedrijf vooruit helpt"
+                description="Oosterom Studio bouwt maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland. Snel, veilig en resultaatgericht."
+                path="/"
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "Oosterom Studio",
+                    "url": "https://www.oosteromstudio.nl",
+                    "logo": "https://www.oosteromstudio.nl/og-image.jpg",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Vincent Oosterom"
+                    },
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "email": "vincent@oosteromstudio.nl",
+                        "contactType": "customer service",
+                        "availableLanguage": "Dutch"
+                    },
+                    "areaServed": {
+                        "@type": "Country",
+                        "name": "Netherlands"
+                    },
+                    "sameAs": [
+                        "https://www.linkedin.com/in/vincent-oosterom-05017176/",
+                        "https://www.instagram.com/oosteromstudio"
+                    ],
+                    "description": "Oosterom Studio bouwt maatwerk websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups in Nederland."
+                }}
+            />
 
 
             <Header

@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './OfferteAanvragen.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
-import { Helmet } from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
+import SEO from "../../components/seo/SEO.jsx";
 
 // ── Animatie ──────────────────────────────────────────────────────────────────
 
@@ -89,19 +89,13 @@ function OfferteAanvragen() {
 
     return (
         <>
-            <Helmet>
-                <title>Offerte aanvragen | Oosterom Studio</title>
-                <meta name="description" content="Vraag een gratis gesprek aan bij Oosterom Studio. Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie." />
-                <meta name="robots" content="noindex, nofollow" />
-                <meta property="og:title" content="Offerte aanvragen | Oosterom Studio" />
-                <meta property="og:description" content="Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie van Oosterom Studio." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/offerte-aanvragen" />
-                <meta property="og:site_name" content="Oosterom Studio" />
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-            </Helmet>
+            <SEO
+                title="Offerte aanvragen"
+                description="Vraag een gratis gesprek aan bij Oosterom Studio. Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie."
+                ogDescription="Vertel ons over jouw project en ontvang binnen 24 uur een persoonlijke reactie van Oosterom Studio."
+                path="/offerte-aanvragen"
+                noindex
+            />
 
             <Navigate />
 

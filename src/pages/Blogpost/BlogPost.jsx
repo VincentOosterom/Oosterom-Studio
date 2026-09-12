@@ -1,11 +1,11 @@
 import { useParams, useNavigate, Link, Navigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { blogPosts } from "../../../data/blogPosts";
 import { services } from "../../../data/services";
 import { seoDiensten } from "../../../data/seoDiensten";
 import styles from "./BlogPost.module.css";
 import Nav from "../../components/navigate/Navigate.jsx";
 import Footer from "../../components/footer/Footer.jsx";
+import SEO from "../../components/seo/SEO.jsx";
 
 
 const alleDiensten = [...services, ...seoDiensten];
@@ -49,34 +49,33 @@ export default function BlogPost() {
 
     return (
         <div className={styles.pagina}>
-            <Helmet>
-                <title>{`${post.title} | Oosterom Studio Blog`}</title>
-                <meta name="description" content={post.excerpt} />
-                <link rel="canonical" href={canonicalUrl} />
-                <meta property="og:title" content={post.title} />
-                <meta property="og:description" content={post.excerpt} />
-                <meta property="og:type" content="article" />
-                <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:site_name" content="Oosterom Studio" />
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BlogPosting",
-                        headline: post.title,
-                        description: post.excerpt,
-                        datePublished: post.datum,
-                        url: canonicalUrl,
-                        author: {
-                            "@type": "Organization",
-                            name: "Oosterom Studio",
-                        },
-                    })}
-                </script>
-            </Helmet>
+            <SEO
+                title={post.title}
+                description={post.excerpt}
+                path={`/kennisbank/${post.slug}`}
+                ogType="article"
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    headline: post.title,
+                    description: post.excerpt,
+                    datePublished: post.datum,
+                    url: canonicalUrl,
+                    author: {
+                        "@type": "Organization",
+                        name: "Oosterom Studio",
+                    },
+                    publisher: {
+                        "@type": "Organization",
+                        name: "Oosterom Studio",
+                        url: "https://www.oosteromstudio.nl",
+                    },
+                    mainEntityOfPage: {
+                        "@type": "WebPage",
+                        "@id": canonicalUrl,
+                    },
+                }}
+            />
 
             <header className={styles.topbar}>
                <Nav/>

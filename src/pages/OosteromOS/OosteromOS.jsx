@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import Navigate from '../../components/navigate/Navigate.jsx'
 import Footer from '../../components/footer/Footer.jsx'
 import './OosteromOS.css'
+import SEO from "../../components/seo/SEO.jsx";
 
 const features = [
     {
@@ -141,17 +142,26 @@ export default function OosteromOS() {
 
     return (
         <>
-            <Helmet>
-                <title>Oosterom OS - Jouw persoonlijk klantportaal | Oosterom Studio</title>
-                <meta name="description"
-                      content="Als klant van Oosterom Studio krijg je toegang tot Oosterom OS, jouw persoonlijk dashboard voor projectbeheer, CMS, facturen, chatbot en meer."/>
-                <link rel="canonical" href="https://www.oosteromstudio.nl/oosterom-os"/>
-                <meta property="og:title" content="Oosterom OS | Oosterom Studio"/>
-                <meta property="og:description" content="Jouw project. Altijd inzichtelijk."/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://www.oosteromstudio.nl/oosterom-os"/>
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
-            </Helmet>
+            <SEO
+                title="Oosterom OS | Jouw persoonlijk klantportaal"
+                description="Als klant van Oosterom Studio krijg je toegang tot Oosterom OS, jouw persoonlijk dashboard voor projectbeheer, CMS, facturen, chatbot en meer."
+                ogDescription="Jouw project. Altijd inzichtelijk."
+                path="/oosterom-os"
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "SoftwareApplication",
+                    "name": "Oosterom OS",
+                    "applicationCategory": "BusinessApplication",
+                    "operatingSystem": "Web",
+                    "url": "https://www.oosteromstudio.nl/oosterom-os",
+                    "description": "Klantportaal met projectbeheer, CMS, facturen en chatbot voor klanten van Oosterom Studio.",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Oosterom Studio",
+                        "url": "https://www.oosteromstudio.nl"
+                    }
+                }}
+            />
 
             <Navigate/>
 

@@ -2,11 +2,11 @@ import './Portfolio.css';
 import Navigate from "../../components/navigate/Navigate.jsx";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
-import {Helmet} from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
 import projects from "../../../data/projects.js";
 import image_cta from "../../assets/images/cta2.jpg";
 import PakketCta from "../../components/pakketCta/PakketCta.jsx";
+import SEO from "../../components/seo/SEO.jsx";
 
 
 // ── Project card ──────────────────────────────────────────────
@@ -65,31 +65,21 @@ function ProjectCard({project, index}) {
 function Portfolio() {
     return (
         <>
-            <Helmet>
-                <title>Portfolio & Cases | Oosterom Studio – Webdesign & Cybersecurity</title>
-                <meta name="description"
-                      content="Bekijk gerealiseerde projecten van Oosterom Studio — van maatwerk websites en Shopify webshops tot beveiligde digitale platformen voor MKB en startups in Nederland."/>
-                <meta property="og:title" content="Portfolio & Cases | Oosterom Studio"/>
-                <meta property="og:description"
-                      content="Van webdesign tot cybersecurity — bekijk wat Oosterom Studio heeft gebouwd voor MKB en startups."/>
-                <link rel="canonical" href="https://www.oosteromstudio.nl/portfolio"/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://www.oosteromstudio.nl/portfolio"/>
-                <meta property="og:site_name" content="Oosterom Studio"/>
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
-                <meta name="twitter:card" content="summary_large_image"/>
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "CollectionPage",
-                        "name": "Portfolio & Cases | Oosterom Studio",
-                        "url": "https://www.oosteromstudio.nl/portfolio",
-                        "description": "Gerealiseerde projecten van Oosterom Studio op het gebied van webdesign, Shopify en cybersecurity.",
-                        "author": {"@type": "Organization", "name": "Oosterom Studio"}
-                    })}
-                </script>
-            </Helmet>
+            <SEO
+                rawTitle
+                title="Portfolio & Cases | Oosterom Studio"
+                description="Bekijk gerealiseerde projecten van Oosterom Studio - van maatwerk websites en Shopify webshops tot beveiligde digitale platformen voor MKB en startups in Nederland."
+                ogDescription="Van webdesign tot cybersecurity - bekijk wat Oosterom Studio heeft gebouwd voor MKB en startups."
+                path="/portfolio"
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "name": "Portfolio & Cases",
+                    "url": "https://www.oosteromstudio.nl/portfolio",
+                    "description": "Gerealiseerde projecten van Oosterom Studio op het gebied van webdesign, Shopify en cybersecurity.",
+                    "author": { "@type": "Organization", "name": "Oosterom Studio" }
+                }}
+            />
 
             <Navigate/>
 

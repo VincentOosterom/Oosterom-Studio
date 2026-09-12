@@ -6,6 +6,7 @@ import Navigate from "../../components/navigate/Navigate.jsx";
 import { Helmet } from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
 import privacy from "../../assets/Privacybeleid Oosterom Studio.pdf";
+import SEO from "../../components/seo/SEO.jsx";
 
 // ── Animatie ──────────────────────────────────────────────────────────────────
 
@@ -59,19 +60,33 @@ function Contact() {
 
     return (
         <>
-            <Helmet>
-                <title>Contact | Oosterom Studio</title>
-                <meta name="description" content="Neem contact op met Oosterom Studio. Binnen 24 uur een persoonlijke reactie. Wij bouwen websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups." />
-                <link rel="canonical" href="https://www.oosteromstudio.nl/contact" />
-                <meta property="og:title" content="Contact | Oosterom Studio" />
-                <meta property="og:description" content="Klaar om jouw project te starten? Stuur een bericht en ontvang binnen 24 uur een reactie." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/contact" />
-                <meta property="og:site_name" content="Oosterom Studio" />
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-            </Helmet>
+            <SEO
+                title="Contact"
+                description="Neem contact op met Oosterom Studio. Binnen 24 uur een persoonlijke reactie. Wij bouwen websites, webapplicaties en beveiligde digitale oplossingen voor MKB en startups."
+                ogDescription="Klaar om jouw project te starten? Stuur een bericht en ontvang binnen 24 uur een reactie."
+                path="/contact"
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "ContactPage",
+                    "name": "Contact",
+                    "url": "https://www.oosteromstudio.nl/contact",
+                    "mainEntity": {
+                        "@type": "Organization",
+                        "name": "Oosterom Studio",
+                        "url": "https://www.oosteromstudio.nl",
+                        "email": "v-oosterom@hotmail.com",
+                        "telephone": "+31640294823",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Champignon 17",
+                            "postalCode": "2403 SB",
+                            "addressLocality": "Alphen aan den Rijn",
+                            "addressCountry": "NL"
+                        },
+                        "areaServed": { "@type": "Country", "name": "Netherlands" }
+                    }
+                }}
+            />
 
             <Navigate />
 

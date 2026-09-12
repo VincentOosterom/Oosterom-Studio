@@ -1,10 +1,10 @@
 import "./ProjectPage.css";
 import {motion} from "framer-motion";
 import {Link, useParams} from "react-router-dom";
-import {Helmet} from "react-helmet-async";
 import Navigate from "../../components/navigate/Navigate.jsx";
 import projects from "/data/projects.js";
 import Footer from "../../components/footer/Footer.jsx";
+import SEO from "../../components/seo/SEO.jsx";
 
 function ProjectPage() {
     const {slug} = useParams();
@@ -25,50 +25,39 @@ function ProjectPage() {
 
     return (
         <>
-            <Helmet>
-                <title>{`Case Study ${project.title} | Oosterom Studio`}</title>
-
-                {/* Meta description */}
-                <meta
-                    name="description"
-                    content={`${project.title} – ${project.intro}`}
-                />
-
-                <link
-                    rel="canonical"
-                    href={`https://www.oosteromstudio.nl/portfolio/${project.slug}`}
-                />
-
-                {/* Open Graph */}
-                <meta
-                    property="og:title"
-                    content={`${project.title} | Case Study | Oosterom Studio`}
-                />
-                <meta
-                    property="og:description"
-                    content={`${project.intro}`}
-                />
-                <meta property="og:type" content="article"/>
-                <meta
-                    property="og:url"
-                    content={`https://www.oosteromstudio.nl/portfolio/${project.slug}`}
-                />
-                <meta property="og:image" content={project.image}/>
-                <meta name="twitter:card" content="summary_large_image"/>
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Article",
-                        "name": project.title,
-                        "description": project.intro,
-                        "author": {
-                            "@type": "Organization",
-                            "name": "Oosterom Studio"
-                        }
-                    })}
-                </script>
-            </Helmet>
+            <SEO
+                rawTitle
+                title={`Case study: ${project.title} | Oosterom Studio`}
+                description={`${project.title} — ${project.intro}`}
+                ogDescription={project.intro}
+                path={`/portfolio/${project.slug}`}
+                ogType="article"
+                image={
+                    project.image?.startsWith("http")
+                        ? project.image
+                        : `https://www.oosteromstudio.nl${project.image}`
+                }
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": project.title,
+                    "description": project.intro,
+                    "url": `https://www.oosteromstudio.nl/portfolio/${project.slug}`,
+                    "image": project.image?.startsWith("http")
+                        ? project.image
+                        : `https://www.oosteromstudio.nl${project.image}`,
+                    "author": {
+                        "@type": "Organization",
+                        "name": "Oosterom Studio",
+                        "url": "https://www.oosteromstudio.nl"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Oosterom Studio",
+                        "url": "https://www.oosteromstudio.nl"
+                    }
+                }}
+            />
 
             <Navigate/>
 

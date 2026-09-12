@@ -10,8 +10,8 @@ import pf from "/pf.jpeg"; // <-- pas pad/bestandsnaam aan naar waar jouw foto s
 
 const contact = {
     naam: "Vincent Oosterom",
-    functie: "Oprichter — Oosterom Studio",
-    telefoon: "", // vul in als je een zakelijk nummer wil delen, bijv. "+31612345678"
+    functie: "Founder of Oosterom Studio",
+    telefoon: "0640294823", // vul in als je een zakelijk nummer wil delen, bijv. "+31612345678"
     email: "vincent@oosteromstudio.nl",
     website: "https://www.oosteromstudio.nl",
     linkedin: "https://www.linkedin.com/in/vincent-oosterom-05017176/",

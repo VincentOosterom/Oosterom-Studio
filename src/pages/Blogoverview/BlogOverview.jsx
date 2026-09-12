@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { blogPosts } from "../../../data/blogPosts";
 import styles from "./Blogoverview.module.css";
 import Navigate from "../../components/navigate/Navigate.jsx";
 import Footer from "../../components/footer/Footer.jsx";
+import SEO from "../../components/seo/SEO.jsx";
 
 const PAGE_TITLE = "Kennisbank | Oosterom Studio";
 const PAGE_DESCRIPTION =
@@ -24,19 +24,30 @@ function formatteerDatum(isoDatum) {
 export default function BlogOverview() {
     return (
         <div className={styles.pagina}>
-            <Helmet>
-                <title>{PAGE_TITLE}</title>
-                <meta name="description" content={PAGE_DESCRIPTION} />
-                <link rel="canonical" href="https://www.oosteromstudio.nl/kennisbank" />
-                <meta property="og:title" content={PAGE_TITLE} />
-                <meta property="og:description" content={PAGE_DESCRIPTION} />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.oosteromstudio.nl/kennisbank" />
-                <meta property="og:site_name" content="Oosterom Studio" />
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-            </Helmet>
+            <SEO
+                title={PAGE_TITLE}
+                description={PAGE_DESCRIPTION}
+                path="/kennisbank"
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "name": "Kennisbank",
+                    "description": PAGE_DESCRIPTION,
+                    "url": "https://www.oosteromstudio.nl/kennisbank",
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Oosterom Studio",
+                        "url": "https://www.oosteromstudio.nl"
+                    },
+                    "hasPart": gesorteerdeBlogs.map((post) => ({
+                        "@type": "BlogPosting",
+                        "headline": post.title,
+                        "description": post.excerpt,
+                        "datePublished": post.datum,
+                        "url": `https://www.oosteromstudio.nl/kennisbank/${post.slug}`
+                    }))
+                }}
+            />
 
             <header className={styles.topbar}>
                 <Navigate/>

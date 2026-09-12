@@ -6,6 +6,7 @@ import Navigate from "../../components/navigate/Navigate.jsx";
 import {Helmet} from "react-helmet-async";
 import Footer from "../../components/footer/Footer.jsx";
 import {services} from "../../../data/services";
+import SEO from "../../components/seo/SEO.jsx";
 
 const fadeUp = {
     hidden: {opacity: 0, y: 32},
@@ -47,25 +48,12 @@ const formatPrice = (amount) =>
 function Diensten() {
     return (
         <div>
-            <Helmet>
-                <title>Diensten | Oosterom Studio </title>
-                <meta
-                    name="description"
-                    content="Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale platformen voor MKB en startups. Inclusief technische SEO, performance optimalisatie en cybersecurity."
-                />
-                <link rel="canonical" href="https://www.oosteromstudio.nl/diensten" />
-                <meta property="og:title" content="Diensten | Oosterom Studio"/>
-                <meta
-                    property="og:description"
-                    content="Webdesign, Shopify webshops en cybersecurity onder één dak. Bekijk wat Oosterom Studio voor jouw bedrijf kan betekenen."
-                />
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://www.oosteromstudio.nl/diensten"/>
-                <meta property="og:site_name" content="Oosterom Studio"/>
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
-                <meta name="twitter:card" content="summary_large_image"/>
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg"/>
-            </Helmet>
+            <SEO
+                title="Diensten"
+                description="Oosterom Studio bouwt maatwerk websites, Shopify webshops en beveiligde digitale platformen voor MKB en startups. Inclusief technische SEO, performance optimalisatie en cybersecurity."
+                ogDescription="Webdesign, Shopify webshops en cybersecurity onder één dak. Bekijk wat Oosterom Studio voor jouw bedrijf kan betekenen."
+                path="/diensten"
+            />
 
             <Navigate/>
             <div className="diensten-bg" aria-hidden="true" />

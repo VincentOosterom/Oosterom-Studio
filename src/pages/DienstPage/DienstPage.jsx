@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import './DienstPage.css'
 import Navigate from "../../components/navigate/Navigate.jsx";
 import Footer from "../../components/footer/Footer.jsx";
+import SEO from "../../components/seo/SEO.jsx";
 // ── Animation variants ────────────────────────────────────────────────────────
 
 const fadeUp = {
@@ -85,21 +85,12 @@ function DienstPage({
 
     return (
         <>
-            <Helmet>
-                <title>{title} | Oosterom Studio</title>
-                <meta name="description" content={metaDescription} />
-                <link rel="canonical" href={canonicalUrl} />
-                <meta property="og:title" content={`${title} | Oosterom Studio`} />
-                <meta property="og:description" content={metaDescription} />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:site_name" content="Oosterom Studio" />
-                <meta property="og:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content="https://www.oosteromstudio.nl/og-image.jpg" />
-
-                <script type="application/ld+json">
-                    {JSON.stringify({
+            <SEO
+                title={title}
+                description={metaDescription}
+                path={slug ?? ""}
+                schema={[
+                    {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "name": title,
@@ -114,12 +105,9 @@ function DienstPage({
                             "@type": "Country",
                             "name": "Netherlands"
                         }
-                    })}
-                </script>
-
-                {faq.length > 0 && (
-                    <script type="application/ld+json">
-                        {JSON.stringify({
+                    },
+                    ...(faq.length > 0
+                        ? [{
                             "@context": "https://schema.org",
                             "@type": "FAQPage",
                             "mainEntity": faq.map((item) => ({
@@ -130,10 +118,10 @@ function DienstPage({
                                     "text": item.antwoord
                                 }
                             }))
-                        })}
-                    </script>
-                )}
-            </Helmet>
+                        }]
+                        : [])
+                ]}
+            />
             <Navigate/>
 
             {/* ── HERO ── */}
