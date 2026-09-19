@@ -202,6 +202,7 @@
     color: var(--color-accent, #88e8f4);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    font-family: var(--font-title), sans-serif;
 }
 
 /* ── Card content ────────────────────────────────────────────── */
@@ -225,12 +226,13 @@
 }
 
 .pf-card__tag {
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-title), sans-serif;
     font-size: 9px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-accent, #88e8f4);
     margin-bottom: 12px;
+
 }
 
 .pf-card__title {
@@ -238,6 +240,7 @@
     letter-spacing: -0.02em;
     line-height: 1.15;
     margin-bottom: 12px;
+
 }
 
 .pf-card__title a {
@@ -281,6 +284,7 @@
 
 .pf-card__link:hover {
     color: var(--color-accent, #88e8f4);
+    font-family: var(--font-title), sans-serif;
 }
 
 .pf-card__link--muted {

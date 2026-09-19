@@ -1,29 +1,29 @@
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import {useNavigate} from "react-router-dom";
+import {motion} from "framer-motion";
 import Navigate from "../navigate/Navigate.jsx";
 import './Header.css';
 
 // ── Animatie varianten ────────────────────────────────────────────────────────
 
 const fadeUp = {
-    hidden:  { opacity: 0, y: 40 },
+    hidden: {opacity: 0, y: 40},
     visible: (i = 0) => ({
         opacity: 1,
         y: 0,
-        transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }
+        transition: {duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: i * 0.12}
     }),
 };
 
 // ── Component ─────────────────────────────────────────────────────────────────
-function Header({ title, subtitle, buttonText, tag, buttonTextSecon }) {
+function Header({title, subtitle, buttonText, tag, buttonTextSecon}) {
     const navigate = useNavigate();
 
     return (
         <header className="header">
-            <Navigate />
+            <Navigate/>
 
-            <div className="header__grid" aria-hidden="true" />
-            <div className="header__glow" aria-hidden="true" />
+            <div className="header__grid" aria-hidden="true"/>
+            <div className="header__glow" aria-hidden="true"/>
 
             <section className="header-content">
                 <article className="content-center">
@@ -51,7 +51,7 @@ function Header({ title, subtitle, buttonText, tag, buttonTextSecon }) {
                         {title.split("\n").map((line, i) => (
                             <span key={i}>
                                 {line}
-                                {i < title.split("\n").length - 1 && <br />}
+                                {i < title.split("\n").length - 1 && <br/>}
                             </span>
                         ))}
                     </motion.h1>
@@ -92,9 +92,9 @@ function Header({ title, subtitle, buttonText, tag, buttonTextSecon }) {
                     )}
                     <div className="header__trust">
                         <span>Reactie binnen 24 uur</span>
-                        <span className="header__trust-dot" aria-hidden="true" />
+                        <span className="header__trust-dot" aria-hidden="true"/>
                         <span>Vrijblijvend gesprek</span>
-                        <span className="header__trust-dot" aria-hidden="true" />
+                        <span className="header__trust-dot" aria-hidden="true"/>
                         <span>Eén vast aanspreekpunt</span>
                     </div>
                 </article>
@@ -104,12 +104,12 @@ function Header({ title, subtitle, buttonText, tag, buttonTextSecon }) {
             {/* Scroll indicator */}
             <motion.div
                 className="header__scroll"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2, duration: 0.6 }}
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{delay: 1.2, duration: 0.6}}
                 aria-hidden="true"
             >
-                <span className="header__scroll-line" />
+                <span className="header__scroll-line"/>
             </motion.div>
         </header>
     );

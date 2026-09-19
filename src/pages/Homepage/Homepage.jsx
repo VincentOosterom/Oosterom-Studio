@@ -83,51 +83,55 @@ function Homepage() {
                         viewport={{once: true}}
                     >
                         <motion.h2 variants={fadeUp}>
-                            Het werkt,<br/>of het is <em>niet af</em>.
+                            Digitaal sterk<br/>gebouwd<em>.</em>
                         </motion.h2>
 
                         <motion.p className="values-subtitle" variants={fadeUp}>
-                            Elke keuze die ik maak, in design, code en samenwerking,
-                            wordt langs diezelfde lat gelegd.
+                            Geen half werk, geen losse eindjes. Elke keuze, in design,
+                            code en communicatie, wordt langs diezelfde lat gelegd.
                         </motion.p>
 
                         <section className="values-grid">
                             <motion.article className="value-card" variants={fadeUp}>
-                                <h3>Performance First</h3>
+                                <h3>Snelheid staat voorop</h3>
                                 <p>
-                                    Snelheid is geen luxe, het is het uitgangspunt. Ik ontwikkel
-                                    technisch geoptimaliseerde websites met hoge Core Web Vitals-scores
-                                    die bezoekers niet laten wachten.
+                                    Een trage website kost je bezoekers, punt. Ik bouw met
+                                    performance als uitgangspunt, niet als extra check
+                                    achteraf.
                                 </p>
                             </motion.article>
 
                             <motion.article className="value-card" variants={fadeUp}>
-                                <h3>Beveiliging standaard</h3>
+                                <h3>Veilig vanaf dag één</h3>
                                 <p>
-                                    Beveiliging zit in de basis, niet als afvinkpunt achteraf. HTTPS,
-                                    security headers en bescherming tegen veelvoorkomende aanvallen zijn
-                                    standaard onderdeel van elk project.
+                                    Beveiliging zit in de basis van elk project. HTTPS,
+                                    juiste headers, bescherming tegen de bekende risico's.
+                                    Geen afvinklijstje achteraf.
                                 </p>
                             </motion.article>
+
                             <motion.article className="value-card" variants={fadeUp}>
-                                <h3>WCAG Richtlijnen </h3>
+                                <h3>Toegankelijk voor iedereen</h3>
                                 <p>
-                                    De Web Content Accessibility Guidelines zijn de standaarden om websites en apps
-                                    toegankelijk te maken voor iedereen, inclusief mensen met een visuele, auditieve,
-                                    motorische of cognitive beperking.
+                                    Een website die niet iedereen kan gebruiken, is niet af.
+                                    Ik bouw volgens de WCAG-richtlijnen, zodat jouw site
+                                    werkt voor elke bezoeker.
                                 </p>
                             </motion.article>
+
                             <motion.article className="value-card" variants={fadeUp}>
-                                <h3>Langetermijnpartner</h3>
+                                <h3>Eerlijk, ook als dat lastig is</h3>
                                 <p>
-                                    Ik denk verder dan de oplevering. Systemen die meegroeien,
-                                    code die overdraagbaar is, en eerlijk advies ook als dat
-                                    betekent dat ik je doorverwijs.
+                                    Ik denk verder dan de oplevering. Duidelijke taal, geen
+                                    verkooppraatjes, en eerlijk advies, ook als dat betekent
+                                    dat ik je doorverwijs.
                                 </p>
                             </motion.article>
                         </section>
                     </motion.div>
                 </section>
+
+                <WatWeBouwen/>
 
                 <section className="waarom-section">
                     <motion.div
@@ -214,8 +218,6 @@ function Homepage() {
                         </motion.div>
                     </motion.div>
                 </section>
-
-                <WatWeBouwen/>
 
                 <PakketCta
                     achtergrond={image_cta}
