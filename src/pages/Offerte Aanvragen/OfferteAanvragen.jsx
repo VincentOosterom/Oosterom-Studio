@@ -220,12 +220,9 @@ function OfferteAanvragen() {
                                         <option value="">Kies een dienst</option>
                                         <option value="webdesign">Webdesign & UX</option>
                                         <option value="development">Webdevelopment</option>
-                                        <option value="complete">Complete website</option>
                                         <option value="saas">SaaS & Digitale systemen</option>
                                         <option value="klantportaal">Klantportaal & CRM</option>
-                                        <option value="software">Software op maat</option>
                                         <option value="ai-agents">AI Agents & Automatisering</option>
-                                        <option value="avg">AVG-proof website</option>
                                         <option value="onderhoud">Onderhoud & Support</option>
                                         <option value="branding">Branding & Strategie</option>
                                         <option value="seo">SEO & Performance</option>
